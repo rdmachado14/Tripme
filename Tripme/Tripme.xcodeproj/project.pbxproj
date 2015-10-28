@@ -15,6 +15,20 @@
 		79F071621BCEE87600646DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F071601BCEE87600646DD5 /* LaunchScreen.storyboard */; };
 		79F0716D1BCEE87600646DD5 /* TripmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0716C1BCEE87600646DD5 /* TripmeTests.swift */; };
 		79F071781BCEE87600646DD5 /* TripmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071771BCEE87600646DD5 /* TripmeUITests.swift */; };
+		A7B62CB11BE14FE600145361 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CAF1BE14FE600145361 /* Bolts.framework */; };
+		A7B62CB21BE14FE600145361 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CB01BE14FE600145361 /* Parse.framework */; };
+		A7B62CB41BE1504500145361 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CB31BE1504500145361 /* AudioToolbox.framework */; };
+		A7B62CB61BE1505D00145361 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CB51BE1505D00145361 /* CFNetwork.framework */; };
+		A7B62CB81BE1506800145361 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CB71BE1506800145361 /* CoreGraphics.framework */; };
+		A7B62CBA1BE1507600145361 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CB91BE1507600145361 /* CoreLocation.framework */; };
+		A7B62CBC1BE1508000145361 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CBB1BE1508000145361 /* QuartzCore.framework */; };
+		A7B62CBE1BE1509100145361 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CBD1BE1509100145361 /* Security.framework */; };
+		A7B62CC01BE1509D00145361 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CBF1BE1509D00145361 /* StoreKit.framework */; };
+		A7B62CC21BE150A800145361 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC11BE150A800145361 /* SystemConfiguration.framework */; };
+		A7B62CC41BE150B100145361 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC31BE150B100145361 /* libz.tbd */; };
+		A7B62CC61BE150BC00145361 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC51BE150BC00145361 /* libsqlite3.tbd */; };
+		A7B62CC81BE150C600145361 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC71BE150C600145361 /* Accounts.framework */; };
+		A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC91BE150D000145361 /* Social.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +63,20 @@
 		79F071731BCEE87600646DD5 /* TripmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F071771BCEE87600646DD5 /* TripmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripmeUITests.swift; sourceTree = "<group>"; };
 		79F071791BCEE87600646DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A7B62CAF1BE14FE600145361 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
+		A7B62CB01BE14FE600145361 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
+		A7B62CB31BE1504500145361 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		A7B62CB51BE1505D00145361 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		A7B62CB71BE1506800145361 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A7B62CB91BE1507600145361 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A7B62CBB1BE1508000145361 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A7B62CBD1BE1509100145361 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		A7B62CBF1BE1509D00145361 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		A7B62CC11BE150A800145361 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A7B62CC31BE150B100145361 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A7B62CC51BE150BC00145361 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		A7B62CC71BE150C600145361 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
+		A7B62CC91BE150D000145361 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +84,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */,
+				A7B62CC81BE150C600145361 /* Accounts.framework in Frameworks */,
+				A7B62CC61BE150BC00145361 /* libsqlite3.tbd in Frameworks */,
+				A7B62CC41BE150B100145361 /* libz.tbd in Frameworks */,
+				A7B62CC21BE150A800145361 /* SystemConfiguration.framework in Frameworks */,
+				A7B62CC01BE1509D00145361 /* StoreKit.framework in Frameworks */,
+				A7B62CBE1BE1509100145361 /* Security.framework in Frameworks */,
+				A7B62CBC1BE1508000145361 /* QuartzCore.framework in Frameworks */,
+				A7B62CBA1BE1507600145361 /* CoreLocation.framework in Frameworks */,
+				A7B62CB81BE1506800145361 /* CoreGraphics.framework in Frameworks */,
+				A7B62CB61BE1505D00145361 /* CFNetwork.framework in Frameworks */,
+				A7B62CB41BE1504500145361 /* AudioToolbox.framework in Frameworks */,
+				A7B62CB21BE14FE600145361 /* Parse.framework in Frameworks */,
+				A7B62CB11BE14FE600145361 /* Bolts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -99,6 +141,7 @@
 		79F071531BCEE87600646DD5 /* Tripme */ = {
 			isa = PBXGroup;
 			children = (
+				A7B62CAE1BE14FAB00145361 /* Frameworks */,
 				79F071541BCEE87600646DD5 /* AppDelegate.swift */,
 				79F071561BCEE87600646DD5 /* ViewController.swift */,
 				79F071581BCEE87600646DD5 /* Main.storyboard */,
@@ -126,6 +169,27 @@
 				79F071791BCEE87600646DD5 /* Info.plist */,
 			);
 			path = TripmeUITests;
+			sourceTree = "<group>";
+		};
+		A7B62CAE1BE14FAB00145361 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A7B62CC91BE150D000145361 /* Social.framework */,
+				A7B62CC71BE150C600145361 /* Accounts.framework */,
+				A7B62CC51BE150BC00145361 /* libsqlite3.tbd */,
+				A7B62CC31BE150B100145361 /* libz.tbd */,
+				A7B62CC11BE150A800145361 /* SystemConfiguration.framework */,
+				A7B62CBF1BE1509D00145361 /* StoreKit.framework */,
+				A7B62CBD1BE1509100145361 /* Security.framework */,
+				A7B62CBB1BE1508000145361 /* QuartzCore.framework */,
+				A7B62CB91BE1507600145361 /* CoreLocation.framework */,
+				A7B62CB71BE1506800145361 /* CoreGraphics.framework */,
+				A7B62CB51BE1505D00145361 /* CFNetwork.framework */,
+				A7B62CB31BE1504500145361 /* AudioToolbox.framework */,
+				A7B62CAF1BE14FE600145361 /* Bolts.framework */,
+				A7B62CB01BE14FE600145361 /* Parse.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -402,6 +466,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tripme",
+				);
 				INFOPLIST_FILE = Tripme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bepid.Tripme;
@@ -413,6 +481,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Tripme",
+				);
 				INFOPLIST_FILE = Tripme/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.bepid.Tripme;
@@ -487,6 +559,7 @@
 				79F0717E1BCEE87600646DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79F0717F1BCEE87600646DD5 /* Build configuration list for PBXNativeTarget "TripmeTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +568,7 @@
 				79F071811BCEE87600646DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		79F071821BCEE87600646DD5 /* Build configuration list for PBXNativeTarget "TripmeUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +577,7 @@
 				79F071841BCEE87600646DD5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
