@@ -8,10 +8,15 @@
 
 import UIKit
 import Parse
+import ParseUI
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate
+{
+    var logInViewController: PFLogInViewController! = PFLogInViewController()
+    var signUpViewController: PFSignUpViewController! = PFSignUpViewController()
 
-    override func viewDidLoad() {
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
         
         let testObject = PFObject(className: "TestObject")
@@ -19,14 +24,82 @@ class ViewController: UIViewController {
         testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
             print("Object has been saved.")
         }
-        // Do any additional setup after loading the view, typically from a nib.
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
-
+    override func viewWillAppear(animated: Bool)
+    {
+        super.viewWillAppear(animated)
+        
+        if PFUser.currentUser() == nil
+        {
+            self.logInViewController.fields = PFLogInFields.UsernameAndPassword
+            self.logInViewController.fields = PFLogInFields.LogInButton
+            self.logInViewController.fields = PFLogInFields.SignUpButton
+            self.logInViewController.fields = PFLogInFields.PasswordForgotten
+            self.logInViewController.fields = PFLogInFields.DismissButton
+            
+            let logInLogoTitle = UILabel()
+            logInLogoTitle.text = "Tripme"
+            
+            self.logInViewController.logInView?.logo = logInLogoTitle
+            self.logInViewController.delegate = self
+            let signUpLogoTitle = UILabel()
+            signUpLogoTitle.text = "Tripme"
+            
+            self.signUpViewController.signUpView?.logo = signUpLogoTitle
+            
+            self.signUpViewController.delegate = self
+            
+            self.logInViewController.signUpController = self.signUpViewController
+            
+        }
+    }
+    
+    // Login do Parse
+    
+    func logInViewController(logInController: PFLogInViewController, shouldBeginLogInWithUsername username: String, password: String) -> Bool
+    {
+        if !username.isEmpty || !password.isEmpty
+        {
+            return true
+        }
+        else
+        {
+            return false
+        }
+    }
+    
+    func logInViewController(logInController: PFLogInViewController, didLogInUser user: PFUser)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func logInViewController(logInController: PFLogInViewController, didFailToLogInWithError error: NSError?)
+    {
+        print("Falha no login!")
+    }
+    
+    // Cadastro do Parse
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didSignUpUser user: PFUser)
+    {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    func signUpViewController(signUpController: PFSignUpViewController, didFailToSignUpWithError error: NSError?)
+    {
+        print("Falha no cadastro!")
+    }
+    
+    func signUpViewControllerDidCancelSignUp(signUpController: PFSignUpViewController)
+    {
+        print("Usuário cancelou o cadastro!")
+    }
+    
+    
 }
-
