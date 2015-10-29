@@ -15,6 +15,35 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-ZN-eYS">
+                                <rect key="frame" x="168" y="267" width="38" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNV-OB-Ait"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyq-jP-bDx">
+                                <rect key="frame" x="160" y="305" width="54" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Custom"/>
+                                <connections>
+                                    <action selector="btCustom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVj-Xy-Uvo"/>
+                                    <action selector="btLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KU8-ve-kdJ"/>
+                                    <action selector="btLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bn7-Fu-2Nr"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euG-06-oyU">
+                                <rect key="frame" x="163" y="343" width="48" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Logout"/>
+                                <connections>
+                                    <action selector="btLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HC9-vG-I1q"/>
+                                    <action selector="btLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2u5-ZA-IIz"/>
+                                </connections>
+                            </button>
+                        </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>

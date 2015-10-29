@@ -108,4 +108,15 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     {
         self.presentViewController(self.logInViewController, animated: true, completion: nil)
     }
+    
+    @IBAction func btCustom(sender: AnyObject)
+    {
+        self.performSegueWithIdentifier("", sender: self)
+    }
+    
+    
+    @IBAction func btLogout(sender: AnyObject)
+    {
+        PFUser.logOut()
+    }
 }
