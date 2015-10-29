@@ -101,5 +101,11 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
         print("Usuário cancelou o cadastro!")
     }
     
+    // Ações
     
+    
+    @IBAction func btLogin(sender: AnyObject)
+    {
+        self.presentViewController(self.logInViewController, animated: true, completion: nil)
+    }
 }
