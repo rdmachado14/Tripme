@@ -10,6 +10,8 @@ import UIKit
 
 class TMCustomLoginViewController: UIViewController
 {
+    @IBOutlet weak var tfUsername: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
 
     override func viewDidLoad()
     {
@@ -24,5 +26,13 @@ class TMCustomLoginViewController: UIViewController
         
     }
     
+    @IBAction func btLogin(sender: AnyObject)
+    {
+        
+    }
 
+    @IBAction func btSignUp(sender: AnyObject)
+    {
+        
+    }
 }

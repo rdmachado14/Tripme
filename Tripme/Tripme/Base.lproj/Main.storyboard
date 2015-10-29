@@ -56,10 +56,10 @@
             </objects>
             <point key="canvasLocation" x="1079.5" y="601.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom Login View Controller-->
         <scene sceneID="O0v-cP-Kp9">
             <objects>
-                <viewController id="Ett-xv-Ks7" sceneMemberID="viewController">
+                <viewController id="Ett-xv-Ks7" customClass="TMCustomLoginViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="spr-54-0W3"/>
                         <viewControllerLayoutGuide type="bottom" id="faE-wS-LWN"/>
@@ -84,11 +84,17 @@
                                 <rect key="frame" x="168" y="159" width="38" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Login"/>
+                                <connections>
+                                    <action selector="btLogin:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="eYy-Md-Vh1"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwO-Ye-YC3">
                                 <rect key="frame" x="160" y="266" width="55" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="btSignUp:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="4xm-tr-uRC"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -96,6 +102,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
+                        <outlet property="tfPassword" destination="c0N-ol-mQx" id="Yr5-3c-cSg"/>
+                        <outlet property="tfUsername" destination="uSA-aY-Fe4" id="IsN-YO-Lx0"/>
                         <segue destination="lbM-8o-vo7" kind="show" identifier="signup" id="Ell-rm-ILT"/>
                     </connections>
                 </viewController>
@@ -103,10 +111,10 @@
             </objects>
             <point key="canvasLocation" x="1717.5" y="601.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Custom Sign Up View Controller-->
         <scene sceneID="gEA-mr-RbP">
             <objects>
-                <viewController id="lbM-8o-vo7" sceneMemberID="viewController">
+                <viewController id="lbM-8o-vo7" customClass="TMCustomSignUpViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="lZJ-TY-aun"/>
                         <viewControllerLayoutGuide type="bottom" id="eNn-2i-GDR"/>
@@ -137,12 +145,20 @@
                                 <rect key="frame" x="160" y="192" width="55" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Sign Up"/>
+                                <connections>
+                                    <action selector="btSignUp:" destination="lbM-8o-vo7" eventType="touchUpInside" id="soW-cI-q8n"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tfEmail" destination="qrH-gQ-gdd" id="lPK-2T-Iyb"/>
+                        <outlet property="tfPassword" destination="9f3-mm-IrZ" id="gqr-PK-5sI"/>
+                        <outlet property="tfUsername" destination="u8S-9m-9p0" id="Ckb-nu-drf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

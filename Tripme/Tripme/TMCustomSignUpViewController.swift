@@ -10,6 +10,9 @@ import UIKit
 
 class TMCustomSignUpViewController: UIViewController
 {
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfUsername: UITextField!
+    @IBOutlet weak var tfPassword: UITextField!
 
     override func viewDidLoad()
     {
@@ -24,4 +27,8 @@ class TMCustomSignUpViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    @IBAction func btSignUp(sender: AnyObject)
+    {
+        
+    }
 }
