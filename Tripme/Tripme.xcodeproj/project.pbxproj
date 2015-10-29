@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		795AB38B1BE29FCF00FD6BD8 /* TMFacebookLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB38A1BE29FCF00FD6BD8 /* TMFacebookLoginViewController.swift */; };
+		795AB38F1BE2A00800FD6BD8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */; };
+		795AB3901BE2A00800FD6BD8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */; };
+		795AB3911BE2A00800FD6BD8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38E1BE2A00800FD6BD8 /* FBSDKCoreKit.framework */; };
 		79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071541BCEE87600646DD5 /* AppDelegate.swift */; };
 		79F071571BCEE87600646DD5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071561BCEE87600646DD5 /* ViewController.swift */; };
 		79F0715A1BCEE87600646DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F071581BCEE87600646DD5 /* Main.storyboard */; };
@@ -49,6 +53,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		795AB38A1BE29FCF00FD6BD8 /* TMFacebookLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMFacebookLoginViewController.swift; sourceTree = "<group>"; };
+		795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
+		795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
+		795AB38E1BE2A00800FD6BD8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
 		79F071511BCEE87600646DD5 /* Tripme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F071541BCEE87600646DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F071561BCEE87600646DD5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -86,11 +94,14 @@
 			files = (
 				A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */,
 				A7B62CC81BE150C600145361 /* Accounts.framework in Frameworks */,
+				795AB3911BE2A00800FD6BD8 /* FBSDKCoreKit.framework in Frameworks */,
+				795AB38F1BE2A00800FD6BD8 /* FBSDKLoginKit.framework in Frameworks */,
 				A7B62CC61BE150BC00145361 /* libsqlite3.tbd in Frameworks */,
 				A7B62CC41BE150B100145361 /* libz.tbd in Frameworks */,
 				A7B62CC21BE150A800145361 /* SystemConfiguration.framework in Frameworks */,
 				A7B62CC01BE1509D00145361 /* StoreKit.framework in Frameworks */,
 				A7B62CBE1BE1509100145361 /* Security.framework in Frameworks */,
+				795AB3901BE2A00800FD6BD8 /* FBSDKShareKit.framework in Frameworks */,
 				A7B62CBC1BE1508000145361 /* QuartzCore.framework in Frameworks */,
 				A7B62CBA1BE1507600145361 /* CoreLocation.framework in Frameworks */,
 				A7B62CB81BE1506800145361 /* CoreGraphics.framework in Frameworks */,
@@ -143,6 +154,7 @@
 			children = (
 				A7B62CAE1BE14FAB00145361 /* Frameworks */,
 				79F071541BCEE87600646DD5 /* AppDelegate.swift */,
+				795AB38A1BE29FCF00FD6BD8 /* TMFacebookLoginViewController.swift */,
 				79F071561BCEE87600646DD5 /* ViewController.swift */,
 				79F071581BCEE87600646DD5 /* Main.storyboard */,
 				79F0715E1BCEE87600646DD5 /* Assets.xcassets */,
@@ -178,6 +190,9 @@
 				A7B62CC71BE150C600145361 /* Accounts.framework */,
 				A7B62CC51BE150BC00145361 /* libsqlite3.tbd */,
 				A7B62CC31BE150B100145361 /* libz.tbd */,
+				795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */,
+				795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */,
+				795AB38E1BE2A00800FD6BD8 /* FBSDKCoreKit.framework */,
 				A7B62CC11BE150A800145361 /* SystemConfiguration.framework */,
 				A7B62CBF1BE1509D00145361 /* StoreKit.framework */,
 				A7B62CBD1BE1509100145361 /* Security.framework */,
@@ -323,6 +338,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79F071571BCEE87600646DD5 /* ViewController.swift in Sources */,
+				795AB38B1BE29FCF00FD6BD8 /* TMFacebookLoginViewController.swift in Sources */,
 				79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */,
 				79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */,
 			);
