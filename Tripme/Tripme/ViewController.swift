@@ -111,7 +111,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     @IBAction func btCustom(sender: AnyObject)
     {
-        self.performSegueWithIdentifier("", sender: self)
+        self.performSegueWithIdentifier("custom", sender: self)
     }
     
     
