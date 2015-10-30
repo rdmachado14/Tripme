@@ -8,10 +8,8 @@
 
 import UIKit
 import Parse
-import FBSDKCoreKit
-import FBSDKLoginKit
 
-class TMCustomLoginViewController: UIViewController, FBSDKLoginButtonDelegate
+class TMCustomLoginViewController: UIViewController
 {
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
@@ -20,25 +18,6 @@ class TMCustomLoginViewController: UIViewController, FBSDKLoginButtonDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        // verificação para saber se o usuário está logado
-        if FBSDKAccessToken.currentAccessToken() == nil
-        {
-            print("Não logado")
-        }
-        else
-        {
-            print("Logado")
-        }
-        
-        let loginButton = FBSDKLoginButton() // botão de login do Facebook
-        loginButton.readPermissions = ["public_profile", "email", "user_friends"] // permissões do usuário
-        loginButton.center = self.view.center
-        
-        loginButton.delegate = self
-        
-        self.view.addSubview(loginButton) // adicionando o botão a view
-
     }
 
     override func didReceiveMemoryWarning()
@@ -85,30 +64,5 @@ class TMCustomLoginViewController: UIViewController, FBSDKLoginButtonDelegate
         }
     }
     
-    // Facebook
-
-    @IBAction func btSignUp(sender: AnyObject)
-    {
-        self.performSegueWithIdentifier("signup", sender: self)
-    }
     
-    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
-    {
-        if error == nil
-        {
-            print("Login completo")
-            self.performSegueWithIdentifier("showNew", sender: self)
-        }
-        else
-        {
-            print(error.localizedDescription)
-        }
-    }
-    
-    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
-    {
-        print("Usuário saiu")
-        
-    }
-
 }

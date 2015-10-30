@@ -4,6 +4,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Tondo_Trial_Sign.ttf">
+            <string>TondoTrial-Signage</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
         <!--Custom Login View Controller-->
         <scene sceneID="O0v-cP-Kp9">
@@ -17,19 +22,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSA-aY-Fe4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSA-aY-Fe4">
                                 <rect key="frame" x="20" y="77" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-ol-mQx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-ol-mQx">
                                 <rect key="frame" x="20" y="115" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v83-Pl-yhr">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v83-Pl-yhr">
                                 <rect key="frame" x="168" y="159" width="38" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Login"/>
@@ -37,7 +42,7 @@
                                     <action selector="btLogin:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="eYy-Md-Vh1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwO-Ye-YC3">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwO-Ye-YC3">
                                 <rect key="frame" x="160" y="266" width="55" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Sign Up"/>
@@ -85,25 +90,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrH-gQ-gdd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrH-gQ-gdd">
                                 <rect key="frame" x="20" y="78" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8S-9m-9p0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8S-9m-9p0">
                                 <rect key="frame" x="20" y="116" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f3-mm-IrZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f3-mm-IrZ">
                                 <rect key="frame" x="20" y="154" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esj-76-IAy">
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esj-76-IAy">
                                 <rect key="frame" x="160" y="192" width="55" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Sign Up"/>
@@ -137,12 +142,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3123.5" y="1300.5"/>
+            <point key="canvasLocation" x="3129.5" y="1300.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="5FO-9z-jcQ">
             <objects>
-                <viewController id="Tzl-YC-y1W" sceneMemberID="viewController">
+                <viewController id="Tzl-YC-y1W" customClass="TMInitialViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="77l-6x-tNt"/>
                         <viewControllerLayoutGuide type="bottom" id="yWP-SE-yMT"/>
@@ -151,31 +156,39 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-El-ZDb">
-                                <rect key="frame" x="34" y="385" width="307" height="67"/>
-                                <animations/>
-                                <state key="normal" image="Criarconta-7"/>
-                                <connections>
-                                    <segue destination="lbM-8o-vo7" kind="show" id="cyM-Kj-j5E"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easier to travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-iV-NIP">
-                                <rect key="frame" x="131" y="239" width="113" height="21"/>
-                                <animations/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-10" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-fS-stX">
-                                <rect key="frame" x="104" y="49" width="167" height="168"/>
-                                <animations/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-X7-rQ9">
                                 <rect key="frame" x="34" y="300" width="307" height="67"/>
                                 <animations/>
                                 <state key="normal" image="LoginButton-7"/>
                                 <connections>
                                     <segue destination="Ett-xv-Ks7" kind="show" id="hob-Wb-x13"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-El-ZDb">
+                                <rect key="frame" x="34" y="382" width="307" height="67"/>
+                                <animations/>
+                                <state key="normal" image="Criarconta-7"/>
+                                <connections>
+                                    <segue destination="lbM-8o-vo7" kind="show" id="cyM-Kj-j5E"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-10" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-fS-stX">
+                                <rect key="frame" x="104" y="49" width="167" height="168"/>
+                                <animations/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easier to travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-iV-NIP">
+                                <rect key="frame" x="112" y="240" width="150" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Signage" family="Tondo Trial" pointSize="22"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WPf-yc-HcQ">
+                                <rect key="frame" x="34" y="463" width="308" height="67"/>
+                                <animations/>
+                                <state key="normal" image="Facebook-button-7"/>
+                                <connections>
+                                    <action selector="btFB:" destination="Tzl-YC-y1W" eventType="touchUpInside" id="06k-gO-kYI"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -192,6 +205,7 @@
     </scenes>
     <resources>
         <image name="Criarconta-7" width="308" height="67"/>
+        <image name="Facebook-button-7" width="308" height="67"/>
         <image name="LoginButton-7" width="308" height="67"/>
         <image name="logo-10" width="167" height="163"/>
     </resources>
