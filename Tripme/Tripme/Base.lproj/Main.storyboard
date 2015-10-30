@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1X-6W-pKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2377.5" y="594.5"/>
+            <point key="canvasLocation" x="3123.5" y="470.5"/>
         </scene>
         <!--Custom Sign Up View Controller-->
         <scene sceneID="gEA-mr-RbP">
@@ -137,7 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2876.5" y="594.5"/>
+            <point key="canvasLocation" x="3123.5" y="1300.5"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="5FO-9z-jcQ">
@@ -155,6 +155,9 @@
                                 <rect key="frame" x="34" y="385" width="307" height="67"/>
                                 <animations/>
                                 <state key="normal" image="Criarconta-7"/>
+                                <connections>
+                                    <segue destination="lbM-8o-vo7" kind="show" id="cyM-Kj-j5E"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easier to travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-iV-NIP">
                                 <rect key="frame" x="131" y="239" width="113" height="21"/>
@@ -171,36 +174,20 @@
                                 <rect key="frame" x="34" y="300" width="307" height="67"/>
                                 <animations/>
                                 <state key="normal" image="LoginButton-7"/>
+                                <connections>
+                                    <segue destination="Ett-xv-Ks7" kind="show" id="hob-Wb-x13"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.9137254901960784" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <navigationItem key="navigationItem" id="8VI-7B-n2i"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8M-pc-aTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1367.5" y="594.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="Va7-6Q-Vwg">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="08f-aJ-jj7" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="BGU-OI-ERj">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="Ett-xv-Ks7" kind="relationship" relationship="rootViewController" id="bn4-VC-pdJ"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="7Ms-kh-wpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1879.5" y="594.5"/>
+            <point key="canvasLocation" x="2415.5" y="859.5"/>
         </scene>
     </scenes>
     <resources>
@@ -208,4 +195,7 @@
         <image name="LoginButton-7" width="308" height="67"/>
         <image name="logo-10" width="167" height="163"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="cyM-Kj-j5E"/>
+    </inferredMetricsTieBreakers>
 </document>
