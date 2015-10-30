@@ -150,8 +150,31 @@
                     <view key="view" contentMode="scaleToFill" id="agz-y1-1lZ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6nq-El-ZDb">
+                                <rect key="frame" x="34" y="385" width="307" height="67"/>
+                                <animations/>
+                                <state key="normal" image="Criarconta-7"/>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easier to travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-iV-NIP">
+                                <rect key="frame" x="131" y="239" width="113" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-10" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-fS-stX">
+                                <rect key="frame" x="104" y="49" width="167" height="168"/>
+                                <animations/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="A1y-X7-rQ9">
+                                <rect key="frame" x="34" y="300" width="307" height="67"/>
+                                <animations/>
+                                <state key="normal" image="LoginButton-7"/>
+                            </button>
+                        </subviews>
                         <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.11372549019607843" green="0.9137254901960784" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </viewController>
@@ -180,4 +203,9 @@
             <point key="canvasLocation" x="1879.5" y="594.5"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Criarconta-7" width="308" height="67"/>
+        <image name="LoginButton-7" width="308" height="67"/>
+        <image name="logo-10" width="167" height="163"/>
+    </resources>
 </document>
