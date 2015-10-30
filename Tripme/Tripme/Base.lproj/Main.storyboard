@@ -5,55 +5,6 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
-        <scene sceneID="tne-QT-ifu">
-            <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
-                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-ZN-eYS">
-                                <rect key="frame" x="164" y="267" width="47" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Simple"/>
-                                <connections>
-                                    <action selector="btLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNV-OB-Ait"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vyq-jP-bDx">
-                                <rect key="frame" x="160" y="305" width="54" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Custom"/>
-                                <connections>
-                                    <action selector="btCustom:" destination="BYZ-38-t0r" eventType="touchUpInside" id="FVj-Xy-Uvo"/>
-                                    <action selector="btLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="KU8-ve-kdJ"/>
-                                    <action selector="btLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Bn7-Fu-2Nr"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="euG-06-oyU">
-                                <rect key="frame" x="163" y="343" width="48" height="30"/>
-                                <animations/>
-                                <state key="normal" title="Logout"/>
-                                <connections>
-                                    <action selector="btLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HC9-vG-I1q"/>
-                                    <action selector="btLogout:" destination="BYZ-38-t0r" eventType="touchUpInside" id="2u5-ZA-IIz"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="4a5-f2-nc0"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1079.5" y="601.5"/>
-        </scene>
         <!--Custom Login View Controller-->
         <scene sceneID="O0v-cP-Kp9">
             <objects>
@@ -120,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1X-6W-pKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2529.5" y="601.5"/>
+            <point key="canvasLocation" x="2005.5" y="594.5"/>
         </scene>
         <!--Custom Sign Up View Controller-->
         <scene sceneID="gEA-mr-RbP">
@@ -186,47 +137,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3114.5" y="601.5"/>
-        </scene>
-        <!--Facebook Login View Controller-->
-        <scene sceneID="6kh-hk-6CO">
-            <objects>
-                <viewController id="tUT-OZ-uH0" customClass="TMFacebookLoginViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="jgz-3R-mY8"/>
-                        <viewControllerLayoutGuide type="bottom" id="eRk-gP-3a3"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="weh-33-flV">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="c00-DA-prZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="705.5" y="1457.5"/>
-        </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="IzY-fW-fIM">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="YJL-jA-Uky" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="dc8-YF-WXc">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Gkq-jL-nGn"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ltP-s6-YVL" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="396" y="602"/>
+            <point key="canvasLocation" x="2651.5" y="594.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="Va7-6Q-Vwg">
@@ -246,7 +157,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="7Ms-kh-wpp" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1922.5" y="601.5"/>
+            <point key="canvasLocation" x="1437.5" y="594.5"/>
         </scene>
     </scenes>
 </document>
