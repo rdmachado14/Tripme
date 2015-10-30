@@ -9,8 +9,10 @@
 import UIKit
 import Parse
 import ParseUI
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate
+class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpViewControllerDelegate, FBSDKLoginButtonDelegate
 {
     var logInViewController: PFLogInViewController! = PFLogInViewController()
     var signUpViewController: PFSignUpViewController! = PFSignUpViewController()
@@ -18,12 +20,7 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-//        let testObject = PFObject(className: "TestObject")
-//        testObject["foo"] = "bar"
-//        testObject.saveInBackgroundWithBlock { (success: Bool, error: NSError?) -> Void in
-//            print("Object has been saved.")
-//        }
+
     }
 
     override func didReceiveMemoryWarning()
@@ -58,6 +55,23 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
 //            self.logInViewController.signUpController = self.signUpViewController
 //            
 //        }
+        
+        if FBSDKAccessToken.currentAccessToken() == nil
+        {
+            print("Não logado")
+        }
+        else
+        {
+            print("Logado")
+        }
+        
+        let loginButton = FBSDKLoginButton() // botão de login do Facebook
+        loginButton.readPermissions = ["public_profile", "email", "user_friends"] // permissões do usuário
+        loginButton.center = self.view.center
+        
+        loginButton.delegate = self
+        
+        self.view.addSubview(loginButton) // adicionando o botão a view
     }
     
     // Login do Parse
@@ -103,20 +117,40 @@ class ViewController: UIViewController, PFLogInViewControllerDelegate, PFSignUpV
     
     // Ações
     
-    
-    @IBAction func btLogin(sender: AnyObject)
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
     {
-        self.presentViewController(self.logInViewController, animated: true, completion: nil)
+        if error == nil
+        {
+            print("Login completo")
+            self.performSegueWithIdentifier("showNew", sender: self)
+        }
+        else
+        {
+            print(error.localizedDescription)
+        }
     }
     
-    @IBAction func btCustom(sender: AnyObject)
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
     {
-        self.performSegueWithIdentifier("custom", sender: self)
+        print("Usuário saiu")
+        
     }
+
     
     
-    @IBAction func btLogout(sender: AnyObject)
-    {
-        PFUser.logOut()
-    }
+//    @IBAction func btLogin(sender: AnyObject)
+//    {
+//        self.presentViewController(self.logInViewController, animated: true, completion: nil)
+//    }
+//    
+//    @IBAction func btCustom(sender: AnyObject)
+//    {
+//        self.performSegueWithIdentifier("custom", sender: self)
+//    }
+//    
+//    
+//    @IBAction func btLogout(sender: AnyObject)
+//    {
+//        PFUser.logOut()
+//    }
 }

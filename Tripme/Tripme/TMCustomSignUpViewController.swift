@@ -15,17 +15,17 @@ class TMCustomSignUpViewController: UIViewController
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
-    var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+    //var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        self.actInd.center = self.view.center
-        self.actInd.hidesWhenStopped = true
-        self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+//        self.actInd.center = self.view.center
+//        self.actInd.hidesWhenStopped = true
+//        self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
         
-        view.addSubview(self.actInd)
+        //view.addSubview(self.actInd)
         
     }
 
@@ -54,7 +54,7 @@ class TMCustomSignUpViewController: UIViewController
         }
         else
         {
-            self.actInd.startAnimating()
+            //self.actInd.startAnimating()
             
             var user = PFUser()
             
@@ -64,7 +64,7 @@ class TMCustomSignUpViewController: UIViewController
             
             user.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
                 
-                self.actInd.stopAnimating()
+                //self.actInd.stopAnimating()
                 
                 if error != nil
                 {

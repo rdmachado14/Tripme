@@ -8,23 +8,36 @@
 
 import UIKit
 import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class TMCustomLoginViewController: UIViewController
+class TMCustomLoginViewController: UIViewController, FBSDKLoginButtonDelegate
 {
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
     
-    var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
-        self.actInd.center = self.view.center
-        self.actInd.hidesWhenStopped = true
-        self.actInd.activityIndicatorViewStyle = UIActivityIndicatorViewStyle.Gray
+        // verificação para saber se o usuário está logado
+        if FBSDKAccessToken.currentAccessToken() == nil
+        {
+            print("Não logado")
+        }
+        else
+        {
+            print("Logado")
+        }
         
-        view.addSubview(self.actInd)
+        let loginButton = FBSDKLoginButton() // botão de login do Facebook
+        loginButton.readPermissions = ["public_profile", "email", "user_friends"] // permissões do usuário
+        loginButton.center = self.view.center
+        
+        loginButton.delegate = self
+        
+        self.view.addSubview(loginButton) // adicionando o botão a view
 
     }
 
@@ -48,11 +61,11 @@ class TMCustomLoginViewController: UIViewController
         }
         else
         {
-            self.actInd.startAnimating()
+            //self.actInd.startAnimating()
             
             PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user, error) -> Void in
              
-                self.actInd.stopAnimating()
+                //self.actInd.stopAnimating()
                 
                 if user != nil
                 {
@@ -71,9 +84,31 @@ class TMCustomLoginViewController: UIViewController
             
         }
     }
+    
+    // Facebook
 
     @IBAction func btSignUp(sender: AnyObject)
     {
         self.performSegueWithIdentifier("signup", sender: self)
     }
+    
+    func loginButton(loginButton: FBSDKLoginButton!, didCompleteWithResult result: FBSDKLoginManagerLoginResult!, error: NSError!)
+    {
+        if error == nil
+        {
+            print("Login completo")
+            self.performSegueWithIdentifier("showNew", sender: self)
+        }
+        else
+        {
+            print(error.localizedDescription)
+        }
+    }
+    
+    func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
+    {
+        print("Usuário saiu")
+        
+    }
+
 }

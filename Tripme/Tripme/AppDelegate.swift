@@ -10,7 +10,7 @@ import UIKit
 import CoreData
 import Parse
 import Bolts
-//import FBSDKCoreKit
+import FBSDKCoreKit
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,12 +29,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("DBIjndvYua2TbE1kJc9coUHCrsS1bX9RG8iM6wcJ",
             clientKey: "mPhUDgkrIX20fgOHX3aFurzPrk57PmmC2dCvDRMR")
         
-        // [Optional] Track statistics around application opens.
-        //PFAnalytics.trackAppOpenedWithLaunchOptions(launchOptions)
+        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-        //return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
-        
-        return true
+        //return true
         
     }
 
@@ -57,11 +54,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called as part of the transition from the background to the inactive state; here you can undo many of the changes made on entering the background.
     }
 
-//    func applicationDidBecomeActive(application: UIApplication) {
-//        
-//        FBSDKAppEvents.activateApp() // ativando o aplicativo para o Facebook
-//
-//    }
+    func applicationDidBecomeActive(application: UIApplication) {
+        
+      FBSDKAppEvents.activateApp() // ativando o aplicativo para o Facebook
+
+    }
 
     func applicationWillTerminate(application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
