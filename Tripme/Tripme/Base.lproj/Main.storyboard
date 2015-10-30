@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="tUT-OZ-uH0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="YJL-jA-Uky">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -17,9 +18,9 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tPr-ZN-eYS">
-                                <rect key="frame" x="168" y="267" width="38" height="30"/>
+                                <rect key="frame" x="164" y="267" width="47" height="30"/>
                                 <animations/>
-                                <state key="normal" title="Login"/>
+                                <state key="normal" title="Simple"/>
                                 <connections>
                                     <action selector="btLogin:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aNV-OB-Ait"/>
                                 </connections>
@@ -68,19 +69,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSA-aY-Fe4">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSA-aY-Fe4">
                                 <rect key="frame" x="20" y="77" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-ol-mQx">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-ol-mQx">
                                 <rect key="frame" x="20" y="115" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v83-Pl-yhr">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v83-Pl-yhr">
                                 <rect key="frame" x="168" y="159" width="38" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Login"/>
@@ -88,7 +89,7 @@
                                     <action selector="btLogin:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="eYy-Md-Vh1"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwO-Ye-YC3">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KwO-Ye-YC3">
                                 <rect key="frame" x="160" y="266" width="55" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Sign Up"/>
@@ -99,6 +100,18 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="uSA-aY-Fe4" firstAttribute="top" secondItem="spr-54-0W3" secondAttribute="bottom" constant="13" id="2eh-gv-ZNQ"/>
+                            <constraint firstItem="uSA-aY-Fe4" firstAttribute="leading" secondItem="31N-Kk-eA1" secondAttribute="leadingMargin" constant="4" id="38o-Qr-Db4"/>
+                            <constraint firstItem="c0N-ol-mQx" firstAttribute="top" secondItem="uSA-aY-Fe4" secondAttribute="bottom" constant="8" symbolic="YES" id="6te-L7-MdL"/>
+                            <constraint firstItem="c0N-ol-mQx" firstAttribute="trailing" secondItem="uSA-aY-Fe4" secondAttribute="trailing" id="Iro-iq-oEV"/>
+                            <constraint firstItem="v83-Pl-yhr" firstAttribute="top" secondItem="c0N-ol-mQx" secondAttribute="bottom" constant="14" id="M3u-Bi-5yr"/>
+                            <constraint firstItem="KwO-Ye-YC3" firstAttribute="centerX" secondItem="v83-Pl-yhr" secondAttribute="centerX" id="PXo-xb-5MN"/>
+                            <constraint firstItem="v83-Pl-yhr" firstAttribute="centerX" secondItem="c0N-ol-mQx" secondAttribute="centerX" id="TFJ-MV-ki6"/>
+                            <constraint firstItem="v83-Pl-yhr" firstAttribute="centerX" secondItem="31N-Kk-eA1" secondAttribute="centerX" id="aWr-f1-nGi"/>
+                            <constraint firstItem="c0N-ol-mQx" firstAttribute="leading" secondItem="uSA-aY-Fe4" secondAttribute="leading" id="can-qc-uJP"/>
+                            <constraint firstItem="KwO-Ye-YC3" firstAttribute="top" secondItem="v83-Pl-yhr" secondAttribute="bottom" constant="77" id="sNg-Ns-I1i"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -123,25 +136,25 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrH-gQ-gdd">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qrH-gQ-gdd">
                                 <rect key="frame" x="20" y="78" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8S-9m-9p0">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="u8S-9m-9p0">
                                 <rect key="frame" x="20" y="116" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f3-mm-IrZ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9f3-mm-IrZ">
                                 <rect key="frame" x="20" y="154" width="335" height="30"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esj-76-IAy">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Esj-76-IAy">
                                 <rect key="frame" x="160" y="192" width="55" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Sign Up"/>
@@ -152,6 +165,19 @@
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="9f3-mm-IrZ" firstAttribute="centerX" secondItem="n9u-GC-dwi" secondAttribute="centerX" id="0TT-Bd-Jis"/>
+                            <constraint firstItem="qrH-gQ-gdd" firstAttribute="leading" secondItem="n9u-GC-dwi" secondAttribute="leadingMargin" constant="4" id="8iB-06-PQf"/>
+                            <constraint firstItem="qrH-gQ-gdd" firstAttribute="trailing" secondItem="u8S-9m-9p0" secondAttribute="trailing" id="CfW-8L-5bX"/>
+                            <constraint firstItem="qrH-gQ-gdd" firstAttribute="leading" secondItem="u8S-9m-9p0" secondAttribute="leading" id="K4h-ux-Ea1"/>
+                            <constraint firstItem="u8S-9m-9p0" firstAttribute="trailing" secondItem="9f3-mm-IrZ" secondAttribute="trailing" id="KyZ-H0-Ia3"/>
+                            <constraint firstItem="qrH-gQ-gdd" firstAttribute="top" secondItem="lZJ-TY-aun" secondAttribute="bottom" constant="14" id="LBl-kc-rlO"/>
+                            <constraint firstItem="u8S-9m-9p0" firstAttribute="top" secondItem="qrH-gQ-gdd" secondAttribute="bottom" constant="8" symbolic="YES" id="Xfl-7G-emf"/>
+                            <constraint firstItem="9f3-mm-IrZ" firstAttribute="centerX" secondItem="Esj-76-IAy" secondAttribute="centerX" id="frs-Tr-Q67"/>
+                            <constraint firstItem="9f3-mm-IrZ" firstAttribute="top" secondItem="u8S-9m-9p0" secondAttribute="bottom" constant="8" symbolic="YES" id="jyf-pJ-HnC"/>
+                            <constraint firstItem="Esj-76-IAy" firstAttribute="top" secondItem="9f3-mm-IrZ" secondAttribute="bottom" constant="8" symbolic="YES" id="vTJ-az-qpq"/>
+                            <constraint firstItem="9f3-mm-IrZ" firstAttribute="leading" secondItem="u8S-9m-9p0" secondAttribute="leading" id="vV3-TK-FeP"/>
+                        </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>

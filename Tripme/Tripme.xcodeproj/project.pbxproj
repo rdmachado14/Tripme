@@ -145,8 +145,8 @@
 		795AB3931BE2A29800FD6BD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				795AB38A1BE29FCF00FD6BD8 /* TMFacebookLoginViewController.swift */,
 				79F071561BCEE87600646DD5 /* ViewController.swift */,
+				795AB38A1BE29FCF00FD6BD8 /* TMFacebookLoginViewController.swift */,
 				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 			);
