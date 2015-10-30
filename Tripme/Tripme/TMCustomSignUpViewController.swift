@@ -27,6 +27,8 @@ class TMCustomSignUpViewController: UIViewController
         // Dispose of any resources that can be recreated.
     }
     
+    // Ações
+    
     @IBAction func btSignUp(sender: AnyObject)
     {
         
