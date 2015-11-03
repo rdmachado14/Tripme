@@ -17,8 +17,15 @@ class TMInitialViewController: UIViewController
     {
         super.viewDidLoad()
         
-        
-
+        // verificação para saber se o usuário está logado
+        if FBSDKAccessToken.currentAccessToken() == nil
+        {
+            print("Não logado")
+        }
+        else
+        {
+            print("Logado")
+        }
         
     }
 
@@ -56,18 +63,27 @@ class TMInitialViewController: UIViewController
     
     @IBAction func btFB(sender: AnyObject)
     {
-        // verificação para saber se o usuário está logado
-        if FBSDKAccessToken.currentAccessToken() == nil
-        {
-            print("Não logado")
+        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+        fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
+            if (error == nil){
+                let fbloginresult : FBSDKLoginManagerLoginResult = result
+                if(fbloginresult.grantedPermissions.contains("email"))
+                {
+                    self.getFBUserData()
+                    fbLoginManager.logOut()
+                }
+            }
+        })
+    }
+    
+    func getFBUserData(){
+        if((FBSDKAccessToken.currentAccessToken()) != nil){
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+                if (error == nil){
+                    print(result)
+                }
+            })
         }
-        else
-        {
-            print("Logado")
-        }
-        
-        let loginButton = FBSDKLoginButton() // botão de login do Facebook
-        loginButton.readPermissions = ["public_profile", "email", "user_friends"] // permissões do usuário
     }
 
 
