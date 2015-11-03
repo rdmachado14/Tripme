@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */; };
+		5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */; };
+		5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281C51BE8E9DF002D90EE /* Trips.swift */; };
 		795AB38F1BE2A00800FD6BD8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */; };
 		795AB3901BE2A00800FD6BD8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */; };
 		795AB3911BE2A00800FD6BD8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38E1BE2A00800FD6BD8 /* FBSDKCoreKit.framework */; };
@@ -54,6 +57,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuViewController.swift; sourceTree = "<group>"; };
+		5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuItensCell.swift; sourceTree = "<group>"; };
+		5EF281C51BE8E9DF002D90EE /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		795AB38E1BE2A00800FD6BD8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -131,6 +137,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5EF281C01BE8E928002D90EE /* Menu Inicial */ = {
+			isa = PBXGroup;
+			children = (
+				5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */,
+				5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */,
+			);
+			name = "Menu Inicial";
+			sourceTree = "<group>";
+		};
 		795AB3921BE2A28700FD6BD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -146,6 +161,7 @@
 				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
+				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -155,6 +171,7 @@
 			children = (
 				79F0715B1BCEE87600646DD5 /* Tripme.xcdatamodeld */,
 				79F071631BCEE87600646DD5 /* Info.plist */,
+				5EF281C51BE8E9DF002D90EE /* Trips.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -370,10 +387,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */,
+				5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */,
 				795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */,
 				79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */,
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
+				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
 				79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
