@@ -262,6 +262,14 @@
                                     <action selector="btFB:" destination="Tzl-YC-y1W" eventType="touchUpInside" id="06k-gO-kYI"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nuvens-3" translatesAutoresizingMaskIntoConstraints="NO" id="FkI-9R-tt2">
+                                <rect key="frame" x="22" y="34" width="330" height="193"/>
+                                <animations/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-10" translatesAutoresizingMaskIntoConstraints="NO" id="5fX-Ca-NgK">
+                                <rect key="frame" x="105" y="49" width="167" height="163"/>
+                                <animations/>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.11372549019607843" green="0.9137254901960784" blue="0.71372549019607845" alpha="1" colorSpace="calibratedRGB"/>
@@ -279,6 +287,8 @@
         <image name="Criarconta-7" width="308" height="67"/>
         <image name="Facebook-button-7" width="308" height="67"/>
         <image name="LoginButton-7" width="308" height="67"/>
+        <image name="Nuvens-3" width="330" height="193"/>
+        <image name="logo-10" width="167" height="163"/>
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
