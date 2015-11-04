@@ -247,10 +247,6 @@
                                     <segue destination="lbM-8o-vo7" kind="show" id="cyM-Kj-j5E"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-10" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-fS-stX">
-                                <rect key="frame" x="104" y="49" width="167" height="168"/>
-                                <animations/>
-                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Easier to travel" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CG3-iV-NIP">
                                 <rect key="frame" x="112" y="240" width="150" height="21"/>
                                 <animations/>
@@ -283,7 +279,6 @@
         <image name="Criarconta-7" width="308" height="67"/>
         <image name="Facebook-button-7" width="308" height="67"/>
         <image name="LoginButton-7" width="308" height="67"/>
-        <image name="logo-10" width="167" height="163"/>
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
