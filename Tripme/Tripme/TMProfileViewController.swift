@@ -14,15 +14,18 @@ class TMProfileViewController: UIViewController
 {
     @IBOutlet weak var img: UIImageView!
     @IBOutlet weak var lbFacebookName: UILabel!
+    @IBOutlet weak var lbFacebookLocation: UILabel!
     
     var imagem : UIImage!
     var name: String!
+    var location: String!
     
     override func viewDidAppear(animated: Bool)
     {
         
         img.image = imagem
         lbFacebookName.text = name
+        lbFacebookLocation.text = location
         
         
     }

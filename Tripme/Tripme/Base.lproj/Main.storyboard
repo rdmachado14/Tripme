@@ -361,6 +361,7 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="img" destination="m6d-SN-rYD" id="hL3-28-M8k"/>
+                        <outlet property="lbFacebookLocation" destination="F8E-4w-NFK" id="EJY-2U-Lb1"/>
                         <outlet property="lbFacebookName" destination="Bax-wa-WwT" id="gfj-IX-XrW"/>
                     </connections>
                 </viewController>
