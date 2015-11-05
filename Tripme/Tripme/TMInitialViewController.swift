@@ -16,8 +16,13 @@ class TMInitialViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
-        // verificação para saber se o usuário está logado
+    
+    
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+
+//        verificação para saber se o usuário está logado
         if FBSDKAccessToken.currentAccessToken() == nil
         {
             print("Não logado")
@@ -25,10 +30,18 @@ class TMInitialViewController: UIViewController
         else
         {
             print("Logado")
+            
+            // chamando a controller de pefil
+            UIApplication.sharedApplication().keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as? TMProfileViewController
+            
         }
+
+        
         
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -58,7 +71,6 @@ class TMInitialViewController: UIViewController
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
     {
         print("Usuário saiu")
-        
     }
     
     @IBAction func btFB(sender: AnyObject)
@@ -74,6 +86,9 @@ class TMInitialViewController: UIViewController
                 }
             }
         })
+        
+//        let sb = UIStoryboard(name: "profile", bundle: nil)
+        
     }
     
     func getFBUserData(){

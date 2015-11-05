@@ -7,29 +7,36 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 
-class TMProfileViewController: UIViewController {
-
-    override func viewDidLoad() {
+class TMProfileViewController: UIViewController
+{
+    @IBOutlet weak var ivProfilePicture: UIImageView!
+    var profilePictureView = FBSDKProfilePictureView()
+    
+    
+    override func viewDidLoad()
+    {
         super.viewDidLoad()
+        
 
-        // Do any additional setup after loading the view.
+        
     }
 
-    override func didReceiveMemoryWarning() {
+    override func didReceiveMemoryWarning()
+    {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+        
     }
     
+//    func loadPicture() -> FBSDKProfilePictureView
+//    {
+//        if !profilePictureView
+//        {
+//            profilePictureView = FBSDKProfilePictureView.init(frame: self)
+//        }
+//    }
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
+    
 }
