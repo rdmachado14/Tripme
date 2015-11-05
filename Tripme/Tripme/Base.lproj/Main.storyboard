@@ -63,7 +63,7 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="J5d-rm-4on"/>
                                 </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo-10" translatesAutoresizingMaskIntoConstraints="NO" id="8J1-Qz-JxY">
