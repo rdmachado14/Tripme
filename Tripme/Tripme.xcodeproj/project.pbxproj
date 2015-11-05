@@ -17,6 +17,7 @@
 		795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */; };
 		795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */; };
 		795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */; };
+		79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */; };
 		79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071541BCEE87600646DD5 /* AppDelegate.swift */; };
 		79F0715A1BCEE87600646DD5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F071581BCEE87600646DD5 /* Main.storyboard */; };
 		79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 79F0715B1BCEE87600646DD5 /* Tripme.xcdatamodeld */; };
@@ -67,6 +68,7 @@
 		795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomLoginViewController.swift; sourceTree = "<group>"; };
 		795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomSignUpViewController.swift; sourceTree = "<group>"; };
 		795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMInitialViewController.swift; sourceTree = "<group>"; };
+		79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileViewController.swift; sourceTree = "<group>"; };
 		79F071511BCEE87600646DD5 /* Tripme.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripme.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F071541BCEE87600646DD5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		79F071591BCEE87600646DD5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -161,6 +163,7 @@
 				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
+				79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 			);
 			name = Controller;
@@ -388,6 +391,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */,
+				79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */,
 				5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */,
 				795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */,
 				79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */,
