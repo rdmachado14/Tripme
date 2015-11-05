@@ -12,31 +12,29 @@ import FBSDKLoginKit
 
 class TMProfileViewController: UIViewController
 {
-    @IBOutlet weak var ivProfilePicture: UIImageView!
-    var profilePictureView = FBSDKProfilePictureView()
+    @IBOutlet weak var img: UIImageView!
     
+    var imagem : UIImage!
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
+    override func viewDidAppear(animated: Bool) {
         
-
+        print(imagem)
+        
+        print("A imagem chegou")
+        print(img)
+        
+        img.image = imagem
+        
         
     }
+    
+    
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         
     }
-    
-//    func loadPicture() -> FBSDKProfilePictureView
-//    {
-//        if !profilePictureView
-//        {
-//            profilePictureView = FBSDKProfilePictureView.init(frame: self)
-//        }
-//    }
 
     
 }

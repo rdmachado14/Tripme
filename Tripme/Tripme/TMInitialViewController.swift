@@ -20,7 +20,8 @@ class TMInitialViewController: UIViewController
     
     }
     
-    override func viewDidAppear(animated: Bool) {
+    @IBOutlet weak var img: UIImageView!
+      override func viewDidAppear(animated: Bool) {
 
 //        verificação para saber se o usuário está logado
         if FBSDKAccessToken.currentAccessToken() == nil
@@ -33,7 +34,6 @@ class TMInitialViewController: UIViewController
             
             // chamando a controller de pefil
             UIApplication.sharedApplication().keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as? TMProfileViewController
-            
         }
 
         
@@ -95,7 +95,38 @@ class TMInitialViewController: UIViewController
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
+                  
                     print(result)
+            
+                    let pic = result["picture"] as! NSDictionary
+                    let data = pic["data"] as! NSDictionary
+                    let url = data["url"] as! String
+                
+                    
+    if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data) {
+                        print(downloadedImage.size)
+                        print(data.length)
+                        print(downloadedImage)
+        
+//                        self.img.image = downloadedImage
+        
+        
+        let profile = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as! TMProfileViewController
+        
+        print("Profile")
+        print(profile)
+        print("Profile.img")
+//        print(profile.img)
+        
+     
+        profile.imagem = downloadedImage
+//        profile.img.image = downloadedImage
+        
+        UIApplication.sharedApplication().keyWindow?.rootViewController = profile
+        
+        
+        
+                    }
                 }
             })
         }
