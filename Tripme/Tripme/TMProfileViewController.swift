@@ -13,13 +13,16 @@ import FBSDKLoginKit
 class TMProfileViewController: UIViewController
 {
     @IBOutlet weak var img: UIImageView!
+    @IBOutlet weak var lbFacebookName: UILabel!
     
     var imagem : UIImage!
+    var name: String!
     
     override func viewDidAppear(animated: Bool)
     {
         
         img.image = imagem
+        lbFacebookName.text = name
         
         
     }

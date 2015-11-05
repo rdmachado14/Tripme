@@ -32,8 +32,6 @@ class TMInitialViewController: UIViewController
         {
             print("Logado")
             
-            // chamando a controller de pefil
-            UIApplication.sharedApplication().keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as? TMProfileViewController
         }
 
         
@@ -96,10 +94,12 @@ class TMInitialViewController: UIViewController
                 if (error == nil){
                   
                     print(result)
-            
+                    
+                    // constantes para pegar as informações do usuário direto do Facebook
                     let pic = result["picture"] as! NSDictionary
                     let data = pic["data"] as! NSDictionary
                     let url = data["url"] as! String
+                    let name = result["name"] as! String
                 
                     
                     if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data)
@@ -117,10 +117,14 @@ class TMInitialViewController: UIViewController
 
         
      
-                        profile.imagem = downloadedImage
+                        profile.imagem = downloadedImage // carregando imagem do perfil
+                        profile.name = name // carregando o nome do perfil
+
         
                         UIApplication.sharedApplication().keyWindow?.rootViewController = profile
                     }
+                    
+                    
                 }
             })
         }
