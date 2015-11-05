@@ -87,11 +87,10 @@ class TMInitialViewController: UIViewController
             }
         })
         
-//        let sb = UIStoryboard(name: "profile", bundle: nil)
-        
     }
     
-    func getFBUserData(){
+    func getFBUserData()
+    {
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
@@ -103,36 +102,27 @@ class TMInitialViewController: UIViewController
                     let url = data["url"] as! String
                 
                     
-    if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data) {
+                    if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data)
+                    {
                         print(downloadedImage.size)
                         print(data.length)
                         print(downloadedImage)
         
-//                        self.img.image = downloadedImage
         
+                        let profile = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as! TMProfileViewController
         
-        let profile = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as! TMProfileViewController
-        
-        print("Profile")
-        print(profile)
-        print("Profile.img")
-//        print(profile.img)
+                        print("Profile")
+                        print(profile)
+                        print("Profile.img")
+
         
      
-        profile.imagem = downloadedImage
-//        profile.img.image = downloadedImage
+                        profile.imagem = downloadedImage
         
-        UIApplication.sharedApplication().keyWindow?.rootViewController = profile
-        
-        
-        
+                        UIApplication.sharedApplication().keyWindow?.rootViewController = profile
                     }
                 }
             })
         }
     }
-
-
-
-    
 }

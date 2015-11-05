@@ -16,20 +16,14 @@ class TMProfileViewController: UIViewController
     
     var imagem : UIImage!
     
-    override func viewDidAppear(animated: Bool) {
-        
-        print(imagem)
-        
-        print("A imagem chegou")
-        print(img)
+    override func viewDidAppear(animated: Bool)
+    {
         
         img.image = imagem
         
         
     }
     
-    
-
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -37,4 +31,5 @@ class TMProfileViewController: UIViewController
     }
 
     
+
 }
