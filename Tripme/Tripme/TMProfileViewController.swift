@@ -20,20 +20,25 @@ class TMProfileViewController: UIViewController
     var name: String!
     var location: String!
     
+    // MARK: - UICollectionViewDataSource
+    private var profileTrips = TMProfileTrips.createdTrips()
+    
     override func viewDidAppear(animated: Bool)
     {
-        
         img.image = imagem
         lbFacebookName.text = name
         lbFacebookLocation.text = location
-        
-        
     }
     
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
         
+    }
+    
+    private struct Storyboard
+    {
+        static let CellIdentifier = "createdTrips"
     }
     
 }
@@ -47,23 +52,16 @@ extension TMProfileViewController: UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return trips.count
+        return profileTrips.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let cell:TMMenuItensCell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! TMMenuItensCell
+        let cell:TMProfileViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! TMProfileViewCell
         
-        cell.trips = self.trips[indexPath.item]
-        //cell.featuredImageView.im
-        
+        cell.profileTrips = self.profileTrips[indexPath.item]
         return cell
     }
 
-}
-
-extension TMProfileViewController: UICollectionViewDelegate
-{
-    
 }
 

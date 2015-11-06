@@ -10,10 +10,10 @@ import UIKit
 
 class TMProfileTrips
 {
-    var tripName: String! // nome da viagem
-    var user: String! // nome do usuário
-    var moneyRaised: Double! // dinheiro arrecadado
-    var moneyTotal: Double! // total para ser arrecadado
+    var tripName = "" // nome da viagem
+    var user = "" // nome do usuário
+    var moneyRaised = 0.0 // dinheiro arrecadado
+    var moneyTotal = 0.0 // total para ser arrecadado
     var imageUser: UIImage! // imagem do usuário
     
     // método construtor
@@ -29,8 +29,7 @@ class TMProfileTrips
     // função para manipular a collection
     static func createdTrips() -> [TMProfileTrips]
     {
-        return
-        [
+        return [
             TMProfileTrips(tripName: "Mochilão na Améica do Sul", user: "Michel Paz", moneyRaised: 10000, moneyTotal: 20000, imageUser: UIImage(named: "p2")!),
             TMProfileTrips(tripName: "Passeio na Estrela da Morte", user: "Michel Paz", moneyRaised: 1, moneyTotal: 2, imageUser: UIImage(named: "p3")!)
             
