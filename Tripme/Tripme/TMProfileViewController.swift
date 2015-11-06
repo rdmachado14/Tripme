@@ -35,7 +35,35 @@ class TMProfileViewController: UIViewController
         super.didReceiveMemoryWarning()
         
     }
-
     
+}
+
+extension TMProfileViewController: UICollectionViewDataSource
+{
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
+    {
+        return 1
+    }
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
+    {
+        return trips.count
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
+    {
+        let cell:TMMenuItensCell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! TMMenuItensCell
+        
+        cell.trips = self.trips[indexPath.item]
+        //cell.featuredImageView.im
+        
+        return cell
+    }
 
 }
+
+extension TMProfileViewController: UICollectionViewDelegate
+{
+    
+}
+
