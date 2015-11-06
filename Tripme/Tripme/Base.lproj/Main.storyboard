@@ -549,8 +549,8 @@
                                     <action selector="btFB:" destination="Tzl-YC-y1W" eventType="touchUpInside" id="06k-gO-kYI"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nuvens-3" translatesAutoresizingMaskIntoConstraints="NO" id="FkI-9R-tt2">
-                                <rect key="frame" x="22" y="34" width="330" height="193"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Logo-Nuvem-3" translatesAutoresizingMaskIntoConstraints="NO" id="aT5-fS-stX">
+                                <rect key="frame" x="23" y="40" width="329" height="192"/>
                                 <animations/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo-10" translatesAutoresizingMaskIntoConstraints="NO" id="5fX-Ca-NgK">
@@ -578,7 +578,7 @@
         <image name="Facebook-button-7" width="308" height="67"/>
         <image name="Linha divisoria-7" width="273" height="1"/>
         <image name="LoginButton-7" width="308" height="67"/>
-        <image name="Nuvens-3" width="330" height="193"/>
+        <image name="Logo-Nuvem-3" width="330" height="193"/>
         <image name="logo-10" width="167" height="163"/>
         <image name="r1" width="750" height="513"/>
     </resources>
