@@ -50,6 +50,7 @@ class TMCustomLoginViewController: UIViewController
                 {
                     let alert = UIAlertView(title: "Sucesso!", message: "Você está logado!", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
+                    self.dismissViewControllerAnimated(true, completion: nil)
                 }
                 else
                 {
