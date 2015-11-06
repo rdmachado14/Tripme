@@ -26,7 +26,16 @@ class TMProfileTrips
         self.imageUser = imageUser
     }
     
-    
+    // função para manipular a collection
+    static func createdTrips() -> [TMProfileTrips]
+    {
+        return
+        [
+            TMProfileTrips(tripName: "Mochilão na Améica do Sul", user: "Michel Paz", moneyRaised: 10000, moneyTotal: 20000, imageUser: UIImage(named: "p2")!),
+            TMProfileTrips(tripName: "Passeio na Estrela da Morte", user: "Michel Paz", moneyRaised: 1, moneyTotal: 2, imageUser: UIImage(named: "p3")!)
+            
+        ]
+    }
     
     
 }
