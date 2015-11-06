@@ -1,5 +1,5 @@
 //
-//  TMCreateTripes.swift
+//  TMProfileTrips.swift
 //  Tripme
 //
 //  Created by Rodrigo Machado on 11/6/15.
