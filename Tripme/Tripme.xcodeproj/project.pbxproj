@@ -86,10 +86,6 @@
 		79F071731BCEE87600646DD5 /* TripmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F071771BCEE87600646DD5 /* TripmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripmeUITests.swift; sourceTree = "<group>"; };
 		79F071791BCEE87600646DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A72381521BEB95A40089609C /* Tondo_Trial_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Bd.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Bd.ttf; sourceTree = "<group>"; };
-		A72381531BEB95A40089609C /* Tondo_Trial_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Lt.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Lt.ttf; sourceTree = "<group>"; };
-		A72381541BEB95A40089609C /* Tondo_Trial_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Rg.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Rg.ttf; sourceTree = "<group>"; };
-		A72381551BEB95A40089609C /* Tondo_Trial_Sign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Sign.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Sign.ttf; sourceTree = "<group>"; };
 		A7B62CAF1BE14FE600145361 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A7B62CB01BE14FE600145361 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A7B62CB31BE1504500145361 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -220,7 +216,6 @@
 		79F071531BCEE87600646DD5 /* Tripme */ = {
 			isa = PBXGroup;
 			children = (
-				A72381511BEB957A0089609C /* Fontes */,
 				795AB3941BE2A2A900FD6BD8 /* Model */,
 				795AB3931BE2A29800FD6BD8 /* Controller */,
 				795AB3921BE2A28700FD6BD8 /* View */,
@@ -247,17 +242,6 @@
 				79F071791BCEE87600646DD5 /* Info.plist */,
 			);
 			path = TripmeUITests;
-			sourceTree = "<group>";
-		};
-		A72381511BEB957A0089609C /* Fontes */ = {
-			isa = PBXGroup;
-			children = (
-				A72381521BEB95A40089609C /* Tondo_Trial_Bd.ttf */,
-				A72381531BEB95A40089609C /* Tondo_Trial_Lt.ttf */,
-				A72381541BEB95A40089609C /* Tondo_Trial_Rg.ttf */,
-				A72381551BEB95A40089609C /* Tondo_Trial_Sign.ttf */,
-			);
-			name = Fontes;
 			sourceTree = "<group>";
 		};
 		A7B62CAE1BE14FAB00145361 /* Frameworks */ = {

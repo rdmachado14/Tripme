@@ -20,6 +20,25 @@
         </mutableArray>
     </customFonts>
     <scenes>
+        <!--View Controller-->
+        <scene sceneID="HDa-Sr-HJf">
+            <objects>
+                <viewController id="hsW-c2-l70" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="DMf-xs-N7J"/>
+                        <viewControllerLayoutGuide type="bottom" id="eVU-zr-Qg5"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="OW0-Pa-gog">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G8d-ha-JtW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2616" y="87"/>
+        </scene>
         <!--Custom Login View Controller-->
         <scene sceneID="O0v-cP-Kp9">
             <objects>
@@ -505,26 +524,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOD-zU-jWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1977.5" y="547.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="hLb-ig-Huh">
-            <objects>
-                <viewController id="wtC-47-Og9" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="tFh-WC-03G"/>
-                        <viewControllerLayoutGuide type="bottom" id="FaW-vc-jNI"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="9M2-ZX-Ydg">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="HJ9-M1-8eT" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2551.5" y="63.5"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="5FO-9z-jcQ">
