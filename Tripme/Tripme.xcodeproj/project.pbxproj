@@ -17,6 +17,7 @@
 		795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */; };
 		795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */; };
 		795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */; };
+		79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */; };
 		79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */; };
 		79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */; };
 		79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */; };
@@ -70,6 +71,7 @@
 		795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomLoginViewController.swift; sourceTree = "<group>"; };
 		795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomSignUpViewController.swift; sourceTree = "<group>"; };
 		795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMInitialViewController.swift; sourceTree = "<group>"; };
+		79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSearchViewController.swift; sourceTree = "<group>"; };
 		79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileTrips.swift; sourceTree = "<group>"; };
 		79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileViewCell.swift; sourceTree = "<group>"; };
 		79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileViewController.swift; sourceTree = "<group>"; };
@@ -169,6 +171,7 @@
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
+				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -413,6 +416,7 @@
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
+				79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */,
 				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
 				79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */,
 			);
