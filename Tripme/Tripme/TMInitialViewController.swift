@@ -50,10 +50,15 @@ class TMInitialViewController: UIViewController
         else
         {
             print("Logado")
+            
         }
+
+        
         
     }
-
+    
+    
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -83,13 +88,12 @@ class TMInitialViewController: UIViewController
     func loginButtonDidLogOut(loginButton: FBSDKLoginButton!)
     {
         print("Usuário saiu")
-        
     }
     
     @IBAction func btFB(sender: AnyObject)
     {
         let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager .logInWithReadPermissions(["email"], handler: { (result, error) -> Void in
+        fbLoginManager .logInWithReadPermissions(["email","user_location"], handler: { (result, error) -> Void in // pegando tokens do facebook
             if (error == nil){
                 let fbloginresult : FBSDKLoginManagerLoginResult = result
                 if(fbloginresult.grantedPermissions.contains("email"))
@@ -99,13 +103,48 @@ class TMInitialViewController: UIViewController
                 }
             }
         })
+        
     }
     
-    func getFBUserData(){
+    func getFBUserData()
+    {
         if((FBSDKAccessToken.currentAccessToken()) != nil){
-            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (connection, result, error) -> Void in
+            FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email, location"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
+                  
                     print(result)
+                    
+                    // constantes para pegar as informações do usuário direto do Facebook
+                    let pic = result["picture"] as! NSDictionary
+                    let data = pic["data"] as! NSDictionary
+                    let url = data["url"] as! String
+                    let name = result["name"] as! String
+                    let location = result["location"] as! NSDictionary
+                    let nameLocation = location["name"] as! String
+                
+                    if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data)
+                    {
+                        print(downloadedImage.size)
+                        print(data.length)
+                        print(downloadedImage)
+        
+                        let profile = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as! TMProfileViewController
+        
+                        print("Profile")
+                        print(profile)
+                        print("Profile.img")
+
+        
+     
+                        profile.imagem = downloadedImage // carregando imagem do perfil
+                        profile.name = name // carregando o nome do perfil
+                        profile.location = nameLocation // carregando a localização do perfil
+
+        
+                        UIApplication.sharedApplication().keyWindow?.rootViewController = profile
+                    }
+                    
+                    
                 }
             })
         }
