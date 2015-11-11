@@ -17,6 +17,7 @@
 		795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */; };
 		795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */; };
 		795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */; };
+		79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */; };
 		79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */; };
 		79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */; };
 		79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */; };
@@ -71,6 +72,7 @@
 		795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomLoginViewController.swift; sourceTree = "<group>"; };
 		795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomSignUpViewController.swift; sourceTree = "<group>"; };
 		795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMInitialViewController.swift; sourceTree = "<group>"; };
+		79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSearchViewController.swift; sourceTree = "<group>"; };
 		79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileTrips.swift; sourceTree = "<group>"; };
 		79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileViewCell.swift; sourceTree = "<group>"; };
 		79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileViewController.swift; sourceTree = "<group>"; };
@@ -87,10 +89,6 @@
 		79F071731BCEE87600646DD5 /* TripmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F071771BCEE87600646DD5 /* TripmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripmeUITests.swift; sourceTree = "<group>"; };
 		79F071791BCEE87600646DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		A72381521BEB95A40089609C /* Tondo_Trial_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Bd.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Bd.ttf; sourceTree = "<group>"; };
-		A72381531BEB95A40089609C /* Tondo_Trial_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Lt.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Lt.ttf; sourceTree = "<group>"; };
-		A72381541BEB95A40089609C /* Tondo_Trial_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Rg.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Rg.ttf; sourceTree = "<group>"; };
-		A72381551BEB95A40089609C /* Tondo_Trial_Sign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = Tondo_Trial_Sign.ttf; path = ../../../../SharePlan/Tripme/Fontes/Trial_tondo/Tondo_Trial_Sign.ttf; sourceTree = "<group>"; };
 		A7B62CAF1BE14FE600145361 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A7B62CB01BE14FE600145361 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A7B62CB31BE1504500145361 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -176,6 +174,7 @@
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
+				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -223,7 +222,6 @@
 		79F071531BCEE87600646DD5 /* Tripme */ = {
 			isa = PBXGroup;
 			children = (
-				A72381511BEB957A0089609C /* Fontes */,
 				795AB3941BE2A2A900FD6BD8 /* Model */,
 				795AB3931BE2A29800FD6BD8 /* Controller */,
 				795AB3921BE2A28700FD6BD8 /* View */,
@@ -250,17 +248,6 @@
 				79F071791BCEE87600646DD5 /* Info.plist */,
 			);
 			path = TripmeUITests;
-			sourceTree = "<group>";
-		};
-		A72381511BEB957A0089609C /* Fontes */ = {
-			isa = PBXGroup;
-			children = (
-				A72381521BEB95A40089609C /* Tondo_Trial_Bd.ttf */,
-				A72381531BEB95A40089609C /* Tondo_Trial_Lt.ttf */,
-				A72381541BEB95A40089609C /* Tondo_Trial_Rg.ttf */,
-				A72381551BEB95A40089609C /* Tondo_Trial_Sign.ttf */,
-			);
-			name = Fontes;
 			sourceTree = "<group>";
 		};
 		A7B62CAE1BE14FAB00145361 /* Frameworks */ = {
@@ -433,6 +420,7 @@
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
+				79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */,
 				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
 				79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */,
 			);
