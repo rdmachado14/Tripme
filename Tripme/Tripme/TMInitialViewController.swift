@@ -10,6 +10,7 @@ import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
 import Parse
+import ParseFacebookUtilsV4
 
 class TMInitialViewController: UIViewController
 {
@@ -33,14 +34,6 @@ class TMInitialViewController: UIViewController
     {
         super.viewDidLoad()
         
-//        let currentUser = PFUser.currentUser()
-//        if (currentUser != nil) {
-//            print("esta logado \(currentUser)")
-//
-//        } else {
-//            print("nao esta logado \(currentUser)")
-//            
-//        }
         
         // verificação para saber se o usuário está logado
         if FBSDKAccessToken.currentAccessToken() == nil
@@ -92,17 +85,56 @@ class TMInitialViewController: UIViewController
     
     @IBAction func btFB(sender: AnyObject)
     {
-        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
-        fbLoginManager .logInWithReadPermissions(["email","user_location"], handler: { (result, error) -> Void in // pegando tokens do facebook
-            if (error == nil){
-                let fbloginresult : FBSDKLoginManagerLoginResult = result
-                if(fbloginresult.grantedPermissions.contains("email"))
-                {
-                    self.getFBUserData()
-                    fbLoginManager.logOut()
+        
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"]) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let user = user {
+                if user.isNew {
+                    FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (conection, result, error) -> Void in
+                        if (error == nil) {
+                            if (result["email"] != nil) {
+                                user["email"] = result["email"]
+                            }
+                            if (result["first_name"] != nil) {
+                                user["primeiroNome"] = result["first_name"]
+                            }
+                            if (result["last_name"] != nil) {
+                                user["ultimoNome"] = result["last_name"]
+                            }
+                            if (result["picture"] != nil) {
+                                let pic = result["picture"] as! NSDictionary
+                                let data = pic["data"] as! NSDictionary
+                                let url = data["url"] as! String
+                                if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data) {
+                                    print("testando essa porra aqui\(downloadedImage)")
+                                    let imageData = UIImagePNGRepresentation(downloadedImage)
+
+                                    let ias:PFFile = PFFile(name: "perfilFace", data: imageData!)!
+                                    user["foto"] = ias
+                                }
+                            }
+                            user.saveInBackground()
+                        }
+                    })
+                    print("User signed up and logged in through Facebook!")
+                } else {
+                    print("User logged in through Facebook!")
                 }
+            } else {
+                print("Uh oh. The user cancelled the Facebook login.")
             }
-        })
+        }
+//        let fbLoginManager : FBSDKLoginManager = FBSDKLoginManager()
+//        fbLoginManager .logInWithReadPermissions(["email","user_location"], handler: { (result, error) -> Void in // pegando tokens do facebook
+//            if (error == nil){
+//                let fbloginresult : FBSDKLoginManagerLoginResult = result
+//                if(fbloginresult.grantedPermissions.contains("email"))
+//                {
+//                    self.getFBUserData()
+//                    fbLoginManager.logOut()
+//                }
+//             }
+//        })
         
     }
     
@@ -111,7 +143,7 @@ class TMInitialViewController: UIViewController
         if((FBSDKAccessToken.currentAccessToken()) != nil){
             FBSDKGraphRequest(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email, location"]).startWithCompletionHandler({ (connection, result, error) -> Void in
                 if (error == nil){
-                  
+                  print("entrou awui 2")
                     print(result)
                     
                     // constantes para pegar as informações do usuário direto do Facebook
@@ -124,24 +156,33 @@ class TMInitialViewController: UIViewController
                 
                     if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data)
                     {
+                        print("entrou awui")
                         print(downloadedImage.size)
                         print(data.length)
-                        print(downloadedImage)
+                        print("testando essa porra aqui\(downloadedImage)")
+                        
+                        
+                        let currentUser = PFUser.currentUser()
+                        let imageData = UIImagePNGRepresentation(downloadedImage)
+                        print("testando o imageData: \(imageData)")
+                        let ias:PFFile = PFFile(name: "perfilFace", data: imageData!)!
+                        currentUser!["foto"] = ias
+                        currentUser!.saveInBackground()
         
-                        let profile = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as! TMProfileViewController
-        
-                        print("Profile")
-                        print(profile)
-                        print("Profile.img")
-
-        
-     
-                        profile.imagem = downloadedImage // carregando imagem do perfil
-                        profile.name = name // carregando o nome do perfil
-                        profile.location = nameLocation // carregando a localização do perfil
-
-        
-                        UIApplication.sharedApplication().keyWindow?.rootViewController = profile
+//                        let profile = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("profile") as! TMProfileViewController
+//        
+//                        print("Profile")
+//                        print(profile)
+//                        print("Profile.img")
+//
+//                        
+//     
+//                        profile.imagem = downloadedImage // carregando imagem do perfil
+//                        profile.name = name // carregando o nome do perfil
+//                        profile.location = nameLocation // carregando a localização do perfil
+//
+//        
+//                        UIApplication.sharedApplication().keyWindow?.rootViewController = profile
                     }
                     
                     
