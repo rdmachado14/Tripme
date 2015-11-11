@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hsW-c2-l70">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C95-Ax-Ebp">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -89,10 +89,10 @@
             </objects>
             <point key="canvasLocation" x="3172.5" y="64.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Share View Controller-->
         <scene sceneID="Cob-i2-aDH">
             <objects>
-                <viewController id="C95-Ax-Ebp" sceneMemberID="viewController">
+                <viewController id="C95-Ax-Ebp" customClass="TMShareViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0Zg-9C-Hbp"/>
                         <viewControllerLayoutGuide type="bottom" id="yws-E3-NhW"/>
@@ -105,11 +105,17 @@
                                 <rect key="frame" x="75" y="176" width="225" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Compartilhar no Facebook"/>
+                                <connections>
+                                    <action selector="btShareFacebook:" destination="C95-Ax-Ebp" eventType="touchUpInside" id="EIx-6I-O5d"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-mw-IfO">
                                 <rect key="frame" x="75" y="254" width="225" height="30"/>
                                 <animations/>
                                 <state key="normal" title="Compartilhar no Twitter"/>
+                                <connections>
+                                    <action selector="btShareTwitter:" destination="C95-Ax-Ebp" eventType="touchUpInside" id="nOj-xG-Bad"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>

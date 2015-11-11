@@ -169,7 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				79D4A0B51BECEC1B000E552D /* Profile */,
-				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
+				79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */,
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
@@ -193,8 +193,8 @@
 			isa = PBXGroup;
 			children = (
 				79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */,
+				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
 				79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */,
-				79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
