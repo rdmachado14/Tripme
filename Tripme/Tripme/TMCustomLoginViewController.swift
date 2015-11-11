@@ -13,12 +13,29 @@ class TMCustomLoginViewController: UIViewController
 {
     @IBOutlet weak var tfUsername: UITextField!
     @IBOutlet weak var tfPassword: UITextField!
+    @IBOutlet weak var tfButton: UIButton!
+    @IBOutlet weak var tfFacebutton: UIButton!
+    @IBOutlet weak var navigationTitulo: UINavigationItem!
     
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        tfUsername.borderStyle = UITextBorderStyle.RoundedRect
+        tfUsername.layer.cornerRadius = 4
+        
+        tfPassword.borderStyle = UITextBorderStyle.RoundedRect
+        tfPassword.layer.cornerRadius = 4
+        
+        tfButton.layer.cornerRadius = 4
+        
+        tfFacebutton.layer.cornerRadius = 4
+        
+        
     }
+    
+    
 
     override func didReceiveMemoryWarning()
     {
@@ -50,7 +67,7 @@ class TMCustomLoginViewController: UIViewController
                 {
                     let alert = UIAlertView(title: "Sucesso!", message: "Você está logado!", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
-                    self.dismissViewControllerAnimated(true, completion: nil)
+                    UIApplication.sharedApplication().keyWindow?.rootViewController = TMMenuViewController()
                 }
                 else
                 {
@@ -65,5 +82,10 @@ class TMCustomLoginViewController: UIViewController
         }
     }
     
+
+    @IBAction func cancelar(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+        
+    }
     
 }

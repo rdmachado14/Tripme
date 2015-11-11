@@ -9,13 +9,38 @@
 import UIKit
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Parse
 
 class TMInitialViewController: UIViewController
 {
     
+    
+    override func viewDidAppear(animated: Bool) {
+        
+        let currentUser = PFUser.currentUser()
+        if (currentUser != nil) {
+            print("esta logado \(currentUser)")
+            //self.performSegueWithIdentifier("mainScreen", sender: nil)
+        } else {
+            print("nao esta logado \(currentUser)")
+            
+        }
+        
+    }
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+//        let currentUser = PFUser.currentUser()
+//        if (currentUser != nil) {
+//            print("esta logado \(currentUser)")
+//
+//        } else {
+//            print("nao esta logado \(currentUser)")
+//            
+//        }
         
         // verificação para saber se o usuário está logado
         if FBSDKAccessToken.currentAccessToken() == nil
@@ -47,7 +72,7 @@ class TMInitialViewController: UIViewController
         if error == nil
         {
             print("Login completo")
-            self.performSegueWithIdentifier("showNew", sender: self)
+            self.performSegueWithIdentifier("vai", sender: self)
         }
         else
         {
@@ -85,7 +110,12 @@ class TMInitialViewController: UIViewController
             })
         }
     }
-
+    
+    override func prepareForSegue(segue: UIStoryboardSegue?, sender: AnyObject?) {
+        
+        print(segue!.identifier)
+        
+    }
 
 
     
