@@ -128,7 +128,27 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kGy-hm-o61" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3898.5" y="-296.5"/>
+            <point key="canvasLocation" x="3697.5" y="-295.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="N7D-hf-byN">
+            <objects>
+                <viewController id="P1l-LT-USm" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Xp0-rh-qU0"/>
+                        <viewControllerLayoutGuide type="bottom" id="qkN-z0-jQT"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="QRv-Hd-ump">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Nb1-H4-r6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4271.5" y="-295.5"/>
         </scene>
         <!--Custom Login View Controller-->
         <scene sceneID="O0v-cP-Kp9">
