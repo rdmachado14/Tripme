@@ -42,6 +42,7 @@
 		A7B62CC61BE150BC00145361 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC51BE150BC00145361 /* libsqlite3.tbd */; };
 		A7B62CC81BE150C600145361 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC71BE150C600145361 /* Accounts.framework */; };
 		A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC91BE150D000145361 /* Social.framework */; };
+		A7D686201BF3C3FF006DD0F7 /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7D6861F1BF3C3FF006DD0F7 /* ParseFacebookUtilsV4.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -103,6 +104,7 @@
 		A7B62CC51BE150BC00145361 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A7B62CC71BE150C600145361 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A7B62CC91BE150D000145361 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A7D6861F1BF3C3FF006DD0F7 /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -124,6 +126,7 @@
 				A7B62CBA1BE1507600145361 /* CoreLocation.framework in Frameworks */,
 				A7B62CB81BE1506800145361 /* CoreGraphics.framework in Frameworks */,
 				A7B62CB61BE1505D00145361 /* CFNetwork.framework in Frameworks */,
+				A7D686201BF3C3FF006DD0F7 /* ParseFacebookUtilsV4.framework in Frameworks */,
 				A7B62CB41BE1504500145361 /* AudioToolbox.framework in Frameworks */,
 				A7B62CB21BE14FE600145361 /* Parse.framework in Frameworks */,
 				A7B62CB11BE14FE600145361 /* Bolts.framework in Frameworks */,
@@ -253,6 +256,7 @@
 		A7B62CAE1BE14FAB00145361 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A7D6861F1BF3C3FF006DD0F7 /* ParseFacebookUtilsV4.framework */,
 				A7B62CC91BE150D000145361 /* Social.framework */,
 				A7B62CC71BE150C600145361 /* Accounts.framework */,
 				A7B62CC51BE150BC00145361 /* libsqlite3.tbd */,
@@ -341,7 +345,7 @@
 				TargetAttributes = {
 					79F071501BCEE87600646DD5 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = ZUD974TE3Q;
+						DevelopmentTeam = 34PHTXR9K4;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -564,6 +568,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tripme",
@@ -579,6 +584,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/Tripme",

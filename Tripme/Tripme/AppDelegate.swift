@@ -11,6 +11,7 @@ import CoreData
 import Parse
 import Bolts
 import FBSDKCoreKit
+import ParseFacebookUtilsV4
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -29,9 +30,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("DBIjndvYua2TbE1kJc9coUHCrsS1bX9RG8iM6wcJ",
             clientKey: "mPhUDgkrIX20fgOHX3aFurzPrk57PmmC2dCvDRMR")
         
-        return FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
+        PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
+        FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
-//        return true
+        return true
         
     }
 
