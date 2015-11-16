@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="C95-Ax-Ebp">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tzl-YC-y1W">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -262,11 +262,12 @@
                         <outlet property="tfFacebutton" destination="dKy-N4-CDT" id="eo5-Go-i45"/>
                         <outlet property="tfPassword" destination="c0N-ol-mQx" id="Yr5-3c-cSg"/>
                         <outlet property="tfUsername" destination="uSA-aY-Fe4" id="IsN-YO-Lx0"/>
+                        <segue destination="ENh-HJ-8iU" kind="show" identifier="loginVai" id="Nyp-65-EYY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="S1X-6W-pKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3935" y="470"/>
+            <point key="canvasLocation" x="3040" y="900"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="s8k-zl-wKr">
@@ -580,7 +581,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3136.5" y="1163.5"/>
+            <point key="canvasLocation" x="3435.5" y="1445.5"/>
         </scene>
         <!--Profile View Controller-->
         <scene sceneID="Sav-K7-ki1">
@@ -865,10 +866,13 @@
         <image name="Criarconta-7" width="308" height="67"/>
         <image name="Facebook-button-7" width="308" height="67"/>
         <image name="Linha Divisória-11" width="375" height="2"/>
-        <image name="Linha com avião-11" width="375" height="28"/>
+        <image name="Linha com avião-11" width="320" height="549"/>
         <image name="LoginButton-7" width="308" height="67"/>
         <image name="Logo-Nuvem-3" width="330" height="193"/>
         <image name="logo-10" width="167" height="163"/>
         <image name="r1" width="750" height="513"/>
     </resources>
+    <inferredMetricsTieBreakers>
+        <segue reference="Nyp-65-EYY"/>
+    </inferredMetricsTieBreakers>
 </document>

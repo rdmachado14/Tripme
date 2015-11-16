@@ -67,7 +67,8 @@ class TMCustomLoginViewController: UIViewController
                 {
                     let alert = UIAlertView(title: "Sucesso!", message: "Você está logado!", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
-                    UIApplication.sharedApplication().keyWindow?.rootViewController = TMMenuViewController()
+                    self.performSegueWithIdentifier("loginVai", sender: self)
+                    //UIApplication.sharedApplication().keyWindow?.rootViewController = TMMenuViewController()
                 }
                 else
                 {
