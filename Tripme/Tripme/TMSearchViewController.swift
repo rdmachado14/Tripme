@@ -71,9 +71,9 @@ class TMSearchViewController: UIViewController, UITableViewDelegate, UITableView
         
         
         
-        query.getFirstObjectInBackgroundWithBlock {
-            (object: PFObject?, error: NSError?) -> Void in
-            if error != nil || object == nil {
+        query.findObjectsInBackgroundWithBlock {
+            (objects: [PFObject]?, error: NSError?) -> Void in
+            if error != nil || objects == nil {
                 print("The getFirstObject request failed.")
             } else {
                 // The find succeeded.
@@ -84,7 +84,7 @@ class TMSearchViewController: UIViewController, UITableViewDelegate, UITableView
                 
                 print("Não fez o request")
             
-            }else if object == nil{
+            }else if objects == nil{
             
                 print("Não retornou nada")
             
@@ -92,16 +92,20 @@ class TMSearchViewController: UIViewController, UITableViewDelegate, UITableView
             
                 self.searchResults.removeAll(keepCapacity: false)
                 
-                //                for object in objects {
-                let firstName = object!.objectForKey("nome") as! String
-                let lastName = object!.objectForKey("sobrenome") as! String
-                let fullName = firstName + " " + lastName
+                // busca dos objetos no banco
+                for object in objects!
+                {
+                    let firstName = object.objectForKey("nome") as! String
+                    let lastName = object.objectForKey("sobrenome") as! String
+                    let fullName = firstName + " " + lastName
                 
-                self.searchResults.append(fullName)
                 
-                self.myTableView.reloadData()
+                    self.searchResults.append(fullName)
                 
-                print(self.searchResults.count)
+                    self.myTableView.reloadData()
+                
+                    print(self.searchResults.count)
+                }
                 
             
             }

@@ -8,6 +8,8 @@
 
 import UIKit
 import Social
+import FBSDKShareKit
+import FBSDKCoreKit
 
 class TMShareViewController: UIViewController
 {
@@ -15,6 +17,17 @@ class TMShareViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let content = FBSDKShareLinkContent()
+        
+        content.contentURL = NSURL(string: "https://www.facebook.com")
+        
+        let shareButton = FBSDKShareButton()
+        
+        shareButton.shareContent = content
+        shareButton.center = self.view.center
+        self.view.addSubview(shareButton)
+        
 
      
     }
