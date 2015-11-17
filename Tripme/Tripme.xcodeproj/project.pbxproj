@@ -228,6 +228,7 @@
 		79F071531BCEE87600646DD5 /* Tripme */ = {
 			isa = PBXGroup;
 			children = (
+				A714B1611BFBB3CB00990971 /* Fontes */,
 				795AB3941BE2A2A900FD6BD8 /* Model */,
 				795AB3931BE2A29800FD6BD8 /* Controller */,
 				795AB3921BE2A28700FD6BD8 /* View */,
@@ -254,6 +255,13 @@
 				79F071791BCEE87600646DD5 /* Info.plist */,
 			);
 			path = TripmeUITests;
+			sourceTree = "<group>";
+		};
+		A714B1611BFBB3CB00990971 /* Fontes */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Fontes;
 			sourceTree = "<group>";
 		};
 		A7B62CAE1BE14FAB00145361 /* Frameworks */ = {
