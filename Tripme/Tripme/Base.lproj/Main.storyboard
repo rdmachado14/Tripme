@@ -833,9 +833,9 @@
         <image name="Criar Conta - Button-11-11" width="687" height="128"/>
         <image name="Linha Divisória-11" width="751" height="4"/>
         <image name="Linha com avião-11" width="751" height="56"/>
-        <image name="Login - Button-11-11" width="751" height="56"/>
-        <image name="Nuvens-11" width="751" height="56"/>
-        <image name="facebook-11" width="751" height="56"/>
+        <image name="Login - Button-11-11" width="687" height="128"/>
+        <image name="Nuvens-11" width="661" height="385"/>
+        <image name="facebook-11" width="687" height="128"/>
         <image name="logo-10" width="167" height="163"/>
         <image name="r1" width="750" height="513"/>
     </resources>
