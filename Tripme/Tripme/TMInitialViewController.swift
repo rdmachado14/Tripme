@@ -17,11 +17,11 @@ class TMInitialViewController: UIViewController
     
     
     override func viewDidAppear(animated: Bool) {
-        
+        PFUser.logOut()
         let currentUser = PFUser.currentUser()
         if (currentUser != nil) {
             print("esta logado \(currentUser)")
-            //self.performSegueWithIdentifier("mainScreen", sender: nil)
+            self.performSegueWithIdentifier("mainScreen", sender: nil)
         } else {
             print("nao esta logado \(currentUser)")
             
@@ -35,16 +35,16 @@ class TMInitialViewController: UIViewController
         super.viewDidLoad()
         
         
-        // verificação para saber se o usuário está logado
-        if FBSDKAccessToken.currentAccessToken() == nil
-        {
-            print("Não logado")
-        }
-        else
-        {
-            print("Logado")
-            
-        }
+//        // verificação para saber se o usuário está logado
+//        if FBSDKAccessToken.currentAccessToken() == nil
+//        {
+//            print("Não logado")
+//        }
+//        else
+//        {
+//            print("Logado")
+//            
+//        }
 
         
 
@@ -118,8 +118,10 @@ class TMInitialViewController: UIViewController
                             user.saveInBackground()
                         }
                     })
+                    self.performSegueWithIdentifier("mainScreen", sender: nil)
                     print("User signed up and logged in through Facebook!")
                 } else {
+                    self.performSegueWithIdentifier("mainScreen", sender: nil)
                     print("User logged in through Facebook!")
                 }
             } else {
