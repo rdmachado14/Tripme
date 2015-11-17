@@ -831,7 +831,7 @@
     <resources>
         <image name="Cor Superior" width="750" height="447"/>
         <image name="Criar Conta - Button-11-11" width="687" height="128"/>
-        <image name="Linha Divisória-11" width="375" height="2"/>
+        <image name="Linha Divisória-11" width="751" height="4"/>
         <image name="Linha com avião-11" width="751" height="56"/>
         <image name="Login - Button-11-11" width="751" height="56"/>
         <image name="Nuvens-11" width="751" height="56"/>
@@ -840,6 +840,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Nyp-65-EYY"/>
+        <segue reference="Ica-Uc-XCA"/>
     </inferredMetricsTieBreakers>
 </document>
