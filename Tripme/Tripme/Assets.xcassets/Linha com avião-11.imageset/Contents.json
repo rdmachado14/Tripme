@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "Linha com avião-11.png",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "LoginButton-7.png",
       "scale" : "2x"
     },
     {
