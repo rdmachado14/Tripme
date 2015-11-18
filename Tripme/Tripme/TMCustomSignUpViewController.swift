@@ -89,7 +89,7 @@ class TMCustomSignUpViewController: UIViewController
             user.username = email
             user.password = password
             user.email = email
-            user["nome"] = nome
+            user["primeiroNome"] = nome
             
             
             user.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
