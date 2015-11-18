@@ -43,25 +43,4 @@ class TMProfileViewController: UIViewController
     
 }
 
-extension TMProfileViewController: UICollectionViewDataSource
-{
-    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int
-    {
-        return 1
-    }
-    
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
-    {
-        return profileTrips.count
-    }
-    
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
-    {
-        let cell:TMProfileViewCell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! TMProfileViewCell
-        
-        cell.profileTrips = self.profileTrips[indexPath.item]
-        return cell
-    }
-
-}
 

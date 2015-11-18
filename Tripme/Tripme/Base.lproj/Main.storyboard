@@ -21,6 +21,7 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -232,9 +233,13 @@
                                 <constraints>
                                     <constraint firstAttribute="height" constant="49" id="75Y-qw-ksr"/>
                                 </constraints>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
                                 <state key="normal" title="Entrar pelo Facebook">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginFace:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="OBZ-ez-W7l"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linha Divisória-11" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-T8-bcc">
                                 <rect key="frame" x="0.0" y="58" width="320" height="2"/>
@@ -480,6 +485,9 @@
                                 <state key="normal" title="Entrar pelo Facebook">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="loginFacebook:" destination="lbM-8o-vo7" eventType="touchUpInside" id="g2j-xA-n3g"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Eu aceito os termos de uso" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KLK-Dm-Oi4">
                                 <rect key="frame" x="26" y="344" width="207" height="21"/>
@@ -513,11 +521,13 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="criarConta" destination="Esj-76-IAy" id="Iom-KB-9TQ"/>
+                        <outlet property="logarFace" destination="weI-HQ-JRR" id="5Nn-ak-dxu"/>
                         <outlet property="respostaSwitch" destination="Gfe-Tw-TzF" id="HV2-gn-kZo"/>
                         <outlet property="tfConfirmarSenha" destination="NTV-Ei-sWf" id="z1B-l7-rRD"/>
                         <outlet property="tfEmail" destination="qrH-gQ-gdd" id="lPK-2T-Iyb"/>
                         <outlet property="tfPassword" destination="9f3-mm-IrZ" id="gqr-PK-5sI"/>
                         <outlet property="tfUsername" destination="u8S-9m-9p0" id="Ckb-nu-drf"/>
+                        <segue destination="ENh-HJ-8iU" kind="show" identifier="fbVai" id="cUF-ya-26X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>

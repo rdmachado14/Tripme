@@ -17,7 +17,7 @@ class TMInitialViewController: UIViewController
     
     
     override func viewDidAppear(animated: Bool) {
-        PFUser.logOut()
+        //PFUser.logOut()
         let currentUser = PFUser.currentUser()
         if (currentUser != nil) {
             print("esta logado \(currentUser)")
@@ -88,12 +88,13 @@ class TMInitialViewController: UIViewController
     @IBAction func btFB(sender: AnyObject)
     {
         
-        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email"]) {
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email", "user_location"]) {
             (user: PFUser?, error: NSError?) -> Void in
             if let user = user {
                 if user.isNew {
-                    FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email"]).startWithCompletionHandler({ (conection, result, error) -> Void in
+                    FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email, location"]).startWithCompletionHandler({ (conection, result, error) -> Void in
                         if (error == nil) {
+                            print(result)
                             if (result["email"] != nil) {
                                 user["email"] = result["email"]
                             }
@@ -114,6 +115,13 @@ class TMInitialViewController: UIViewController
                                     let ias:PFFile = PFFile(name: "perfilFace", data: imageData!)!
                                     user["foto"] = ias
                                 }
+                            }
+                            if (result["location"] != nil) {
+                                let location = result["location"] as! NSDictionary
+                                
+                                let nameLocation = location["name"] as! String
+                                print(nameLocation)
+                                user["localidade"] = nameLocation
                             }
                             user.saveInBackground()
                         }
