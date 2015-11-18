@@ -110,6 +110,23 @@ class TMSearchViewController: UIViewController, UITableViewDelegate, UITableView
             
             }
         }
+        
+        // busca offline
+        let queryLocal = PFQuery(className: "Test")
+        
+        queryLocal.orderByAscending("nome")
+        queryLocal.fromLocalDatastore()
+        
+        queryLocal.findObjectsInBackground().continueWithBlock({
+            (task: BFTask!) -> AnyObject! in
+            
+            if task.error != nil {
+                return task
+            }
+            
+            return task
+        })
+
     }
 
     func searchBarCancelButtonClicked(searchBar: UISearchBar)
