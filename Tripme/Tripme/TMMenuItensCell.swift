@@ -31,7 +31,8 @@ class TMMenuItensCell: UICollectionViewCell
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        
+        self.layer.borderWidth = 2.0
+        self.layer.borderColor = UIColor.whiteColor().CGColor
         self.layer.cornerRadius = 10.0
         self.clipsToBounds = true
     }

@@ -178,12 +178,12 @@
 		795AB3931BE2A29800FD6BD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 				79D4A0B51BECEC1B000E552D /* Profile */,
 				79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */,
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
-				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
