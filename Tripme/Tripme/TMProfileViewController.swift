@@ -55,6 +55,8 @@ class TMProfileViewController: UIViewController
         
         img.layer.cornerRadius = img.frame.width/2
         img.clipsToBounds = true
+        img.layer.borderWidth = 5
+        img.layer.borderColor = UIColor.blackColor().verdeEscuro.CGColor
     
         
     }
@@ -68,6 +70,11 @@ class TMProfileViewController: UIViewController
     private struct Storyboard
     {
         static let CellIdentifier = "createdTrips"
+    }
+    
+    
+    @IBAction func fechar(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
 }
