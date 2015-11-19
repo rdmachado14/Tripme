@@ -99,6 +99,9 @@ extension TMProfileViewController: UITableViewDataSource {
         } else if indexPath.section == 3 {
             cell?.textLabel?.text = "Desempenho"
             cell?.backgroundColor = UIColor.blueColor().roxo
+        } else if indexPath.section == 4 {
+            cell?.textLabel?.text = "Mensagens"
+            cell?.backgroundColor = UIColor.blackColor().amareloEscuro
         }
         
         cell?.layer.cornerRadius = 5
@@ -106,7 +109,7 @@ extension TMProfileViewController: UITableViewDataSource {
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 4
+        return 5
     }
     
 }

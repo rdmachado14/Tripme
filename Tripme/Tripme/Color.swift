@@ -11,9 +11,8 @@ import UIKit
 
 extension UIColor
 {
-    var azulEscuro: UIColor
-        {
-            return UIColor(red: 13/255, green: 46/255, blue: 84/255, alpha: 1)
+    var azulEscuro: UIColor {
+        return UIColor(red: 13/255, green: 46/255, blue: 84/255, alpha: 1)
     }
     
     var vemelho: UIColor {
@@ -30,5 +29,9 @@ extension UIColor
     
     var verdeEscuro: UIColor {
         return UIColor(red: 7/255, green: 190/255, blue: 152/255, alpha: 1)
+    }
+    
+    var amareloEscuro: UIColor {
+        return UIColor(red: 249/255, green: 168/255, blue: 37/255, alpha: 1)
     }
 }
