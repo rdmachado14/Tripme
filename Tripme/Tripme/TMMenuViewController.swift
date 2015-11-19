@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class TMMenuViewController: UIViewController {
     @IBOutlet weak var imageView : UIImageView!
@@ -25,6 +26,10 @@ class TMMenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = colorWithHexString("118DF0")
+        
+        let currentuser = PFUser.currentUser()
+        let location = currentuser!["localidade"]
+        print(location)
         // Do any additional setup after loading the view.
     }
     
