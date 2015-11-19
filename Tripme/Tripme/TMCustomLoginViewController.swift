@@ -7,7 +7,10 @@
 //
 
 import UIKit
+import FBSDKCoreKit
+import FBSDKLoginKit
 import Parse
+import ParseFacebookUtilsV4
 
 class TMCustomLoginViewController: UIViewController
 {
@@ -86,6 +89,58 @@ class TMCustomLoginViewController: UIViewController
 
     @IBAction func cancelar(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
+        
+    }
+    @IBAction func loginFace(sender: AnyObject) {
+        
+        PFFacebookUtils.logInInBackgroundWithReadPermissions(["public_profile", "email", "user_location"]) {
+            (user: PFUser?, error: NSError?) -> Void in
+            if let user = user {
+                if user.isNew {
+                    FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email, location"]).startWithCompletionHandler({ (conection, result, error) -> Void in
+                        if (error == nil) {
+                            print(result)
+                            if (result["email"] != nil) {
+                                user["email"] = result["email"]
+                            }
+                            if (result["first_name"] != nil) {
+                                user["primeiroNome"] = result["first_name"]
+                            }
+                            if (result["last_name"] != nil) {
+                                user["ultimoNome"] = result["last_name"]
+                            }
+                            if (result["picture"] != nil) {
+                                let pic = result["picture"] as! NSDictionary
+                                let data = pic["data"] as! NSDictionary
+                                let url = data["url"] as! String
+                                if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data) {
+                                    print("testando essa porra aqui\(downloadedImage)")
+                                    let imageData = UIImagePNGRepresentation(downloadedImage)
+                                    
+                                    let ias:PFFile = PFFile(name: "perfilFace", data: imageData!)!
+                                    user["foto"] = ias
+                                }
+                            }
+                            if (result["location"] != nil) {
+                                let location = result["location"] as! NSDictionary
+                                
+                                let nameLocation = location["name"] as! String
+                                print(nameLocation)
+                                user["localidade"] = nameLocation
+                            }
+                            user.saveInBackground()
+                        }
+                    })
+                    self.performSegueWithIdentifier("mainScreen", sender: nil)
+                    print("User signed up and logged in through Facebook!")
+                } else {
+                    self.performSegueWithIdentifier("mainScreen", sender: nil)
+                    print("User logged in through Facebook!")
+                }
+            } else {
+                print("Uh oh. The user cancelled the Facebook login.")
+            }
+        }
         
     }
     
