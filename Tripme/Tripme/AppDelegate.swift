@@ -15,29 +15,38 @@ import ParseFacebookUtilsV4
 
 
 @UIApplicationMain
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate
+{
 
     var window: UIWindow?
-
-
-    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    
+    func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool
+    {
         // Override point for customization after application launch.
         
         // [Optional] Power your app with Local Datastore. For more info, go to
         // https://parse.com/docs/ios_guide#localdatastore/iOS
+        
+        // PayPal
+        PayPalMobile.initializeWithClientIdsForEnvironments([PayPalEnvironmentProduction: "AbXXrjszrCrkKlQmQoDi4c4W_JowY-kKNjtvqCkI8JOW4nrijxZH3lc3RaYav6Y_dkIBr09y8RGpMKw8", PayPalEnvironmentSandbox: "APP-80W284485P519543T"])
+        
+        
+        
+        // Parse
         Parse.enableLocalDatastore()
-        
-        // Initialize Parse.
+    
         Parse.setApplicationId("DBIjndvYua2TbE1kJc9coUHCrsS1bX9RG8iM6wcJ",
-            clientKey: "mPhUDgkrIX20fgOHX3aFurzPrk57PmmC2dCvDRMR")
+            clientKey: "AVzRH1gMDfUNDmZfJ7a-YKURRAV9lo2Kng3ehhOE_yov1JIZquCIr1UidFAPJvROMzU6G164x_S6XhRz")
         
+        // Facebook
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
         return true
         
     }
-
+    
+    
     func applicationWillResignActive(application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and throttle down OpenGL ES frame rates. Games should use this method to pause the game.

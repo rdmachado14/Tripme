@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="hsW-c2-l70">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GVy-MH-6EW">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -151,6 +151,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Nb1-H4-r6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4271.5" y="-295.5"/>
+        </scene>
+        <!--Pay Pal View Controller-->
+        <scene sceneID="LhF-bR-LVl">
+            <objects>
+                <viewController id="GVy-MH-6EW" customClass="TMPayPalViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9KK-Hi-4Wh"/>
+                        <viewControllerLayoutGuide type="bottom" id="wdo-Xe-F8k"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="6oL-ee-yLl">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wM6-FW-6iW">
+                                <rect key="frame" x="164" y="319" width="46" height="30"/>
+                                <animations/>
+                                <state key="normal" title="PayPal"/>
+                                <connections>
+                                    <action selector="payPressed:" destination="GVy-MH-6EW" eventType="touchUpInside" id="36W-ZJ-0eJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NJa-OA-s96" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3840.5" y="500.5"/>
         </scene>
         <!--Custom Login View Controller-->
         <scene sceneID="O0v-cP-Kp9">
@@ -862,6 +892,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ica-Uc-XCA"/>
+        <segue reference="cUF-ya-26X"/>
     </inferredMetricsTieBreakers>
 </document>
