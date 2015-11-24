@@ -21,6 +21,7 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var lbTripHost: UILabel!
     @IBOutlet weak var lbCollected: UILabel!
     @IBOutlet weak var lbTripTotal: UILabel!
+    @IBOutlet weak var lbTripHostLastName: UILabel!
     
     override func viewDidAppear(animated: Bool)
     {
@@ -29,11 +30,18 @@ class TMTripProjectViewController: UIViewController
         print("esta logado: \(currentUser)")
         print("nome: \(currentUser!["primeiroNome"])")
         
-        if currentUser!["primeiroNome"] != nil {
+        if currentUser!["primeiroNome"] != nil
+        {
             lbTripHost.text = (currentUser!["primeiroNome"] as! String)
         }
         
-        if currentUser!["foto"] != nil {
+        if currentUser!["ultimoNome"] != nil
+        {
+            lbTripHostLastName.text = (currentUser!["ultimoNome"] as! String)
+        }
+        
+        if currentUser!["foto"] != nil
+        {
             let imageFile  = currentUser!["foto"]
             imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
                 if error == nil {
@@ -49,6 +57,8 @@ class TMTripProjectViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        ivTripImage.image = UIImage(named: "p3")
 
     }
 
