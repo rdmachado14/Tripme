@@ -22,6 +22,33 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var lbCollected: UILabel!
     @IBOutlet weak var lbTripTotal: UILabel!
     @IBOutlet weak var lbTripHostLastName: UILabel!
+    @IBOutlet weak var pvTripProgress: UIProgressView!
+    
+    // Referência para os outlets de arrecadação e o total
+    var collectedNumber = Float()
+    var tripTotalNumber = Float()
+    
+    override func viewDidLoad()
+    {
+        super.viewDidLoad()
+        
+        ivTripImage.image = UIImage(named: "p3")
+        
+        lbTripName.text = "Naboo"
+        
+        lbCollected.text = "1200"
+        lbTripTotal.text = "2000"
+        
+        progressViewAction()
+        
+    }
+    
+    override func didReceiveMemoryWarning()
+    {
+        super.didReceiveMemoryWarning()
+        
+    }
+
     
     override func viewDidAppear(animated: Bool)
     {
@@ -51,22 +78,21 @@ class TMTripProjectViewController: UIViewController
         }
         
     }
+    
+    func progressViewAction()
+    {
+        self.collectedNumber = NSString(string: lbCollected.text!).floatValue
+        self.tripTotalNumber = NSString(string: lbTripTotal.text!).floatValue
+        
+        dispatch_async(dispatch_get_main_queue())
+            {
+                self.pvTripProgress.setProgress(self.collectedNumber/self.tripTotalNumber, animated: true)
+        }
+        
+    }
 
     
     
-    override func viewDidLoad()
-    {
-        super.viewDidLoad()
-        
-        ivTripImage.image = UIImage(named: "p3")
-
-    }
-
-    override func didReceiveMemoryWarning()
-    {
-        super.didReceiveMemoryWarning()
-        
-    }
     
 
 }
