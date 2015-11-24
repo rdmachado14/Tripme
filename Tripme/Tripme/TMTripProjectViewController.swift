@@ -7,10 +7,45 @@
 //
 
 import UIKit
+import Parse
+import FBSDKCoreKit
+import FBSDKLoginKit
 
 class TMTripProjectViewController: UIViewController
 {
 
+    
+    @IBOutlet weak var ivTripImage: UIImageView!
+    @IBOutlet weak var lbTripName: UILabel!
+    @IBOutlet weak var ivProfilePicture: UIImageView!
+    @IBOutlet weak var lbTripHost: UILabel!
+    @IBOutlet weak var lbCollected: UILabel!
+    @IBOutlet weak var lbTripTotal: UILabel!
+    
+    override func viewDidAppear(animated: Bool)
+    {
+        
+        let currentUser = PFUser.currentUser()
+        print("esta logado: \(currentUser)")
+        print("nome: \(currentUser!["primeiroNome"])")
+        
+        if currentUser!["primeiroNome"] != nil {
+            lbTripHost.text = (currentUser!["primeiroNome"] as! String)
+        }
+        
+        if currentUser!["foto"] != nil {
+            let imageFile  = currentUser!["foto"]
+            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+                if error == nil {
+                    self.ivProfilePicture.image = UIImage(data: data!)
+                }
+            }
+        }
+        
+    }
+
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()

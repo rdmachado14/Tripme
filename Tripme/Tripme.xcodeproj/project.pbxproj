@@ -189,6 +189,7 @@
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
+				79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */,
 				797F98A41C04BA4000CEE13F /* TMTripProjectViewController.swift */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 			);
@@ -210,7 +211,6 @@
 			isa = PBXGroup;
 			children = (
 				7921CAEB1BF51A41008C6F6C /* TMLikeViewController.swift */,
-				79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */,
 				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
 				79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */,
 				A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */,
