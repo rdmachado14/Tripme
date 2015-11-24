@@ -303,10 +303,10 @@
             </objects>
             <point key="canvasLocation" x="3851" y="913"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip Project View Controller-->
         <scene sceneID="xhs-Ah-A5Q">
             <objects>
-                <viewController id="NWZ-Kr-wqq" sceneMemberID="viewController">
+                <viewController id="NWZ-Kr-wqq" customClass="TMTripProjectViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VZh-cS-kDw"/>
                         <viewControllerLayoutGuide type="bottom" id="aN5-Xa-7Fm"/>

@@ -19,6 +19,7 @@
 		795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */; };
 		795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */; };
 		795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */; };
+		797F98A51C04BA4000CEE13F /* TMTripProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797F98A41C04BA4000CEE13F /* TMTripProjectViewController.swift */; };
 		79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */; };
 		79C774D91BF3C74E00D51E3D /* TMShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */; };
 		79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */; };
@@ -78,6 +79,7 @@
 		795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomLoginViewController.swift; sourceTree = "<group>"; };
 		795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomSignUpViewController.swift; sourceTree = "<group>"; };
 		795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMInitialViewController.swift; sourceTree = "<group>"; };
+		797F98A41C04BA4000CEE13F /* TMTripProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTripProjectViewController.swift; sourceTree = "<group>"; };
 		79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSearchViewController.swift; sourceTree = "<group>"; };
 		79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMShareViewController.swift; sourceTree = "<group>"; };
 		79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileTrips.swift; sourceTree = "<group>"; };
@@ -187,6 +189,7 @@
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
 				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
+				797F98A41C04BA4000CEE13F /* TMTripProjectViewController.swift */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 			);
 			name = Controller;
@@ -441,6 +444,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				797F98A51C04BA4000CEE13F /* TMTripProjectViewController.swift in Sources */,
 				7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */,
 				5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */,
 				79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */,
