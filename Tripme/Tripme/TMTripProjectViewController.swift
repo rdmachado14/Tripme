@@ -23,6 +23,8 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var lbTripTotal: UILabel!
     @IBOutlet weak var lbTripHostLastName: UILabel!
     @IBOutlet weak var pvTripProgress: UIProgressView!
+    @IBOutlet weak var scrollView: UIScrollView!
+    
     
     // Referência para os outlets de arrecadação e o total
     var collectedNumber = Float()
@@ -40,6 +42,9 @@ class TMTripProjectViewController: UIViewController
         lbTripTotal.text = "2000"
         
         progressViewAction()
+        
+        // scroll
+        scrollView.contentSize.height = 10000
         
     }
     
