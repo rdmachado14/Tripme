@@ -24,6 +24,9 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var lbTripHostLastName: UILabel!
     @IBOutlet weak var pvTripProgress: UIProgressView!
     @IBOutlet weak var scrollView: UIScrollView!
+
+
+    
     
     
     // Referência para os outlets de arrecadação e o total
@@ -34,8 +37,6 @@ class TMTripProjectViewController: UIViewController
     {
         super.viewDidLoad()
         
-        ivTripImage.image = UIImage(named: "p3")
-        
         lbTripName.text = "Naboo"
         
         lbCollected.text = "1200"
@@ -45,6 +46,8 @@ class TMTripProjectViewController: UIViewController
         
         // scroll
         scrollView.contentSize.height = 10000
+        
+        
         
     }
     
@@ -95,7 +98,7 @@ class TMTripProjectViewController: UIViewController
         }
         
     }
-
+    
     
     
     
