@@ -306,7 +306,7 @@
         <!--Trip Project View Controller-->
         <scene sceneID="xhs-Ah-A5Q">
             <objects>
-                <viewController id="NWZ-Kr-wqq" customClass="TMTripProjectViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Project" id="NWZ-Kr-wqq" customClass="TMTripProjectViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VZh-cS-kDw"/>
                         <viewControllerLayoutGuide type="bottom" id="aN5-Xa-7Fm"/>
@@ -409,36 +409,6 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTh-ou-0F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4286.5" y="967.5"/>
-        </scene>
-        <!--Page View Controller-->
-        <scene sceneID="6lp-TU-jgL">
-            <objects>
-                <pageViewController storyboardIdentifier="PageControl" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="1lb-wj-eev" sceneMemberID="viewController">
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="q0q-YS-Hc5" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4712.5" y="967.5"/>
-        </scene>
-        <!--View Controller-->
-        <scene sceneID="en3-pX-4rQ">
-            <objects>
-                <viewController id="Cbc-Fm-b61" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="yB2-t9-Ciw"/>
-                        <viewControllerLayoutGuide type="bottom" id="ksB-EG-RXg"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="jMB-62-5JR">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="0sT-Ly-Kjp" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="5146.5" y="967.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="s8k-zl-wKr">

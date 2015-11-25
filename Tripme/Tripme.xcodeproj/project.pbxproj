@@ -10,6 +10,7 @@
 		5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */; };
 		5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */; };
 		5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281C51BE8E9DF002D90EE /* Trips.swift */; };
+		790B761F1C0665A5001CED07 /* TMPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B761E1C0665A5001CED07 /* TMPageViewController.swift */; };
 		7921CAEA1BF513D4008C6F6C /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */; };
 		7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921CAEB1BF51A41008C6F6C /* TMLikeViewController.swift */; };
 		795AB38F1BE2A00800FD6BD8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */; };
@@ -70,6 +71,7 @@
 		5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuViewController.swift; sourceTree = "<group>"; };
 		5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuItensCell.swift; sourceTree = "<group>"; };
 		5EF281C51BE8E9DF002D90EE /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
+		790B761E1C0665A5001CED07 /* TMPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPageViewController.swift; sourceTree = "<group>"; };
 		7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		7921CAEB1BF51A41008C6F6C /* TMLikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMLikeViewController.swift; sourceTree = "<group>"; };
 		795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
 				79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */,
 				797F98A41C04BA4000CEE13F /* TMTripProjectViewController.swift */,
+				790B761E1C0665A5001CED07 /* TMPageViewController.swift */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 			);
 			name = Controller;
@@ -458,6 +461,7 @@
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
+				790B761F1C0665A5001CED07 /* TMPageViewController.swift in Sources */,
 				79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */,
 				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
 				79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */,

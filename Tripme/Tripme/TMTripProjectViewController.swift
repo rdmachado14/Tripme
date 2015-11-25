@@ -24,6 +24,18 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var lbTripHostLastName: UILabel!
     @IBOutlet weak var pvTripProgress: UIProgressView!
     @IBOutlet weak var scrollView: UIScrollView!
+    var itemIndex: Int = 0
+    var imageName: String = "" {
+        
+        didSet {
+            
+            if let imageView = ivTripImage {
+                imageView.image = UIImage(named: imageName)
+            }
+            
+        }
+    }
+
 
 
     
@@ -46,6 +58,8 @@ class TMTripProjectViewController: UIViewController
         
         // scroll
         scrollView.contentSize.height = 10000
+        
+        ivTripImage!.image = UIImage(named: imageName)
         
         
         
