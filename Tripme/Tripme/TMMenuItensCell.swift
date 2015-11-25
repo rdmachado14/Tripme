@@ -22,11 +22,17 @@ class TMMenuItensCell: UICollectionViewCell
     
     @IBOutlet weak var featuredImageView: UIImageView!
     @IBOutlet weak var interestTitleLabel: UILabel!
+    @IBOutlet weak var progressView: UIProgressView!
+    @IBOutlet weak var lbLocal: UILabel!
+    @IBOutlet weak var Nome: UILabel!
+    @IBOutlet weak var UserImg: UIImageView!
+    @IBOutlet weak var FAvorite: UIImageView!
     
     private func updateUI()
     {
         interestTitleLabel?.text! = trips.title
         featuredImageView?.image! = trips.featuredImage
+        
     }
     
     override func layoutSubviews() {

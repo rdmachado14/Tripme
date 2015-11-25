@@ -397,8 +397,13 @@
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <connections>
+                                            <outlet property="FAvorite" destination="j22-rg-bEO" id="14D-sm-Tjq"/>
+                                            <outlet property="Nome" destination="bfs-9k-Do3" id="a34-bt-rZq"/>
+                                            <outlet property="UserImg" destination="lev-nG-zh4" id="Oaw-a8-MT3"/>
                                             <outlet property="featuredImageView" destination="sKo-3L-udM" id="lKI-Ua-1Qs"/>
                                             <outlet property="interestTitleLabel" destination="9eY-Tm-ebL" id="XAf-t6-gzi"/>
+                                            <outlet property="lbLocal" destination="Bzu-8p-JT4" id="grL-SY-ZON"/>
+                                            <outlet property="progressView" destination="1o3-1Z-aSd" id="gkG-pr-UQx"/>
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
@@ -835,7 +840,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FtC-TO-mUu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249" y="1027"/>
+            <point key="canvasLocation" x="2119" y="548"/>
         </scene>
     </scenes>
     <resources>
