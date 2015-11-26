@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="NWZ-Kr-wqq">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9060" systemVersion="15B42" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="UPF-1G-J8q">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9051"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
@@ -306,7 +306,7 @@
         <!--Trip Project View Controller-->
         <scene sceneID="xhs-Ah-A5Q">
             <objects>
-                <viewController storyboardIdentifier="Project" id="NWZ-Kr-wqq" customClass="TMTripProjectViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Trip" useStoryboardIdentifierAsRestorationIdentifier="YES" id="NWZ-Kr-wqq" customClass="TMTripProjectViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="VZh-cS-kDw"/>
                         <viewControllerLayoutGuide type="bottom" id="aN5-Xa-7Fm"/>
@@ -321,10 +321,6 @@
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-cc-dPa">
                                         <rect key="frame" x="39" y="37" width="299" height="595"/>
                                         <subviews>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCX-zk-3dy">
-                                                <rect key="frame" x="43" y="27" width="212" height="158"/>
-                                                <animations/>
-                                            </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-Bd-CWe">
                                                 <rect key="frame" x="8" y="208" width="106" height="21"/>
                                                 <animations/>
@@ -381,10 +377,10 @@
                                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="U9n-Zk-QUI">
-                                                <rect key="frame" x="130" y="148" width="39" height="37"/>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="LCX-zk-3dy" customClass="Image" customModule="Tripme" customModuleProvider="target">
+                                                <rect key="frame" x="43" y="27" width="212" height="158"/>
                                                 <animations/>
-                                            </pageControl>
+                                            </imageView>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
@@ -412,17 +408,37 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTh-ou-0F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4286.5" y="967.5"/>
+            <point key="canvasLocation" x="4268.5" y="981.5"/>
         </scene>
         <!--Page View Controller-->
-        <scene sceneID="9Mp-7U-YxZ">
+        <scene sceneID="FsC-DY-Pjs">
             <objects>
-                <pageViewController storyboardIdentifier="PageController" autoresizesArchivedViewToFullSize="NO" transitionStyle="pageCurl" navigationOrientation="horizontal" spineLocation="min" id="RYJ-fs-gka" sceneMemberID="viewController">
+                <pageViewController storyboardIdentifier="PageViewController" autoresizesArchivedViewToFullSize="NO" transitionStyle="scroll" navigationOrientation="horizontal" spineLocation="none" id="7nv-BR-Lbg" sceneMemberID="viewController">
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                 </pageViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="nEX-Rc-xb7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9EK-Yd-HO5" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4766.5" y="967.5"/>
+            <point key="canvasLocation" x="4717.5" y="981.5"/>
+        </scene>
+        <!--Test Page View Controller-->
+        <scene sceneID="eOP-Cp-6O5">
+            <objects>
+                <viewController id="UPF-1G-J8q" customClass="TMTestPageViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Ss3-7R-Iya"/>
+                        <viewControllerLayoutGuide type="bottom" id="C7j-CE-T2L"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ya3-mS-va9">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="gut-6x-rJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5162.5" y="981.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="s8k-zl-wKr">

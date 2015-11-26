@@ -24,6 +24,21 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var lbTripHostLastName: UILabel!
     @IBOutlet weak var pvTripProgress: UIProgressView!
     @IBOutlet weak var scrollView: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
+    
+    
+    
+    // MARK: - Variables
+    var itemIndex: Int = 0
+    var imageName: String = "" {
+        didSet {
+            if let imageView = ivTripImage {
+                imageView.image = UIImage(named: imageName)
+            }
+            
+        }
+    }
+
 
 
     // Referência para os outlets de arrecadação e o total
@@ -44,8 +59,12 @@ class TMTripProjectViewController: UIViewController
         // scroll
         scrollView.contentSize.height = 10000
         
+        ivTripImage!.image = UIImage(named: imageName)
+        
         
     }
+    
+
     
     override func didReceiveMemoryWarning()
     {
