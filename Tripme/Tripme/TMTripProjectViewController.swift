@@ -26,6 +26,7 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     
+    var object: PFObject!
     
     
     // MARK: - Variables
@@ -61,7 +62,17 @@ class TMTripProjectViewController: UIViewController
         
         ivTripImage!.image = UIImage(named: imageName)
         
-        
+        // requisição de curtir
+        let query = PFQuery(className: "Trip")
+        query.whereKey("objectId", equalTo: "Yh44NT0Ksj")
+        query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, NSError) -> Void in
+            if NSError == nil {
+                self.object = object![0]
+                print(self.object)
+            } else {
+                print("Erro")
+            }
+        }
     }
     
 
@@ -100,7 +111,7 @@ class TMTripProjectViewController: UIViewController
         }
         
     }
-    
+
     func progressViewAction()
     {
         self.collectedNumber = NSString(string: lbCollected.text!).floatValue
@@ -114,7 +125,19 @@ class TMTripProjectViewController: UIViewController
     }
     
     
+    @IBAction func btLikeTrip(sender: AnyObject)
+    {
+        object.addUniqueObject((PFUser.currentUser()?.objectId)!, forKey: "Favoritos")
+        object.saveInBackgroundWithBlock { (success: Bool, NSError) -> Void in
+            if NSError == nil
+            {
+                print("sem erro!")
+            }
+            else
+            {
+                print(NSError)
+            }
+        }
+    }
     
-    
-
 }

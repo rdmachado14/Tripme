@@ -58,7 +58,7 @@
                                         <rect key="frame" x="0.0" y="136" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dc9-JY-U7I" id="Kfh-JM-SCr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -369,6 +369,9 @@
                                                 <rect key="frame" x="235" y="557" width="46" height="30"/>
                                                 <animations/>
                                                 <state key="normal" title="Button"/>
+                                                <connections>
+                                                    <action selector="btLikeTrip:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="Bl0-S8-c8E"/>
+                                                </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobrenome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5o-A4-dji">
                                                 <rect key="frame" x="170" y="307" width="111" height="21"/>
