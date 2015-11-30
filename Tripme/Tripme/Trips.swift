@@ -12,18 +12,24 @@ class Trips
 {
     // MARK: - Public API
     var title = ""
-    var description = ""
-    var numberOfMembers = 0
-    var numberOfPosts = 0
     var featuredImage: UIImage!
+    var local = ""
+    var dinheiroAtual = ""
+    var dinheiroTotal = ""
+    var Nome = ""
+    var UserImg : UIImage!
+    var Favorite : Bool!
     
-    init(title: String, description: String, featuredImage: UIImage!)
+    init(title: String, featuredImage: UIImage!, local: String, dinheiroAtual: String, dinheiroTotal: String, Nome: String, UserImg: UIImage! ,Favorite: Bool)
     {
         self.title = title
-        self.description = description
         self.featuredImage = featuredImage
-        numberOfMembers = 1
-        numberOfPosts = 1
+        self.local = local
+        self.dinheiroAtual = dinheiroAtual
+        self.dinheiroTotal = dinheiroTotal
+        self.Nome = Nome
+        self.UserImg = UserImg
+        self.Favorite = Favorite
     }
     
     // MARK: - Private
@@ -31,24 +37,9 @@ class Trips
     static func createInterests() -> [Trips]
     {
         return [
-            Trips(title: "We Love Traveling Around the World",
-                description: "We love backpack and adventures! We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨",
-                featuredImage: UIImage(named: "r1")!),
-            Trips(title: "Romance Stories",
-                description: "We love romantic stories. We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨",
-                featuredImage: UIImage(named: "r2")!),
-            Trips(title: "iOS Dev",
-                description: "Create beautiful apps. We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨",
-                featuredImage: UIImage(named: "r3")!),
-            Trips(title: "Race",
-                description: "Cars and aircrafts and boats and sky. We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨",
-                featuredImage: UIImage(named: "r4")!),
-            Trips(title: "Personal Development",
-                description: "Meet life with full presence. We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨",
-                featuredImage: UIImage(named: "r5")!),
-            Trips(title: "Reading News",
-                description: "Get up to date with breaking-news. We walked to Antartica yesterday, and camped with some cute pinguines, and talked about this wonderful app idea. 🐧⛺️✨",
-                featuredImage: UIImage(named: "r6")!),
+            Trips(title: "Titulo 1", featuredImage: UIImage(named: "r1"), local: "Local 1", dinheiroAtual: "1000", dinheiroTotal: "3200", Nome: "Nome 1", UserImg: UIImage(named: "User1"), Favorite: true),
+            
+            Trips(title: "Titulo 2", featuredImage: UIImage(named: "r2"), local: "Local 2", dinheiroAtual: "3121", dinheiroTotal: "5000", Nome: "Nome 2", UserImg: UIImage(named: "r3"), Favorite: false)
         ]
     }
 }

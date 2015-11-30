@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5EB541FB1C0C92B000D232F5 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB541FA1C0C92B000D232F5 /* Animation.swift */; };
 		5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */; };
 		5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */; };
 		5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281C51BE8E9DF002D90EE /* Trips.swift */; };
@@ -66,6 +67,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5EB541FA1C0C92B000D232F5 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
 		5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuViewController.swift; sourceTree = "<group>"; };
 		5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuItensCell.swift; sourceTree = "<group>"; };
 		5EF281C51BE8E9DF002D90EE /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
@@ -166,6 +168,7 @@
 			children = (
 				5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */,
 				5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */,
+				5EF281C51BE8E9DF002D90EE /* Trips.swift */,
 			);
 			name = "Menu Inicial";
 			sourceTree = "<group>";
@@ -197,7 +200,8 @@
 			children = (
 				79F0715B1BCEE87600646DD5 /* Tripme.xcdatamodeld */,
 				79F071631BCEE87600646DD5 /* Info.plist */,
-				5EF281C51BE8E9DF002D90EE /* Trips.swift */,
+				A7E57D981BFD3B9700463174 /* Color.swift */,
+				5EB541FA1C0C92B000D232F5 /* Animation.swift */,
 				79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */,
 			);
 			name = Model;
@@ -245,7 +249,6 @@
 				A7B62CAE1BE14FAB00145361 /* Frameworks */,
 				79F071541BCEE87600646DD5 /* AppDelegate.swift */,
 				79F0715E1BCEE87600646DD5 /* Assets.xcassets */,
-				A7E57D981BFD3B9700463174 /* Color.swift */,
 			);
 			path = Tripme;
 			sourceTree = "<group>";
@@ -444,6 +447,7 @@
 				7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */,
 				5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */,
 				79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */,
+				5EB541FB1C0C92B000D232F5 /* Animation.swift in Sources */,
 				5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */,
 				795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */,
 				A7E57D991BFD3B9700463174 /* Color.swift in Sources */,

@@ -27,13 +27,42 @@ class TMMenuItensCell: UICollectionViewCell
     @IBOutlet weak var Nome: UILabel!
     @IBOutlet weak var UserImg: UIImageView!
     @IBOutlet weak var FAvorite: UIImageView!
+    @IBOutlet weak var DinheiroAtual: UILabel!
+    @IBOutlet weak var DinheiroTotal: UILabel!
     
     private func updateUI()
     {
         interestTitleLabel?.text! = trips.title
         featuredImageView?.image! = trips.featuredImage
+        progressView.progress = Float(trips.dinheiroAtual)!/Float(trips.dinheiroTotal)!
+        lbLocal.text = trips.local
+        DinheiroAtual.text = trips.dinheiroAtual
+        DinheiroTotal.text = trips.dinheiroTotal
+        UserImg.image = trips.UserImg
+        Nome.text = trips.Nome
+        if(trips.Favorite.boolValue){
+            FAvorite.image = UIImage(named: "icon-heart")
+        }else{
+            FAvorite.image = UIImage(named: "icon-heart-stroke")
+        }
         
     }
+    
+    
+    @IBAction func FavoriteClicked(sender: AnyObject) {
+        if(FAvorite.image == UIImage(named: "icon-heart")){
+            FAvorite.growDown(0.1){
+                self.FAvorite.image = UIImage(named: "icon-heart-stroke")
+                self.FAvorite.growNormalSize(0.1)
+            }
+        } else {
+            FAvorite.growUp(0.1){
+                self.FAvorite.image = UIImage(named: "icon-heart")
+                self.FAvorite.growNormalSize(0.1)
+            }
+        }
+    }
+    
     
     override func layoutSubviews() {
         super.layoutSubviews()
