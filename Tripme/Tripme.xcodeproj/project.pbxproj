@@ -34,6 +34,9 @@
 		79F071621BCEE87600646DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F071601BCEE87600646DD5 /* LaunchScreen.storyboard */; };
 		79F0716D1BCEE87600646DD5 /* TripmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0716C1BCEE87600646DD5 /* TripmeTests.swift */; };
 		79F071781BCEE87600646DD5 /* TripmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071771BCEE87600646DD5 /* TripmeUITests.swift */; };
+		A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */; };
+		A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */; };
+		A7ACB5881C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5851C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift */; };
 		A7B62CB11BE14FE600145361 /* Bolts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CAF1BE14FE600145361 /* Bolts.framework */; };
 		A7B62CB21BE14FE600145361 /* Parse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CB01BE14FE600145361 /* Parse.framework */; };
 		A7B62CB41BE1504500145361 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CB31BE1504500145361 /* AudioToolbox.framework */; };
@@ -107,6 +110,9 @@
 		A714B1641BFBB53900990971 /* Tondo_Trial_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Lt.ttf; sourceTree = "<group>"; };
 		A714B1651BFBB53900990971 /* Tondo_Trial_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Rg.ttf; sourceTree = "<group>"; };
 		A714B1661BFBB53900990971 /* Tondo_Trial_Sign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Sign.ttf; sourceTree = "<group>"; };
+		A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemViewController.swift; sourceTree = "<group>"; };
+		A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemCell.swift; sourceTree = "<group>"; };
+		A7ACB5851C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagem2TableViewCell.swift; sourceTree = "<group>"; };
 		A7B62CAF1BE14FE600145361 /* Bolts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Bolts.framework; sourceTree = "<group>"; };
 		A7B62CB01BE14FE600145361 /* Parse.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Parse.framework; sourceTree = "<group>"; };
 		A7B62CB31BE1504500145361 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
@@ -189,6 +195,7 @@
 		795AB3931BE2A29800FD6BD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				A7ACB5821C0DD51100B5F24C /* CriarViagem */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 				79D4A0B51BECEC1B000E552D /* Profile */,
 				79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */,
@@ -284,6 +291,16 @@
 				A714B1621BFBB47200990971 /* Gidole-Regular.ttf */,
 			);
 			name = Fontes;
+			sourceTree = "<group>";
+		};
+		A7ACB5821C0DD51100B5F24C /* CriarViagem */ = {
+			isa = PBXGroup;
+			children = (
+				A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */,
+				A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */,
+				A7ACB5851C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift */,
+			);
+			name = CriarViagem;
 			sourceTree = "<group>";
 		};
 		A7B62CAE1BE14FAB00145361 /* Frameworks */ = {
@@ -449,7 +466,9 @@
 			files = (
 				797F98A51C04BA4000CEE13F /* TMTripProjectViewController.swift in Sources */,
 				7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */,
+				A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */,
 				5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */,
+				A7ACB5881C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift in Sources */,
 				79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */,
 				5EB541FB1C0C92B000D232F5 /* Animation.swift in Sources */,
 				5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */,
@@ -457,6 +476,7 @@
 				A7E57D991BFD3B9700463174 /* Color.swift in Sources */,
 				79C774D91BF3C74E00D51E3D /* TMShareViewController.swift in Sources */,
 				A7E57D971BFD15B700463174 /* CustomTableViewCell.swift in Sources */,
+				A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */,
 				79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */,
 				790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */,
 				79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */,
