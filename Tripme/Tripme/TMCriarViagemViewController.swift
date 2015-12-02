@@ -18,6 +18,7 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        myTable.tableFooterView = UIView(frame: CGRectZero)
     }
     
     override func didReceiveMemoryWarning() {
@@ -99,6 +100,7 @@ extension TMCriarViagemViewController: UITableViewDataSource {
 
 
 extension TMCriarViagemViewController: UITableViewDelegate {
+    
     
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Informações gerais"

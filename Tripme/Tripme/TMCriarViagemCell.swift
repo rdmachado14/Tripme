@@ -28,6 +28,7 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
             //tvTextView.text = teste
             TMCriarViagemCell.teste = tvDescicao.text
             print("testando o teste1: \(TMCriarViagemCell.teste)")
+            
             tvDescicao.hidden = true
             print("entoru aqui")
             lbDescicao.hidden = false
