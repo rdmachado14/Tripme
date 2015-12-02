@@ -10,6 +10,8 @@ import UIKit
 
 class TMCriarViagem2ViewController: UIViewController {
 
+    @IBOutlet weak var myCollection: UICollectionView!
+    @IBOutlet weak var imagem: UIImageView!
     @IBOutlet weak var lbHeader: UILabel!
     @IBOutlet weak var add: UIButton!
     
@@ -19,6 +21,8 @@ class TMCriarViagem2ViewController: UIViewController {
         
         add.backgroundColor = UIColor.blackColor().azulCriarViagem
         add.layer.cornerRadius = 4
+        
+        myCollection.hidden = true
 
         // Do any additional setup after loading the view.
     }
@@ -43,5 +47,26 @@ class TMCriarViagem2ViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func adicionar(sender: AnyObject) {
+        
+        myCollection.hidden = false
+    }
+    
 
+
+}
+
+extension TMCriarViagem2ViewController: UICollectionViewDataSource {
+    
+    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
+    
+    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+
+        let cell: TMCriarViagemCollectionViewCell = collectionView.dequeueReusableCellWithReuseIdentifier("cellectionCell", forIndexPath: indexPath) as! TMCriarViagemCollectionViewCell
+        return cell
+    }
+    
+    
 }
