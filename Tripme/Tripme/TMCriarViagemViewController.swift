@@ -120,6 +120,7 @@ extension TMCriarViagemViewController: UITableViewDelegate {
                 return TMCriarViagemCell.expandedHeight
             } else {
                 verificador = false
+                
                 return TMCriarViagemCell.defaultHeight
                 
             }
