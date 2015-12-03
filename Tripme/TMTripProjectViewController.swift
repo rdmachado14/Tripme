@@ -73,6 +73,11 @@ class TMTripProjectViewController: UIViewController
                 print("Erro")
             }
         }
+        
+        ivProfilePicture.layer.cornerRadius = ivProfilePicture.frame.width/2
+        ivProfilePicture.clipsToBounds = true
+        ivProfilePicture.layer.borderWidth = 5
+        ivProfilePicture.layer.borderColor = UIColor.blackColor().verdeEscuro.CGColor
     }
     
 
