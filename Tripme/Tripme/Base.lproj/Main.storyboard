@@ -455,18 +455,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="M9P-jc-Mhl">
-                                <rect key="frame" x="375" y="0.0" width="375" height="667"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="j9K-TH-jZp"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-vC-1u9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-vC-1u9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.63571772490770784" green="0.75272253787878785" blue="0.47165607297701462" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="M9P-jc-Mhl">
+                                <rect key="frame" x="375" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L7K-MD-8jh">
                                 <rect key="frame" x="0.0" y="94" width="375" height="452"/>
@@ -634,13 +631,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="L7K-MD-8jh" secondAttribute="trailing" id="3Oo-4Q-dtW"/>
                             <constraint firstItem="L7K-MD-8jh" firstAttribute="top" secondItem="xfQ-xR-qAa" secondAttribute="bottom" constant="74" id="6wE-dL-LVN"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="top" secondItem="6Wr-vC-1u9" secondAttribute="top" id="EYI-UY-9uL"/>
                             <constraint firstItem="L7K-MD-8jh" firstAttribute="leading" secondItem="Jzf-GS-LQU" secondAttribute="leading" id="Hcv-da-APR"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="bottom" secondItem="6Wr-vC-1u9" secondAttribute="bottom" id="Iu1-0y-yAX"/>
                             <constraint firstItem="AyJ-lG-t4K" firstAttribute="top" secondItem="L7K-MD-8jh" secondAttribute="bottom" constant="121" id="TOM-GM-VLH"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="leading" secondItem="L7K-MD-8jh" secondAttribute="trailing" id="gHT-y3-hqo"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="leading" secondItem="6Wr-vC-1u9" secondAttribute="trailing" id="h2E-WR-jQg"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="top" secondItem="Jzf-GS-LQU" secondAttribute="top" id="mI5-P5-OPn"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1216,6 +1208,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ica-Uc-XCA"/>
+        <segue reference="cUF-ya-26X"/>
     </inferredMetricsTieBreakers>
 </document>
