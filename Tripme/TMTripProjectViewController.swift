@@ -25,6 +25,8 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var pvTripProgress: UIProgressView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
+    @IBOutlet weak var view1: UIView!
+    
     
     var object: PFObject!
     
@@ -80,8 +82,25 @@ class TMTripProjectViewController: UIViewController
         //ivProfilePicture.layer.borderColor = UIColor.blackColor().verdeEscuro.CGColor
         
         
+        customView()
         
         
+    }
+    
+    func customView()
+    {
+        view1.layer.cornerRadius = 10
+        view1.layer.masksToBounds = true
+        view1.layer.borderColor = UIColor.grayColor().CGColor
+        view1.layer.borderWidth = 0.5
+        
+        view1.layer.contentsScale = UIScreen.mainScreen().scale;
+        view1.layer.shadowColor = UIColor.blackColor().CGColor;
+        view1.layer.shadowOffset = CGSizeZero;
+        view1.layer.shadowRadius = 5.0;
+        view1.layer.shadowOpacity = 0.5;
+        view1.layer.masksToBounds = false;
+        view1.clipsToBounds = false;
         
     }
     
