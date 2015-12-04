@@ -45,6 +45,13 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -78,7 +85,7 @@
                                         <rect key="frame" x="0.0" y="136" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dc9-JY-U7I" id="Kfh-JM-SCr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="57"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -532,7 +539,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="340" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TW-Al-kJp" id="8rl-8p-uh8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-Um-Kt0">
@@ -563,7 +570,7 @@
                                                 <rect key="frame" x="0.0" y="72" width="340" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H0J-FL-cX2" id="iq9-sQ-7MG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="49.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="49"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bch-YP-s2A">
@@ -1483,7 +1490,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fZL-nx-Bug" id="hZ6-EK-ykF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-Lr-fEJ">
@@ -1520,7 +1527,7 @@
                                         <rect key="frame" x="0.0" y="228" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mvu-AJ-aW6" id="FgR-xW-Wy4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZB-AS-KNJ">
@@ -1549,7 +1556,7 @@
                                         <rect key="frame" x="0.0" y="272" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NgA-s8-3dZ" id="bCX-2m-J5y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-Br-8UJ">
@@ -1693,17 +1700,6 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQW-4v-S8A">
-                                <rect key="frame" x="70" y="428" width="235" height="59"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.75686274509999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Adicionar Foto">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="adicionar:" destination="39p-pu-h7L" eventType="touchUpInside" id="jV7-1t-84y"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fotos-9" translatesAutoresizingMaskIntoConstraints="NO" id="otx-O1-Sm4">
                                 <rect key="frame" x="0.0" y="157" width="375" height="93"/>
                                 <animations/>
@@ -1751,7 +1747,7 @@
                                 <animations/>
                                 <state key="normal" title="Button" image="Proximo-button-9"/>
                                 <connections>
-                                    <segue destination="KVC-2H-Ct0" kind="show" animates="NO" id="YIO-TO-GeC"/>
+                                    <action selector="proximo:" destination="39p-pu-h7L" eventType="touchUpInside" id="Nnr-cU-Igm"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQW-4v-S8A">
@@ -1775,6 +1771,7 @@
                         <outlet property="imagem" destination="otx-O1-Sm4" id="4uN-yB-CPr"/>
                         <outlet property="lbHeader" destination="VSc-xg-qnR" id="OEN-nr-qKN"/>
                         <outlet property="myCollection" destination="CtC-sd-wgR" id="JcW-tm-NK5"/>
+                        <segue destination="KVC-2H-Ct0" kind="show" identifier="tela2" id="oWN-wT-m7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tn0-F4-LJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>

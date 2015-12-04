@@ -19,6 +19,8 @@ class TMCriarViagemTresViewControler: UIViewController {
     var Tela1: [String]!
     var Tela2: [UIImage]!
     var Tela3: [String]!
+    var imagens: [UIImage] = []
+    var vetorStrings: [String] = []
     var Erro = false
     var verificador = false
     var selectedIndexPath: NSIndexPath?
@@ -89,7 +91,8 @@ class TMCriarViagemTresViewControler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        print(vetorStrings)
+        print(imagens)
         var imagemFilesArray: [PFObject] = []
         
         let query = PFQuery(className: "capas")
