@@ -187,14 +187,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		5EC1649C1C10C488002E6C58 /* TELA 3 */ = {
+		5EC1649C1C10C488002E6C58 /* Tela3 */ = {
 			isa = PBXGroup;
 			children = (
 				5EC1649D1C10CD71002E6C58 /* TMCriarViagemTresViewControler.swift */,
 				5EBA944F1C11CEE6009DC696 /* TMCriarViagemTresViewHeader.swift */,
 				5EC164A71C10D524002E6C58 /* TMCriarViagemTresTableViewCell.swift */,
 			);
-			name = "TELA 3";
+			name = Tela3;
 			sourceTree = "<group>";
 		};
 		5EF281C01BE8E928002D90EE /* Menu Inicial */ = {
@@ -321,7 +321,6 @@
 		A7280F031C0F94DA00B89E08 /* Tela1 */ = {
 			isa = PBXGroup;
 			children = (
-				5EC1649C1C10C488002E6C58 /* TELA 3 */,
 				A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */,
 				A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */,
 				A7ACB5851C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift */,
@@ -342,6 +341,7 @@
 		A7ACB5821C0DD51100B5F24C /* CriarViagem */ = {
 			isa = PBXGroup;
 			children = (
+				5EC1649C1C10C488002E6C58 /* Tela3 */,
 				A7280F041C0F94F200B89E08 /* Tela2 */,
 				A7280F031C0F94DA00B89E08 /* Tela1 */,
 			);

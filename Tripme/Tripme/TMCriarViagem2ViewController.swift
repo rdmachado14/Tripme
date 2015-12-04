@@ -45,7 +45,7 @@ class TMCriarViagem2ViewController: UIViewController {
     */
     
     @IBAction func voltar(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(false, completion: nil)
     }
     
     @IBAction func adicionar(sender: AnyObject) {
