@@ -32,7 +32,11 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         let indexPathe: NSIndexPath = NSIndexPath(forRow: 1, inSection: 0)
         if verificador == true {
             self.tableView(myTable, didSelectRowAtIndexPath: indexPathe)
-        }
+    }
+        
+        
+        
+        
         
 //        myTable.reloadRowsAtIndexPaths([indexPathe], withRowAnimation: UITableViewRowAnimation.Automatic)
 
@@ -144,8 +148,9 @@ extension TMCriarViagemViewController: UITableViewDelegate {
         
         var indexPaths : Array<NSIndexPath> = []
         if indexPath.row == 2  {
+            print("entrou aqui nese")
             if let previous = previousIndexPath {
-                indexPaths += [previous]
+            indexPaths += [previous]
             }
             
             if let current = selectedIndexPath {
