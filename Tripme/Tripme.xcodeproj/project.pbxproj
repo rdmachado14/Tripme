@@ -505,6 +505,7 @@
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
+				791DEC541C10E26F0070E812 /* TMCustomView.swift in Sources */,
 				5EC164A81C10D524002E6C58 /* TMCriarViagemTresTableViewCell.swift in Sources */,
 				79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */,
 				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
