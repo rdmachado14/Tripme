@@ -38,6 +38,10 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -516,9 +520,78 @@
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v25-DK-Mex">
-                                        <rect key="frame" x="17" y="705" width="340" height="476"/>
+                                        <rect key="frame" x="17" y="705" width="340" height="481"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="5TW-Al-kJp" customClass="TMTripProjectViewCell" customModule="Tripme" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="340" height="44"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TW-Al-kJp" id="8rl-8p-uh8">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="43.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-Um-Kt0">
+                                                            <rect key="frame" x="257" y="11" width="68" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                                            <color key="textColor" red="0.42745098039215684" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCG-BO-pRS">
+                                                            <rect key="frame" x="17" y="8" width="214" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                                            <color key="textColor" red="0.50196078431372548" green="0.49411764705882355" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <animations/>
+                                                </tableViewCellContentView>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="lbName" destination="NCG-BO-pRS" id="5Kg-OK-A0p"/>
+                                                    <outlet property="lbValue" destination="jlX-Um-Kt0" id="oI9-GY-Tuj"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" rowHeight="50" id="H0J-FL-cX2" customClass="TMTripProjectHeader" customModule="Tripme" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="72" width="340" height="50"/>
+                                                <autoresizingMask key="autoresizingMask"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H0J-FL-cX2" id="iq9-sQ-7MG">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="49.5"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bch-YP-s2A">
+                                                            <rect key="frame" x="19" y="14" width="252" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-yJ-ajh">
+                                                            <rect key="frame" x="284" y="10" width="36" height="30"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                            <state key="normal" title="Editar">
+                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
+                                                    </subviews>
+                                                    <animations/>
+                                                </tableViewCellContentView>
+                                                <animations/>
+                                                <connections>
+                                                    <outlet property="btEdit" destination="ueE-yJ-ajh" id="lNm-WY-z6F"/>
+                                                    <outlet property="lbName" destination="bch-YP-s2A" id="Sw2-Mn-ba5"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="NWZ-Kr-wqq" id="kde-nh-x0U"/>
+                                            <outlet property="delegate" destination="NWZ-Kr-wqq" id="GhK-0u-8Ae"/>
+                                        </connections>
                                     </tableView>
                                 </subviews>
                                 <animations/>
@@ -539,6 +612,7 @@
                         <outlet property="lbTripHostLastName" destination="t5o-A4-dji" id="8Ua-Je-X9h"/>
                         <outlet property="lbTripName" destination="c3F-Bd-CWe" id="muD-EB-NH5"/>
                         <outlet property="lbTripTotal" destination="lqO-p5-Zdl" id="rjc-sN-ZzM"/>
+                        <outlet property="myTableView" destination="v25-DK-Mex" id="gcw-Lj-47H"/>
                         <outlet property="pvTripProgress" destination="NSL-ph-IWV" id="Gge-6F-KVx"/>
                         <outlet property="scrollView" destination="5r8-rU-9kp" id="Ybc-Ra-K9c"/>
                         <outlet property="secondImage" destination="0cR-ci-qss" id="F7k-Go-tNm"/>
