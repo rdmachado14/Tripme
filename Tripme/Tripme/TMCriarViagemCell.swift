@@ -11,6 +11,7 @@ import UIKit
 class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
     
     var isObserving = false
+    var primeiraVez = false
     
     @IBOutlet weak var tvDescicao: UITextView!
     
@@ -27,6 +28,7 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
             //tvTextView.text = teste
             TMCriarViagemCell.teste = tvDescicao.text
             print("testando o teste1: \(TMCriarViagemCell.teste)")
+            
             tvDescicao.hidden = true
             print("entoru aqui")
             lbDescicao.hidden = false
@@ -46,9 +48,17 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
     
     func watchFrameChanges() {
         if !isObserving {
-            print("entrou aqui 3")
+            //tvDescicao.becomeFirstResponder()
+            print("boolean: \(primeiraVez)")
+            if primeiraVez.boolValue {
+                
+            } else {
+                primeiraVez = true
+            }
+            print("boolean: \(primeiraVez)")
             addObserver(self, forKeyPath: "frame", options: [NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Initial], context: nil)
             isObserving = true;
+            
         }
     }
     

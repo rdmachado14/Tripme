@@ -18,6 +18,7 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        myTable.tableFooterView = UIView(frame: CGRectZero)
     }
     
     override func didReceiveMemoryWarning() {
@@ -31,7 +32,11 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         let indexPathe: NSIndexPath = NSIndexPath(forRow: 1, inSection: 0)
         if verificador == true {
             self.tableView(myTable, didSelectRowAtIndexPath: indexPathe)
-        }
+    }
+        
+        
+        
+        
         
 //        myTable.reloadRowsAtIndexPaths([indexPathe], withRowAnimation: UITableViewRowAnimation.Automatic)
 
@@ -100,17 +105,19 @@ extension TMCriarViagemViewController: UITableViewDataSource {
 
 extension TMCriarViagemViewController: UITableViewDelegate {
     
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("header") as! TMCriarViagemHeader
+        cell.HeaderName = "Informações gerais"
+        cell.backgroundColor = UIColor.blackColor().azulCriarViagem
+        return cell
+    }
+    
     func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         return "Informações gerais"
     }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
-    }
-    
-    func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
-        tableView.headerViewForSection(0)?.backgroundColor = UIColor.blackColor().azulCriarViagem
-        tableView.headerViewForSection(0)?.tintColor = UIColor.whiteColor()
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
@@ -120,6 +127,7 @@ extension TMCriarViagemViewController: UITableViewDelegate {
                 return TMCriarViagemCell.expandedHeight
             } else {
                 verificador = false
+                
                 return TMCriarViagemCell.defaultHeight
                 
             }
@@ -140,8 +148,9 @@ extension TMCriarViagemViewController: UITableViewDelegate {
         
         var indexPaths : Array<NSIndexPath> = []
         if indexPath.row == 2  {
+            print("entrou aqui nese")
             if let previous = previousIndexPath {
-                indexPaths += [previous]
+            indexPaths += [previous]
             }
             
             if let current = selectedIndexPath {

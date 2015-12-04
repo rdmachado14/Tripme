@@ -36,7 +36,7 @@ extension UIColor
     }
     
     var azulCriarViagem: UIColor {
-        return UIColor(red: 21/255, green: 118/255, blue: 236/255, alpha: 1)
+        return UIColor(red: 17/255, green: 141/255, blue: 240/255, alpha: 1)
     }
     
     func colorWithHexString (hex:String) -> UIColor {
