@@ -34,6 +34,11 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -1251,7 +1256,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rmG-nr-uZB">
-                                <rect key="frame" x="293" y="595" width="51" height="51"/>
+                                <rect key="frame" x="304" y="596" width="51" height="51"/>
                                 <animations/>
                                 <state key="normal" image="Proximo-button-9"/>
                                 <connections>
