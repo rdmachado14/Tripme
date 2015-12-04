@@ -12,9 +12,10 @@
 		5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */; };
 		5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281C51BE8E9DF002D90EE /* Trips.swift */; };
 		790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */; };
-		791DEC541C10E26F0070E812 /* TMCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 791DEC531C10E26F0070E812 /* TMCustomView.swift */; };
 		7921CAEA1BF513D4008C6F6C /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */; };
 		7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7921CAEB1BF51A41008C6F6C /* TMLikeViewController.swift */; };
+		793AA9351C11DA2B00095CFD /* TMTripProjectViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793AA9341C11DA2B00095CFD /* TMTripProjectViewCell.swift */; };
+		793AA9371C11DFD900095CFD /* TMTripProjectHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 793AA9361C11DFD900095CFD /* TMTripProjectHeader.swift */; };
 		795AB38F1BE2A00800FD6BD8 /* FBSDKLoginKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */; };
 		795AB3901BE2A00800FD6BD8 /* FBSDKShareKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */; };
 		795AB3911BE2A00800FD6BD8 /* FBSDKCoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 795AB38E1BE2A00800FD6BD8 /* FBSDKCoreKit.framework */; };
@@ -81,9 +82,10 @@
 		5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuItensCell.swift; sourceTree = "<group>"; };
 		5EF281C51BE8E9DF002D90EE /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTestPageViewController.swift; sourceTree = "<group>"; };
-		791DEC531C10E26F0070E812 /* TMCustomView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomView.swift; sourceTree = "<group>"; };
 		7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
 		7921CAEB1BF51A41008C6F6C /* TMLikeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMLikeViewController.swift; sourceTree = "<group>"; };
+		793AA9341C11DA2B00095CFD /* TMTripProjectViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTripProjectViewCell.swift; sourceTree = "<group>"; };
+		793AA9361C11DFD900095CFD /* TMTripProjectHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTripProjectHeader.swift; sourceTree = "<group>"; };
 		795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKLoginKit.framework; sourceTree = "<group>"; };
 		795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKShareKit.framework; sourceTree = "<group>"; };
 		795AB38E1BE2A00800FD6BD8 /* FBSDKCoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = FBSDKCoreKit.framework; sourceTree = "<group>"; };
@@ -191,6 +193,15 @@
 			name = "Menu Inicial";
 			sourceTree = "<group>";
 		};
+		793AA9331C11DA0700095CFD /* Viagem */ = {
+			isa = PBXGroup;
+			children = (
+				793AA9341C11DA2B00095CFD /* TMTripProjectViewCell.swift */,
+				793AA9361C11DFD900095CFD /* TMTripProjectHeader.swift */,
+			);
+			name = Viagem;
+			sourceTree = "<group>";
+		};
 		795AB3921BE2A28700FD6BD8 /* View */ = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +214,7 @@
 		795AB3931BE2A29800FD6BD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				793AA9331C11DA0700095CFD /* Viagem */,
 				A7ACB5821C0DD51100B5F24C /* CriarViagem */,
 				5EF281C01BE8E928002D90EE /* Menu Inicial */,
 				79D4A0B51BECEC1B000E552D /* Profile */,
@@ -267,7 +279,6 @@
 				A7B62CAE1BE14FAB00145361 /* Frameworks */,
 				79F071541BCEE87600646DD5 /* AppDelegate.swift */,
 				79F0715E1BCEE87600646DD5 /* Assets.xcassets */,
-				791DEC531C10E26F0070E812 /* TMCustomView.swift */,
 			);
 			path = Tripme;
 			sourceTree = "<group>";
@@ -496,6 +507,7 @@
 				7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */,
 				A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */,
 				5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */,
+				793AA9371C11DFD900095CFD /* TMTripProjectHeader.swift in Sources */,
 				A7ACB5881C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift in Sources */,
 				79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */,
 				5EB541FB1C0C92B000D232F5 /* Animation.swift in Sources */,
@@ -512,12 +524,12 @@
 				A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
-				791DEC541C10E26F0070E812 /* TMCustomView.swift in Sources */,
 				79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */,
 				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
 				A7C9CC4D1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift in Sources */,
 				A7C9CC4B1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift in Sources */,
 				79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */,
+				793AA9351C11DA2B00095CFD /* TMTripProjectViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
