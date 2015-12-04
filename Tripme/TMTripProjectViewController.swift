@@ -28,6 +28,10 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
     @IBOutlet weak var view3: UIView!
+    @IBOutlet weak var view4: UIView!
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var lbNameAgain: UILabel!
+    @IBOutlet weak var lbSecondNameAgain: UILabel!
     
     
     var object: PFObject!
@@ -133,10 +137,19 @@ class TMTripProjectViewController: UIViewController
         view3.layer.masksToBounds = false;
         view3.clipsToBounds = false;
         
-        
-        
         // view 4
+        view4.layer.cornerRadius = 10
+        view4.layer.masksToBounds = true
+        view4.layer.borderColor = UIColor.grayColor().CGColor
+        view4.layer.borderWidth = 0.5
         
+        view4.layer.contentsScale = UIScreen.mainScreen().scale;
+        view4.layer.shadowColor = UIColor.blackColor().CGColor;
+        view4.layer.shadowOffset = CGSizeZero;
+        view4.layer.shadowRadius = 5.0;
+        view4.layer.shadowOpacity = 0.5;
+        view4.layer.masksToBounds = false;
+        view4.clipsToBounds = false;
         
 
         

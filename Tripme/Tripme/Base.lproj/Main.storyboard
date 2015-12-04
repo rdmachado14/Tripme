@@ -53,6 +53,9 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -466,7 +469,7 @@
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-Lj-0hr">
                                                 <rect key="frame" x="285" y="541" width="30" height="33"/>
                                                 <animations/>
-                                                <state key="normal" title="Button" image="icon-heart"/>
+                                                <state key="normal" image="icon-heart"/>
                                                 <connections>
                                                     <action selector="btLikeTrip:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="Bl0-S8-c8E"/>
                                                 </connections>
@@ -606,7 +609,7 @@
                                                 <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Despesas da viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuF-WT-ebk">
-                                                        <rect key="frame" x="8" y="19" width="229" height="21"/>
+                                                        <rect key="frame" x="8" y="19" width="167" height="21"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -668,6 +671,56 @@
                                     </view>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuM-V1-H1e">
                                         <rect key="frame" x="17" y="1219" width="340" height="315"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASE-cK-Qte">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobre o viajante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-mC-cjo">
+                                                        <rect key="frame" x="8" y="19" width="131" height="21"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.050980392156862744" green="0.1803921568627451" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-ci-qss">
+                                                <rect key="frame" x="8" y="74" width="28" height="28"/>
+                                                <animations/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRI-vw-IAm">
+                                                <rect key="frame" x="44" y="77" width="51" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobrenome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugg-n9-igD">
+                                                <rect key="frame" x="94" y="77" width="82" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ola-a5-dgT">
+                                                <rect key="frame" x="15" y="115" width="317" height="158"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzz-hN-scz">
+                                                <rect key="frame" x="294" y="275" width="30" height="33"/>
+                                                <animations/>
+                                                <state key="normal" image="icon-heart"/>
+                                                <connections>
+                                                    <action selector="btLikeTrip:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="jys-lA-KbJ"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
@@ -684,15 +737,19 @@
                         <outlet property="ivProfilePicture" destination="TWl-r1-k6t" id="BjB-sS-W2c"/>
                         <outlet property="ivTripImage" destination="LCX-zk-3dy" id="RIL-BS-oSU"/>
                         <outlet property="lbCollected" destination="ehi-wO-dqi" id="qfQ-Fw-dmx"/>
+                        <outlet property="lbNameAgain" destination="vRI-vw-IAm" id="E6X-Xc-aFT"/>
+                        <outlet property="lbSecondNameAgain" destination="ugg-n9-igD" id="SkR-RC-qtw"/>
                         <outlet property="lbTripHost" destination="ZCK-Pr-MWe" id="QQX-4Y-0xe"/>
                         <outlet property="lbTripHostLastName" destination="t5o-A4-dji" id="8Ua-Je-X9h"/>
                         <outlet property="lbTripName" destination="c3F-Bd-CWe" id="muD-EB-NH5"/>
                         <outlet property="lbTripTotal" destination="lqO-p5-Zdl" id="rjc-sN-ZzM"/>
                         <outlet property="pvTripProgress" destination="NSL-ph-IWV" id="Gge-6F-KVx"/>
                         <outlet property="scrollView" destination="5r8-rU-9kp" id="Ybc-Ra-K9c"/>
+                        <outlet property="secondImage" destination="0cR-ci-qss" id="F7k-Go-tNm"/>
                         <outlet property="view1" destination="Y2A-cc-dPa" id="V57-eU-uxq"/>
                         <outlet property="view2" destination="ge9-9p-oUX" id="l1v-I1-nsR"/>
                         <outlet property="view3" destination="wDL-1z-m2C" id="Vku-Je-6TC"/>
+                        <outlet property="view4" destination="OuM-V1-H1e" id="4Yw-oM-KzI"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTh-ou-0F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
