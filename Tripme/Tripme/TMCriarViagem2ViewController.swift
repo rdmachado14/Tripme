@@ -15,6 +15,7 @@ class TMCriarViagem2ViewController: UIViewController {
     @IBOutlet weak var lbHeader: UILabel!
     @IBOutlet weak var add: UIButton!
     var imagens: [UIImage] = []
+    var strings: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
         lbHeader.backgroundColor = UIColor.blackColor().azulCriarViagem
