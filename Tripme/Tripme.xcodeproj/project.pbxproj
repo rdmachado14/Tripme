@@ -524,6 +524,7 @@
 				7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */,
 				A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */,
 				5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */,
+				793AA9371C11DFD900095CFD /* TMTripProjectHeader.swift in Sources */,
 				5EC1649E1C10CD71002E6C58 /* TMCriarViagemTresViewControler.swift in Sources */,
 				A7ACB5881C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift in Sources */,
 				79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */,
