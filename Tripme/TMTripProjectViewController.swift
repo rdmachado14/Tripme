@@ -26,10 +26,24 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view4: UIView!
+    @IBOutlet weak var secondImage: UIImageView!
+    @IBOutlet weak var lbNameAgain: UILabel!
+    @IBOutlet weak var lbSecondNameAgain: UILabel!
+    @IBOutlet weak var myTableView: UITableView!
     
     
     var object: PFObject!
     
+    struct Objects {
+        var sectionName: String!
+        var sectionObjects: [String]!
+        var sectionNameObjects: [String]!
+        var BackGroungColor: UIColor!
+    }
+    
+    var objectsArray = [Objects]()
+
     
     // MARK: - Variables
     var itemIndex: Int = 0
@@ -51,11 +65,12 @@ class TMTripProjectViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        
+
         lbTripName.text = "Naboo"
         
         lbCollected.text = "1200"
         lbTripTotal.text = "2000"
+        myTableView.tableFooterView = UIView(frame: CGRectZero)
         
         progressViewAction()
         
@@ -84,11 +99,29 @@ class TMTripProjectViewController: UIViewController
         
         customView()
         
+        objectsArray = [
+            Objects(
+                sectionName: "Informações sobre a viagem",
+                sectionObjects: ["a","b","c","d","e"],
+                sectionNameObjects: ["Valor a ser arrecadado","Tempo total de arrecadação","Tempo restante","Dias viajando","Valor mínimo de doação"],
+                BackGroungColor:  UIColor().colorWithHexString("FB324F")
+            ),
+            
+            Objects(
+                sectionName: "Despesas da viagem",
+                sectionObjects: ["f","g"],
+                sectionNameObjects: ["Passagens aéreas","Alimentação"],
+                BackGroungColor: UIColor().colorWithHexString("431A8C")
+            )
+        ]
+
+        
         
     }
     
     func customView()
     {
+        // view 1
         view1.layer.cornerRadius = 10
         view1.layer.masksToBounds = true
         view1.layer.borderColor = UIColor.grayColor().CGColor
@@ -101,6 +134,22 @@ class TMTripProjectViewController: UIViewController
         view1.layer.shadowOpacity = 0.5;
         view1.layer.masksToBounds = false;
         view1.clipsToBounds = false;
+        
+        // view 4
+        view4.layer.cornerRadius = 10
+        view4.layer.masksToBounds = true
+        view4.layer.borderColor = UIColor.grayColor().CGColor
+        view4.layer.borderWidth = 0.5
+        
+        view4.layer.contentsScale = UIScreen.mainScreen().scale;
+        view4.layer.shadowColor = UIColor.blackColor().CGColor;
+        view4.layer.shadowOffset = CGSizeZero;
+        view4.layer.shadowRadius = 5.0;
+        view4.layer.shadowOpacity = 0.5;
+        view4.layer.masksToBounds = false;
+        view4.clipsToBounds = false;
+        
+
         
     }
     
@@ -168,5 +217,63 @@ class TMTripProjectViewController: UIViewController
             }
         }
     }
+}
+
+extension TMTripProjectViewController: UITableViewDataSource
+{
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMTripProjectViewCell!
+        
+        print(indexPath.row)
+        print(objectsArray[indexPath.section].sectionName)
+        print(objectsArray[indexPath.section].sectionNameObjects)
+        print(objectsArray[indexPath.section].sectionObjects)
+        
+        cell.lbName.text = objectsArray[indexPath.section].sectionNameObjects[indexPath.row]
+        cell.lbValue.text = objectsArray[indexPath.section].sectionObjects[indexPath.row]
+        
+        return cell
+    }
     
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return objectsArray[section].sectionNameObjects.count
+    }
+    
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return objectsArray.count
+    }
+}
+
+extension TMTripProjectViewController: UITableViewDelegate
+{
+    func tableView(tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 30
+    }
+    
+    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let footerView:UIView = UIView()
+        footerView.backgroundColor = UIColor.clearColor()
+        return footerView
+    }
+    
+    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 50
+    }
+    
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Header") as! TMTripProjectHeader
+        cell.backgroundColor = objectsArray[section].BackGroungColor
+        
+        cell.lbName.text = objectsArray[section].sectionName
+        
+        return cell
+    }
+    
+    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
+        return objectsArray[section].sectionName
+    }
 }
