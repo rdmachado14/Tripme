@@ -10,6 +10,9 @@ import UIKit
 import Parse
 import FBSDKCoreKit
 import FBSDKLoginKit
+import Social
+import FBSDKShareKit
+
 
 class TMTripProjectViewController: UIViewController
 {
@@ -361,4 +364,14 @@ extension TMTripProjectViewController: UITableViewDelegate
         print(retorno)
         return retorno
     }
+    
+    @IBAction func btShare(sender: AnyObject)
+    {
+        let shareFacebook: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+        //        shareFacebook.setInitialText("") // texto inicial
+        //        shareFacebook.addImage() // imagem inicial
+        
+        self.presentViewController(shareFacebook, animated: true, completion: nil)
+    }
+    
 }

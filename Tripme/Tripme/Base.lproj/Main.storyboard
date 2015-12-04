@@ -371,6 +371,7 @@
                                             <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="btShare:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="AVW-tM-dbE"/>
                                             <action selector="cancelar:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="kNg-O8-jJv"/>
                                         </connections>
                                     </button>
