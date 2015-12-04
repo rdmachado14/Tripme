@@ -39,8 +39,8 @@ class TMCriarViagem2ViewController: UIViewController {
         if segue.identifier == "tela2" {
             
             let viewController:TMCriarViagemTresViewControler = segue.destinationViewController as! TMCriarViagemTresViewControler
-            viewController.vetorStrings = strings
-            viewController.imagens = imagens
+            viewController.Tela1 = strings
+            viewController.Tela2 = imagens
         }
         
     }

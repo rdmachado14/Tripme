@@ -19,8 +19,8 @@ class TMCriarViagemTresViewControler: UIViewController {
     var Tela1: [String]!
     var Tela2: [UIImage]!
     var Tela3: [String]!
-    var imagens: [UIImage] = []
-    var vetorStrings: [String] = []
+//    var imagens: [UIImage] = []
+//    var vetorStrings: [String] = []
     var Erro = false
     var verificador = false
     var selectedIndexPath: NSIndexPath?
@@ -45,13 +45,14 @@ class TMCriarViagemTresViewControler: UIViewController {
                 Tela3.append(cell.tfTextField.text!)
             } else {
                 Erro = true
-                UIAlertView(title: "Opa", message: "Esqueceu um campo aí", delegate: self, cancelButtonTitle: "OK").show()            }
+            }
         }
         
         if(!Erro){
             salvarNoParse()
             ///CHAMAR UMA ACTIVITY LOG
         }else{
+            UIAlertView(title: "Opa", message: "Esqueceu um campo aí", delegate: self, cancelButtonTitle: "OK").show()
             ///MERDA NENHUMA
         }
         
@@ -73,8 +74,8 @@ class TMCriarViagemTresViewControler: UIViewController {
         for i in 0..<Tela2.count{
             let FotoData = UIImagePNGRepresentation(Tela2[i])
             Fotos.append(PFFile(name: "Imagens", data: FotoData!)!)
+            NewTrip["Foto\(i)"] = Fotos[i]
         }
-        NewTrip["Fotos"] = Fotos
         
         
         NewTrip["CustoPassagem"]    = Tela3[0]
@@ -91,33 +92,26 @@ class TMCriarViagemTresViewControler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        print(vetorStrings)
-        print(imagens)
         var imagemFilesArray: [PFObject] = []
         
-        let query = PFQuery(className: "capas")
-        query.whereKey("objectId", equalTo: "XqVhrqa0k6")
-        query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, NSError) -> Void in
-            if NSError == nil {
-                imagemFilesArray = object!
-                print(object![0].objectForKey("Fotos") as! [PFFile])
-                let imageFile = object![0].objectForKey("Fotos") as! [PFFile]
-                print(imageFile[0])
-                imageFile[0].getDataInBackgroundWithBlock { (data, error) -> Void in
-                    if error == nil {
-                        print(data!)
-                        self.Imag.image = UIImage(data: data!)
-                    }
-                }
-            } else {
-                print("Erro na classe ComicsFavouriteCollectionView.. com o carregamenxto de imagens")
-            }
-        }
-        
-        
-        
-        Tela1 = ["0","1","2","3","4","5"]
-        Tela2 = [UIImage(named: "r1")!, UIImage(named: "r2")!, UIImage(named: "r3")!, UIImage(named: "r4")!, UIImage(named: "r5")!]
+//        let query = PFQuery(className: "capas")
+//        query.whereKey("objectId", equalTo: "XqVhrqa0k6")
+//        query.findObjectsInBackgroundWithBlock { (object: [PFObject]?, NSError) -> Void in
+//            if NSError == nil {
+//                imagemFilesArray = object!
+//                //print(object![0].objectForKey("Fotos") as! PFFile)
+//                let imageFile = object![0].objectForKey("Foto 1") as! PFFile
+//                print(imageFile)
+//                imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+//                    if error == nil {
+//                        print(data!)
+//                        self.Imag.image = UIImage(data: data!)
+//                    }
+//                }
+//            } else {
+//                print("Erro na classe ComicsFavouriteCollectionView.. com o carregamenxto de imagens")
+//            }
+//        }
         
         BtVoltar.setTitleColor(UIColor().CinzaClaroButtonText, forState: .Normal)
         BtCancelar.setTitleColor(UIColor().CinzaClaroButtonText, forState: .Normal)
