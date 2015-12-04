@@ -5,6 +5,9 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Tondo_Trial_Lt.ttf">
+            <string>TondoTrial-Light</string>
+        </mutableArray>
         <mutableArray key="Tondo_Trial_Rg.ttf">
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
@@ -1075,19 +1078,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-dv-kd5">
-                                <rect key="frame" x="0.0" y="48" width="375" height="619"/>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-dv-kd5">
+                                <rect key="frame" x="0.0" y="66" width="375" height="472"/>
                                 <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell2" rowHeight="44" id="WES-QB-DIW" customClass="TMCriarViagemTresTableViewCell" customModule="Tripme" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="WES-QB-DIW" customClass="TMCriarViagemTresTableViewCell" customModule="Tripme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WES-QB-DIW" id="rX5-H7-OMW">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4y-nE-ous">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4y-nE-ous">
                                                     <rect key="frame" x="25" y="8" width="342" height="30"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1095,25 +1098,115 @@
                                                 </textField>
                                             </subviews>
                                             <animations/>
+                                            <constraints>
+                                                <constraint firstItem="T4y-nE-ous" firstAttribute="leading" secondItem="rX5-H7-OMW" secondAttribute="leadingMargin" constant="17" id="AaF-bg-bse"/>
+                                                <constraint firstItem="T4y-nE-ous" firstAttribute="top" secondItem="rX5-H7-OMW" secondAttribute="topMargin" id="Fwc-tW-LQc"/>
+                                                <constraint firstItem="T4y-nE-ous" firstAttribute="trailing" secondItem="rX5-H7-OMW" secondAttribute="trailingMargin" id="Y4p-WO-0Qp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="T4y-nE-ous" secondAttribute="bottom" constant="-3" id="qqE-84-1nY"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <animations/>
                                         <connections>
                                             <outlet property="tfTextField" destination="T4y-nE-ous" id="Z1j-jr-6Fw"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="53" id="wSf-LA-XsZ" customClass="TMCriarViagemTresViewHeader" customModule="Tripme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wSf-LA-XsZ" id="5OI-1M-sjc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Despesas da Viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vb-6M-a9r">
+                                                    <rect key="frame" x="8" y="8" width="367" height="36"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="1vb-6M-a9r" firstAttribute="bottom" secondItem="5OI-1M-sjc" secondAttribute="bottomMargin" id="KWi-HQ-duP"/>
+                                                <constraint firstAttribute="trailing" secondItem="1vb-6M-a9r" secondAttribute="trailing" id="Oc9-09-JmE"/>
+                                                <constraint firstItem="1vb-6M-a9r" firstAttribute="top" secondItem="5OI-1M-sjc" secondAttribute="topMargin" id="ae7-d4-DwB"/>
+                                                <constraint firstItem="1vb-6M-a9r" firstAttribute="leading" secondItem="5OI-1M-sjc" secondAttribute="leadingMargin" id="hjT-Cg-4FY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.082352941176470587" green="0.45882352941176469" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="Header" destination="1vb-6M-a9r" id="9Un-Qd-zjd"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KVC-2H-Ct0" id="vDf-xK-Qc4"/>
+                                    <outlet property="delegate" destination="KVC-2H-Ct0" id="VHE-br-PYn"/>
+                                </connections>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar Viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYR-HC-aZ7">
+                                <rect key="frame" x="138" y="20" width="99" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Light" family="Tondo Trial" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXw-Hb-6uA">
+                                <rect key="frame" x="302" y="16" width="61" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Cancelar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnM-TE-Img">
+                                <rect key="frame" x="23" y="16" width="41" height="30"/>
+                                <animations/>
+                                <state key="normal" title="Voltar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-V7-Eel">
+                                <rect key="frame" x="70" y="586" width="235" height="58"/>
+                                <animations/>
+                                <state key="normal" image="criar viagem - buttonpng-9"/>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="d3Z-gJ-otl">
+                                <rect key="frame" x="168" y="546" width="39" height="37"/>
+                                <animations/>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linha Divisória-11" translatesAutoresizingMaskIntoConstraints="NO" id="qM6-vG-rOh">
+                                <rect key="frame" x="0.0" y="49" width="375" height="9"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="9" id="Qz2-J8-aIW"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="UMo-dv-kd5" firstAttribute="bottom" secondItem="nml-Pa-Ude" secondAttribute="top" id="2Kr-6R-4UQ"/>
-                            <constraint firstAttribute="trailing" secondItem="UMo-dv-kd5" secondAttribute="trailing" id="7X5-Xf-kvU"/>
-                            <constraint firstItem="UMo-dv-kd5" firstAttribute="top" secondItem="Vsc-nk-ARi" secondAttribute="bottom" constant="28" id="9dv-XD-nZR"/>
-                            <constraint firstItem="UMo-dv-kd5" firstAttribute="leading" secondItem="Jux-8c-z1f" secondAttribute="leading" id="ba6-PX-4FL"/>
+                            <constraint firstItem="nml-Pa-Ude" firstAttribute="top" secondItem="cx4-V7-Eel" secondAttribute="bottom" constant="23" id="06g-1P-Fwx"/>
+                            <constraint firstItem="d3Z-gJ-otl" firstAttribute="centerX" secondItem="UMo-dv-kd5" secondAttribute="centerX" id="1B4-bo-8Oz"/>
+                            <constraint firstItem="d3Z-gJ-otl" firstAttribute="top" secondItem="UMo-dv-kd5" secondAttribute="bottom" constant="8" symbolic="YES" id="2Dx-MY-Hff"/>
+                            <constraint firstItem="qM6-vG-rOh" firstAttribute="leading" secondItem="Jux-8c-z1f" secondAttribute="leading" id="5qe-vh-jpv"/>
+                            <constraint firstItem="cx4-V7-Eel" firstAttribute="top" secondItem="d3Z-gJ-otl" secondAttribute="bottom" constant="3" id="8Ka-2G-gW5"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="baseline" secondItem="HXw-Hb-6uA" secondAttribute="baseline" id="9Kc-tw-0qc"/>
+                            <constraint firstItem="qM6-vG-rOh" firstAttribute="top" secondItem="SYR-HC-aZ7" secondAttribute="bottom" constant="8" symbolic="YES" id="JeT-Yl-W8c"/>
+                            <constraint firstItem="qM6-vG-rOh" firstAttribute="leading" secondItem="UMo-dv-kd5" secondAttribute="leading" id="KU0-pT-aSL"/>
+                            <constraint firstItem="d3Z-gJ-otl" firstAttribute="centerX" secondItem="cx4-V7-Eel" secondAttribute="centerX" id="Mdd-BA-5MO"/>
+                            <constraint firstItem="OnM-TE-Img" firstAttribute="baseline" secondItem="SYR-HC-aZ7" secondAttribute="baseline" id="P3W-DB-g3g"/>
+                            <constraint firstAttribute="trailing" secondItem="qM6-vG-rOh" secondAttribute="trailing" id="TGB-AN-VxA"/>
+                            <constraint firstItem="HXw-Hb-6uA" firstAttribute="leading" secondItem="SYR-HC-aZ7" secondAttribute="trailing" constant="65" id="bFu-Ih-qXL"/>
+                            <constraint firstItem="qM6-vG-rOh" firstAttribute="trailing" secondItem="UMo-dv-kd5" secondAttribute="trailing" id="bN0-iz-kGC"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="leading" secondItem="OnM-TE-Img" secondAttribute="trailing" constant="74" id="cQp-G0-Nx5"/>
+                            <constraint firstItem="UMo-dv-kd5" firstAttribute="top" secondItem="qM6-vG-rOh" secondAttribute="bottom" constant="8" symbolic="YES" id="j4Z-rJ-XJg"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="top" secondItem="Vsc-nk-ARi" secondAttribute="bottom" id="mkj-8c-QDy"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="centerX" secondItem="qM6-vG-rOh" secondAttribute="centerX" id="zgA-je-hae"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="myTable" destination="UMo-dv-kd5" id="osV-ld-cj2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZe-fQ-8es" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1256,6 +1349,7 @@
         <image name="Nuvens-11" width="661" height="385"/>
         <image name="Perfil-top-9" width="751" height="437"/>
         <image name="User1" width="386" height="386"/>
+        <image name="criar viagem - buttonpng-9" width="235" height="58"/>
         <image name="facebook-11" width="687" height="128"/>
         <image name="icon-heart" width="23" height="21"/>
         <image name="logo-10" width="167" height="163"/>

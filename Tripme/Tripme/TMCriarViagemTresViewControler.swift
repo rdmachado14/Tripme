@@ -25,6 +25,7 @@ class TMCriarViagemTresViewControler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        myTable.tableFooterView = UIView(frame: CGRectZero)
     }
     
     override func didReceiveMemoryWarning() {
@@ -43,7 +44,8 @@ extension TMCriarViagemTresViewControler: UITableViewDataSource {
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         var customCel = UITableViewCell()
         
-            let customCell = tableView.dequeueReusableCellWithIdentifier("cell2") as! TMCriarViagemTresTableViewCell
+        let customCell: TMCriarViagemTresTableViewCell = tableView.dequeueReusableCellWithIdentifier("cell") as! TMCriarViagemTresTableViewCell
+        print(indexPath.row)
             customCell.tfTextField.placeholder = self.strings[indexPath.row]
             
             customCel = customCell
@@ -52,30 +54,29 @@ extension TMCriarViagemTresViewControler: UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 5
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
     }
     
-    func tableView(tableView: UITableView, didEndDisplayingHeaderView view: UIView, forSection section: Int) {
-        tableView.headerViewForSection(0)?.backgroundColor = UIColor().azulCriarViagem
-        tableView.headerViewForSection(0)?.tintColor = UIColor.whiteColor()
+    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let cell = tableView.dequeueReusableCellWithIdentifier("header") as! TMCriarViagemTresViewHeader
+        cell.HeaderName = "Despesas da viagem"
+        cell.backgroundColor = UIColor().azulCriarViagem
+        return cell
     }
 }
 
 extension TMCriarViagemTresViewControler: UITableViewDelegate {
-    func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-        return "Informações gerais"
-    }
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 40
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return TMCriarViagemTresCell.defaultHeight
+        return 44
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
@@ -91,7 +92,6 @@ extension TMCriarViagemTresViewControler: UITableViewDelegate {
         
         tableView.reloadRowsAtIndexPaths(indexPaths, withRowAnimation: UITableViewRowAnimation.Automatic)
         
-        //descricaoTeste = TMCriarViagemTresCell.teste
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
         
     }

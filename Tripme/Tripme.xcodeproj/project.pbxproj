@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		5EB541FB1C0C92B000D232F5 /* Animation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EB541FA1C0C92B000D232F5 /* Animation.swift */; };
+		5EBA94501C11CEE6009DC696 /* TMCriarViagemTresViewHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EBA944F1C11CEE6009DC696 /* TMCriarViagemTresViewHeader.swift */; };
 		5EC1649E1C10CD71002E6C58 /* TMCriarViagemTresViewControler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC1649D1C10CD71002E6C58 /* TMCriarViagemTresViewControler.swift */; };
-		5EC164A61C10D50B002E6C58 /* TMCriarViagemTresCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC164A51C10D50B002E6C58 /* TMCriarViagemTresCell.swift */; };
 		5EC164A81C10D524002E6C58 /* TMCriarViagemTresTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EC164A71C10D524002E6C58 /* TMCriarViagemTresTableViewCell.swift */; };
 		5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */; };
 		5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */; };
@@ -76,8 +76,8 @@
 
 /* Begin PBXFileReference section */
 		5EB541FA1C0C92B000D232F5 /* Animation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Animation.swift; sourceTree = "<group>"; };
+		5EBA944F1C11CEE6009DC696 /* TMCriarViagemTresViewHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemTresViewHeader.swift; sourceTree = "<group>"; };
 		5EC1649D1C10CD71002E6C58 /* TMCriarViagemTresViewControler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemTresViewControler.swift; sourceTree = "<group>"; };
-		5EC164A51C10D50B002E6C58 /* TMCriarViagemTresCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemTresCell.swift; sourceTree = "<group>"; };
 		5EC164A71C10D524002E6C58 /* TMCriarViagemTresTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemTresTableViewCell.swift; sourceTree = "<group>"; };
 		5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuViewController.swift; sourceTree = "<group>"; };
 		5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuItensCell.swift; sourceTree = "<group>"; };
@@ -183,7 +183,7 @@
 			isa = PBXGroup;
 			children = (
 				5EC1649D1C10CD71002E6C58 /* TMCriarViagemTresViewControler.swift */,
-				5EC164A51C10D50B002E6C58 /* TMCriarViagemTresCell.swift */,
+				5EBA944F1C11CEE6009DC696 /* TMCriarViagemTresViewHeader.swift */,
 				5EC164A71C10D524002E6C58 /* TMCriarViagemTresTableViewCell.swift */,
 			);
 			name = "TELA 3";
@@ -491,12 +491,12 @@
 				5EB541FB1C0C92B000D232F5 /* Animation.swift in Sources */,
 				5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */,
 				795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */,
+				5EBA94501C11CEE6009DC696 /* TMCriarViagemTresViewHeader.swift in Sources */,
 				A7E57D991BFD3B9700463174 /* Color.swift in Sources */,
 				79C774D91BF3C74E00D51E3D /* TMShareViewController.swift in Sources */,
 				A7E57D971BFD15B700463174 /* CustomTableViewCell.swift in Sources */,
 				A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */,
 				79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */,
-				5EC164A61C10D50B002E6C58 /* TMCriarViagemTresCell.swift in Sources */,
 				790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */,
 				79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */,
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
