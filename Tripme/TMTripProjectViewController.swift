@@ -26,6 +26,7 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var view1: UIView!
+    @IBOutlet weak var view2: UIView!
     
     
     var object: PFObject!
@@ -101,6 +102,20 @@ class TMTripProjectViewController: UIViewController
         view1.layer.shadowOpacity = 0.5;
         view1.layer.masksToBounds = false;
         view1.clipsToBounds = false;
+        
+        view2.layer.cornerRadius = 10
+        view2.layer.masksToBounds = true
+        view2.layer.borderColor = UIColor.grayColor().CGColor
+        view2.layer.borderWidth = 0.5
+        
+        view2.layer.contentsScale = UIScreen.mainScreen().scale;
+        view2.layer.shadowColor = UIColor.blackColor().CGColor;
+        view2.layer.shadowOffset = CGSizeZero;
+        view2.layer.shadowRadius = 5.0;
+        view2.layer.shadowOpacity = 0.5;
+        view2.layer.masksToBounds = false;
+        view2.clipsToBounds = false;
+
         
     }
     
