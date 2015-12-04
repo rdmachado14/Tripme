@@ -36,6 +36,7 @@
 		79F071621BCEE87600646DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F071601BCEE87600646DD5 /* LaunchScreen.storyboard */; };
 		79F0716D1BCEE87600646DD5 /* TripmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0716C1BCEE87600646DD5 /* TripmeTests.swift */; };
 		79F071781BCEE87600646DD5 /* TripmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071771BCEE87600646DD5 /* TripmeUITests.swift */; };
+		A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7280F051C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift */; };
 		A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */; };
 		A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */; };
 		A7ACB5881C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5851C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift */; };
@@ -52,6 +53,8 @@
 		A7B62CC61BE150BC00145361 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC51BE150BC00145361 /* libsqlite3.tbd */; };
 		A7B62CC81BE150C600145361 /* Accounts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC71BE150C600145361 /* Accounts.framework */; };
 		A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC91BE150D000145361 /* Social.framework */; };
+		A7C9CC4B1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9CC4A1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift */; };
+		A7C9CC4D1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9CC4C1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift */; };
 		A7E57D971BFD15B700463174 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */; };
 		A7E57D991BFD3B9700463174 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E57D981BFD3B9700463174 /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -114,6 +117,7 @@
 		A714B1641BFBB53900990971 /* Tondo_Trial_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Lt.ttf; sourceTree = "<group>"; };
 		A714B1651BFBB53900990971 /* Tondo_Trial_Rg.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Rg.ttf; sourceTree = "<group>"; };
 		A714B1661BFBB53900990971 /* Tondo_Trial_Sign.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Sign.ttf; sourceTree = "<group>"; };
+		A7280F051C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemCollectionViewCell.swift; sourceTree = "<group>"; };
 		A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemViewController.swift; sourceTree = "<group>"; };
 		A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemCell.swift; sourceTree = "<group>"; };
 		A7ACB5851C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagem2TableViewCell.swift; sourceTree = "<group>"; };
@@ -130,6 +134,8 @@
 		A7B62CC51BE150BC00145361 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
 		A7B62CC71BE150C600145361 /* Accounts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accounts.framework; path = System/Library/Frameworks/Accounts.framework; sourceTree = SDKROOT; };
 		A7B62CC91BE150D000145361 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
+		A7C9CC4A1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemHeader.swift; sourceTree = "<group>"; };
+		A7C9CC4C1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagem2ViewController.swift; sourceTree = "<group>"; };
 		A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A7E57D981BFD3B9700463174 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -307,12 +313,31 @@
 			name = Fontes;
 			sourceTree = "<group>";
 		};
-		A7ACB5821C0DD51100B5F24C /* CriarViagem */ = {
+		A7280F031C0F94DA00B89E08 /* Tela1 */ = {
 			isa = PBXGroup;
 			children = (
 				A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */,
 				A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */,
 				A7ACB5851C0DD53500B5F24C /* TMCriarViagem2TableViewCell.swift */,
+				A7C9CC4A1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift */,
+			);
+			name = Tela1;
+			sourceTree = "<group>";
+		};
+		A7280F041C0F94F200B89E08 /* Tela2 */ = {
+			isa = PBXGroup;
+			children = (
+				A7C9CC4C1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift */,
+				A7280F051C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift */,
+			);
+			name = Tela2;
+			sourceTree = "<group>";
+		};
+		A7ACB5821C0DD51100B5F24C /* CriarViagem */ = {
+			isa = PBXGroup;
+			children = (
+				A7280F041C0F94F200B89E08 /* Tela2 */,
+				A7280F031C0F94DA00B89E08 /* Tela1 */,
 			);
 			name = CriarViagem;
 			sourceTree = "<group>";
@@ -409,7 +434,7 @@
 				TargetAttributes = {
 					79F071501BCEE87600646DD5 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = ZUD974TE3Q;
+						DevelopmentTeam = 34PHTXR9K4;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -496,10 +521,13 @@
 				790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */,
 				79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */,
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
+				A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
 				79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */,
 				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
+				A7C9CC4D1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift in Sources */,
+				A7C9CC4B1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift in Sources */,
 				79F0715D1BCEE87600646DD5 /* Tripme.xcdatamodeld in Sources */,
 				793AA9351C11DA2B00095CFD /* TMTripProjectViewCell.swift in Sources */,
 			);
