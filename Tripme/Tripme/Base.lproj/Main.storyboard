@@ -1288,7 +1288,7 @@
                                 <rect key="frame" x="138" y="18" width="98" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -1352,7 +1352,7 @@
                                 <rect key="frame" x="138" y="19" width="99" height="21"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="16"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="   Adicione mídia a sua viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VSc-xg-qnR">
