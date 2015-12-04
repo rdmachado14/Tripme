@@ -405,7 +405,7 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobrenome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="t5o-A4-dji">
-                                                        <rect key="frame" x="96" y="60" width="82" height="21"/>
+                                                        <rect key="frame" x="94" y="60" width="82" height="21"/>
                                                         <animations/>
                                                         <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -515,6 +515,7 @@
                         <outlet property="lbTripTotal" destination="lqO-p5-Zdl" id="rjc-sN-ZzM"/>
                         <outlet property="pvTripProgress" destination="NSL-ph-IWV" id="Gge-6F-KVx"/>
                         <outlet property="scrollView" destination="5r8-rU-9kp" id="Ybc-Ra-K9c"/>
+                        <outlet property="view1" destination="Y2A-cc-dPa" id="V57-eU-uxq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTh-ou-0F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
