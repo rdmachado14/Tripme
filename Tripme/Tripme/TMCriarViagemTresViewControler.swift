@@ -92,7 +92,7 @@ class TMCriarViagemTresViewControler: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        var imagemFilesArray: [PFObject] = []
+//        var imagemFilesArray: [PFObject] = []
         
 //        let query = PFQuery(className: "capas")
 //        query.whereKey("objectId", equalTo: "XqVhrqa0k6")

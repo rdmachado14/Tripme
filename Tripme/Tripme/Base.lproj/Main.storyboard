@@ -1492,10 +1492,6 @@
                                     <action selector="CriarViagem:" destination="KVC-2H-Ct0" eventType="touchUpInside" id="p0J-AM-BaZ"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="foR-sG-2LK">
-                                <rect key="frame" x="32" y="543" width="311" height="115"/>
-                                <animations/>
-                            </imageView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -1523,7 +1519,6 @@
                     <connections>
                         <outlet property="BtCancelar" destination="HXw-Hb-6uA" id="8Qo-Lm-QlA"/>
                         <outlet property="BtVoltar" destination="OnM-TE-Img" id="bGl-yQ-Uu7"/>
-                        <outlet property="Imag" destination="foR-sG-2LK" id="qlG-ab-bC7"/>
                         <outlet property="myTable" destination="UMo-dv-kd5" id="osV-ld-cj2"/>
                     </connections>
                 </viewController>
