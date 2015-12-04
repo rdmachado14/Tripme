@@ -18,6 +18,7 @@ class TMCriarViagem2ViewController: UIViewController {
     var strings: [String] = []
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(strings)
         lbHeader.backgroundColor = UIColor.blackColor().azulCriarViagem
         
         add.backgroundColor = UIColor.blackColor().azulCriarViagem
@@ -34,6 +35,15 @@ class TMCriarViagem2ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "tela2" {
+            
+            let viewController:TMCriarViagemTresViewControler = segue.destinationViewController as! TMCriarViagemTresViewControler
+            viewController.Tela1 = strings
+            viewController.Tela2 = imagens
+        }
+        
+    }
 
     /*
     // MARK: - Navigation
@@ -46,7 +56,7 @@ class TMCriarViagem2ViewController: UIViewController {
     */
     
     @IBAction func voltar(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(false, completion: nil)
     }
     
     @IBAction func adicionar(sender: AnyObject) {
@@ -91,6 +101,11 @@ class TMCriarViagem2ViewController: UIViewController {
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         picker.delegate = self
         presentViewController(picker, animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func proximo(sender: AnyObject) {
+        performSegueWithIdentifier("tela2", sender: self)
     }
     
 

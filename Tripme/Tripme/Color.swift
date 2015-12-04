@@ -27,6 +27,10 @@ extension UIColor
         return UIColor(red: 67/255, green: 26/255, blue: 140/255, alpha: 1)
     }
     
+    var CinzaClaroButtonText: UIColor{
+        return UIColor().colorWithHexString("808080")
+    }
+    
     var verdeEscuro: UIColor {
         return UIColor(red: 7/255, green: 190/255, blue: 152/255, alpha: 1)
     }
