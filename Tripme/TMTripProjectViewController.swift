@@ -27,6 +27,7 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view2: UIView!
+    @IBOutlet weak var view3: UIView!
     
     
     var object: PFObject!
@@ -90,6 +91,7 @@ class TMTripProjectViewController: UIViewController
     
     func customView()
     {
+        // view 1
         view1.layer.cornerRadius = 10
         view1.layer.masksToBounds = true
         view1.layer.borderColor = UIColor.grayColor().CGColor
@@ -103,6 +105,7 @@ class TMTripProjectViewController: UIViewController
         view1.layer.masksToBounds = false;
         view1.clipsToBounds = false;
         
+        // view 2
         view2.layer.cornerRadius = 10
         view2.layer.masksToBounds = true
         view2.layer.borderColor = UIColor.grayColor().CGColor
@@ -115,6 +118,26 @@ class TMTripProjectViewController: UIViewController
         view2.layer.shadowOpacity = 0.5;
         view2.layer.masksToBounds = false;
         view2.clipsToBounds = false;
+        
+        // view 3
+        view3.layer.cornerRadius = 10
+        view3.layer.masksToBounds = true
+        view3.layer.borderColor = UIColor.grayColor().CGColor
+        view3.layer.borderWidth = 0.5
+        
+        view3.layer.contentsScale = UIScreen.mainScreen().scale;
+        view3.layer.shadowColor = UIColor.blackColor().CGColor;
+        view3.layer.shadowOffset = CGSizeZero;
+        view3.layer.shadowRadius = 5.0;
+        view3.layer.shadowOpacity = 0.5;
+        view3.layer.masksToBounds = false;
+        view3.clipsToBounds = false;
+        
+        
+        
+        // view 4
+        
+        
 
         
     }
