@@ -13,14 +13,14 @@ import UIKit
 
 extension UIView {
     
-    func goLeftAndAgain(primeiro: Bool = false,var duration: NSTimeInterval = 2.0, delay: NSTimeInterval = 0.0, completion: (() -> Void) = { () -> Void in }) {
+    func goLeftAndAgain(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
         if(primeiro) {
-           duration = 1
+            duration = 5
         }
         
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
-            self.frame = CGRect(x: -self.frame.size.width, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+            self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
             }) { (bool : Bool) -> Void in
                 print("go")
                 self.frame.origin = CGPoint(x: 375, y: 0)

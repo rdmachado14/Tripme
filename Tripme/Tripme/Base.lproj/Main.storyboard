@@ -5,7 +5,17 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Tondo_Trial_Lt.ttf">
+            <string>TondoTrial-Light</string>
+        </mutableArray>
         <mutableArray key="Tondo_Trial_Rg.ttf">
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
@@ -80,7 +90,7 @@
                                         <rect key="frame" x="0.0" y="136" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Dc9-JY-U7I" id="Kfh-JM-SCr">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <animations/>
                                         </tableViewCellContentView>
@@ -334,7 +344,7 @@
                         <viewControllerLayoutGuide type="bottom" id="aN5-Xa-7Fm"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="AgC-dz-fdd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1900"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5r8-rU-9kp">
@@ -366,6 +376,7 @@
                                             <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                         </state>
                                         <connections>
+                                            <action selector="btShare:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="AVW-tM-dbE"/>
                                             <action selector="cancelar:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="kNg-O8-jJv"/>
                                         </connections>
                                     </button>
@@ -469,63 +480,8 @@
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuM-V1-H1e">
-                                        <rect key="frame" x="17" y="1219" width="340" height="315"/>
-                                        <subviews>
-                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASE-cK-Qte">
-                                                <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
-                                                <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobre o viajante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-mC-cjo">
-                                                        <rect key="frame" x="8" y="19" width="131" height="21"/>
-                                                        <animations/>
-                                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
-                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
-                                                </subviews>
-                                                <animations/>
-                                                <color key="backgroundColor" red="0.050980392156862744" green="0.1803921568627451" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
-                                            </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-ci-qss">
-                                                <rect key="frame" x="8" y="74" width="28" height="28"/>
-                                                <animations/>
-                                            </imageView>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRI-vw-IAm">
-                                                <rect key="frame" x="44" y="77" width="51" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
-                                                <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobrenome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugg-n9-igD">
-                                                <rect key="frame" x="94" y="77" width="82" height="21"/>
-                                                <animations/>
-                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
-                                                <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Ola-a5-dgT">
-                                                <rect key="frame" x="15" y="115" width="317" height="158"/>
-                                                <animations/>
-                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
-                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                                            </textView>
-                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzz-hN-scz">
-                                                <rect key="frame" x="294" y="275" width="30" height="33"/>
-                                                <animations/>
-                                                <state key="normal" image="icon-heart"/>
-                                                <connections>
-                                                    <action selector="btLikeTrip:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="jys-lA-KbJ"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <animations/>
-                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                    </view>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v25-DK-Mex">
-                                        <rect key="frame" x="17" y="705" width="340" height="481"/>
+                                    <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Informacoes" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v25-DK-Mex">
+                                        <rect key="frame" x="17" y="698" width="340" height="278"/>
                                         <animations/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -534,7 +490,7 @@
                                                 <rect key="frame" x="0.0" y="28" width="340" height="44"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="5TW-Al-kJp" id="8rl-8p-uh8">
-                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="43.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="43"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-Um-Kt0">
@@ -565,7 +521,7 @@
                                                 <rect key="frame" x="0.0" y="72" width="340" height="50"/>
                                                 <autoresizingMask key="autoresizingMask"/>
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="H0J-FL-cX2" id="iq9-sQ-7MG">
-                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="49.5"/>
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="49"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bch-YP-s2A">
@@ -598,6 +554,135 @@
                                             <outlet property="delegate" destination="NWZ-Kr-wqq" id="GhK-0u-8Ae"/>
                                         </connections>
                                     </tableView>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Despesas" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HdV-Sy-xXt">
+                                        <rect key="frame" x="17" y="1004" width="340" height="281"/>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <prototypes>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Go6-ya-NG3" customClass="TMTripProjectViewCell" customModule="Tripme" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="28" width="340" height="44"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Go6-ya-NG3" id="Cue-DV-ABd">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="43"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyW-3B-RdM">
+                                                            <rect key="frame" x="257" y="11" width="68" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                                            <color key="textColor" red="0.42745098040000001" green="0.41960784309999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-tE-6jo">
+                                                            <rect key="frame" x="17" y="8" width="214" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                                            <color key="textColor" red="0.50196078430000002" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <animations/>
+                                                </tableViewCellContentView>
+                                                <animations/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                                <connections>
+                                                    <outlet property="lbName" destination="JpR-tE-6jo" id="hrc-B2-FPe"/>
+                                                    <outlet property="lbValue" destination="gyW-3B-RdM" id="Aqd-us-zSp"/>
+                                                </connections>
+                                            </tableViewCell>
+                                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Header" rowHeight="50" id="B1q-T9-sE5" customClass="TMTripProjectHeader" customModule="Tripme" customModuleProvider="target">
+                                                <rect key="frame" x="0.0" y="72" width="340" height="50"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="B1q-T9-sE5" id="LMN-LJ-gUF">
+                                                    <rect key="frame" x="0.0" y="0.0" width="340" height="49"/>
+                                                    <autoresizingMask key="autoresizingMask"/>
+                                                    <subviews>
+                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3U-0c-BW1">
+                                                            <rect key="frame" x="284" y="10" width="36" height="30"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                            <state key="normal" title="Editar">
+                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            </state>
+                                                        </button>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IX-8N-TaC">
+                                                            <rect key="frame" x="19" y="14" width="252" height="21"/>
+                                                            <animations/>
+                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                    </subviews>
+                                                    <animations/>
+                                                </tableViewCellContentView>
+                                                <animations/>
+                                                <connections>
+                                                    <outlet property="btEdit" destination="T3U-0c-BW1" id="3GK-Bu-Uha"/>
+                                                    <outlet property="lbName" destination="5IX-8N-TaC" id="Em1-Y2-Adk"/>
+                                                </connections>
+                                            </tableViewCell>
+                                        </prototypes>
+                                        <connections>
+                                            <outlet property="dataSource" destination="NWZ-Kr-wqq" id="sHA-SO-GXl"/>
+                                            <outlet property="delegate" destination="NWZ-Kr-wqq" id="t5Y-Sp-0p6"/>
+                                        </connections>
+                                    </tableView>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuM-V1-H1e">
+                                        <rect key="frame" x="17" y="1316" width="340" height="315"/>
+                                        <subviews>
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-ci-qss">
+                                                <rect key="frame" x="8" y="74" width="28" height="28"/>
+                                                <animations/>
+                                            </imageView>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRI-vw-IAm">
+                                                <rect key="frame" x="44" y="77" width="51" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobrenome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ugg-n9-igD">
+                                                <rect key="frame" x="94" y="77" width="82" height="21"/>
+                                                <animations/>
+                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pzz-hN-scz">
+                                                <rect key="frame" x="294" y="275" width="30" height="33"/>
+                                                <animations/>
+                                                <state key="normal" image="icon-heart"/>
+                                                <connections>
+                                                    <action selector="btLikeTrip:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="jys-lA-KbJ"/>
+                                                </connections>
+                                            </button>
+                                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="m0D-Mg-bxc">
+                                                <rect key="frame" x="23" y="120" width="294" height="136"/>
+                                                <animations/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                                <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
+                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                            </textView>
+                                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASE-cK-Qte">
+                                                <rect key="frame" x="0.0" y="0.0" width="340" height="60"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sobre o viajante" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hSK-mC-cjo">
+                                                        <rect key="frame" x="8" y="19" width="131" height="21"/>
+                                                        <animations/>
+                                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.050980392156862744" green="0.1803921568627451" blue="0.33333333333333331" alpha="1" colorSpace="calibratedRGB"/>
+                                            </view>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
                                 </subviews>
                                 <animations/>
                             </scrollView>
@@ -606,7 +691,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
-                    <size key="freeformSize" width="375" height="1900"/>
+                    <size key="freeformSize" width="375" height="1700"/>
                     <connections>
                         <outlet property="ivProfilePicture" destination="TWl-r1-k6t" id="BjB-sS-W2c"/>
                         <outlet property="ivTripImage" destination="LCX-zk-3dy" id="RIL-BS-oSU"/>
@@ -617,6 +702,7 @@
                         <outlet property="lbTripHostLastName" destination="t5o-A4-dji" id="8Ua-Je-X9h"/>
                         <outlet property="lbTripName" destination="c3F-Bd-CWe" id="muD-EB-NH5"/>
                         <outlet property="lbTripTotal" destination="lqO-p5-Zdl" id="rjc-sN-ZzM"/>
+                        <outlet property="mtTableView2" destination="HdV-Sy-xXt" id="1hi-eJ-sWc"/>
                         <outlet property="myTableView" destination="v25-DK-Mex" id="gcw-Lj-47H"/>
                         <outlet property="pvTripProgress" destination="NSL-ph-IWV" id="Gge-6F-KVx"/>
                         <outlet property="scrollView" destination="5r8-rU-9kp" id="Ybc-Ra-K9c"/>
@@ -671,18 +757,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="M9P-jc-Mhl">
-                                <rect key="frame" x="375" y="0.0" width="375" height="667"/>
-                                <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="375" id="j9K-TH-jZp"/>
-                                </constraints>
-                            </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-vC-1u9">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-vC-1u9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <animations/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" red="0.63571772490770784" green="0.75272253787878785" blue="0.47165607297701462" alpha="0.5" colorSpace="calibratedRGB"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="M9P-jc-Mhl">
+                                <rect key="frame" x="375" y="0.0" width="375" height="667"/>
+                                <animations/>
+                                <color key="backgroundColor" red="1" green="1" blue="1" alpha="0.59999999999999998" colorSpace="calibratedRGB"/>
                             </imageView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L7K-MD-8jh">
                                 <rect key="frame" x="0.0" y="94" width="375" height="452"/>
@@ -702,7 +785,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="450"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Mochilão na América do Sul" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-Tm-ebL">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mochilão na América do Sul" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-Tm-ebL">
                                                     <rect key="frame" x="8" y="294" width="282" height="33"/>
                                                     <animations/>
                                                     <constraints>
@@ -712,11 +795,11 @@
                                                     <color key="textColor" white="0.25" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="r1" translatesAutoresizingMaskIntoConstraints="NO" id="sKo-3L-udM">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="r1" translatesAutoresizingMaskIntoConstraints="NO" id="sKo-3L-udM">
                                                     <rect key="frame" x="0.0" y="0.0" width="290" height="289"/>
                                                     <animations/>
                                                 </imageView>
-                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" misplaced="YES" progressViewStyle="bar" progress="0.5" progressImage="Criar conta-7" trackImage="facebook-11" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-1Z-aSd">
+                                                <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" progressImage="Criar conta-7" trackImage="facebook-11" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-1Z-aSd">
                                                     <rect key="frame" x="19" y="333" width="253" height="3"/>
                                                     <animations/>
                                                     <constraints>
@@ -725,7 +808,7 @@
                                                     <color key="progressTintColor" red="0.1176470588" green="0.90196078430000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
                                                     <color key="trackTintColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="R$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxn-m7-Buq">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxn-m7-Buq">
                                                     <rect key="frame" x="133" y="349" width="134" height="21"/>
                                                     <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
@@ -739,7 +822,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzu-8p-JT4">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzu-8p-JT4">
                                                     <rect key="frame" x="38" y="361" width="66" height="21"/>
                                                     <animations/>
                                                     <constraints>
@@ -749,7 +832,7 @@
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ycU-Ys-aqU">
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ycU-Ys-aqU">
                                                     <rect key="frame" x="8" y="358" width="29" height="32"/>
                                                     <animations/>
                                                     <constraints>
@@ -850,13 +933,8 @@
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="L7K-MD-8jh" secondAttribute="trailing" id="3Oo-4Q-dtW"/>
                             <constraint firstItem="L7K-MD-8jh" firstAttribute="top" secondItem="xfQ-xR-qAa" secondAttribute="bottom" constant="74" id="6wE-dL-LVN"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="top" secondItem="6Wr-vC-1u9" secondAttribute="top" id="EYI-UY-9uL"/>
                             <constraint firstItem="L7K-MD-8jh" firstAttribute="leading" secondItem="Jzf-GS-LQU" secondAttribute="leading" id="Hcv-da-APR"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="bottom" secondItem="6Wr-vC-1u9" secondAttribute="bottom" id="Iu1-0y-yAX"/>
                             <constraint firstItem="AyJ-lG-t4K" firstAttribute="top" secondItem="L7K-MD-8jh" secondAttribute="bottom" constant="121" id="TOM-GM-VLH"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="leading" secondItem="L7K-MD-8jh" secondAttribute="trailing" id="gHT-y3-hqo"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="leading" secondItem="6Wr-vC-1u9" secondAttribute="trailing" id="h2E-WR-jQg"/>
-                            <constraint firstItem="M9P-jc-Mhl" firstAttribute="top" secondItem="Jzf-GS-LQU" secondAttribute="top" id="mI5-P5-OPn"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1287,6 +1365,186 @@
             </objects>
             <point key="canvasLocation" x="2119" y="548"/>
         </scene>
+        <!--Criar Viagem Tres View Controler-->
+        <scene sceneID="39y-x7-UPs">
+            <objects>
+                <viewController id="KVC-2H-Ct0" customClass="TMCriarViagemTresViewControler" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Vsc-nk-ARi"/>
+                        <viewControllerLayoutGuide type="bottom" id="nml-Pa-Ude"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Jux-8c-z1f">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UMo-dv-kd5">
+                                <rect key="frame" x="0.0" y="66" width="375" height="472"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="44" id="WES-QB-DIW" customClass="TMCriarViagemTresTableViewCell" customModule="Tripme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="WES-QB-DIW" id="rX5-H7-OMW">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="T4y-nE-ous">
+                                                    <rect key="frame" x="25" y="8" width="342" height="30"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="T4y-nE-ous" firstAttribute="leading" secondItem="rX5-H7-OMW" secondAttribute="leadingMargin" constant="17" id="AaF-bg-bse"/>
+                                                <constraint firstItem="T4y-nE-ous" firstAttribute="top" secondItem="rX5-H7-OMW" secondAttribute="topMargin" id="Fwc-tW-LQc"/>
+                                                <constraint firstItem="T4y-nE-ous" firstAttribute="trailing" secondItem="rX5-H7-OMW" secondAttribute="trailingMargin" id="Y4p-WO-0Qp"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="T4y-nE-ous" secondAttribute="bottom" constant="-3" id="qqE-84-1nY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <connections>
+                                            <outlet property="tfTextField" destination="T4y-nE-ous" id="Z1j-jr-6Fw"/>
+                                        </connections>
+                                    </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="header" rowHeight="53" id="wSf-LA-XsZ" customClass="TMCriarViagemTresViewHeader" customModule="Tripme" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="72" width="375" height="53"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wSf-LA-XsZ" id="5OI-1M-sjc">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="52"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Despesas da Viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1vb-6M-a9r">
+                                                    <rect key="frame" x="8" y="8" width="367" height="36"/>
+                                                    <animations/>
+                                                    <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="16"/>
+                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <animations/>
+                                            <constraints>
+                                                <constraint firstItem="1vb-6M-a9r" firstAttribute="bottom" secondItem="5OI-1M-sjc" secondAttribute="bottomMargin" id="KWi-HQ-duP"/>
+                                                <constraint firstAttribute="trailing" secondItem="1vb-6M-a9r" secondAttribute="trailing" id="Oc9-09-JmE"/>
+                                                <constraint firstItem="1vb-6M-a9r" firstAttribute="top" secondItem="5OI-1M-sjc" secondAttribute="topMargin" id="ae7-d4-DwB"/>
+                                                <constraint firstItem="1vb-6M-a9r" firstAttribute="leading" secondItem="5OI-1M-sjc" secondAttribute="leadingMargin" id="hjT-Cg-4FY"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <animations/>
+                                        <color key="backgroundColor" red="0.082352941176470587" green="0.45882352941176469" blue="0.9137254901960784" alpha="1" colorSpace="calibratedRGB"/>
+                                        <connections>
+                                            <outlet property="Header" destination="1vb-6M-a9r" id="9Un-Qd-zjd"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="KVC-2H-Ct0" id="vDf-xK-Qc4"/>
+                                    <outlet property="delegate" destination="KVC-2H-Ct0" id="VHE-br-PYn"/>
+                                </connections>
+                            </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Criar Viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SYR-HC-aZ7">
+                                <rect key="frame" x="138" y="20" width="99" height="21"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Light" family="Tondo Trial" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HXw-Hb-6uA">
+                                <rect key="frame" x="302" y="16" width="61" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                <state key="normal" title="Cancelar"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OnM-TE-Img">
+                                <rect key="frame" x="23" y="16" width="41" height="30"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="Voltar:" destination="KVC-2H-Ct0" eventType="touchUpInside" id="p0y-Cx-SJZ"/>
+                                </connections>
+                            </button>
+                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" currentPage="2" translatesAutoresizingMaskIntoConstraints="NO" id="d3Z-gJ-otl">
+                                <rect key="frame" x="153" y="621" width="69" height="37"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="btw-JK-8AL"/>
+                                </constraints>
+                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            </pageControl>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Linha Divisória-11" translatesAutoresizingMaskIntoConstraints="NO" id="qM6-vG-rOh">
+                                <rect key="frame" x="0.0" y="49" width="375" height="9"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="9" id="Icv-OP-Wmq"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cx4-V7-Eel">
+                                <rect key="frame" x="70" y="553" width="235" height="58"/>
+                                <animations/>
+                                <state key="normal" image="criar viagem - buttonpng-9"/>
+                                <connections>
+                                    <action selector="CriarViagem:" destination="KVC-2H-Ct0" eventType="touchUpInside" id="p0J-AM-BaZ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="leading" secondItem="OnM-TE-Img" secondAttribute="trailing" constant="74" id="2dZ-gn-ShF"/>
+                            <constraint firstItem="qM6-vG-rOh" firstAttribute="top" secondItem="SYR-HC-aZ7" secondAttribute="bottom" constant="8" symbolic="YES" id="3Yo-Y0-9QR"/>
+                            <constraint firstItem="cx4-V7-Eel" firstAttribute="centerX" secondItem="d3Z-gJ-otl" secondAttribute="centerX" id="3aq-RT-iiQ"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="centerX" secondItem="qM6-vG-rOh" secondAttribute="centerX" id="6Is-FY-Ldg"/>
+                            <constraint firstItem="d3Z-gJ-otl" firstAttribute="top" secondItem="cx4-V7-Eel" secondAttribute="bottom" constant="10" id="8Di-KJ-DV1"/>
+                            <constraint firstAttribute="trailing" secondItem="UMo-dv-kd5" secondAttribute="trailing" id="9eD-at-JAB"/>
+                            <constraint firstItem="nml-Pa-Ude" firstAttribute="top" secondItem="d3Z-gJ-otl" secondAttribute="bottom" constant="9" id="F3y-Bq-hGY"/>
+                            <constraint firstItem="UMo-dv-kd5" firstAttribute="top" secondItem="qM6-vG-rOh" secondAttribute="bottom" constant="8" symbolic="YES" id="NBg-eI-A0i"/>
+                            <constraint firstItem="qM6-vG-rOh" firstAttribute="leading" secondItem="UMo-dv-kd5" secondAttribute="leading" id="QdR-bx-Pqq"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="baseline" secondItem="HXw-Hb-6uA" secondAttribute="baseline" id="X0V-5A-EXT"/>
+                            <constraint firstItem="HXw-Hb-6uA" firstAttribute="leading" secondItem="SYR-HC-aZ7" secondAttribute="trailing" constant="65" id="aFH-oG-SmQ"/>
+                            <constraint firstItem="cx4-V7-Eel" firstAttribute="centerX" secondItem="UMo-dv-kd5" secondAttribute="centerX" id="ddN-b2-OnF"/>
+                            <constraint firstItem="UMo-dv-kd5" firstAttribute="leading" secondItem="Jux-8c-z1f" secondAttribute="leading" id="efw-qc-yyp"/>
+                            <constraint firstItem="cx4-V7-Eel" firstAttribute="top" secondItem="UMo-dv-kd5" secondAttribute="bottom" constant="15" id="gBO-ww-cSO"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="top" secondItem="Vsc-nk-ARi" secondAttribute="bottom" id="nln-UX-HSJ"/>
+                            <constraint firstItem="SYR-HC-aZ7" firstAttribute="baseline" secondItem="OnM-TE-Img" secondAttribute="baseline" id="sZd-cW-ffm"/>
+                            <constraint firstItem="UMo-dv-kd5" firstAttribute="trailing" secondItem="qM6-vG-rOh" secondAttribute="trailing" id="yeB-PE-hae"/>
+                        </constraints>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="BtCancelar" destination="HXw-Hb-6uA" id="8Qo-Lm-QlA"/>
+                        <outlet property="BtVoltar" destination="OnM-TE-Img" id="bGl-yQ-Uu7"/>
+                        <outlet property="myTable" destination="UMo-dv-kd5" id="osV-ld-cj2"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IZe-fQ-8es" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2508.5" y="-523.5"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="9Tt-nb-Qqy">
+            <objects>
+                <viewController id="2BZ-DC-lMe" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="6Af-Hd-oHW"/>
+                        <viewControllerLayoutGuide type="bottom" id="LFY-29-1tp"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Zb7-gT-YLL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="PI8-ys-bIQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2316" y="-2576"/>
+        </scene>
         <!--Criar Viagem View Controller-->
         <scene sceneID="epB-w6-1f7">
             <objects>
@@ -1308,7 +1566,7 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="200"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="fZL-nx-Bug" id="hZ6-EK-ykF">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="199"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-Lr-fEJ">
@@ -1345,7 +1603,7 @@
                                         <rect key="frame" x="0.0" y="228" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="mvu-AJ-aW6" id="FgR-xW-Wy4">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bZB-AS-KNJ">
@@ -1374,7 +1632,7 @@
                                         <rect key="frame" x="0.0" y="272" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="NgA-s8-3dZ" id="bCX-2m-J5y">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cbw-Br-8UJ">
@@ -1518,17 +1776,6 @@
                                 <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="currentPageIndicatorTintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                             </pageControl>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQW-4v-S8A">
-                                <rect key="frame" x="70" y="428" width="235" height="59"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.098039215690000001" green="0.75686274509999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Adicionar Foto">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="adicionar:" destination="39p-pu-h7L" eventType="touchUpInside" id="jV7-1t-84y"/>
-                                </connections>
-                            </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="fotos-9" translatesAutoresizingMaskIntoConstraints="NO" id="otx-O1-Sm4">
                                 <rect key="frame" x="0.0" y="157" width="375" height="93"/>
                                 <animations/>
@@ -1575,6 +1822,20 @@
                                 <rect key="frame" x="304" y="596" width="51" height="51"/>
                                 <animations/>
                                 <state key="normal" title="Button" image="Proximo-button-9"/>
+                                <connections>
+                                    <action selector="proximo:" destination="39p-pu-h7L" eventType="touchUpInside" id="Nnr-cU-Igm"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lQW-4v-S8A">
+                                <rect key="frame" x="70" y="428" width="235" height="59"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.75686274509999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Adicionar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="adicionar:" destination="39p-pu-h7L" eventType="touchUpInside" id="jV7-1t-84y"/>
+                                </connections>
                             </button>
                         </subviews>
                         <animations/>
@@ -1586,6 +1847,7 @@
                         <outlet property="imagem" destination="otx-O1-Sm4" id="4uN-yB-CPr"/>
                         <outlet property="lbHeader" destination="VSc-xg-qnR" id="OEN-nr-qKN"/>
                         <outlet property="myCollection" destination="CtC-sd-wgR" id="JcW-tm-NK5"/>
+                        <segue destination="KVC-2H-Ct0" kind="show" identifier="tela2" id="oWN-wT-m7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tn0-F4-LJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1603,6 +1865,7 @@
         <image name="Perfil-top-9" width="751" height="437"/>
         <image name="Proximo-button-9" width="102" height="102"/>
         <image name="User1" width="386" height="386"/>
+        <image name="criar viagem - buttonpng-9" width="235" height="58"/>
         <image name="facebook-11" width="687" height="128"/>
         <image name="fotos-9" width="751" height="186"/>
         <image name="icon-heart" width="23" height="21"/>
