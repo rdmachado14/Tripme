@@ -14,6 +14,7 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
     var verificador = false
     var descricaoTeste = String()
     var selectedIndexPath : NSIndexPath?
+    var vetorStrings: [String] = []
     let strings = ["Dê um nome a sua viagem", "Motivo da sua viagem", "Descrição da viagem", "Valor a ser arrecadado", "Data limite de arrecadação", "Quantidade de dias que pretende viajar"]
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,6 +27,15 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "tela1" {
+            
+            let viewController:TMCriarViagem2ViewController = segue.destinationViewController as! TMCriarViagem2ViewController
+            viewController.strings = vetorStrings
+        }
+        
+    }
+    
     func textFieldDidBeginEditing(textField: UITextField) {
         
         print("printou")
@@ -34,12 +44,28 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
             self.tableView(myTable, didSelectRowAtIndexPath: indexPathe)
     }
         
+    
         
         
         
         
 //        myTable.reloadRowsAtIndexPaths([indexPathe], withRowAnimation: UITableViewRowAnimation.Automatic)
 
+    }
+    
+    
+    @IBAction func priximo(sender: AnyObject) {
+        for i in 0..<6 {
+            if i == 2 {
+                let celula2: TMCriarViagemCell = myTable.cellForRowAtIndexPath(NSIndexPath(forItem: i, inSection: 0)) as! TMCriarViagemCell
+                vetorStrings.append(celula2.tvDescicao.text)
+            } else {
+                let celula: TMCriarViagem2TableViewCell = myTable.cellForRowAtIndexPath(NSIndexPath(forItem: i, inSection: 0)) as! TMCriarViagem2TableViewCell
+                vetorStrings.append(celula.tfTextField.text!)
+            }
+        }
+        
+        performSegueWithIdentifier("tela1", sender: self)
     }
     
 }
