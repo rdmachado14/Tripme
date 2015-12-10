@@ -19,11 +19,12 @@ class TMProfileViewController: UIViewController
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var lbFacebookLocation: UILabel!
     
+    @IBOutlet weak var myTable: UITableView!
     
     // MARK: - UICollectionViewDataSource
     //private var profileTrips = TMProfileTrips.createdTrips()
     
-    override func viewDidAppear(animated: Bool)
+    override func viewWillAppear(animated: Bool)
     {
         
         
@@ -57,6 +58,7 @@ class TMProfileViewController: UIViewController
         img.clipsToBounds = true
         img.layer.borderWidth = 5
         img.layer.borderColor = UIColor.blackColor().verdeEscuro.CGColor
+        myTable.tableFooterView = UIView(frame: CGRectZero)
     
         
     }
@@ -82,26 +84,21 @@ class TMProfileViewController: UIViewController
 extension TMProfileViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 1
+        return 5
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        if indexPath.section == 0 {
+        if indexPath.row == 0 {
             cell?.textLabel?.text = "Minhas viagens"
-            cell?.backgroundColor = UIColor.brownColor().azulEscuro
-        } else if indexPath.section == 1 {
+        } else if indexPath.row == 1 {
             cell?.textLabel?.text = "Viagens que eu ajudei"
-            cell?.backgroundColor = UIColor.redColor().vemelho
-        } else if indexPath.section == 2 {
+        } else if indexPath.row == 2 {
             cell?.textLabel?.text = "Viagens que gostei"
-            cell?.backgroundColor = UIColor.blackColor().azulClaro
-        } else if indexPath.section == 3 {
+        } else if indexPath.row == 3 {
             cell?.textLabel?.text = "Desempenho"
-            cell?.backgroundColor = UIColor.blueColor().roxo
-        } else if indexPath.section == 4 {
+        } else if indexPath.row == 4 {
             cell?.textLabel?.text = "Mensagens"
-            cell?.backgroundColor = UIColor.blackColor().amareloEscuro
         }
         
         cell?.layer.cornerRadius = 5
@@ -109,25 +106,25 @@ extension TMProfileViewController: UITableViewDataSource {
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
-        return 5
+        return 1
     }
     
 }
 
 extension TMProfileViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
-        return 72
+        return 57
     }
     
-    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 10
-    }
-    
-    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let headerView:UIView = UIView()
-        headerView.backgroundColor = UIColor.clearColor()
-        return headerView
-    }
+//    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+//        return 10
+//    }
+//    
+//    func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+//        let headerView:UIView = UIView()
+//        headerView.backgroundColor = UIColor.clearColor()
+//        return headerView
+//    }
     
     
     

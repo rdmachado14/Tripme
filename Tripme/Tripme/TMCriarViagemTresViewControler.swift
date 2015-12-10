@@ -50,6 +50,7 @@ class TMCriarViagemTresViewControler: UIViewController {
         
         if(!Erro){
             salvarNoParse()
+            performSegueWithIdentifier("vaiTelaScroll", sender: self)
             ///CHAMAR UMA ACTIVITY LOG
         }else{
             UIAlertView(title: "Opa", message: "Esqueceu um campo aí", delegate: self, cancelButtonTitle: "OK").show()
@@ -89,6 +90,9 @@ class TMCriarViagemTresViewControler: UIViewController {
     
     @IBOutlet weak var Imag: UIImageView!
     
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -112,11 +116,17 @@ class TMCriarViagemTresViewControler: UIViewController {
 //                print("Erro na classe ComicsFavouriteCollectionView.. com o carregamenxto de imagens")
 //            }
 //        }
-        
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
         BtVoltar.setTitleColor(UIColor().CinzaClaroButtonText, forState: .Normal)
         BtCancelar.setTitleColor(UIColor().CinzaClaroButtonText, forState: .Normal)
         
         myTable.tableFooterView = UIView(frame: CGRectZero)
+    }
+    
+    func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
     }
     
     override func didReceiveMemoryWarning() {

@@ -24,15 +24,32 @@ class TMMenuViewController: UIViewController {
     }
     
     
+    
+    @IBOutlet weak var perfilImagem: UIImageView!
+    
     @IBOutlet weak var nuvens1: UIImageView!
     @IBOutlet weak var nuvens2: UIImageView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        let currentUser = PFUser.currentUser()
         self.view.backgroundColor = UIColor().colorWithHexString("118DF0")
         
         nuvens1.goLeftAndAgain(true)
         nuvens2.goLeftAndAgain(false)
+        
+        if currentUser!["foto"] != nil {
+            let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile
+            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+                if error == nil {
+                    self.perfilImagem.image = UIImage(data: data!)
+                }
+            }
+        }
+        perfilImagem.layer.cornerRadius = perfilImagem.frame.width/2
+        perfilImagem.clipsToBounds = true
+//        perfilImagem.layer.borderWidth = 1
+//        perfilImagem.layer.borderColor = UIColor.whiteColor().CGColor
     }
     
     private struct Storyboard {
@@ -53,9 +70,21 @@ extension TMMenuViewController : UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
+        let currentUser = PFUser.currentUser()
         let cell:TMMenuItensCell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! TMMenuItensCell
         
         cell.trips = self.trips[indexPath.item]
+        if currentUser!["foto"] != nil {
+            let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile
+            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+                if error == nil {
+                    
+                    cell.UserImg.image = UIImage(data: data!)
+                    cell.UserImg.layer.cornerRadius = cell.UserImg.frame.width/2
+                    cell.UserImg.clipsToBounds = true
+                }
+            }
+        }
         //cell.featuredImageView.im
         
         return cell

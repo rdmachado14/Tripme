@@ -451,7 +451,7 @@
 				TargetAttributes = {
 					79F071501BCEE87600646DD5 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = ZUD974TE3Q;
+						DevelopmentTeam = 34PHTXR9K4;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -543,7 +543,6 @@
 				A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
-				791DEC541C10E26F0070E812 /* TMCustomView.swift in Sources */,
 				5EC164A81C10D524002E6C58 /* TMCriarViagemTresTableViewCell.swift in Sources */,
 				79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */,
 				5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */,
