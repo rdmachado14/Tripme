@@ -57,6 +57,8 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -345,6 +347,7 @@
                                         </state>
                                         <connections>
                                             <action selector="cancelar:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="9NS-uO-gw6"/>
+                                            <segue destination="ENh-HJ-8iU" kind="show" id="YAv-ch-A9n"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAl-AY-pid">
@@ -648,7 +651,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTh-ou-0F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4298.5" y="1495"/>
+            <point key="canvasLocation" x="4283.5" y="1523"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="FsC-DY-Pjs">
@@ -753,7 +756,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="66" id="xC7-fp-7Oa"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -845,6 +848,28 @@
                                     <outlet property="delegate" destination="ENh-HJ-8iU" id="lxS-EH-k1U"/>
                                 </connections>
                             </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yke-nr-2Rf">
+                                <rect key="frame" x="295" y="37" width="60" height="32"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                <state key="normal" title="Eu">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="RfZ-t4-rXC" kind="show" id="vUX-6f-Q7i"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcl-g6-23T">
+                                <rect key="frame" x="295" y="37" width="32" height="32"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uyv-yx-ak7">
+                                <rect key="frame" x="299" y="589" width="56" height="58"/>
+                                <state key="normal" title="Mais" image="Adicionar-9">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="P4V-B4-5vn" kind="show" id="FdN-lI-ocJ"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.54509803921568623" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -859,11 +884,12 @@
                         <outlet property="collectionView" destination="L7K-MD-8jh" id="tRc-FC-buw"/>
                         <outlet property="nuvens1" destination="M9P-jc-Mhl" id="gdD-UC-Z9k"/>
                         <outlet property="nuvens2" destination="6Wr-vC-1u9" id="a7F-AI-QgJ"/>
+                        <outlet property="perfilImagem" destination="Pcl-g6-23T" id="fhQ-g1-Kml"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKW-UL-t2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2463.5" y="1759.5"/>
+            <point key="canvasLocation" x="2249.5" y="1982.5"/>
         </scene>
         <!--Custom Sign Up View Controller-->
         <scene sceneID="gEA-mr-RbP">
@@ -1040,22 +1066,22 @@
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9X-lo-8e6">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="G9X-lo-8e6">
                                 <rect key="frame" x="10" y="291" width="354" height="376"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="zGK-eq-EdZ" rowHeight="72" style="IBUITableViewCellStyleDefault" id="lcv-Jw-vdf">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" editingAccessoryType="disclosureIndicator" textLabel="zGK-eq-EdZ" rowHeight="72" style="IBUITableViewCellStyleDefault" id="lcv-Jw-vdf">
                                         <rect key="frame" x="0.0" y="28" width="354" height="72"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="lcv-Jw-vdf" id="Ezq-dh-14q">
-                                            <rect key="frame" x="0.0" y="0.0" width="321" height="72"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="321" height="71.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="zGK-eq-EdZ">
-                                                    <rect key="frame" x="15" y="0.0" width="304" height="72"/>
+                                                    <rect key="frame" x="15" y="0.0" width="304" height="71.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="18"/>
-                                                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -1106,6 +1132,7 @@
                     <connections>
                         <outlet property="img" destination="m6d-SN-rYD" id="hL3-28-M8k"/>
                         <outlet property="lbFacebookLocation" destination="F8E-4w-NFK" id="EJY-2U-Lb1"/>
+                        <outlet property="myTable" destination="G9X-lo-8e6" id="sUe-Lj-nKf"/>
                         <outlet property="nome" destination="4X5-SW-nap" id="b1b-Kh-aGd"/>
                     </connections>
                 </viewController>
@@ -1387,6 +1414,7 @@
                         <outlet property="BtCancelar" destination="HXw-Hb-6uA" id="8Qo-Lm-QlA"/>
                         <outlet property="BtVoltar" destination="OnM-TE-Img" id="bGl-yQ-Uu7"/>
                         <outlet property="myTable" destination="UMo-dv-kd5" id="osV-ld-cj2"/>
+                        <segue destination="UPF-1G-J8q" kind="show" identifier="vaiTelaScroll" id="v2C-RA-dfe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IZe-fQ-8es" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1529,6 +1557,9 @@
                                 <state key="normal" title="Cancelar">
                                     <color key="titleColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="cancel:" destination="P4V-B4-5vn" eventType="touchUpInside" id="vqZ-t2-9GZ"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Linha Divisória-11" translatesAutoresizingMaskIntoConstraints="NO" id="FFi-Sj-ZWE">
                                 <rect key="frame" x="0.0" y="52" width="375" height="2"/>
@@ -1552,13 +1583,13 @@
                             <constraint firstAttribute="trailing" secondItem="JRy-g3-JM3" secondAttribute="trailing" id="MB2-AW-juF"/>
                             <constraint firstItem="WYO-Rv-npN" firstAttribute="top" secondItem="JRy-g3-JM3" secondAttribute="bottom" id="Tav-cV-del"/>
                             <constraint firstItem="JRy-g3-JM3" firstAttribute="leading" secondItem="5w4-Om-3LV" secondAttribute="leading" id="hFr-W6-YCR"/>
-                            <constraint firstItem="JRy-g3-JM3" firstAttribute="top" secondItem="ave-a5-57A" secondAttribute="bottom" constant="63" id="uVa-ZX-Idi"/>
+                            <constraint firstItem="JRy-g3-JM3" firstAttribute="top" secondItem="ave-a5-57A" secondAttribute="bottom" constant="42" id="uVa-ZX-Idi"/>
                         </constraints>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTable" destination="JRy-g3-JM3" id="s9A-Yx-jT2"/>
-                        <segue destination="39p-pu-h7L" kind="show" identifier="tela1" id="im2-j0-IZl"/>
+                        <segue destination="39p-pu-h7L" kind="show" identifier="tela1" animates="NO" id="im2-j0-IZl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSu-dX-IIn" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1681,7 +1712,7 @@
                         <outlet property="imagem" destination="otx-O1-Sm4" id="4uN-yB-CPr"/>
                         <outlet property="lbHeader" destination="VSc-xg-qnR" id="OEN-nr-qKN"/>
                         <outlet property="myCollection" destination="CtC-sd-wgR" id="JcW-tm-NK5"/>
-                        <segue destination="KVC-2H-Ct0" kind="show" identifier="tela2" id="oWN-wT-m7o"/>
+                        <segue destination="KVC-2H-Ct0" kind="show" identifier="tela2" animates="NO" id="oWN-wT-m7o"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Tn0-F4-LJZ" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1690,6 +1721,7 @@
         </scene>
     </scenes>
     <resources>
+        <image name="Adicionar-9" width="111" height="116"/>
         <image name="Criar Conta - Button-11-11" width="687" height="128"/>
         <image name="Criar conta-7" width="326" height="48"/>
         <image name="Linha Divisória-11" width="751" height="4"/>
@@ -1708,6 +1740,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="cUF-ya-26X"/>
+        <segue reference="Ica-Uc-XCA"/>
     </inferredMetricsTieBreakers>
 </document>

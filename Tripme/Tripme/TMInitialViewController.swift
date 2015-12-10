@@ -34,7 +34,7 @@ class TMInitialViewController: UIViewController
     {
         super.viewDidLoad()
         
-        
+       // PFUser.logOut()
 //        // verificação para saber se o usuário está logado
 //        if FBSDKAccessToken.currentAccessToken() == nil
 //        {
