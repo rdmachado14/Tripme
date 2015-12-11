@@ -38,6 +38,8 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var mtTableView2: UITableView!
     
     
+    
+    
     var object: PFObject!
     
     struct Objects {
@@ -81,7 +83,7 @@ class TMTripProjectViewController: UIViewController
             
             Objects(
                 sectionName: "Despesas da viagem",
-                sectionObjects: ["Object1","Flash"],
+                sectionObjects: ["Passagens aérias","Alimentação"],
                 sectionNameObjects: ["NameOnject1","Barry Allen"],
                 BackGroungColor: UIColor().colorWithHexString("431A8D")
             )

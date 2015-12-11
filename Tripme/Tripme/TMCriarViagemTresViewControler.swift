@@ -50,7 +50,7 @@ class TMCriarViagemTresViewControler: UIViewController {
         
         if(!Erro){
             salvarNoParse()
-            performSegueWithIdentifier("vaiTelaScroll", sender: self)
+            
             ///CHAMAR UMA ACTIVITY LOG
         }else{
             UIAlertView(title: "Opa", message: "Esqueceu um campo aí", delegate: self, cancelButtonTitle: "OK").show()
@@ -85,7 +85,18 @@ class TMCriarViagemTresViewControler: UIViewController {
         NewTrip["CustoLazer"]       = Tela3[3]
         NewTrip["CustoSaude"]       = Tela3[4]
 
-        NewTrip.saveInBackground()
+        NewTrip.saveInBackgroundWithBlock { (sucess, error) -> Void in
+            if sucess {
+                print("dados salvos!!!")
+                self.vaiSegue()
+            } else {
+                print("teve algum erro: \(error)")
+            }
+        }
+    }
+    
+    func vaiSegue() {
+        performSegueWithIdentifier("vaiTelaScroll", sender: self)
     }
     
     @IBOutlet weak var Imag: UIImageView!
