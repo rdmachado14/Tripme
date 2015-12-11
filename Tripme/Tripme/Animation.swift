@@ -22,7 +22,7 @@ extension UIView {
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
             self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
             }) { (bool : Bool) -> Void in
-                print("go")
+                //print("go")
                 self.frame.origin = CGPoint(x: 375, y: 0)
                 self.goLeftAndAgain(false)
         }

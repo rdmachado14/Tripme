@@ -15,6 +15,11 @@ import ParseFacebookUtilsV4
 class TMInitialViewController: UIViewController
 {
     
+    @IBOutlet weak var btCriarConta: UIButton!
+    @IBOutlet weak var btLogarFace: UIButton!
+    @IBOutlet weak var tfEmail: UITextField!
+    @IBOutlet weak var tfSenha: UITextField!
+    @IBOutlet weak var btEntrar: UIButton!
     
     override func viewDidAppear(animated: Bool) {
         //PFUser.logOut()
@@ -33,7 +38,20 @@ class TMInitialViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+    
         
+        tfEmail.borderStyle = UITextBorderStyle.RoundedRect
+        tfEmail.layer.cornerRadius = 4
+        
+        tfSenha.borderStyle = UITextBorderStyle.RoundedRect
+        tfSenha.layer.cornerRadius = 4
+        
+        btCriarConta.layer.cornerRadius = 4
+        btCriarConta.backgroundColor = UIColor.blackColor().azulEscuro
+        
+        btLogarFace.layer.cornerRadius = 4
+        
+        btEntrar.layer.cornerRadius = 4
        // PFUser.logOut()
 //        // verificação para saber se o usuário está logado
 //        if FBSDKAccessToken.currentAccessToken() == nil
@@ -53,6 +71,43 @@ class TMInitialViewController: UIViewController
     }
     
     
+    @IBAction func Entrar(sender: AnyObject) {
+        
+        let username = self.tfEmail.text
+        let password = self.tfEmail.text
+        
+        if username! == "" || password! == ""
+        {
+            let alert = UIAlertView(title: "Erro!", message: "Por favor, preencha os campos!", delegate: self, cancelButtonTitle: "OK")
+            alert.show()
+        }
+        else
+        {
+            //self.actInd.startAnimating()
+            
+            PFUser.logInWithUsernameInBackground(username!, password: password!, block: { (user, error) -> Void in
+                
+                //self.actInd.stopAnimating()
+                
+                if user != nil
+                {
+                    let alert = UIAlertView(title: "Sucesso!", message: "Você está logado!", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    self.performSegueWithIdentifier("loginVai", sender: self)
+                    //UIApplication.sharedApplication().keyWindow?.rootViewController = TMMenuViewController()
+                }
+                else
+                {
+                    let alert = UIAlertView(title: "Erro!", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    alert.show()
+                    
+                }
+                
+                
+            })
+            
+        }
+    }
     
     override func didReceiveMemoryWarning()
     {

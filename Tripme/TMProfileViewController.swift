@@ -57,7 +57,7 @@ class TMProfileViewController: UIViewController
         img.layer.cornerRadius = img.frame.width/2
         img.clipsToBounds = true
         img.layer.borderWidth = 5
-        img.layer.borderColor = UIColor.blackColor().verdeEscuro.CGColor
+        img.layer.borderColor = UIColor.whiteColor().CGColor
         myTable.tableFooterView = UIView(frame: CGRectZero)
     
         

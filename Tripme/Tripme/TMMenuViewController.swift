@@ -102,14 +102,14 @@ extension TMMenuViewController : UIScrollViewDelegate
         let index = (offset.x + scrollView.contentInset.left) / cellWidthIncludingSpacing
         let roundedIndex = round(index)
         
-         print(offset)
+        // print(offset)
         if (offset.x < 0){
             offset = CGPoint(x: 0, y: 0)
         }else{
             
         }
-        print(offset)
-        print("\n")
+       // print(offset)
+        //print("\n")
         offset = CGPoint(x: roundedIndex * cellWidthIncludingSpacing - scrollView.contentInset.left, y: -scrollView.contentInset.top)
         targetContentOffset.memory = offset
     }
@@ -118,6 +118,6 @@ extension TMMenuViewController : UIScrollViewDelegate
 extension TMMenuViewController: UICollectionViewDelegate
 {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
-        print(indexPath.row)
+        //print(indexPath.row)
     }
 }
