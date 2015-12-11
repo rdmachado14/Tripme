@@ -7,13 +7,20 @@
 //
 
 import UIKit
+import Parse
 
 class TMRecoveryPasswordViewController: UIViewController
 {
 
+    @IBOutlet weak var tfEmail: UITextField!
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
 
         
     }
@@ -24,6 +31,36 @@ class TMRecoveryPasswordViewController: UIViewController
         
     }
     
+
+    @IBAction func btRecoveryPassword(sender: AnyObject)
+    {
+        PFUser.requestPasswordResetForEmailInBackground(tfEmail.text!) { (success, error) -> Void in
+            
+            if self.tfEmail.text == ""
+            {
+                let alert = UIAlertView(title: "Erro!", message: "Informe seu e-mail.", delegate: self, cancelButtonTitle: "Ok")
+                alert.show()
+            }
+            
+            if success
+            {
+                print("Foi!")
+                
+                let alert = UIAlertView(title: "Enviado!", message: "Confira seu e-mail.", delegate: self, cancelButtonTitle: "Ok")
+                alert.show()
+                
+            }
+            else
+            {
+                print(error)
+            }
+        }
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 
 
 

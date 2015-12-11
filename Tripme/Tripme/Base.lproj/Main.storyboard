@@ -1095,10 +1095,10 @@
             </objects>
             <point key="canvasLocation" x="3309.5" y="914.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Recovery Password View Controller-->
         <scene sceneID="7o3-Vp-DSh">
             <objects>
-                <viewController id="s24-wJ-DoX" sceneMemberID="viewController">
+                <viewController id="s24-wJ-DoX" customClass="TMRecoveryPasswordViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="KVv-qt-TgP"/>
                         <viewControllerLayoutGuide type="bottom" id="TLC-JY-sVS"/>
@@ -1129,11 +1129,17 @@
                                 <state key="normal" title="Recuperar Senha">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
+                                <connections>
+                                    <action selector="btRecoveryPassword:" destination="s24-wJ-DoX" eventType="touchUpInside" id="Lp2-1r-aUL"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tfEmail" destination="FZl-wx-Se2" id="8tN-ou-gPW"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LwQ-zz-Cup" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1639,6 +1645,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ica-Uc-XCA"/>
+        <segue reference="cUF-ya-26X"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -238,7 +238,6 @@
 				79D4A0B51BECEC1B000E552D /* Profile */,
 				79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */,
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
-				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
 			);
 			name = Controller;
@@ -264,6 +263,7 @@
 				79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */,
 				A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */,
 				79BCB87D1C1B60800028F165 /* TMRecoveryPasswordViewController.swift */,
+				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -454,7 +454,7 @@
 				TargetAttributes = {
 					79F071501BCEE87600646DD5 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 34PHTXR9K4;
+						DevelopmentTeam = ZUD974TE3Q;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
