@@ -15,7 +15,7 @@ import Parse
 class TMProfileViewController: UIViewController
 {
     @IBOutlet weak var img: UIImageView!
-    
+    let recognizer = UITapGestureRecognizer()
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var lbFacebookLocation: UILabel!
     
@@ -58,7 +58,13 @@ class TMProfileViewController: UIViewController
         img.clipsToBounds = true
         img.layer.borderWidth = 5
         img.layer.borderColor = UIColor.whiteColor().CGColor
+        img.userInteractionEnabled = true
         myTable.tableFooterView = UIView(frame: CGRectZero)
+        
+        recognizer.addTarget(self, action: "profileImageHasBeenTapped")
+        
+        img.addGestureRecognizer(recognizer)
+        
     
         
     }
@@ -69,10 +75,56 @@ class TMProfileViewController: UIViewController
         
     }
     
+    
+    func profileImageHasBeenTapped() {
+        
+        let alert:UIAlertController = UIAlertController(title: "Choose Image",
+            message: nil, preferredStyle: UIAlertControllerStyle.ActionSheet)
+        
+        let cameraAction = UIAlertAction(title: "Camera", style: UIAlertActionStyle.Default) { UIAlertAction in
+            self.openCamera()
+        }
+        let gallaryAction = UIAlertAction(title: "Gallery", style: UIAlertActionStyle.Default) { UIAlertAction in
+            self.openGallery()
+        }
+        let cancelAction = UIAlertAction(title: "cancel", style: UIAlertActionStyle.Cancel) { UIAlertAction in
+            
+        }
+        
+        alert.addAction(cameraAction)
+        alert.addAction(gallaryAction)
+        alert.addAction(cancelAction)
+        self.presentViewController(alert, animated: true, completion: nil)
+    }
+    
+    func openCamera() {
+        let picker = UIImagePickerController()
+        
+        if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
+            picker.sourceType = UIImagePickerControllerSourceType.Camera
+            picker.delegate = self
+            picker.allowsEditing = true
+            presentViewController(picker, animated: true, completion: nil)
+        }
+        else {
+            openGallery()
+        }
+    }
+    
+    
+    func openGallery() {
+        let picker = UIImagePickerController()
+        picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
+        picker.delegate = self
+        picker.allowsEditing = true
+        presentViewController(picker, animated: true, completion: nil)
+    }
+    
     private struct Storyboard
     {
         static let CellIdentifier = "createdTrips"
     }
+    
     
     
     @IBAction func fechar(sender: AnyObject) {
@@ -107,6 +159,24 @@ extension TMProfileViewController: UITableViewDataSource {
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {
         return 1
+    }
+    
+}
+
+extension TMProfileViewController : UIImagePickerControllerDelegate, UINavigationControllerDelegate {
+    
+    public func imagePickerController(picker: UIImagePickerController, didFinishPickingImage image: UIImage, editingInfo: [String : AnyObject]?) {
+        picker.dismissViewControllerAnimated(true, completion: nil)
+        print("testando a foto: \(image)")
+        
+        let currentUser = PFUser.currentUser()
+        let imagem: UIImage = image
+        print("testando a image: \(imagem)")
+        let imageData = UIImagePNGRepresentation(image)
+        
+        let ias:PFFile = PFFile(name: "profilePicture", data: imageData!)!
+        currentUser!["foto"] = ias
+        currentUser?.saveInBackground()
     }
     
 }

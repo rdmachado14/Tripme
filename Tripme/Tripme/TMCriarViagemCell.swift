@@ -70,6 +70,9 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
         }
     }
     
+    deinit {
+        removeObserver(self, forKeyPath: "frame")
+    }
 //    func heightForText() -> CGFloat{
 //        let textView = UITextView(frame: CGRectMake(0, 0, 245, 20000))
 //        //print("++++++++++++++++++++++++++++++++\(self.tvDescicao.text)")
