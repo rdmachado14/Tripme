@@ -853,6 +853,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGV-43-us9">
+                                <rect key="frame" x="0.0" y="64" width="375" height="219"/>
+                                <color key="backgroundColor" red="0.066666666669999999" green="0.5450980392" blue="0.92941176469999998" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="F8E-4w-NFK">
                                 <rect key="frame" x="147" y="222" width="81" height="21"/>
                                 <constraints>
@@ -906,11 +910,7 @@
                                     <constraint firstAttribute="width" constant="102" id="XrB-fc-QgS"/>
                                 </constraints>
                             </imageView>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dGV-43-us9">
-                                <rect key="frame" x="0.0" y="64" width="375" height="219"/>
-                            </imageView>
                         </subviews>
-                        <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="dGV-43-us9" firstAttribute="leading" secondItem="Ad9-jt-qLr" secondAttribute="leading" id="2bQ-wZ-s70"/>
                             <constraint firstItem="G9X-lo-8e6" firstAttribute="top" secondItem="F8E-4w-NFK" secondAttribute="bottom" constant="41" id="5Jf-fK-qax"/>
@@ -933,7 +933,7 @@
                         <barButtonItem key="leftBarButtonItem" title="Fechar" id="bVp-S3-yX3">
                             <color key="tintColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                             <connections>
-                                <action selector="fechar:" destination="isk-Hv-8nn" id="qJa-ru-toi"/>
+                                <action selector="fechar:" destination="isk-Hv-8nn" id="IAR-an-Mue"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Configurações" id="nhN-yL-YZp">
