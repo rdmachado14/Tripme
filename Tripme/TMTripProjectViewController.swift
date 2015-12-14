@@ -36,6 +36,7 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var mtTableView2: UITableView!
+    @IBOutlet weak var textView: UITextView!
     
     
     
@@ -124,9 +125,9 @@ class TMTripProjectViewController: UIViewController
         secondImage.clipsToBounds = true
         secondImage.layer.borderWidth = 0
         
-        
-        
         customView()
+        
+        textView.editable = false
         
     }
     
