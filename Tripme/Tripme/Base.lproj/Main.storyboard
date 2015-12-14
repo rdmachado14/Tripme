@@ -453,6 +453,7 @@
                         <outlet property="scrollView" destination="5r8-rU-9kp" id="Ybc-Ra-K9c"/>
                         <outlet property="secondImage" destination="0cR-ci-qss" id="F7k-Go-tNm"/>
                         <outlet property="textView" destination="WEs-3G-hft" id="dsw-TE-fC2"/>
+                        <outlet property="textView2" destination="m0D-Mg-bxc" id="jtG-Ub-Nt3"/>
                         <outlet property="view1" destination="Y2A-cc-dPa" id="V57-eU-uxq"/>
                         <outlet property="view4" destination="OuM-V1-H1e" id="4Yw-oM-KzI"/>
                     </connections>

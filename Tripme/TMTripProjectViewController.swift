@@ -37,6 +37,7 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var mtTableView2: UITableView!
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var textView2: UITextView!
     
     
     
@@ -128,6 +129,7 @@ class TMTripProjectViewController: UIViewController
         customView()
         
         textView.editable = false
+        textView2.editable = false
         
     }
     
