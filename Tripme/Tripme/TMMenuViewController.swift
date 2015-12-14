@@ -16,6 +16,8 @@ class TMMenuViewController: UIViewController {
     @IBOutlet weak var currentUserProfileImageButton: UIButton!
     @IBOutlet weak var currentUserFullNameButton: UIButton!
     
+    
+    
     // MARK: - UICollectionViewDataSource
     private var trips = Trips.createInterests()
     
@@ -50,12 +52,21 @@ class TMMenuViewController: UIViewController {
         perfilImagem.clipsToBounds = true
 //        perfilImagem.layer.borderWidth = 1
 //        perfilImagem.layer.borderColor = UIColor.whiteColor().CGColor
+        
+       
     }
     
     private struct Storyboard {
         static let CellIdentifier = "Trips Cell"
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
 }
+
+
 
 extension TMMenuViewController : UICollectionViewDataSource
 {

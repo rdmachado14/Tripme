@@ -24,6 +24,10 @@ class TMTestPageViewController: UIViewController, UIPageViewControllerDataSource
         setupPageControl()
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     private func createPageViewController() {
         
         let pageController = self.storyboard!.instantiateViewControllerWithIdentifier("PageViewController") as! UIPageViewController

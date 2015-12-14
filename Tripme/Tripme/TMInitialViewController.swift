@@ -56,7 +56,8 @@ class TMInitialViewController: UIViewController
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
-        PFUser.logOut()
+        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+        
         
 
         

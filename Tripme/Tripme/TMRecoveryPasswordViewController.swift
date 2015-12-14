@@ -24,6 +24,10 @@ class TMRecoveryPasswordViewController: UIViewController
 
         
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     override func didReceiveMemoryWarning()
     {
