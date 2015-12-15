@@ -48,6 +48,9 @@ class TMCustomSignUpViewController: UIViewController
         criarConta.layer.cornerRadius = 4
         logarFace.layer.cornerRadius = 4
         
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
     }
 
     override func didReceiveMemoryWarning()
@@ -173,6 +176,11 @@ class TMCustomSignUpViewController: UIViewController
                 print("Uh oh. The user cancelled the Facebook login.")
             }
         }
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
     
     

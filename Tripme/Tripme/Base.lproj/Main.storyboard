@@ -60,8 +60,6 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -129,143 +127,6 @@
             </objects>
             <point key="canvasLocation" x="3984.5" y="64.5"/>
         </scene>
-        <!--Share View Controller-->
-        <scene sceneID="Cob-i2-aDH">
-            <objects>
-                <viewController id="C95-Ax-Ebp" customClass="TMShareViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="0Zg-9C-Hbp"/>
-                        <viewControllerLayoutGuide type="bottom" id="yws-E3-NhW"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="0Ha-L0-rdd">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Rtv-Hy-nxv">
-                                <rect key="frame" x="75" y="176" width="225" height="30"/>
-                                <state key="normal" title="Compartilhar no Facebook"/>
-                                <connections>
-                                    <action selector="btShareFacebook:" destination="C95-Ax-Ebp" eventType="touchUpInside" id="EIx-6I-O5d"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Suj-mw-IfO">
-                                <rect key="frame" x="75" y="254" width="225" height="30"/>
-                                <state key="normal" title="Compartilhar no Twitter"/>
-                                <connections>
-                                    <action selector="btShareTwitter:" destination="C95-Ax-Ebp" eventType="touchUpInside" id="nOj-xG-Bad"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="kGy-hm-o61" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3015.5" y="-523.5"/>
-        </scene>
-        <!--Like View Controller-->
-        <scene sceneID="N7D-hf-byN">
-            <objects>
-                <viewController id="P1l-LT-USm" customClass="TMLikeViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Xp0-rh-qU0"/>
-                        <viewControllerLayoutGuide type="bottom" id="qkN-z0-jQT"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="QRv-Hd-ump">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Nb1-H4-r6R" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="4512.5" y="-378.5"/>
-        </scene>
-        <!--Custom Login View Controller-->
-        <scene sceneID="O0v-cP-Kp9">
-            <objects>
-                <viewController id="Ett-xv-Ks7" customClass="TMCustomLoginViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="spr-54-0W3"/>
-                        <viewControllerLayoutGuide type="bottom" id="faE-wS-LWN"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="31N-Kk-eA1">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="c0N-ol-mQx">
-                                <rect key="frame" x="37" y="141" width="246" height="36"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="uSA-aY-Fe4">
-                                <rect key="frame" x="37" y="89" width="246" height="36"/>
-                                <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jr9-v4-373">
-                                <rect key="frame" x="6" y="20" width="61" height="30"/>
-                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
-                                <state key="normal" title="Cancelar">
-                                    <color key="titleColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
-                                </state>
-                                <connections>
-                                    <action selector="cancelar:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="eJn-iP-na2"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Linha com avião-11" translatesAutoresizingMaskIntoConstraints="NO" id="y8U-Ef-Pxc">
-                                <rect key="frame" x="0.0" y="350" width="320" height="28"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dKy-N4-CDT">
-                                <rect key="frame" x="37" y="252" width="246" height="49"/>
-                                <color key="backgroundColor" red="0.16078431372549018" green="0.38431372549019605" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
-                                <state key="normal" title="Entrar pelo Facebook">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="loginFace:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="OBZ-ez-W7l"/>
-                                </connections>
-                            </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Linha Divisória-11" translatesAutoresizingMaskIntoConstraints="NO" id="8GQ-T8-bcc">
-                                <rect key="frame" x="0.0" y="58" width="320" height="2"/>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Login" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CRA-z5-HVB">
-                                <rect key="frame" x="138" y="24" width="44" height="21"/>
-                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <color key="highlightedColor" red="0.098039215690000001" green="0.75686274509999996" blue="0.25882352939999997" alpha="0.085119298989999995" colorSpace="calibratedRGB"/>
-                            </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v83-Pl-yhr">
-                                <rect key="frame" x="37" y="195" width="246" height="49"/>
-                                <color key="backgroundColor" red="0.098039215686274508" green="0.75686274509803919" blue="0.25882352941176467" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
-                                <state key="normal" title="Entrar">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
-                                <connections>
-                                    <action selector="btLogin:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="eYy-Md-Vh1"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="pfv-dB-fR0"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
-                    <connections>
-                        <outlet property="tfButton" destination="v83-Pl-yhr" id="Iun-wf-UGy"/>
-                        <outlet property="tfFacebutton" destination="dKy-N4-CDT" id="eo5-Go-i45"/>
-                        <outlet property="tfPassword" destination="c0N-ol-mQx" id="Yr5-3c-cSg"/>
-                        <outlet property="tfUsername" destination="uSA-aY-Fe4" id="IsN-YO-Lx0"/>
-                        <segue destination="ENh-HJ-8iU" kind="show" identifier="loginVai" animates="NO" id="Nyp-65-EYY"/>
-                    </connections>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="S1X-6W-pKQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3851" y="913"/>
-        </scene>
         <!--Trip Project View Controller-->
         <scene sceneID="xhs-Ah-A5Q">
             <objects>
@@ -287,17 +148,6 @@
                                             <constraint firstAttribute="height" constant="2" id="7iL-he-1k4"/>
                                         </constraints>
                                     </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-dd-OeZ">
-                                        <rect key="frame" x="0.0" y="26" width="61" height="30"/>
-                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
-                                        <state key="normal" title="Fechar">
-                                            <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="cancelar:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="9NS-uO-gw6"/>
-                                            <segue destination="ENh-HJ-8iU" kind="show" id="YAv-ch-A9n"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAl-AY-pid">
                                         <rect key="frame" x="282" y="26" width="85" height="30"/>
                                         <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
@@ -306,7 +156,6 @@
                                         </state>
                                         <connections>
                                             <action selector="btShare:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="AVW-tM-dbE"/>
-                                            <action selector="cancelar:" destination="Ett-xv-Ks7" eventType="touchUpInside" id="kNg-O8-jJv"/>
                                         </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-ol-Ez5">
@@ -571,6 +420,16 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-dd-OeZ">
+                                        <rect key="frame" x="8" y="26" width="61" height="30"/>
+                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                        <state key="normal" title="Fechar">
+                                            <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                        </state>
+                                        <connections>
+                                            <segue destination="ENh-HJ-8iU" kind="show" id="YAv-ch-A9n"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                             </scrollView>
                         </subviews>
@@ -593,6 +452,8 @@
                         <outlet property="pvTripProgress" destination="NSL-ph-IWV" id="Gge-6F-KVx"/>
                         <outlet property="scrollView" destination="5r8-rU-9kp" id="Ybc-Ra-K9c"/>
                         <outlet property="secondImage" destination="0cR-ci-qss" id="F7k-Go-tNm"/>
+                        <outlet property="textView" destination="WEs-3G-hft" id="dsw-TE-fC2"/>
+                        <outlet property="textView2" destination="m0D-Mg-bxc" id="jtG-Ub-Nt3"/>
                         <outlet property="view1" destination="Y2A-cc-dPa" id="V57-eU-uxq"/>
                         <outlet property="view4" destination="OuM-V1-H1e" id="4Yw-oM-KzI"/>
                     </connections>
@@ -628,7 +489,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="gut-6x-rJ8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5162.5" y="981.5"/>
+            <point key="canvasLocation" x="5151.5" y="981.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="s8k-zl-wKr">
@@ -720,15 +581,6 @@
                                                         <constraint firstAttribute="width" constant="44" id="H6a-I3-mJQ"/>
                                                     </constraints>
                                                 </imageView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-9k-Do3">
-                                                    <rect key="frame" x="63" y="409" width="109" height="21"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="21" id="jsh-II-cb9"/>
-                                                    </constraints>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-heart" translatesAutoresizingMaskIntoConstraints="NO" id="j22-rg-bEO">
                                                     <rect key="frame" x="223" y="401" width="45" height="41"/>
                                                     <constraints>
@@ -741,6 +593,15 @@
                                                         <action selector="FavoriteClicked:" destination="7h4-q1-55o" eventType="touchUpInside" id="Kx8-Ai-flJ"/>
                                                     </connections>
                                                 </button>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-9k-Do3">
+                                                    <rect key="frame" x="63" y="409" width="109" height="21"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="21" id="jsh-II-cb9"/>
+                                                    </constraints>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -837,7 +698,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKW-UL-t2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2249.5" y="1982.5"/>
+            <point key="canvasLocation" x="1856.5" y="1862.5"/>
         </scene>
         <!--Custom Sign Up View Controller-->
         <scene sceneID="gEA-mr-RbP">
@@ -978,7 +839,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3597.5" y="1658.5"/>
+            <point key="canvasLocation" x="3793.5" y="1775.5"/>
         </scene>
         <!--Perfil-->
         <scene sceneID="Sav-K7-ki1">
@@ -1089,7 +950,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOD-zU-jWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2789.5" y="547.5"/>
+            <point key="canvasLocation" x="2638.5" y="547.5"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="5FO-9z-jcQ">
@@ -1144,11 +1005,14 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wVG-6x-Byt">
                                 <rect key="frame" x="114" y="423" width="146" height="30"/>
                                 <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
-                                <state key="normal" title="Esqueci minha cenha">
+                                <state key="normal" title="Esqueci minha senha">
                                     <color key="titleColor" red="0.50196078431372548" green="0.50196078431372548" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="s24-wJ-DoX" kind="show" id="twf-hr-pYD"/>
+                                </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="Emal" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1GN-eP-pBo">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1GN-eP-pBo">
                                 <rect key="frame" x="25" y="270" width="324" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1177,7 +1041,57 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8M-pc-aTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3323.5" y="912.5"/>
+            <point key="canvasLocation" x="3384.5" y="908.5"/>
+        </scene>
+        <!--Recovery Password View Controller-->
+        <scene sceneID="7o3-Vp-DSh">
+            <objects>
+                <viewController id="s24-wJ-DoX" customClass="TMRecoveryPasswordViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="KVv-qt-TgP"/>
+                        <viewControllerLayoutGuide type="bottom" id="TLC-JY-sVS"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="fB7-7C-IMB">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GxC-Qm-2cf">
+                                <rect key="frame" x="20" y="20" width="61" height="30"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                <state key="normal" title="Fechar">
+                                    <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <segue destination="Tzl-YC-y1W" kind="show" id="Fpp-wo-Caz"/>
+                                </connections>
+                            </button>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZl-wx-Se2">
+                                <rect key="frame" x="20" y="91" width="324" height="39"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-K4-7Ph">
+                                <rect key="frame" x="20" y="183" width="324" height="50"/>
+                                <color key="backgroundColor" red="0.098039215690000001" green="0.75686274509999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                <state key="normal" title="Recuperar Senha">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="btRecoveryPassword:" destination="s24-wJ-DoX" eventType="touchUpInside" id="Lp2-1r-aUL"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="tfEmail" destination="FZl-wx-Se2" id="8tN-ou-gPW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LwQ-zz-Cup" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3839.5" y="914.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="zh1-ZH-JWT">
@@ -1405,7 +1319,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="200"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-Lr-fEJ">
+                                                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="f4w-Lr-fEJ">
                                                     <rect key="frame" x="20" y="0.0" width="347" height="200"/>
                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
@@ -1418,6 +1332,9 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="f4w-Lr-fEJ" firstAttribute="top" secondItem="hZ6-EK-ykF" secondAttribute="top" id="W4C-tv-XRU"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <constraints>
                                             <constraint firstItem="Gyd-rP-88e" firstAttribute="top" secondItem="fZL-nx-Bug" secondAttribute="top" constant="13" id="4QS-o7-JX7"/>
@@ -1516,10 +1433,6 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dFi-0h-0jB">
-                                <rect key="frame" x="317" y="20" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -1679,6 +1592,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ica-Uc-XCA"/>
+        <segue reference="YAv-ch-A9n"/>
     </inferredMetricsTieBreakers>
 </document>

@@ -32,9 +32,16 @@ class TMCriarViagemTresViewControler: UIViewController {
         "Custo com saúde"
     ]
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
+    
     @IBAction func Voltar(sender: AnyObject) {
         dismissViewControllerAnimated(false, completion: nil)
     }
+    
+    
     
     @IBAction func CriarViagem(sender: AnyObject) {
         Erro = false
@@ -94,6 +101,8 @@ class TMCriarViagemTresViewControler: UIViewController {
             }
         }
     }
+    
+
     
     func vaiSegue() {
         performSegueWithIdentifier("vaiTelaScroll", sender: self)

@@ -52,18 +52,12 @@ class TMInitialViewController: UIViewController
         btLogarFace.layer.cornerRadius = 4
         
         btEntrar.layer.cornerRadius = 4
-       // PFUser.logOut()
-//        // verificação para saber se o usuário está logado
-//        if FBSDKAccessToken.currentAccessToken() == nil
-//        {
-//            print("Não logado")
-//        }
-//        else
-//        {
-//            print("Logado")
-//            
-//        }
-
+        
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+        
+        UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
+        
         
 
         
@@ -263,6 +257,12 @@ class TMInitialViewController: UIViewController
         print(segue!.identifier)
         
     }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
+
 
 
     

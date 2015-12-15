@@ -44,6 +44,10 @@ class TMCriarViagem2ViewController: UIViewController {
         }
         
     }
+    
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
 
     /*
     // MARK: - Navigation

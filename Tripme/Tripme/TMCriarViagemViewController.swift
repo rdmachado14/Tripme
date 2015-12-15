@@ -29,6 +29,10 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         // Dispose of any resources that can be recreated.
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
@@ -43,6 +47,7 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         }
         
     }
+
     
     
     
@@ -76,6 +81,7 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         
         performSegueWithIdentifier("tela1", sender: self)
     }
+    
     
 }
 

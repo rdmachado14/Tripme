@@ -27,6 +27,7 @@
 		795AB39A1BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */; };
 		795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */; };
 		797F98A51C04BA4000CEE13F /* TMTripProjectViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 797F98A41C04BA4000CEE13F /* TMTripProjectViewController.swift */; };
+		79BCB87E1C1B60800028F165 /* TMRecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCB87D1C1B60800028F165 /* TMRecoveryPasswordViewController.swift */; };
 		79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */; };
 		79C774D91BF3C74E00D51E3D /* TMShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */; };
 		79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */; };
@@ -100,6 +101,7 @@
 		795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCustomSignUpViewController.swift; sourceTree = "<group>"; };
 		795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMInitialViewController.swift; sourceTree = "<group>"; };
 		797F98A41C04BA4000CEE13F /* TMTripProjectViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTripProjectViewController.swift; sourceTree = "<group>"; };
+		79BCB87D1C1B60800028F165 /* TMRecoveryPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMRecoveryPasswordViewController.swift; sourceTree = "<group>"; };
 		79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSearchViewController.swift; sourceTree = "<group>"; };
 		79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMShareViewController.swift; sourceTree = "<group>"; };
 		79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileTrips.swift; sourceTree = "<group>"; };
@@ -236,7 +238,6 @@
 				79D4A0B51BECEC1B000E552D /* Profile */,
 				79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */,
 				795AB3991BE2BA3E00FD6BD8 /* TMCustomSignUpViewController.swift */,
-				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 				79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */,
 			);
 			name = Controller;
@@ -261,6 +262,8 @@
 				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
 				79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */,
 				A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */,
+				79BCB87D1C1B60800028F165 /* TMRecoveryPasswordViewController.swift */,
+				795AB39B1BE3FB3000FD6BD8 /* TMInitialViewController.swift */,
 			);
 			name = Profile;
 			sourceTree = "<group>";
@@ -451,7 +454,7 @@
 				TargetAttributes = {
 					79F071501BCEE87600646DD5 = {
 						CreatedOnToolsVersion = 7.0.1;
-						DevelopmentTeam = 34PHTXR9K4;
+						DevelopmentTeam = ZUD974TE3Q;
 						SystemCapabilities = {
 							com.apple.InAppPurchase = {
 								enabled = 0;
@@ -520,6 +523,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79BCB87E1C1B60800028F165 /* TMRecoveryPasswordViewController.swift in Sources */,
 				797F98A51C04BA4000CEE13F /* TMTripProjectViewController.swift in Sources */,
 				7921CAEC1BF51A41008C6F6C /* TMLikeViewController.swift in Sources */,
 				A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */,
