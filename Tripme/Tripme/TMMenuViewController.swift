@@ -15,6 +15,7 @@ class TMMenuViewController: UIViewController {
     
     @IBOutlet weak var currentUserProfileImageButton: UIButton!
     @IBOutlet weak var currentUserFullNameButton: UIButton!
+    @IBOutlet weak var lbSecondName: UILabel!
     
     
     
@@ -34,25 +35,20 @@ class TMMenuViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        let currentUser = PFUser.currentUser()
-        self.view.backgroundColor = UIColor().colorWithHexString("118DF0")
-        
-        nuvens1.goLeftAndAgain(true)
-        nuvens2.goLeftAndAgain(false)
-        
-        if currentUser!["foto"] != nil {
-            let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile
-            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
-                if error == nil {
-                    self.perfilImagem.image = UIImage(data: data!)
-                }
-            }
-        }
-        perfilImagem.layer.cornerRadius = perfilImagem.frame.width/2
-        perfilImagem.clipsToBounds = true
-//        perfilImagem.layer.borderWidth = 1
-//        perfilImagem.layer.borderColor = UIColor.whiteColor().CGColor
-        
+//        let currentUser = PFUser.currentUser()
+//        self.view.backgroundColor = UIColor().colorWithHexString("118DF0")
+//        
+//        nuvens1.goLeftAndAgain(true)
+//        nuvens2.goLeftAndAgain(false)
+//        
+//        if currentUser!["foto"] != nil {
+//            let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile
+//            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+//                if error == nil {
+//                    self.perfilImagem.image = UIImage(data: data!)
+//                }
+//            }
+//        }
        
     }
     
@@ -93,11 +89,14 @@ extension TMMenuViewController : UICollectionViewDataSource
                     cell.UserImg.image = UIImage(data: data!)
                     cell.UserImg.layer.cornerRadius = cell.UserImg.frame.width/2
                     cell.UserImg.clipsToBounds = true
+                    
                 }
+                
             }
         }
         //cell.featuredImageView.im
-        
+        cell.Nome.text = (currentUser!["primeiroNome"] as! String)
+        cell.lbLocal.text = (currentUser!["localidade"] as! String)
         return cell
     }
 }
