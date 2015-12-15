@@ -20,8 +20,8 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
         myTable.tableFooterView = UIView(frame: CGRectZero)
-        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
+
+        myTable.keyboardDismissMode = UIScrollViewKeyboardDismissMode.OnDrag
     }
     
     override func didReceiveMemoryWarning() {
@@ -33,11 +33,7 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
     @IBAction func cancel(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
-    
-    func dismissKeyboard() {
-        //Causes the view (or one of its embedded text fields) to resign the first responder status.
-        view.endEditing(true)
-    }
+
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         if segue.identifier == "tela1" {
@@ -48,22 +44,23 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
         
     }
     
+    
+    
+    
     func textFieldDidBeginEditing(textField: UITextField) {
         
         print("printou")
         let indexPathe: NSIndexPath = NSIndexPath(forRow: 1, inSection: 0)
         if verificador == true {
             self.tableView(myTable, didSelectRowAtIndexPath: indexPathe)
-    }
-        
-    
-        
-        
-        
+        }
+
         
 //        myTable.reloadRowsAtIndexPaths([indexPathe], withRowAnimation: UITableViewRowAnimation.Automatic)
 
     }
+    
+    
     
     
     @IBAction func priximo(sender: AnyObject) {
@@ -186,6 +183,11 @@ extension TMCriarViagemViewController: UITableViewDelegate {
         
         var indexPaths : Array<NSIndexPath> = []
         if indexPath.row == 2  {
+            let celula2: TMCriarViagemCell = myTable.cellForRowAtIndexPath(indexPath) as! TMCriarViagemCell
+            
+            celula2.tvDescicao.becomeFirstResponder()
+            
+        
             print("entrou aqui nese")
             if let previous = previousIndexPath {
             indexPaths += [previous]
