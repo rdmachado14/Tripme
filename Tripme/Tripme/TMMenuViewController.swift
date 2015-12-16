@@ -37,8 +37,8 @@ class TMMenuViewController: UIViewController {
         let currentUser = PFUser.currentUser()
         self.view.backgroundColor = UIColor().colorWithHexString("118DF0")
         
-        nuvens1.goLeftAndAgain(true)
-        nuvens2.goLeftAndAgain(false)
+        nuvens1.goLeftAndAgain(false)
+        nuvens2.goLeftAndAgain(true)
         
         if currentUser!["foto"] != nil {
             let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile

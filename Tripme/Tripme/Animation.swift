@@ -13,6 +13,7 @@ import UIKit
 
 extension UIView {
     
+    
     func goLeftAndAgain(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
         if(primeiro) {
@@ -24,9 +25,57 @@ extension UIView {
             }) { (bool : Bool) -> Void in
                 //print("go")
                 self.frame.origin = CGPoint(x: 375, y: 0)
-                self.goLeftAndAgain(false)
+                self.goLeftAndAgain(true)
         }
 
+    }
+    
+    func goLeftAndAgain2(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
+        
+        if(primeiro) {
+            duration = 5
+        }
+        
+        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+            }) { (bool : Bool) -> Void in
+                //print("go")
+                self.frame.origin = CGPoint(x: 375, y: 43)
+                self.goLeftAndAgain2(false)
+        }
+        
+    }
+    
+    func goLeftAndAgainNuvem(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
+        
+        if(primeiro) {
+            duration = 5
+        }
+        
+        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+            }) { (bool : Bool) -> Void in
+                //print("go")
+                self.frame.origin = CGPoint(x: 375, y: 206)
+                self.goLeftAndAgainNuvem(false)
+        }
+        
+    }
+    
+    func goLeftAndAgainNuvem2(primeiro: Bool = false,var duration: NSTimeInterval = 12.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -500, y: 667), completion: (() -> Void) = { () -> Void in }) {
+        
+        if(primeiro) {
+            duration = 5
+        }
+        
+        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
+            self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
+            }) { (bool : Bool) -> Void in
+                //print("go")
+                self.frame.origin = CGPoint(x: 500, y: 100)
+                self.goLeftAndAgainNuvem2(false)
+        }
+        
     }
     
     func growUp(duration: NSTimeInterval = 0.2, escalaX: CGFloat = 1.5, escalaY: CGFloat = 1.5,completion : (() -> Void) = {() -> Void in }){

@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
+      "filename" : "nuvem azul.pdf",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
-      "filename" : "Nuvens-11.png",
       "scale" : "2x"
     },
     {
