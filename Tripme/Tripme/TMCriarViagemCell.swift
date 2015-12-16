@@ -56,6 +56,7 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
                 primeiraVez = true
             }
             print("boolean: \(primeiraVez)")
+            print(self)
             addObserver(self, forKeyPath: "frame", options: [NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Initial], context: nil)
             isObserving = true;
             

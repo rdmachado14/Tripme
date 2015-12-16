@@ -19,8 +19,11 @@ class TMProfileViewController: UIViewController
     @IBOutlet weak var nome: UILabel!
     @IBOutlet weak var lbFacebookLocation: UILabel!
     
+    @IBOutlet weak var nuvem2: UIImageView!
     @IBOutlet weak var myTable: UITableView!
+    @IBOutlet weak var nuvem3: UIImageView!
     
+    @IBOutlet weak var nuvem1: UIImageView!
     // MARK: - UICollectionViewDataSource
     //private var profileTrips = TMProfileTrips.createdTrips()
     
@@ -53,7 +56,9 @@ class TMProfileViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        nuvem1.goLeftAndAgain2(true)
+        nuvem2.goLeftAndAgainNuvem(false)
+        nuvem3.goLeftAndAgainNuvem2(true)
         img.layer.cornerRadius = img.frame.width/2
         img.clipsToBounds = true
         img.layer.borderWidth = 5
@@ -111,6 +116,9 @@ class TMProfileViewController: UIViewController
         }
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     func openGallery() {
         let picker = UIImagePickerController()
@@ -126,8 +134,7 @@ class TMProfileViewController: UIViewController
     }
     
     
-    
-    @IBAction func fechar(sender: AnyObject) {
+    @IBAction func Fechar(sender: AnyObject) {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
@@ -152,6 +159,9 @@ extension TMProfileViewController: UITableViewDataSource {
         } else if indexPath.row == 4 {
             cell?.textLabel?.text = "Mensagens"
         }
+        
+        let setinha = UIImageView(image: UIImage(named: "Setinha"))
+        cell?.accessoryView = setinha
         
         cell?.layer.cornerRadius = 5
         return cell!
