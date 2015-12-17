@@ -33,22 +33,33 @@ class TMMenuViewController: UIViewController {
     @IBOutlet weak var nuvens1: UIImageView!
     @IBOutlet weak var nuvens2: UIImageView!
     
+    override func viewDidAppear(animated: Bool) {
+        nuvens1.goLeftAndAgain(10)
+        nuvens2.goLeftAndAgain(5)
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-//        let currentUser = PFUser.currentUser()
-//        self.view.backgroundColor = UIColor().colorWithHexString("118DF0")
-//        
-//        nuvens1.goLeftAndAgain(true)
-//        nuvens2.goLeftAndAgain(false)
-//        
-//        if currentUser!["foto"] != nil {
-//            let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile
-//            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
-//                if error == nil {
-//                    self.perfilImagem.image = UIImage(data: data!)
-//                }
-//            }
-//        }
+        
+        
+        
+        let currentUser = PFUser.currentUser()
+        self.view.backgroundColor = UIColor().colorWithHexString("118DF0")
+        
+        
+        
+        if currentUser!["foto"] != nil {
+            let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile
+            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+                if error == nil {
+                    self.perfilImagem.image = UIImage(data: data!)
+                }
+            }
+        }
+        perfilImagem.layer.cornerRadius = perfilImagem.frame.width/2
+        perfilImagem.clipsToBounds = true
+        //        perfilImagem.layer.borderWidth = 1
+        //        perfilImagem.layer.borderColor = UIColor.whiteColor().CGColor
        
     }
     

@@ -14,18 +14,14 @@ import UIKit
 extension UIView {
     
     
-    func goLeftAndAgain(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
+    func goLeftAndAgain(var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
-        if(primeiro) {
-            duration = 5
-        }
-        
-        UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
+        UIView.animateWithDuration(duration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
+            print("x: \(destination.x), y: \(self.frame.origin.y)")
             self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
             }) { (bool : Bool) -> Void in
-                //print("go")
                 self.frame.origin = CGPoint(x: 375, y: 0)
-                self.goLeftAndAgain(true)
+                self.goLeftAndAgain(10)
         }
 
     }
@@ -62,7 +58,7 @@ extension UIView {
         
     }
     
-    func goLeftAndAgainNuvem2(primeiro: Bool = false,var duration: NSTimeInterval = 12.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -500, y: 667), completion: (() -> Void) = { () -> Void in }) {
+    func goLeftAndAgainNuvem2(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
         if(primeiro) {
             duration = 5
@@ -72,7 +68,7 @@ extension UIView {
             self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
             }) { (bool : Bool) -> Void in
                 //print("go")
-                self.frame.origin = CGPoint(x: 500, y: 100)
+                self.frame.origin = CGPoint(x: 375, y: 100)
                 self.goLeftAndAgainNuvem2(false)
         }
         
