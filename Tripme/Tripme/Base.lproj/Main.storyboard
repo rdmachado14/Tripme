@@ -530,7 +530,7 @@
                                     <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
-                                    <segue destination="RfZ-t4-rXC" kind="show" id="vUX-6f-Q7i"/>
+                                    <segue destination="isk-Hv-8nn" kind="show" id="7BS-JK-JYC"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Pcl-g6-23T">
@@ -551,7 +551,7 @@
                                     <segue destination="P4V-B4-5vn" kind="show" id="FdN-lI-ocJ"/>
                                 </connections>
                             </button>
-                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L7K-MD-8jh">
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" misplaced="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="L7K-MD-8jh">
                                 <rect key="frame" x="0.0" y="94" width="375" height="452"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="XYA-Gq-efb">
@@ -756,7 +756,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKW-UL-t2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1856.5" y="1862.5"/>
+            <point key="canvasLocation" x="1870.5" y="1512.5"/>
         </scene>
         <!--Custom Sign Up View Controller-->
         <scene sceneID="gEA-mr-RbP">
@@ -1669,6 +1669,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Ica-Uc-XCA"/>
+        <segue reference="cUF-ya-26X"/>
     </inferredMetricsTieBreakers>
 </document>
