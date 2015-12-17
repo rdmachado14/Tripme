@@ -595,7 +595,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Local" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bzu-8p-JT4">
-                                                    <rect key="frame" x="38" y="351" width="107" height="21"/>
+                                                    <rect key="frame" x="32" y="351" width="107" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="107" id="xC7-fp-7Oa"/>
                                                     </constraints>
@@ -603,12 +603,6 @@
                                                     <color key="textColor" red="0.4392156862745098" green="0.4392156862745098" blue="0.4392156862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ycU-Ys-aqU">
-                                                    <rect key="frame" x="8" y="346" width="29" height="32"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="width" constant="29" id="OPM-Dw-Kca"/>
-                                                    </constraints>
-                                                </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="User1" translatesAutoresizingMaskIntoConstraints="NO" id="lev-nG-zh4">
                                                     <rect key="frame" x="15" y="398" width="44" height="44"/>
                                                     <constraints>
@@ -654,6 +648,12 @@
                                                         <action selector="FavoriteClicked:" destination="7h4-q1-55o" eventType="touchUpInside" id="Kx8-Ai-flJ"/>
                                                     </connections>
                                                 </button>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Localizacao-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ycU-Ys-aqU">
+                                                    <rect key="frame" x="18" y="356" width="8" height="13"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="8" id="OPM-Dw-Kca"/>
+                                                    </constraints>
+                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
@@ -663,11 +663,11 @@
                                             <constraint firstItem="bfs-9k-Do3" firstAttribute="leading" secondItem="lev-nG-zh4" secondAttribute="trailing" constant="4" id="3FB-cK-mrs"/>
                                             <constraint firstItem="sKo-3L-udM" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leading" id="6Pk-iU-S7E"/>
                                             <constraint firstItem="1o3-1Z-aSd" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leadingMargin" constant="11" id="7lZ-Jo-z0n"/>
-                                            <constraint firstItem="ycU-Ys-aqU" firstAttribute="top" secondItem="1o3-1Z-aSd" secondAttribute="bottom" constant="11" id="9gh-hC-Yfv"/>
+                                            <constraint firstItem="ycU-Ys-aqU" firstAttribute="top" secondItem="1o3-1Z-aSd" secondAttribute="bottom" constant="21" id="9gh-hC-Yfv"/>
                                             <constraint firstItem="gOx-0W-yS0" firstAttribute="baseline" secondItem="bxn-m7-Buq" secondAttribute="baseline" id="AoM-kF-hy1"/>
                                             <constraint firstItem="j22-rg-bEO" firstAttribute="top" secondItem="lh2-e6-H4P" secondAttribute="bottom" constant="31" id="BOE-VI-Uij"/>
                                             <constraint firstItem="lev-nG-zh4" firstAttribute="bottom" secondItem="j22-rg-bEO" secondAttribute="bottom" constant="2" id="Bbt-lk-7bT"/>
-                                            <constraint firstItem="bxn-m7-Buq" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="88" id="CU2-SV-iuG"/>
+                                            <constraint firstItem="bxn-m7-Buq" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="94" id="CU2-SV-iuG"/>
                                             <constraint firstItem="MI7-7r-c8h" firstAttribute="centerX" secondItem="j22-rg-bEO" secondAttribute="centerX" constant="-5.5" id="FIY-e4-ZNV"/>
                                             <constraint firstItem="j22-rg-bEO" firstAttribute="leading" secondItem="bfs-9k-Do3" secondAttribute="trailing" constant="87" id="Gcg-fv-IJa"/>
                                             <constraint firstItem="1o3-1Z-aSd" firstAttribute="top" secondItem="9eY-Tm-ebL" secondAttribute="bottom" constant="7" id="HSn-QA-sA8"/>
@@ -675,26 +675,26 @@
                                             <constraint firstAttribute="trailingMargin" secondItem="bxn-m7-Buq" secondAttribute="trailing" constant="6" id="KLS-GZ-gI5"/>
                                             <constraint firstItem="sKo-3L-udM" firstAttribute="centerX" secondItem="1o3-1Z-aSd" secondAttribute="centerX" id="Kbc-6A-2Ec"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="bfs-9k-Do3" secondAttribute="bottom" constant="12" id="NHW-ip-e4L"/>
-                                            <constraint firstItem="lev-nG-zh4" firstAttribute="top" secondItem="ycU-Ys-aqU" secondAttribute="bottom" constant="20" id="Q4g-md-rdZ"/>
+                                            <constraint firstItem="lev-nG-zh4" firstAttribute="top" secondItem="ycU-Ys-aqU" secondAttribute="bottom" constant="29" id="Q4g-md-rdZ"/>
                                             <constraint firstItem="9eY-Tm-ebL" firstAttribute="top" secondItem="sKo-3L-udM" secondAttribute="bottom" constant="4" id="QOb-03-bMa"/>
                                             <constraint firstItem="j22-rg-bEO" firstAttribute="bottom" secondItem="7h4-q1-55o" secondAttribute="bottomMargin" constant="-2" id="SM2-gV-KpY"/>
-                                            <constraint firstItem="gOx-0W-yS0" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="79" id="SzW-4A-0pT"/>
+                                            <constraint firstItem="gOx-0W-yS0" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="85" id="SzW-4A-0pT"/>
                                             <constraint firstItem="lh2-e6-H4P" firstAttribute="top" secondItem="bxn-m7-Buq" secondAttribute="bottom" constant="-7" id="TEs-wq-irG"/>
-                                            <constraint firstItem="Bzu-8p-JT4" firstAttribute="leading" secondItem="ycU-Ys-aqU" secondAttribute="trailing" constant="1" id="TWM-8A-ffB"/>
+                                            <constraint firstItem="Bzu-8p-JT4" firstAttribute="leading" secondItem="ycU-Ys-aqU" secondAttribute="trailing" constant="6" id="TWM-8A-ffB"/>
                                             <constraint firstItem="lh2-e6-H4P" firstAttribute="top" secondItem="1o3-1Z-aSd" secondAttribute="bottom" constant="28" id="TbQ-M4-mXJ"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="dG2-PL-Y5u" secondAttribute="bottom" constant="58" id="Thx-CU-kht"/>
                                             <constraint firstItem="Bzu-8p-JT4" firstAttribute="top" secondItem="1o3-1Z-aSd" secondAttribute="bottom" constant="16" id="WRS-r5-Z1V"/>
-                                            <constraint firstItem="ycU-Ys-aqU" firstAttribute="leading" secondItem="9eY-Tm-ebL" secondAttribute="leading" constant="-10" id="XQf-HA-nZe"/>
+                                            <constraint firstItem="ycU-Ys-aqU" firstAttribute="leading" secondItem="9eY-Tm-ebL" secondAttribute="leading" id="XQf-HA-nZe"/>
                                             <constraint firstAttribute="trailing" secondItem="sKo-3L-udM" secondAttribute="trailing" id="Xqr-p4-eMi"/>
                                             <constraint firstItem="sKo-3L-udM" firstAttribute="top" secondItem="7h4-q1-55o" secondAttribute="top" id="dGv-6Y-aCY"/>
                                             <constraint firstItem="MI7-7r-c8h" firstAttribute="trailing" secondItem="j22-rg-bEO" secondAttribute="trailing" id="dqe-CD-TYt"/>
-                                            <constraint firstItem="dG2-PL-Y5u" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="44" id="gnZ-5h-Qg0"/>
+                                            <constraint firstItem="dG2-PL-Y5u" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="50" id="gnZ-5h-Qg0"/>
                                             <constraint firstItem="bfs-9k-Do3" firstAttribute="top" secondItem="lh2-e6-H4P" secondAttribute="bottom" constant="25" id="kM5-Lq-LxY"/>
                                             <constraint firstItem="lh2-e6-H4P" firstAttribute="leading" secondItem="bxn-m7-Buq" secondAttribute="leading" constant="-2" id="lru-DZ-sJV"/>
                                             <constraint firstItem="9eY-Tm-ebL" firstAttribute="trailing" secondItem="sKo-3L-udM" secondAttribute="trailing" constant="10" id="ni7-pA-Hp1"/>
                                             <constraint firstItem="MI7-7r-c8h" firstAttribute="top" secondItem="bxn-m7-Buq" secondAttribute="bottom" constant="41" id="o0a-w8-1O6"/>
                                             <constraint firstItem="MI7-7r-c8h" firstAttribute="bottom" secondItem="lev-nG-zh4" secondAttribute="bottom" id="q6r-mX-WnC"/>
-                                            <constraint firstItem="ycU-Ys-aqU" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leadingMargin" id="qNF-ui-Jcg"/>
+                                            <constraint firstItem="ycU-Ys-aqU" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leadingMargin" constant="10" id="qNF-ui-Jcg"/>
                                             <constraint firstItem="lh2-e6-H4P" firstAttribute="trailing" secondItem="bxn-m7-Buq" secondAttribute="trailing" id="sOQ-pC-jec"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="j22-rg-bEO" secondAttribute="trailing" constant="15" id="t9Z-L7-uNJ"/>
                                             <constraint firstItem="bxn-m7-Buq" firstAttribute="top" secondItem="1o3-1Z-aSd" secondAttribute="bottom" constant="14" id="u2t-d4-10l"/>
@@ -1660,9 +1660,10 @@
         <image name="Criar conta-7" width="326" height="48"/>
         <image name="Linha Divisória-11" width="751" height="4"/>
         <image name="Linha com avião-11" width="751" height="56"/>
+        <image name="Localizacao-icon" width="17" height="26"/>
         <image name="Logo-Oficial" width="351" height="343"/>
-        <image name="Nuvem - perfil-9" width="260" height="116"/>
-        <image name="Nuvens Perfil-2" width="751" height="506"/>
+        <image name="Nuvem - perfil-9" width="130" height="58"/>
+        <image name="Nuvens Perfil-2" width="375" height="253"/>
         <image name="Proximo-button-9" width="102" height="102"/>
         <image name="User1" width="386" height="386"/>
         <image name="criar viagem - buttonpng-9" width="235" height="58"/>

@@ -33,7 +33,7 @@ class TMMenuViewController: UIViewController {
     @IBOutlet weak var nuvens1: UIImageView!
     @IBOutlet weak var nuvens2: UIImageView!
     
-    override func viewDidAppear(animated: Bool) {
+    override func viewWillAppear(animated: Bool) {
         nuvens1.goLeftAndAgain(10)
         nuvens2.goLeftAndAgain(5)
     }
