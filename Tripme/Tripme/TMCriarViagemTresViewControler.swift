@@ -193,7 +193,7 @@ extension TMCriarViagemTresViewControler: UITableViewDataSource {
 extension TMCriarViagemTresViewControler: UITableViewDelegate {
     
     func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 40
+        return 50
     }
     
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {

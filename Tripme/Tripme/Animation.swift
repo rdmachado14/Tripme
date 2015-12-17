@@ -26,10 +26,10 @@ extension UIView {
 
     }
     
-    func goLeftAndAgain2(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
+    func goLeftAndAgain2(primeiro: Bool = false,var duration: NSTimeInterval = 20.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
         if(primeiro) {
-            duration = 5
+            duration = 10
         }
         
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
@@ -42,10 +42,10 @@ extension UIView {
         
     }
     
-    func goLeftAndAgainNuvem(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
+    func goLeftAndAgainNuvem(primeiro: Bool = false,var duration: NSTimeInterval = 20.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
         if(primeiro) {
-            duration = 5
+            duration = 10
         }
         
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
@@ -58,10 +58,10 @@ extension UIView {
         
     }
     
-    func goLeftAndAgainNuvem2(primeiro: Bool = false,var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
+    func goLeftAndAgainNuvem2(primeiro: Bool = false,var duration: NSTimeInterval = 20.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
         if(primeiro) {
-            duration = 5
+            duration = 10
         }
         
         UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveLinear, animations: {
