@@ -10,10 +10,13 @@ import UIKit
 
 class TMSettingsTableViewController: UITableViewController {
     
+    @IBOutlet var mytable: UITableView!
 
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        //mytable.tableFooterView = UIView(frame: CGRectZero)
+        
         settings = [
         
             Setting(header: "Perfil", arrayLabel: ["Nome", "Username", "Senha", "Email"], arrayTextField: ["Skywalker", "Luke", "NOOOO", "lukexxt@gmail.com"], image: nil, switchCase: nil),
@@ -100,6 +103,15 @@ class TMSettingsTableViewController: UITableViewController {
         cell.lbHeaderCell.text = settings[section].header
         
         return cell
+    }
+    
+    override func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+    {
+        return 60
+    }
+    
+    override func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 40
     }
 
 
