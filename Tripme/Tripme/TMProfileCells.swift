@@ -8,11 +8,24 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class TMProfileCells: UITableViewCell
 {
     @IBOutlet weak var lbName: UILabel!
     @IBOutlet weak var tfName: UITextField!
     
+//    func viewWillAppear(animated: Bool)
+//    {
+//        
+//        let currentUser = PFUser.currentUser()
+//        
+//        if currentUser!["primeiroNome"] != nil {
+//            tfName.text = (currentUser!["primeiroNome"] as! String)
+//        }
+//        
+//        
+//    }
+
     
 }

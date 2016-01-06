@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class TMSettingsTableViewController: UITableViewController {
     
@@ -15,19 +16,19 @@ class TMSettingsTableViewController: UITableViewController {
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        //mytable.tableFooterView = UIView(frame: CGRectZero)
         
         settings = [
         
             Setting(header: "Perfil", arrayLabel: ["Nome", "Username", "Senha", "Email"], arrayTextField: ["Skywalker", "Luke", "NOOOO", "lukexxt@gmail.com"], image: nil, switchCase: nil),
             Setting(header: "Contas Vinculadas", arrayLabel: ["Facebook", "Twitter"], arrayTextField: nil, image: [UIImage(named: "fb")!, UIImage(named: "tt")!], switchCase: [true, false]),
-            Setting(header: "Notificações", arrayLabel: ["Ativar Notifucações"], arrayTextField: nil, image: nil, switchCase: [true])
+            Setting(header: "Notificações", arrayLabel: ["Ativar notificações"], arrayTextField: nil, image: nil, switchCase: [true])
             
             
         ]
 
     }
-
+    
+    
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
@@ -64,7 +65,30 @@ class TMSettingsTableViewController: UITableViewController {
         {
             let cell = tableView.dequeueReusableCellWithIdentifier("Profile") as! TMProfileCells
             cell.lbName.text = settings[indexPath.section].arrayLabel[indexPath.row]
-            cell.tfName.text = settings[indexPath.section].arrayTextField[indexPath.row]
+//            cell.tfName.text = settings[indexPath.section].arrayTextField[indexPath.row]
+            
+            let currentUser = PFUser.currentUser()
+            
+            if currentUser!["primeiroNome"] != nil && indexPath.row == 0
+            {
+                cell.tfName.text = (currentUser!["primeiroNome"] as! String)
+            }
+            
+            else if currentUser!["username"] != nil && indexPath.row == 1
+            {
+                cell.tfName.text = (currentUser!["username"] as! String)
+            }
+            
+            else if indexPath.row == 2
+            {
+//                cell.tfName.text = (currentUser!["password"] as! String)
+                cell.tfName.secureTextEntry = true
+            }
+            
+            else
+            {
+                cell.tfName.text = (currentUser!["email"] as! String)
+            }
             
             return cell
 
