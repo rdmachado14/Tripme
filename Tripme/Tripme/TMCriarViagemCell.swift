@@ -12,6 +12,8 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
     
     var isObserving = false
     var primeiraVez = false
+    var teste:[AnyObject] = []
+    
     
     @IBOutlet weak var tvDescicao: UITextView!
     
@@ -57,6 +59,7 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
             }
             print("boolean: \(primeiraVez)")
             print(self)
+            teste.append(self)
             addObserver(self, forKeyPath: "frame", options: [NSKeyValueObservingOptions.New, NSKeyValueObservingOptions.Initial], context: nil)
             isObserving = true;
             
@@ -72,7 +75,10 @@ class TMCriarViagemCell: UITableViewCell, UITextViewDelegate {
     }
     
     deinit {
-        removeObserver(self, forKeyPath: "frame")
+        for i in 0...teste.count {
+            removeObserver(teste[i] as! NSObject, forKeyPath: "frame")
+        }
+        
     }
     
 //    func heightForText() -> CGFloat{
