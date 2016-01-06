@@ -625,7 +625,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Configurações" id="1fL-S3-QhF">
-                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="fc5-rF-2Nx"/>
+                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="fc5-rF-2Nx">
+                            <connections>
+                                <segue destination="isk-Hv-8nn" kind="showDetail" id="8JI-59-DfF"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Salvar" id="pBK-wi-S75"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -635,7 +639,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kr9-hn-ncA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5665.5" y="1780.5"/>
+            <point key="canvasLocation" x="3215.5" y="2860.5"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="FsC-DY-Pjs">
@@ -1165,6 +1169,9 @@
                                 <state key="normal" title="Configurações">
                                     <color key="titleColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <segue destination="jcH-Ir-3Sg" kind="show" id="rwd-tq-xY0"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barra cinza" translatesAutoresizingMaskIntoConstraints="NO" id="8tj-G8-jnY">
                                 <rect key="frame" x="0.0" y="41" width="375" height="2"/>
@@ -1212,7 +1219,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOD-zU-jWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2645.5" y="544"/>
+            <point key="canvasLocation" x="2499.5" y="2053.5"/>
         </scene>
         <!--Initial View Controller-->
         <scene sceneID="5FO-9z-jcQ">
@@ -1833,7 +1840,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ysJ-xt-ZLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5118" y="1781"/>
+            <point key="canvasLocation" x="2499.5" y="2854.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1856,6 +1863,7 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="8JI-59-DfF"/>
         <segue reference="cUF-ya-26X"/>
     </inferredMetricsTieBreakers>
 </document>
