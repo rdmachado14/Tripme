@@ -8,8 +8,9 @@
 
 import Foundation
 import UIKit
+import Parse
 
 class TMQuitCells: UITableViewCell
 {
-    
+    @IBOutlet weak var lblogOut: UILabel!
 }

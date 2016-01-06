@@ -21,7 +21,8 @@ class TMSettingsTableViewController: UITableViewController {
         
             Setting(header: "Perfil", arrayLabel: ["Nome", "Username", "Senha", "Email"], arrayTextField: ["Skywalker", "Luke", "NOOOO", "lukexxt@gmail.com"], image: nil, switchCase: nil),
             Setting(header: "Contas Vinculadas", arrayLabel: ["Facebook", "Twitter"], arrayTextField: nil, image: [UIImage(named: "fb")!, UIImage(named: "tt")!], switchCase: [true, false]),
-            Setting(header: "Notificações", arrayLabel: ["Ativar notificações"], arrayTextField: nil, image: nil, switchCase: [true])
+            Setting(header: "Notificações", arrayLabel: ["Ativar notificações"], arrayTextField: nil, image: nil, switchCase: [true]),
+            Setting(header: "", arrayLabel: ["Sair"], arrayTextField: [""], image: nil, switchCase: nil)
             
             
         ]
@@ -41,6 +42,7 @@ class TMSettingsTableViewController: UITableViewController {
         var arrayTextField: [String]!
         var image: [UIImage]!
         var switchCase: [Bool]!
+        
     }
     
     var settings: [Setting]!
@@ -102,7 +104,7 @@ class TMSettingsTableViewController: UITableViewController {
 //            cell.switchCase.on = settings[indexPath.section].switchCase[indexPath.row]
             
             let currentUser = PFUser.currentUser()
-            print("authData: \(currentUser!["authData"])")
+//            print("authData: \(currentUser!["authData"])")
             
             if currentUser!["ultimoNome"] != nil && indexPath.row == 0
             {
@@ -119,7 +121,7 @@ class TMSettingsTableViewController: UITableViewController {
             return cell
         }
         
-        else
+        else if indexPath.section == 2
         {
             let cell = tableView.dequeueReusableCellWithIdentifier("Notification") as! TMNotificationCells
             cell.lbNotification.text = settings[indexPath.section].arrayLabel[indexPath.row]
@@ -130,6 +132,25 @@ class TMSettingsTableViewController: UITableViewController {
             
             return cell
 
+        }
+        
+        else
+        {
+            let cell = tableView.dequeueReusableCellWithIdentifier("Quit") as! TMQuitCells
+            
+            cell.lblogOut.text = settings[indexPath.section].arrayLabel[indexPath.row]
+            
+            
+            return cell
+
+        }
+    }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if indexPath.section == 3 && indexPath.row == 0
+        {
+            PFUser.logOut()
         }
     }
     

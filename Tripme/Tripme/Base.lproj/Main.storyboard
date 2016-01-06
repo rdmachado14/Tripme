@@ -71,6 +71,10 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
         <mutableArray key="Tondo_Trial_Sign.ttf">
             <string>TondoTrial-Signage</string>
@@ -474,7 +478,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTh-ou-0F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4423.5" y="1730"/>
+            <point key="canvasLocation" x="5235.5" y="1730"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="NrB-UX-e3n">
@@ -494,6 +498,7 @@
                                     <subviews>
                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="K8O-Jo-eNx">
                                             <rect key="frame" x="129" y="15" width="219" height="30"/>
+                                            <color key="textColor" red="0.4823529411764706" green="0.4823529411764706" blue="0.4823529411764706" alpha="1" colorSpace="calibratedRGB"/>
                                             <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
                                             <textInputTraits key="textInputTraits"/>
                                         </textField>
@@ -527,18 +532,18 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gCo-hV-4da">
-                                            <rect key="frame" x="41" y="21" width="23" height="23"/>
+                                            <rect key="frame" x="41" y="20.5" width="23" height="23"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="23" id="nrb-Md-Cj8"/>
                                             </constraints>
                                         </imageView>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="357-vV-wy5">
-                                            <rect key="frame" x="309" y="16" width="51" height="31"/>
+                                            <rect key="frame" x="309" y="15.5" width="51" height="31"/>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0w-8Q-vvb">
-                                            <rect key="frame" x="115" y="23" width="100" height="21"/>
-                                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <rect key="frame" x="115" y="22.5" width="100" height="21"/>
+                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                            <color key="textColor" red="0.52156862745098043" green="0.52156862745098043" blue="0.52156862745098043" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
@@ -575,7 +580,7 @@
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="186" id="HTQ-lc-XDs"/>
                                             </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -600,14 +605,17 @@
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1cE-YP-BRp">
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Sair" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cvO-Dv-7Gg">
                                             <rect key="frame" x="172" y="19" width="30" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="lblogOut" destination="cvO-Dv-7Gg" id="eVc-xq-8Tq"/>
+                                </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Header" rowHeight="40" id="cx2-Bn-TTN" customClass="TMHeaderCells" customModule="Tripme" customModuleProvider="target">
                                 <rect key="frame" x="0.0" y="348.5" width="375" height="40"/>
@@ -618,7 +626,7 @@
                                     <subviews>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VDz-dB-Ahr">
                                             <rect key="frame" x="18" y="8" width="157" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="18"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
@@ -651,7 +659,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kr9-hn-ncA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3215.5" y="2860.5"/>
+            <point key="canvasLocation" x="3633.5" y="2863.5"/>
         </scene>
         <!--Page View Controller-->
         <scene sceneID="FsC-DY-Pjs">
@@ -1182,7 +1190,7 @@
                                     <color key="titleColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                                 <connections>
-                                    <segue destination="jcH-Ir-3Sg" kind="show" id="rwd-tq-xY0"/>
+                                    <segue destination="WXz-Qd-OL8" kind="show" id="eXA-bx-WBM"/>
                                 </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barra cinza" translatesAutoresizingMaskIntoConstraints="NO" id="8tj-G8-jnY">
@@ -1836,23 +1844,26 @@
             <point key="canvasLocation" x="2037.5" y="-523.5"/>
         </scene>
         <!--Navigation Controller-->
-        <scene sceneID="TaL-a6-oiN">
+        <scene sceneID="gcu-v4-RVi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="jcH-Ir-3Sg" sceneMemberID="viewController">
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WXz-Qd-OL8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="2o5-Mh-06a">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="4EL-Si-stI">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                        </textAttributes>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="1fR-xJ-TBK" kind="relationship" relationship="rootViewController" id="pPy-tc-aQD"/>
+                        <segue destination="1fR-xJ-TBK" kind="relationship" relationship="rootViewController" id="VG6-Gi-6hg"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="ysJ-xt-ZLu" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iL4-kB-tbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2499.5" y="2854.5"/>
+            <point key="canvasLocation" x="2868.5" y="2863.5"/>
         </scene>
     </scenes>
     <resources>
