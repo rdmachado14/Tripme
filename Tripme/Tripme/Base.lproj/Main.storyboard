@@ -624,19 +624,9 @@
                             <outlet property="delegate" destination="1fR-xJ-TBK" id="fI3-GB-IQ9"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Configurações" id="Cpk-GA-mht">
-                        <barButtonItem key="leftBarButtonItem" style="plain" id="dbe-oe-qBp">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nvg-tg-FpB">
-                                <rect key="frame" x="16" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                        </barButtonItem>
-                        <barButtonItem key="rightBarButtonItem" style="plain" id="vWj-kG-2Up">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="nG9-e6-YwP">
-                                <rect key="frame" x="276" y="7" width="83" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </button>
-                        </barButtonItem>
+                    <navigationItem key="navigationItem" title="Configurações" id="1fL-S3-QhF">
+                        <barButtonItem key="leftBarButtonItem" title="Voltar" id="fc5-rF-2Nx"/>
+                        <barButtonItem key="rightBarButtonItem" title="Salvar" id="pBK-wi-S75"/>
                     </navigationItem>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
