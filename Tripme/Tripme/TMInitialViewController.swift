@@ -26,7 +26,7 @@ class TMInitialViewController: UIViewController
         let currentUser = PFUser.currentUser()
         if (currentUser != nil) {
             print("esta logado \(currentUser)")
-            self.performSegueWithIdentifier("mainScreen", sender: nil)
+            self.performSegueWithIdentifier("loginVai", sender: nil)
         } else {
             print("nao esta logado \(currentUser)")
             
@@ -58,6 +58,7 @@ class TMInitialViewController: UIViewController
         
         UIApplication.sharedApplication().setStatusBarHidden(true, withAnimation: .Fade)
         
+//        PFUser.logOut()
         
 
         
@@ -68,7 +69,7 @@ class TMInitialViewController: UIViewController
     @IBAction func Entrar(sender: AnyObject) {
         
         let username = self.tfEmail.text
-        let password = self.tfEmail.text
+        let password = self.tfSenha.text
         
         if username! == "" || password! == ""
         {
@@ -92,7 +93,7 @@ class TMInitialViewController: UIViewController
                 }
                 else
                 {
-                    let alert = UIAlertView(title: "Erro!", message: "\(error)", delegate: self, cancelButtonTitle: "OK")
+                    let alert = UIAlertView(title: "Erro!", message: "Email ou senha errados.", delegate: self, cancelButtonTitle: "OK")
                     alert.show()
                     
                 }

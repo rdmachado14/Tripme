@@ -107,7 +107,7 @@ extension TMMenuViewController : UICollectionViewDataSource
         }
         //cell.featuredImageView.im
         cell.Nome.text = (currentUser!["primeiroNome"] as! String)
-        cell.lbLocal.text = (currentUser!["localidade"] as! String)
+//        cell.lbLocal.text = (currentUser!["localidade"] as! String)
         return cell
     }
 }
