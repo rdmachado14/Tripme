@@ -151,6 +151,9 @@ class TMSettingsTableViewController: UITableViewController {
         if indexPath.section == 3 && indexPath.row == 0
         {
             PFUser.logOut()
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let view: TMInitialViewController = sb.instantiateViewControllerWithIdentifier("begin") as! TMInitialViewController
+            presentViewController(view, animated: true, completion: nil)
         }
     }
     

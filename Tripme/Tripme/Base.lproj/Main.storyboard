@@ -1244,7 +1244,7 @@
         <!--Initial View Controller-->
         <scene sceneID="5FO-9z-jcQ">
             <objects>
-                <viewController id="Tzl-YC-y1W" customClass="TMInitialViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="begin" id="Tzl-YC-y1W" customClass="TMInitialViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="77l-6x-tNt"/>
                         <viewControllerLayoutGuide type="bottom" id="yWP-SE-yMT"/>

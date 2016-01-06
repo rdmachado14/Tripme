@@ -86,8 +86,6 @@ class TMInitialViewController: UIViewController
                 
                 if user != nil
                 {
-                    let alert = UIAlertView(title: "Sucesso!", message: "Você está logado!", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
                     self.performSegueWithIdentifier("loginVai", sender: self)
                     //UIApplication.sharedApplication().keyWindow?.rootViewController = TMMenuViewController()
                 }
