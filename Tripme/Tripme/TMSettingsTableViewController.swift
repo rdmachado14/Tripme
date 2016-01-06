@@ -148,6 +148,8 @@ class TMSettingsTableViewController: UITableViewController {
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
+
+        
         if indexPath.section == 3 && indexPath.row == 0
         {
             PFUser.logOut()
@@ -155,6 +157,7 @@ class TMSettingsTableViewController: UITableViewController {
             let view: TMInitialViewController = sb.instantiateViewControllerWithIdentifier("begin") as! TMInitialViewController
             presentViewController(view, animated: true, completion: nil)
         }
+        
     }
     
     override func tableView(tableView: UITableView, titleForHeaderInSection section: Int) -> String?
@@ -180,5 +183,40 @@ class TMSettingsTableViewController: UITableViewController {
         return 40
     }
 
+    @IBAction func btSave(sender: AnyObject)
+    {
+        let user = PFUser.currentUser()
+        
+        for i in 0...3
+        {
+            
+        
+            let celula: TMProfileCells = mytable.cellForRowAtIndexPath(NSIndexPath(forItem: i, inSection: 0)) as! TMProfileCells
+        
+            if i == 0 {
+                user!["primeiroNome"] = celula.tfName.text
+            } else if i == 1 {
+                user!["username"] = celula.tfName.text
+            } else if i == 2 {
+                user!["password"] = celula.tfName.text
+            } else if i == 3 {
+                user!["email"] = celula.tfName.text
+            }
+            
+            
+        }
+        
+        user!.saveInBackgroundWithBlock({ (success, error) -> Void in
+            if success
+            {
+                print("salvo")
+            }
+            else
+            {
+                print(error)
+            }
+        })
+
+    }
 
 }
