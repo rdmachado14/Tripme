@@ -113,6 +113,8 @@ class TMCriarViagemTresViewControler: UIViewController {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         let viewController:TMTripProjectViewController = segue.destinationViewController as! TMTripProjectViewController
         viewController.arrayImagensTela = Tela2
+        viewController.arrayTela1 = Tela1
+        viewController.arrayTela3 = Tela3
     }
     
     override func viewDidLoad() {

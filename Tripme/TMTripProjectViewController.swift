@@ -26,14 +26,14 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet weak var lbTripHost: UILabel!
     @IBOutlet weak var lbCollected: UILabel!
     @IBOutlet weak var lbTripTotal: UILabel!
-    @IBOutlet weak var lbTripHostLastName: UILabel!
+
     @IBOutlet weak var pvTripProgress: UIProgressView!
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view4: UIView!
     @IBOutlet weak var secondImage: UIImageView!
     @IBOutlet weak var lbNameAgain: UILabel!
-    @IBOutlet weak var lbSecondNameAgain: UILabel!
+
     @IBOutlet weak var myTableView: UITableView!
     @IBOutlet weak var view3: UIView!
     @IBOutlet weak var mtTableView2: UITableView!
@@ -44,6 +44,8 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     
     
     var arrayImagensTela:[UIImage] = []
+    var arrayTela1:[String] = []
+    var arrayTela3:[String] = []
     var object: PFObject!
     
     struct Objects {
@@ -69,48 +71,17 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
-        pageControl.numberOfPages = arrayImagensTela.count
-        let scrollViewWidth:CGFloat = self.scrollViewImage.frame.width
-        let scrollViewHeight:CGFloat = self.scrollViewImage.frame.height
         
-        for i in 0..<arrayImagensTela.count {
-            let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
-            imgOne.image = arrayImagensTela[i]
-            self.scrollViewImage.addSubview(imgOne)
-        }
         
-        self.scrollViewImage.contentSize = CGSizeMake(self.scrollViewImage.frame.width * CGFloat(arrayImagensTela.count), self.scrollViewImage.frame.height)
-        self.scrollViewImage.delegate = self
-        self.pageControl.currentPage = 0
+        loadFromViewCriarConta()
         
-        objectsArray = [
-            Objects(
-                sectionName: "Informações sobre a viagem",
-                sectionObjects: ["a","b","c","d","e"],
-                sectionNameObjects: ["Valor a ser arrecadado","Tempo total de arrecadação","Tempo restante","Dias viajando","Valor mínimo de doação"],
-                BackGroungColor:  UIColor().colorWithHexString("FB324F")
-            ),
-            
-            Objects(
-                sectionName: "Despesas da viagem",
-                sectionObjects: ["Passagens aérias","Alimentação"],
-                sectionNameObjects: ["NameOnject1","Barry Allen"],
-                BackGroungColor: UIColor().colorWithHexString("431A8D")
-            )
-        ]
-        print(objectsArray)
-        
-
-        lbTripName.text = "Naboo"
-        
-        lbCollected.text = "1200"
-        lbTripTotal.text = "2000"
         myTableView.tableFooterView = UIView(frame: CGRectZero)
         
         progressViewAction()
         
         // scroll
-        scrollView.contentSize.height = 10000
+        print(self.scrollView.frame.height)
+        scrollView.contentSize.height = 2700
         
         
         // requisição de curtir
@@ -137,6 +108,53 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
         textView.editable = false
         textView2.editable = false
+        
+    }
+    
+    func loadFromViewCriarConta() {
+        
+        pageControl.numberOfPages = arrayImagensTela.count
+        let scrollViewWidth:CGFloat = self.scrollViewImage.frame.width
+        let scrollViewHeight:CGFloat = self.scrollViewImage.frame.height
+        
+        for i in 0..<arrayImagensTela.count {
+            let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
+            imgOne.image = arrayImagensTela[i]
+            self.scrollViewImage.addSubview(imgOne)
+        }
+        
+        self.scrollViewImage.contentSize = CGSizeMake(self.scrollViewImage.frame.width * CGFloat(arrayImagensTela.count), self.scrollViewImage.frame.height)
+        self.scrollViewImage.delegate = self
+        self.pageControl.currentPage = 0
+        
+        objectsArray = [
+            Objects(
+                sectionName: "Informações sobre a viagem",
+                sectionObjects: [arrayTela1[3],arrayTela1[4],"c",arrayTela1[5],"e"],
+                sectionNameObjects: ["Valor a ser arrecadado","Tempo total de arrecadação","Tempo restante","Dias viajando","Valor mínimo de doação"],
+                BackGroungColor:  UIColor().colorWithHexString("FB324F")
+            ),
+            
+            Objects(
+                sectionName: "Despesas da viagem",
+                sectionObjects: [arrayTela3[0],arrayTela3[2]],
+                sectionNameObjects: ["Passagens aérias","Alimentação"],
+                BackGroungColor: UIColor().colorWithHexString("431A8D")
+            )
+        ]
+        print(objectsArray)
+        
+        textView.text = arrayTela1[2]
+        
+        
+        lbTripName.text = arrayTela1[0]
+        
+        lbCollected.text = "900"
+        lbTripTotal.text = "Total de R$ \(arrayTela1[3])"
+        
+    }
+    
+    func loadParse() {
         
     }
     
@@ -210,21 +228,27 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     override func viewDidAppear(animated: Bool)
     {
         
+        var string1 = String()
+        var string2 = String()
+        
         let currentUser = PFUser.currentUser()
         print("esta logado: \(currentUser)")
         print("nome: \(currentUser!["primeiroNome"])")
         
         if currentUser!["primeiroNome"] != nil
         {
-            lbTripHost.text = (currentUser!["primeiroNome"] as! String)
-            lbNameAgain.text = (currentUser!["primeiroNome"] as! String)
+            string1 = (currentUser!["primeiroNome"] as! String)
+
         }
         
         if currentUser!["ultimoNome"] != nil
         {
-            lbTripHostLastName.text = (currentUser!["ultimoNome"] as! String)
-            lbSecondNameAgain.text = (currentUser!["ultimoNome"] as! String)
+            string2 = (currentUser!["ultimoNome"] as! String)
         }
+        print("\(string1) e \(string2)")
+        
+        lbTripHost.text = "\(string1) \(string2)"
+        lbNameAgain.text = "\(string1) \(string2)"
         
         if currentUser!["foto"] != nil
         {
@@ -301,7 +325,12 @@ extension TMTripProjectViewController: UITableViewDataSource
         print(objectsArray[section].sectionObjects)
         
         cell.lbName.text = objectsArray[section].sectionNameObjects[indexPath.row]
-        cell.lbValue.text = objectsArray[section].sectionObjects[indexPath.row]
+        if ((section == 0 && (indexPath.row == 1 || indexPath.row == 0)) || section == 1) {
+            cell.lbValue.text = "R$ \(objectsArray[section].sectionObjects[indexPath.row])"
+        } else {
+            cell.lbValue.text = objectsArray[section].sectionObjects[indexPath.row]
+        }
+        
 
         
         return cell
