@@ -58,7 +58,12 @@ class TMSettingsTableViewController: UITableViewController {
     {
         return settings[section].arrayLabel.count
     }
+    
+    
 
+    @IBAction func voltar(sender: AnyObject) {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
