@@ -14,11 +14,13 @@ import Social
 import FBSDKShareKit
 
 
-class TMTripProjectViewController: UIViewController
+class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
 {
 
     
-    @IBOutlet weak var ivTripImage: UIImageView!
+    
+    @IBOutlet weak var scrollViewImage: UIScrollView!
+    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var lbTripName: UILabel!
     @IBOutlet weak var ivProfilePicture: UIImageView!
     @IBOutlet weak var lbTripHost: UILabel!
@@ -27,7 +29,6 @@ class TMTripProjectViewController: UIViewController
     @IBOutlet weak var lbTripHostLastName: UILabel!
     @IBOutlet weak var pvTripProgress: UIProgressView!
     @IBOutlet weak var scrollView: UIScrollView!
-    @IBOutlet weak var pageControl: UIPageControl!
     @IBOutlet weak var view1: UIView!
     @IBOutlet weak var view4: UIView!
     @IBOutlet weak var secondImage: UIImageView!
@@ -42,6 +43,7 @@ class TMTripProjectViewController: UIViewController
     
     
     
+    var arrayImagensTela:[UIImage] = []
     var object: PFObject!
     
     struct Objects {
@@ -56,14 +58,7 @@ class TMTripProjectViewController: UIViewController
     
     // MARK: - Variables
     var itemIndex: Int = 0
-    var imageName: String = "" {
-        didSet {
-            if let imageView = ivTripImage {
-                imageView.image = UIImage(named: imageName)
-            }
-            
-        }
-    }
+    
 
 
 
@@ -74,6 +69,19 @@ class TMTripProjectViewController: UIViewController
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        pageControl.numberOfPages = arrayImagensTela.count
+        let scrollViewWidth:CGFloat = self.scrollViewImage.frame.width
+        let scrollViewHeight:CGFloat = self.scrollViewImage.frame.height
+        
+        for i in 0..<arrayImagensTela.count {
+            let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
+            imgOne.image = arrayImagensTela[i]
+            self.scrollViewImage.addSubview(imgOne)
+        }
+        
+        self.scrollViewImage.contentSize = CGSizeMake(self.scrollViewImage.frame.width * CGFloat(arrayImagensTela.count), self.scrollViewImage.frame.height)
+        self.scrollViewImage.delegate = self
+        self.pageControl.currentPage = 0
         
         objectsArray = [
             Objects(
@@ -104,7 +112,6 @@ class TMTripProjectViewController: UIViewController
         // scroll
         scrollView.contentSize.height = 10000
         
-        ivTripImage!.image = UIImage(named: imageName)
         
         // requisição de curtir
         let query = PFQuery(className: "Trip")
@@ -230,6 +237,17 @@ class TMTripProjectViewController: UIViewController
             }
         }
         
+        
+        
+    }
+    
+    func scrollViewDidEndDecelerating(scrollView: UIScrollView){
+        // Test the offset and calculate the current page after scrolling ends
+        let pageWidth:CGFloat = CGRectGetWidth(scrollView.frame)
+        let currentPage:CGFloat = floor((scrollView.contentOffset.x-pageWidth/2)/pageWidth)+1
+        // Change the indicator
+        self.pageControl.currentPage = Int(currentPage);
+        // Change the text accordingly
         
         
     }

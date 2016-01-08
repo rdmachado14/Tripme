@@ -81,7 +81,7 @@ class TMTestPageViewController: UIViewController, UIPageViewControllerDataSource
         if itemIndex < contentImages.count {
             let pageItemController = self.storyboard!.instantiateViewControllerWithIdentifier("Trip") as! TMTripProjectViewController
             pageItemController.itemIndex = itemIndex
-            pageItemController.imageName = contentImages[itemIndex]
+            //pageItemController.imageName = contentImages[itemIndex]
             return pageItemController
         }
         

@@ -92,6 +92,7 @@ class TMCriarViagem2ViewController: UIViewController {
         if(UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)) {
             picker.sourceType = UIImagePickerControllerSourceType.Camera
             picker.delegate = self
+            picker.allowsEditing = true
             presentViewController(picker, animated: true, completion: nil)
         }
         else {
@@ -104,6 +105,7 @@ class TMCriarViagem2ViewController: UIViewController {
         let picker = UIImagePickerController()
         picker.sourceType = UIImagePickerControllerSourceType.PhotoLibrary
         picker.delegate = self
+        picker.allowsEditing = true
         presentViewController(picker, animated: true, completion: nil)
     }
     

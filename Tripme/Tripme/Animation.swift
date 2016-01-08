@@ -17,7 +17,7 @@ extension UIView {
     func goLeftAndAgain(var duration: NSTimeInterval = 10.0, delay: NSTimeInterval = 0.0, destination: CGPoint = CGPoint(x: -375, y: 667), completion: (() -> Void) = { () -> Void in }) {
         
         UIView.animateWithDuration(duration, delay: 0, options: UIViewAnimationOptions.CurveLinear, animations: {
-            print("x: \(destination.x), y: \(self.frame.origin.y)")
+            //print("x: \(destination.x), y: \(self.frame.origin.y)")
             self.frame = CGRect(x: destination.x, y: self.frame.origin.y, width: self.frame.size.width, height: self.frame.size.height)
             }) { (bool : Bool) -> Void in
                 self.frame.origin = CGPoint(x: 375, y: 0)
