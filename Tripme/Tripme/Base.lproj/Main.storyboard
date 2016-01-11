@@ -469,7 +469,7 @@
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <prototypes>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Profile" rowHeight="60" id="xtL-rH-dsI" customClass="TMProfileCells" customModule="Tripme" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="93.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="49.5" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xtL-rH-dsI" id="QOG-hD-5B4">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -504,7 +504,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Account" rowHeight="81" id="Q62-IF-tYD" customClass="TMAccountsCells" customModule="Tripme" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="153.5" width="375" height="81"/>
+                                <rect key="frame" x="0.0" y="109.5" width="375" height="81"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Q62-IF-tYD" id="22f-IY-Moi">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="80.5"/>
@@ -545,7 +545,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Notification" rowHeight="54" id="Fgy-IU-Fjv" customClass="TMNotificationCells" customModule="Tripme" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="234.5" width="375" height="54"/>
+                                <rect key="frame" x="0.0" y="190.5" width="375" height="54"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Fgy-IU-Fjv" id="wbx-gr-PAl">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
@@ -578,7 +578,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Quit" rowHeight="60" id="bdQ-xA-oCu" customClass="TMQuitCells" customModule="Tripme" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="288.5" width="375" height="60"/>
+                                <rect key="frame" x="0.0" y="244.5" width="375" height="60"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bdQ-xA-oCu" id="FkX-oh-cHB">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="59.5"/>
@@ -597,7 +597,7 @@
                                 </connections>
                             </tableViewCell>
                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Header" rowHeight="40" id="cx2-Bn-TTN" customClass="TMHeaderCells" customModule="Tripme" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="348.5" width="375" height="40"/>
+                                <rect key="frame" x="0.0" y="304.5" width="375" height="40"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="cx2-Bn-TTN" id="U2R-9u-l6F">
                                     <rect key="frame" x="0.0" y="0.0" width="375" height="39.5"/>
@@ -893,6 +893,7 @@
                         <outlet property="nuvens1" destination="M9P-jc-Mhl" id="gdD-UC-Z9k"/>
                         <outlet property="nuvens2" destination="6Wr-vC-1u9" id="a7F-AI-QgJ"/>
                         <outlet property="perfilImagem" destination="Pcl-g6-23T" id="fhQ-g1-Kml"/>
+                        <segue destination="NWZ-Kr-wqq" kind="show" id="GUj-E8-QMr"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKW-UL-t2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1534,7 +1535,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRy-g3-JM3">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="JRy-g3-JM3">
                                 <rect key="frame" x="0.0" y="76" width="375" height="591"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1801,7 +1802,6 @@
         <!--Navigation Controller-->
         <scene sceneID="gcu-v4-RVi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iL4-kB-tbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WXz-Qd-OL8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1817,6 +1817,7 @@
                         <segue destination="1fR-xJ-TBK" kind="relationship" relationship="rootViewController" id="VG6-Gi-6hg"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iL4-kB-tbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2868.5" y="2863.5"/>
         </scene>
@@ -1842,5 +1843,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YAv-ch-A9n"/>
+        <segue reference="GUj-E8-QMr"/>
     </inferredMetricsTieBreakers>
 </document>
