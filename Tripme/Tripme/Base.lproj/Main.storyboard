@@ -893,7 +893,7 @@
                         <outlet property="nuvens1" destination="M9P-jc-Mhl" id="gdD-UC-Z9k"/>
                         <outlet property="nuvens2" destination="6Wr-vC-1u9" id="a7F-AI-QgJ"/>
                         <outlet property="perfilImagem" destination="Pcl-g6-23T" id="fhQ-g1-Kml"/>
-                        <segue destination="NWZ-Kr-wqq" kind="show" id="GUj-E8-QMr"/>
+                        <segue destination="NWZ-Kr-wqq" kind="show" identifier="descricaoPelaCollection" id="eSa-EH-ogh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKW-UL-t2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1843,6 +1843,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YAv-ch-A9n"/>
-        <segue reference="GUj-E8-QMr"/>
+        <segue reference="eSa-EH-ogh"/>
     </inferredMetricsTieBreakers>
 </document>
