@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import Parse
 import ParseFacebookUtilsV4
 
-class TMCustomSignUpViewController: UIViewController
+class TMCustomSignUpViewController: UIViewController, CLLocationManagerDelegate
 {
     @IBOutlet weak var respostaSwitch: UISwitch!
     @IBOutlet weak var criarConta: UIButton!
@@ -23,6 +23,8 @@ class TMCustomSignUpViewController: UIViewController
     @IBOutlet weak var logarFace: UIButton!
     //var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
     
+    let locationManager = CLLocationManager()
+    var local = String()
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -48,9 +50,52 @@ class TMCustomSignUpViewController: UIViewController
         criarConta.layer.cornerRadius = 4
         logarFace.layer.cornerRadius = 4
         
+        locationManager.delegate = self
+        locationManager.desiredAccuracy = kCLLocationAccuracyBest
+        locationManager.requestWhenInUseAuthorization()
+        locationManager.startUpdatingLocation()
+        
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
         
+    }
+    
+    func locationManager(manager: CLLocationManager, didUpdateLocations locations: [CLLocation]) {
+        CLGeocoder().reverseGeocodeLocation(manager.location!, completionHandler: {(placemarks, error)->Void in
+            
+            if (error != nil) {
+                print("Reverse geocoder failed with error" + error!.localizedDescription)
+                return
+            }
+            
+            if placemarks!.count > 0 {
+                let pm = placemarks![0]
+                self.displayLocationInfo(pm)
+            } else {
+                print("Problem with the data received from geocoder")
+            }
+        })
+    }
+    
+    func displayLocationInfo(placemark: CLPlacemark?) {
+        if let containsPlacemark = placemark {
+            //stop updating location to save battery life
+            locationManager.stopUpdatingLocation()
+            let locality = (containsPlacemark.locality != nil) ? containsPlacemark.locality : ""
+//            let postalCode = (containsPlacemark.postalCode != nil) ? containsPlacemark.postalCode : ""
+//            let administrativeArea = (containsPlacemark.administrativeArea != nil) ? containsPlacemark.administrativeArea : ""
+//            let country = (containsPlacemark.country != nil) ? containsPlacemark.country : ""
+            
+            local = locality!
+//            postalCodeTxtField.text = postalCode
+//            aAreaTxtField.text = administrativeArea
+//            countryTxtField.text = country
+        }
+        
+    }
+    
+    func locationManager(manager: CLLocationManager, didFailWithError error: NSError) {
+        print("Error while updating location " + error.localizedDescription)
     }
 
     override func didReceiveMemoryWarning()
@@ -93,7 +138,7 @@ class TMCustomSignUpViewController: UIViewController
             user.password = password
             user.email = email
             user["primeiroNome"] = nome
-            
+            user["localidade"] = local
             
             user.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
                 

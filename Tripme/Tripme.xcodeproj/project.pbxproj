@@ -165,6 +165,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A7B62CBA1BE1507600145361 /* CoreLocation.framework in Frameworks */,
 				795AB3961BE2A48000FD6BD8 /* ParseUI.framework in Frameworks */,
 				A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */,
 				A7B62CC81BE150C600145361 /* Accounts.framework in Frameworks */,
@@ -176,7 +177,6 @@
 				A7B62CBE1BE1509100145361 /* Security.framework in Frameworks */,
 				795AB3901BE2A00800FD6BD8 /* FBSDKShareKit.framework in Frameworks */,
 				A7B62CBC1BE1508000145361 /* QuartzCore.framework in Frameworks */,
-				A7B62CBA1BE1507600145361 /* CoreLocation.framework in Frameworks */,
 				A7B62CB81BE1506800145361 /* CoreGraphics.framework in Frameworks */,
 				A7B62CB61BE1505D00145361 /* CFNetwork.framework in Frameworks */,
 				7921CAEA1BF513D4008C6F6C /* ParseFacebookUtilsV4.framework in Frameworks */,

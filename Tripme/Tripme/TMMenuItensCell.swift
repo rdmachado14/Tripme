@@ -32,12 +32,12 @@ class TMMenuItensCell: UICollectionViewCell
     
     private func updateUI()
     {
-        interestTitleLabel?.text! = trips.title
-        featuredImageView?.image! = trips.featuredImage
+        //interestTitleLabel?.text! = trips.title
+        //featuredImageView?.image! = trips.featuredImage
         progressView.progress = Float(trips.dinheiroAtual)!/Float(trips.dinheiroTotal)!
         lbLocal.text = trips.local
         DinheiroAtual.text = trips.dinheiroAtual
-        DinheiroTotal.text = trips.dinheiroTotal
+        //DinheiroTotal.text = trips.dinheiroTotal
         UserImg.image = trips.UserImg
         Nome.text = trips.Nome
         if(trips.Favorite.boolValue){

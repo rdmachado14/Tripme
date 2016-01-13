@@ -42,11 +42,12 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     
     
     
-    
+    var verificador = false
     var arrayImagensTela:[UIImage] = []
     var arrayTela1:[String] = []
     var arrayTela3:[String] = []
     var object: PFObject!
+    var object2: PFObject!
     
     struct Objects {
         var sectionName: String!
@@ -71,9 +72,13 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        print(verificador.boolValue)
+        if verificador.boolValue {
+            loadParse()
+        } else {
+            loadFromViewCriarConta()
+        }
         
-        
-        loadFromViewCriarConta()
         
         myTableView.tableFooterView = UIView(frame: CGRectZero)
         
@@ -112,20 +117,22 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     }
     
     func loadFromViewCriarConta() {
-        
-        pageControl.numberOfPages = arrayImagensTela.count
-        let scrollViewWidth:CGFloat = self.scrollViewImage.frame.width
-        let scrollViewHeight:CGFloat = self.scrollViewImage.frame.height
-        
-        for i in 0..<arrayImagensTela.count {
-            let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
-            imgOne.image = arrayImagensTela[i]
-            self.scrollViewImage.addSubview(imgOne)
+        if !verificador {
+            pageControl.numberOfPages = arrayImagensTela.count
+            let scrollViewWidth:CGFloat = self.scrollViewImage.frame.width
+            let scrollViewHeight:CGFloat = self.scrollViewImage.frame.height
+            
+            for i in 0..<arrayImagensTela.count {
+                let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
+                imgOne.image = arrayImagensTela[i]
+                self.scrollViewImage.addSubview(imgOne)
+            }
+            
+            self.scrollViewImage.contentSize = CGSizeMake(self.scrollViewImage.frame.width * CGFloat(arrayImagensTela.count), self.scrollViewImage.frame.height)
+            self.scrollViewImage.delegate = self
+            self.pageControl.currentPage = 0
         }
         
-        self.scrollViewImage.contentSize = CGSizeMake(self.scrollViewImage.frame.width * CGFloat(arrayImagensTela.count), self.scrollViewImage.frame.height)
-        self.scrollViewImage.delegate = self
-        self.pageControl.currentPage = 0
         
         objectsArray = [
             Objects(
@@ -142,7 +149,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
                 BackGroungColor: UIColor().colorWithHexString("431A8D")
             )
         ]
-        print(objectsArray)
+        
         
         textView.text = arrayTela1[2]
         
@@ -155,7 +162,100 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     }
     
     func loadParse() {
+        arrayTela1 = ["","","","","",""]
+        arrayTela3 = ["","",""]
+        arrayTela1[2] = (object2.objectForKey("Descricao") as? String)!
+        arrayTela1[0] = (object2.objectForKey("Viagem") as? String)!
+        arrayTela1[3] = (object2.objectForKey("Valor") as? String)!
+        arrayTela1[4] = (object2.objectForKey("DataLimite") as? String)!
+        arrayTela1[5] = (object2.objectForKey("DiasDeViagem") as? String)!
+        arrayTela3[0] = (object2.objectForKey("CustoPassagem") as? String)!
+        arrayTela3[2] = (object2.objectForKey("CustoAlimentacao") as? String)!
         
+        for i in 0..<4 {
+            if (object2.objectForKey("Foto\(i)") != nil) {
+                print("entrou")
+            let userFoto = object2.objectForKey("Foto\(i)") as? PFFile
+                print("oi2")
+                userFoto!.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+                    
+                    if error == nil
+                    {
+                        if let imageData = imageData
+                        {
+                            self.arrayImagensTela.append(UIImage(data: imageData)!)
+                            print(self.arrayImagensTela.count)
+                            
+                            
+                            self.pageControl.numberOfPages = self.arrayImagensTela.count
+                            let scrollViewWidth:CGFloat = self.scrollViewImage.frame.width
+                            let scrollViewHeight:CGFloat = self.scrollViewImage.frame.height
+                            
+                            for i in 0..<self.arrayImagensTela.count {
+                                let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
+                                imgOne.image = self.arrayImagensTela[i]
+                                self.scrollViewImage.addSubview(imgOne)
+                            }
+                            
+                            self.scrollViewImage.contentSize = CGSizeMake(self.scrollViewImage.frame.width * CGFloat(self.arrayImagensTela.count), self.scrollViewImage.frame.height)
+                            self.scrollViewImage.delegate = self
+                            self.pageControl.currentPage = 0
+                            
+                        }
+                    }
+                })
+        }
+        }
+        
+        
+        
+//        if let userFoto = object2.objectForKey("Foto1") as? PFFile {
+//            print("oi2")
+//            userFoto.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+//                
+//                if error == nil
+//                {
+//                    if let imageData = imageData
+//                    {
+//                        self.arrayImagensTela.append(UIImage(data: imageData)!)
+//                        
+//                    }
+//                }
+//            })
+//        }
+//        
+//        if let userFoto = object2.objectForKey("Foto2") as? PFFile {
+//            print("oi3")
+//            userFoto.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+//                
+//                if error == nil
+//                {
+//                    if let imageData = imageData
+//                    {
+//                        self.arrayImagensTela.append(UIImage(data: imageData)!)
+//                        
+//                    }
+//                }
+//            })
+//        }
+//        
+//        if let userFoto = object2.objectForKey("Foto3") as? PFFile {
+//            print("oi4")
+//            userFoto.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+//                
+//                if error == nil
+//                {
+//                    if let imageData = imageData
+//                    {
+//                        self.arrayImagensTela.append(UIImage(data: imageData)!)
+//                        
+//                    }
+//                }
+//            })
+//        }
+        
+        
+        loadFromViewCriarConta()
     }
     
     func customView()
@@ -227,39 +327,53 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     
     override func viewDidAppear(animated: Bool)
     {
-        
-        var string1 = String()
-        var string2 = String()
-        
-        let currentUser = PFUser.currentUser()
-        print("esta logado: \(currentUser)")
-        print("nome: \(currentUser!["primeiroNome"])")
-        
-        if currentUser!["primeiroNome"] != nil
-        {
-            string1 = (currentUser!["primeiroNome"] as! String)
-
-        }
-        
-        if currentUser!["ultimoNome"] != nil
-        {
-            string2 = (currentUser!["ultimoNome"] as! String)
-        }
-        print("\(string1) e \(string2)")
-        
-        lbTripHost.text = "\(string1) \(string2)"
-        lbNameAgain.text = "\(string1) \(string2)"
-        
-        if currentUser!["foto"] != nil
-        {
-            let imageFile  = currentUser!["foto"]
-            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
-                if error == nil {
+        if verificador {
+            let image = object2.objectForKey("personFoto") as? PFFile
+            image?.getDataInBackgroundWithBlock({ (data , error) -> Void in
+                
+                if error == nil
+                {
                     self.ivProfilePicture.image = UIImage(data: data!)
-                    self.secondImage.image = UIImage(data: data!)
+                }
+            })
+            let nomeString = object2.objectForKey("userName") as! String
+            print(nomeString)
+            lbTripHost.text = nomeString
+            lbNameAgain.text = nomeString
+            
+        } else {
+            var string1 = String()
+            var string2 = String()
+            
+            let currentUser = PFUser.currentUser()
+            
+            
+            if currentUser!["primeiroNome"] != nil
+            {
+                string1 = (currentUser!["primeiroNome"] as! String)
+                
+            }
+            
+            if currentUser!["ultimoNome"] != nil
+            {
+                string2 = (currentUser!["ultimoNome"] as! String)
+            }
+            
+            lbTripHost.text = "\(string1) \(string2)"
+            lbNameAgain.text = "\(string1) \(string2)"
+            
+            if currentUser!["foto"] != nil
+            {
+                let imageFile  = currentUser!["foto"]
+                imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
+                    if error == nil {
+                        self.ivProfilePicture.image = UIImage(data: data!)
+                        self.secondImage.image = UIImage(data: data!)
+                    }
                 }
             }
         }
+        
         
         
         
@@ -278,8 +392,10 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
 
     func progressViewAction()
     {
+        
         self.collectedNumber = NSString(string: lbCollected.text!).floatValue
-        self.tripTotalNumber = NSString(string: lbTripTotal.text!).floatValue
+        
+        self.tripTotalNumber = NSString(string: arrayTela1[3]).floatValue
         
         dispatch_async(dispatch_get_main_queue())
             {
@@ -319,10 +435,7 @@ extension TMTripProjectViewController: UITableViewDataSource
         
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMTripProjectViewCell!
         
-        print(indexPath.row)
-        print(objectsArray[section].sectionName)
-        print(objectsArray[section].sectionNameObjects)
-        print(objectsArray[section].sectionObjects)
+        
         
         cell.lbName.text = objectsArray[section].sectionNameObjects[indexPath.row]
         if ((section == 0 && (indexPath.row == 1 || indexPath.row == 0)) || section == 1) {
@@ -413,7 +526,6 @@ extension TMTripProjectViewController: UITableViewDelegate
         
         let retorno = objectsArray[section2].sectionName
         
-        print(retorno)
         return retorno
     }
     

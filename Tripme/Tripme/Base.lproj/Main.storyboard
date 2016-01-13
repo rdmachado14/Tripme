@@ -893,6 +893,7 @@
                         <outlet property="nuvens1" destination="M9P-jc-Mhl" id="gdD-UC-Z9k"/>
                         <outlet property="nuvens2" destination="6Wr-vC-1u9" id="a7F-AI-QgJ"/>
                         <outlet property="perfilImagem" destination="Pcl-g6-23T" id="fhQ-g1-Kml"/>
+                        <segue destination="NWZ-Kr-wqq" kind="show" identifier="descricaoPelaCollection" id="eSa-EH-ogh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="wKW-UL-t2u" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1801,7 +1802,6 @@
         <!--Navigation Controller-->
         <scene sceneID="gcu-v4-RVi">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="iL4-kB-tbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="WXz-Qd-OL8" sceneMemberID="viewController">
                     <toolbarItems/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -1817,6 +1817,7 @@
                         <segue destination="1fR-xJ-TBK" kind="relationship" relationship="rootViewController" id="VG6-Gi-6hg"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="iL4-kB-tbT" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2868.5" y="2863.5"/>
         </scene>
@@ -1842,5 +1843,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YAv-ch-A9n"/>
+        <segue reference="eSa-EH-ogh"/>
     </inferredMetricsTieBreakers>
 </document>
