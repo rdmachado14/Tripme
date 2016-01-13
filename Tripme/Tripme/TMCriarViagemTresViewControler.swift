@@ -16,6 +16,8 @@ class TMCriarViagemTresViewControler: UIViewController {
     @IBOutlet weak var BtVoltar: UIButton!
     @IBOutlet weak var BtCancelar: UIButton!
     
+    var string1 = String()
+    var string2 = String()
     var Tela1: [String]!
     var Tela2: [UIImage]!
     var Tela3: [String]!
@@ -67,7 +69,7 @@ class TMCriarViagemTresViewControler: UIViewController {
     }
     
     func salvarNoParse(){
-        
+        let currentUser = PFUser.currentUser()
         let NewTrip = PFObject(className:"Trip")
         
         NewTrip["Viagem"]       = Tela1[0]
@@ -91,6 +93,26 @@ class TMCriarViagemTresViewControler: UIViewController {
         NewTrip["CustoHospedagem"]  = Tela3[2]
         NewTrip["CustoLazer"]       = Tela3[3]
         NewTrip["CustoSaude"]       = Tela3[4]
+        NewTrip["personFoto"]       = currentUser!["foto"]
+        NewTrip["localidade"]       = currentUser!["localidade"]
+        
+        
+        
+        
+        if currentUser!["primeiroNome"] != nil
+        {
+            string1 = (currentUser!["primeiroNome"] as! String)
+            
+        }
+        
+        if currentUser!["ultimoNome"] != nil
+        {
+            string2 = (currentUser!["ultimoNome"] as! String)
+        }
+
+        print(string1)
+        print(string2)
+        NewTrip["userName"]         = "\(string1) \(string2)"
 
         NewTrip.saveInBackgroundWithBlock { (sucess, error) -> Void in
             if sucess {

@@ -17,7 +17,10 @@ class TMMenuViewController: UIViewController {
     @IBOutlet weak var currentUserFullNameButton: UIButton!
     @IBOutlet weak var lbSecondName: UILabel!
     
+    var tripResult = [PFObject]()
+    var object: PFObject!
     
+    var imagens: [UIImage]!
     
     // MARK: - UICollectionViewDataSource
     private var trips = Trips.createInterests()
@@ -60,7 +63,39 @@ class TMMenuViewController: UIViewController {
         perfilImagem.clipsToBounds = true
         //        perfilImagem.layer.borderWidth = 1
         //        perfilImagem.layer.borderColor = UIColor.whiteColor().CGColor
-       
+       loadParse()
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        print(segue)
+        if segue.identifier == "descricaoPelaCollection" {
+        let viewController:TMTripProjectViewController = segue.destinationViewController as! TMTripProjectViewController
+            viewController.object2 = self.object
+            viewController.verificador = true
+        }
+    }
+    
+    func loadParse() {
+        let queryParse = PFQuery(className: "Trip")
+        queryParse.findObjectsInBackgroundWithBlock { (object: [PFObject]?, NSError) -> Void in
+            if NSError == nil {
+                
+                // adicionando as informacoes para o array
+                if let objects = object
+                {
+                    self.tripResult.appendContentsOf(objects)
+                    print(self.tripResult)
+                }
+                
+                // recarregando os dados
+                self.collectionView.reloadData()
+                
+            } else {
+                print(NSError?.userInfo)
+            }
+            
+        }
+    
     }
     
     private struct Storyboard {
@@ -83,31 +118,61 @@ extension TMMenuViewController : UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int
     {
-        return trips.count
+        return tripResult.count
+        //return trips.count
     }
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
-        let currentUser = PFUser.currentUser()
         let cell:TMMenuItensCell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! TMMenuItensCell
-        
-        cell.trips = self.trips[indexPath.item]
-        if currentUser!["foto"] != nil {
-            let imageFile  = currentUser!["foto"]//imageObject.objectForKey("foto") as! PFFile
-            imageFile.getDataInBackgroundWithBlock { (data, error) -> Void in
-                if error == nil {
-                    
-                    cell.UserImg.image = UIImage(data: data!)
-                    cell.UserImg.layer.cornerRadius = cell.UserImg.frame.width/2
-                    cell.UserImg.clipsToBounds = true
-                    
-                }
-                
-            }
+        if let localDestino = tripResult[indexPath.row]["Viagem"] as? String {
+            cell.interestTitleLabel.text = localDestino
         }
-        //cell.featuredImageView.im
-        cell.Nome.text = (currentUser!["primeiroNome"] as! String)
-//        cell.lbLocal.text = (currentUser!["localidade"] as! String)
+        
+        if let valorTotal = tripResult[indexPath.row]["Valor"] as? String {
+            cell.DinheiroTotal.text = valorTotal
+        }
+        
+        if let local = tripResult[indexPath.row]["localidade"] as? String {
+            cell.lbLocal.text = local
+        }
+        
+        if let nome = tripResult[indexPath.row]["userName"] as? String {
+            cell.Nome.text = nome
+        }
+        
+        if let finalImage = tripResult[indexPath.row]["Foto0"] as? PFFile {
+        
+            finalImage.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+            
+                if error == nil
+                {
+                    if let imageData = imageData
+                    {
+                        cell.featuredImageView.image = UIImage(data: imageData)
+                    
+                    }
+                }
+            })
+        }
+        
+        if let userFoto = tripResult[indexPath.row]["personFoto"] as? PFFile {
+            
+            userFoto.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+                
+                if error == nil
+                {
+                    if let imageData = imageData
+                    {
+                        cell.UserImg.image = UIImage(data: imageData)
+                        cell.UserImg.layer.cornerRadius = cell.UserImg.frame.width/2
+                        cell.UserImg.clipsToBounds = true
+                        
+                    }
+                }
+            })
+        }
+        
         return cell
     }
 }
@@ -139,6 +204,31 @@ extension TMMenuViewController : UIScrollViewDelegate
 extension TMMenuViewController: UICollectionViewDelegate
 {
     func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+        let objeto = tripResult[indexPath.row]
+        self.object = objeto
+        
+//        for i in 0..<4 {
+//            
+//            if let userFoto = object.objectForKey("Foto\(i)") as? PFFile {
+//                print("oi")
+////                userFoto.getDataInBackgroundWithBlock({ (imageData: NSData?, error: NSError?) -> Void in
+////                    
+////                    if error == nil
+////                    {
+////                        if let imageData = imageData
+////                        {
+////                            self.imagens.append(UIImage(data: imageData)!)
+////                            
+////                        }
+////                    }
+////                })
+//            }
+//            print(imagens.count)
+////            if (object.objectForKey("Foto\(i)") != nil) {
+////                
+////            }
+//        }
+        performSegueWithIdentifier("descricaoPelaCollection", sender: self)
         //print(indexPath.row)
     }
 }
