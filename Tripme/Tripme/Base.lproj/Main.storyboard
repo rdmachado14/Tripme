@@ -635,6 +635,7 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="mytable" destination="nZx-AN-T64" id="G7D-1E-bBM"/>
@@ -1853,6 +1854,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="YAv-ch-A9n"/>
-        <segue reference="wjJ-tr-zqq"/>
+        <segue reference="eSa-EH-ogh"/>
     </inferredMetricsTieBreakers>
 </document>
