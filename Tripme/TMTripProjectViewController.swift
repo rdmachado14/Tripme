@@ -105,7 +105,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         ivProfilePicture.clipsToBounds = true
         ivProfilePicture.layer.borderWidth = 0
         
-        secondImage.layer.cornerRadius = ivProfilePicture.frame.width/2
+        secondImage.layer.cornerRadius = secondImage.frame.width/2
         secondImage.clipsToBounds = true
         secondImage.layer.borderWidth = 0
         
@@ -334,12 +334,17 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
                 if error == nil
                 {
                     self.ivProfilePicture.image = UIImage(data: data!)
+                    self.secondImage.image = UIImage(data: data!)
                 }
             })
             let nomeString = object2.objectForKey("userName") as! String
+            let descricao = object2.objectForKey("userDescricao") as! String
+            
             print(nomeString)
+            print(descricao)
             lbTripHost.text = nomeString
             lbNameAgain.text = nomeString
+            textView2.text = descricao
             
         } else {
             var string1 = String()
@@ -357,6 +362,11 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             if currentUser!["ultimoNome"] != nil
             {
                 string2 = (currentUser!["ultimoNome"] as! String)
+            }
+            
+            if currentUser!["userDescricao"] != nil {
+                let descricao = currentUser!["userDescricao"] as! String
+                textView2.text = descricao
             }
             
             lbTripHost.text = "\(string1) \(string2)"

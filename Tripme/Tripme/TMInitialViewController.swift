@@ -171,6 +171,7 @@ class TMInitialViewController: UIViewController
                                 print(nameLocation)
                                 user["localidade"] = nameLocation
                             }
+                            user["userDescricao"] = " "
                             user.saveInBackground()
                         }
                     })
