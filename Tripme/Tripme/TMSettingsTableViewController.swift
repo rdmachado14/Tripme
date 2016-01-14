@@ -29,6 +29,9 @@ class TMSettingsTableViewController: UITableViewController {
 
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
     
     override func didReceiveMemoryWarning()
     {
