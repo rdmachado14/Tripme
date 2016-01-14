@@ -139,6 +139,7 @@ class TMCustomSignUpViewController: UIViewController, CLLocationManagerDelegate
             user.email = email
             user["primeiroNome"] = nome
             user["localidade"] = local
+            user["userDescricao"] = " "
             
             user.signUpInBackgroundWithBlock({ (succeed, error) -> Void in
                 
@@ -208,6 +209,7 @@ class TMCustomSignUpViewController: UIViewController, CLLocationManagerDelegate
                                 print(nameLocation)
                                 user["localidade"] = nameLocation
                             }
+                            user["userDescricao"] = " "
                             user.saveInBackground()
                         }
                     })
