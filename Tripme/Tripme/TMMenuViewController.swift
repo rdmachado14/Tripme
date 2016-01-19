@@ -130,7 +130,7 @@ extension TMMenuViewController : UICollectionViewDataSource
         }
         
         if let valorTotal = tripResult[indexPath.row]["Valor"] as? String {
-            cell.DinheiroTotal.text = valorTotal
+            cell.DinheiroTotal.text = "Total de R$ \(valorTotal)"
         }
         
         if let local = tripResult[indexPath.row]["localidade"] as? String {
@@ -140,6 +140,11 @@ extension TMMenuViewController : UICollectionViewDataSource
         if let nome = tripResult[indexPath.row]["userName"] as? String {
             cell.Nome.text = nome
         }
+        
+        let transform:CGAffineTransform = CGAffineTransformMakeScale(1.0, 3.0);
+        cell.progressView.transform = transform;
+        cell.progressView.layer.cornerRadius = 4.5
+        cell.progressView.clipsToBounds = true
         
         if let finalImage = tripResult[indexPath.row]["Foto0"] as? PFFile {
         

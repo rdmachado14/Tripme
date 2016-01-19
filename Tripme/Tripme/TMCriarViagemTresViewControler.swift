@@ -78,7 +78,7 @@ class TMCriarViagemTresViewControler: UIViewController {
         NewTrip["Valor"]        = Tela1[3]
         NewTrip["DataLimite"]   = Tela1[4]
         NewTrip["DiasDeViagem"] = Tela1[5]
-        
+        NewTrip["DoacaoMinima"] = Tela1[6]
         
         var Fotos: [PFFile] = []
         for i in 0..<Tela2.count{

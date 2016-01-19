@@ -12,7 +12,7 @@ import FBSDKLoginKit
 import Parse
 
 
-class TMProfileViewController: UIViewController, UIScrollViewDelegate
+class TMProfileViewController: UIViewController, UIScrollViewDelegate, UITextViewDelegate
 {
     @IBOutlet weak var img: UIImageView!
     let recognizer = UITapGestureRecognizer()
@@ -28,6 +28,14 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate
     var lastContentOfSet = CGFloat()
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var nuvem1: UIImageView!
+    
+    @IBOutlet weak var configuracaoOutlet: UIButton!
+    @IBOutlet weak var fecharOutlet: UIButton!
+    
+    
+    
+    
+    var verificador = Bool()
     // MARK: - UICollectionViewDataSource
     //private var profileTrips = TMProfileTrips.createdTrips()
     
@@ -38,6 +46,8 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate
         nuvem2.goLeftAndAgainNuvem(true)
         nuvem3.goLeftAndAgainNuvem2(false)
         nuvem4.goLeftAndAgain2(false)
+        configuracaoOutlet.contentHorizontalAlignment = .Right
+        fecharOutlet.contentHorizontalAlignment = .Left
         let currentUser = PFUser.currentUser()
         
 
@@ -61,10 +71,11 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate
         
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        verificador = false
         img.layer.cornerRadius = img.frame.width/2
         img.clipsToBounds = true
         img.layer.borderWidth = 5
@@ -81,14 +92,24 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate
         textView.frame = CGRectMake(scrollViewWidth*CGFloat(1), 0,scrollViewWidth, scrollViewHeight)
         //textView.backgroundColor = UIColor( red: 0.9, green: 0.9, blue:0.9, alpha: 1.0 )
         textView.backgroundColor = UIColor.blackColor()
-        textView.alpha = 0.8
+        textView.alpha = 0.5
         textView.textColor = UIColor.whiteColor()
+        textView.delegate = self
         self.scrollView.addSubview(textView)
         self.scrollView.contentSize = CGSizeMake(self.scrollView.frame.width * 2, self.scrollView.frame.height)
         self.scrollView.delegate = self
         self.pageControll.currentPage = 0
     
         
+    }
+    
+    func textViewDidBeginEditing(textView: UITextView) {
+        fecharOutlet.setTitle("Cancelar", forState: .Normal)
+        //configuracaoOutlet.titleLabel?.text = "Salvar"
+        configuracaoOutlet.setTitle("Salvar", forState: .Normal)
+        
+        verificador = true
+        print("digitando")
     }
     
     override func didReceiveMemoryWarning()
@@ -151,8 +172,41 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate
     }
     
     
+    @IBAction func configuracao(sender: AnyObject) {
+        if verificador.boolValue {
+            let currentUser = PFUser.currentUser()
+            currentUser!["userDescricao"] = textView.text
+            currentUser?.saveInBackgroundWithBlock({ (succes, error) -> Void in
+                if succes {
+                    
+                    self.atualizaOutlet()
+                } else {
+                    print(error)
+                }
+            })
+        } else {
+            performSegueWithIdentifier("vaiConfiguracao", sender: self)
+        }
+    }
+    
     @IBAction func Fechar(sender: AnyObject) {
-        dismissViewControllerAnimated(true, completion: nil)
+        if verificador.boolValue {
+            
+            atualizaOutlet()
+            
+        } else {
+            dismissViewControllerAnimated(true, completion: nil)
+        }
+        
+    }
+    
+    func atualizaOutlet() {
+//        self.fecharOutlet.titleLabel?.text = "Fechar"
+//        self.configuracaoOutlet.titleLabel?.text = "Configurações"
+        fecharOutlet.setTitle("Fechar", forState: .Normal)
+        configuracaoOutlet.setTitle("Configurações", forState: .Normal)
+        view.endEditing(true)
+        verificador = false
     }
     
     func scrollViewWillBeginDecelerating(scrollView: UIScrollView) {
@@ -166,31 +220,16 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate
         // Change the indicator
         self.pageControll.currentPage = Int(currentPage);
         // Change the text accordingly
-        if Int(currentPage) == 0{
-
-            view.endEditing(true)
-            self.img.hidden = false
-            self.nome.hidden = false
-            self.lbFacebookLocation.hidden = false
-        }else if Int(currentPage) == 1{
-
-            textView.becomeFirstResponder()
-            self.nome.hidden = true
-            self.lbFacebookLocation.hidden = true
-            self.img.hidden = true
-        }
         
         if self.lastContentOfSet < scrollView.contentOffset.x {
             print("moved right")
             if (currentUser!["userDescricao"] != nil) {
+                print(currentUser!["userDescricao"])
                 textView.text = currentUser!["userDescricao"] as! String
             }
         } else if self.lastContentOfSet > scrollView.contentOffset.x {
             print("moved left")
-            if textView.textColor != currentUser!["userDescricao"] as! String {
-                currentUser!["userDescricao"] = textView.text
-                currentUser?.saveInBackground()
-            }
+
         }
     }
     
@@ -199,7 +238,7 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate
 extension TMProfileViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
@@ -211,8 +250,6 @@ extension TMProfileViewController: UITableViewDataSource {
         } else if indexPath.row == 2 {
             cell?.textLabel?.text = "Viagens que gostei"
         } else if indexPath.row == 3 {
-            cell?.textLabel?.text = "Desempenho"
-        } else if indexPath.row == 4 {
             cell?.textLabel?.text = "Mensagens"
         }
         
@@ -252,6 +289,7 @@ extension TMProfileViewController: UITableViewDelegate {
         return 57
     }
     
+    
 //    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return 10
 //    }
@@ -265,5 +303,6 @@ extension TMProfileViewController: UITableViewDelegate {
     
     
 }
+
 
 

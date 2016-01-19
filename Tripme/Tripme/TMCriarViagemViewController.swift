@@ -15,7 +15,8 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
     var descricaoTeste = String()
     var selectedIndexPath : NSIndexPath?
     var vetorStrings: [String] = []
-    let strings = ["Dê um nome a sua viagem", "Motivo da sua viagem", "Descrição da viagem", "Valor a ser arrecadado", "Data limite de arrecadação", "Quantidade de dias que pretende viajar"]
+    let strings = ["Dê um nome a sua viagem", "Motivo da sua viagem", "Descrição da viagem", "Valor a ser arrecadado", "Data limite de arrecadação", "Quantidade de dias que pretende viajar", "Valor minimo de doação"]
+    var erro = Bool()
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -67,17 +68,35 @@ class TMCriarViagemViewController: UIViewController, UITextFieldDelegate {
     
     
     @IBAction func priximo(sender: AnyObject) {
-        for i in 0..<6 {
+        erro = false
+        vetorStrings = []
+        for i in 0..<7 {
             if i == 2 {
                 let celula2: TMCriarViagemCell = myTable.cellForRowAtIndexPath(NSIndexPath(forItem: i, inSection: 0)) as! TMCriarViagemCell
-                vetorStrings.append(celula2.tvDescicao.text)
+                if celula2.tvDescicao.text != "" {
+                    vetorStrings.append(celula2.tvDescicao.text)
+                } else {
+                    erro = true
+                }
             } else {
                 let celula: TMCriarViagem2TableViewCell = myTable.cellForRowAtIndexPath(NSIndexPath(forItem: i, inSection: 0)) as! TMCriarViagem2TableViewCell
-                vetorStrings.append(celula.tfTextField.text!)
+                if celula.tfTextField.text != "" {
+                    vetorStrings.append(celula.tfTextField.text!)
+                } else {
+                    erro = true
+                }
+                
             }
         }
         
-        performSegueWithIdentifier("tela1", sender: self)
+        if erro {
+            let alert=UIAlertController(title: "Opa", message: "Esqueceu um campo aí", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+            showViewController(alert, sender: self)
+        } else {
+            performSegueWithIdentifier("tela1", sender: self)
+        }
+        
     }
     
     
@@ -113,7 +132,7 @@ extension TMCriarViagemViewController: UITableViewDataSource {
     
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 6
+        return 7
     }
     
     func numberOfSectionsInTableView(tableView: UITableView) -> Int {

@@ -81,7 +81,15 @@ class TMCriarViagem2ViewController: UIViewController {
         alert.addAction(cameraAction)
         alert.addAction(gallaryAction)
         alert.addAction(cancelAction)
-        self.presentViewController(alert, animated: true, completion: nil)
+        
+        if imagens.count == 4 {
+            let alert=UIAlertController(title: "Opa", message: "So pode adicionar ate 4 fotos", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+            showViewController(alert, sender: self)
+        } else {
+            self.presentViewController(alert, animated: true, completion: nil)
+        }
+        
         //myCollection.hidden = false
         
     }

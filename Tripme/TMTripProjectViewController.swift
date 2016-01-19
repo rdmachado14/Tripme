@@ -72,6 +72,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        print("testando a view: \(view.frame.size)")
         print(verificador.boolValue)
         if verificador.boolValue {
             loadParse()
@@ -85,8 +86,18 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         progressViewAction()
         
         // scroll
-        print(self.scrollView.frame.height)
-        scrollView.contentSize.height = 2700
+//        print(self.scrollView.frame.height)
+//        print(view.frame.size)
+        if view.frame.height == 480 {
+            scrollView.contentSize.height = 2900
+        } else if view.frame.height == 568 {
+            scrollView.contentSize.height = 2800
+        } else if view.frame.height == 667 {
+            scrollView.contentSize.height = 2700
+        } else {
+            scrollView.contentSize.height = 2600
+        }
+        
         
         
         // requisição de curtir
@@ -116,6 +127,15 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
     }
     
+    @IBAction func fechar(sender: AnyObject) {
+        
+        if verificador.boolValue {
+            dismissViewControllerAnimated(true, completion: nil)
+        } else {
+            performSegueWithIdentifier("vaiPraLa", sender: self)
+        }
+    }
+    
     func loadFromViewCriarConta() {
         if !verificador {
             pageControl.numberOfPages = arrayImagensTela.count
@@ -137,7 +157,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         objectsArray = [
             Objects(
                 sectionName: "Informações sobre a viagem",
-                sectionObjects: [arrayTela1[3],arrayTela1[4],"c",arrayTela1[5],"e"],
+                sectionObjects: [arrayTela1[3],arrayTela1[4],"c",arrayTela1[5],arrayTela1[6]],
                 sectionNameObjects: ["Valor a ser arrecadado","Tempo total de arrecadação","Tempo restante","Dias viajando","Valor mínimo de doação"],
                 BackGroungColor:  UIColor().colorWithHexString("FB324F")
             ),
@@ -162,10 +182,11 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     }
     
     func loadParse() {
-        arrayTela1 = ["","","","","",""]
+        arrayTela1 = ["","","","","","",""]
         arrayTela3 = ["","",""]
         arrayTela1[2] = (object2.objectForKey("Descricao") as? String)!
         arrayTela1[0] = (object2.objectForKey("Viagem") as? String)!
+        arrayTela1[6] = (object2.objectForKey("DoacaoMinima") as? String)!
         arrayTela1[3] = (object2.objectForKey("Valor") as? String)!
         arrayTela1[4] = (object2.objectForKey("DataLimite") as? String)!
         arrayTela1[5] = (object2.objectForKey("DiasDeViagem") as? String)!
@@ -388,6 +409,14 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
         
     }
+    
+    
+    
+    @IBAction func doacao(sender: AnyObject) {
+        performSegueWithIdentifier("segureDoacao", sender: self)
+        
+    }
+    
     
     func scrollViewDidEndDecelerating(scrollView: UIScrollView){
         // Test the offset and calculate the current page after scrolling ends
