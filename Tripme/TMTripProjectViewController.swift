@@ -481,10 +481,10 @@ extension TMTripProjectViewController: UITableViewDataSource
         
         
         cell.lbName.text = objectsArray[section].sectionNameObjects[indexPath.row]
-        if ((section == 0 && (indexPath.row == 1 || indexPath.row == 0)) || section == 1) {
+        if ((section == 0 && (indexPath.row == 0 || indexPath.row == 4)) || section == 1) {
             cell.lbValue.text = "R$ \(objectsArray[section].sectionObjects[indexPath.row])"
         } else {
-            cell.lbValue.text = objectsArray[section].sectionObjects[indexPath.row]
+            cell.lbValue.text = "\(objectsArray[section].sectionObjects[indexPath.row]) dia(s)"
         }
         
 

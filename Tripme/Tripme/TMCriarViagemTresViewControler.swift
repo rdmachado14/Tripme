@@ -96,6 +96,7 @@ class TMCriarViagemTresViewControler: UIViewController {
         NewTrip["personFoto"]       = currentUser!["foto"]
         NewTrip["localidade"]       = currentUser!["localidade"]
         NewTrip["userDescricao"]    = currentUser!["userDescricao"]
+        NewTrip["ID"]               = currentUser?.objectId
         
         
         
