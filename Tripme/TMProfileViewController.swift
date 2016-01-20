@@ -289,6 +289,12 @@ extension TMProfileViewController: UITableViewDelegate {
         return 57
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        print("clicou: \(indexPath.row)")
+        performSegueWithIdentifier("selecaoTable", sender: self)
+        myTable.deselectRowAtIndexPath(indexPath, animated: true)
+    }
+    
     
 //    func tableView(tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
 //        return 10

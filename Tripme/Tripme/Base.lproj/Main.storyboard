@@ -71,6 +71,7 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -147,7 +148,7 @@
                         <viewControllerLayoutGuide type="bottom" id="Av0-MH-Rv3"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="BT9-PI-tsk">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -1060,6 +1061,74 @@
             </objects>
             <point key="canvasLocation" x="3793.5" y="1775.5"/>
         </scene>
+        <!--Selecao Table View Controller-->
+        <scene sceneID="FYy-FF-cQ2">
+            <objects>
+                <viewController id="Opw-4u-jf7" customClass="TMSelecaoTableViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="rC7-F6-HGb"/>
+                        <viewControllerLayoutGuide type="bottom" id="7N7-as-X2S"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Dq3-dw-P6s">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="60" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="hIJ-RB-Leq">
+                                <rect key="frame" x="0.0" y="69" width="320" height="411"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="OdL-4I-0no" style="IBUITableViewCellStyleDefault" id="05C-JG-qtc">
+                                        <rect key="frame" x="0.0" y="28" width="320" height="60"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="05C-JG-qtc" id="v8I-KO-mzx">
+                                            <rect key="frame" x="0.0" y="0.0" width="320" height="59.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="teste" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="OdL-4I-0no">
+                                                    <rect key="frame" x="15" y="0.0" width="290" height="59.5"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="16"/>
+                                                    <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="Opw-4u-jf7" id="bzE-ah-GF2"/>
+                                    <outlet property="delegate" destination="Opw-4u-jf7" id="ifE-nE-joG"/>
+                                </connections>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="N9j-Ko-T5f">
+                                <rect key="frame" x="20" y="20" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="voltar:" destination="Opw-4u-jf7" eventType="touchUpInside" id="yHx-2p-QDK"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="hIJ-RB-Leq" firstAttribute="leading" secondItem="Dq3-dw-P6s" secondAttribute="leading" id="DXC-MX-xvN"/>
+                            <constraint firstAttribute="trailing" secondItem="hIJ-RB-Leq" secondAttribute="trailing" id="KoU-jN-WL4"/>
+                            <constraint firstItem="hIJ-RB-Leq" firstAttribute="bottom" secondItem="7N7-as-X2S" secondAttribute="top" id="M5k-Nu-SRs"/>
+                            <constraint firstItem="hIJ-RB-Leq" firstAttribute="top" secondItem="N9j-Ko-T5f" secondAttribute="bottom" constant="19" id="Qao-Uf-k6J"/>
+                            <constraint firstItem="N9j-Ko-T5f" firstAttribute="leading" secondItem="Dq3-dw-P6s" secondAttribute="leadingMargin" constant="4" id="eev-0B-E4u"/>
+                            <constraint firstItem="N9j-Ko-T5f" firstAttribute="top" secondItem="Dq3-dw-P6s" secondAttribute="top" constant="20" symbolic="YES" id="q1H-C7-xLa"/>
+                        </constraints>
+                    </view>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <connections>
+                        <outlet property="myTable" destination="hIJ-RB-Leq" id="rgB-Sv-sjU"/>
+                        <segue destination="NWZ-Kr-wqq" kind="show" identifier="cellSelecionada" id="u0y-qs-mpL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ph8-Pq-Zg7" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1822" y="2533"/>
+        </scene>
         <!--Profile View Controller-->
         <scene sceneID="Sav-K7-ki1">
             <objects>
@@ -1202,6 +1271,7 @@
                         <outlet property="pageControll" destination="cc6-b9-rxI" id="2Vc-aO-Jna"/>
                         <outlet property="scrollView" destination="KNL-ke-25w" id="TBB-w4-wF3"/>
                         <segue destination="WXz-Qd-OL8" kind="show" identifier="vaiConfiguracao" id="YNW-84-6ae"/>
+                        <segue destination="Opw-4u-jf7" kind="show" identifier="selecaoTable" id="kuQ-5M-qfy"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kOD-zU-jWE" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1677,6 +1747,7 @@
                             <constraint firstItem="JRy-g3-JM3" firstAttribute="top" secondItem="ave-a5-57A" secondAttribute="bottom" constant="56" id="uVa-ZX-Idi"/>
                         </constraints>
                     </view>
+                    <nil key="simulatedStatusBarMetrics"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="myTable" destination="JRy-g3-JM3" id="s9A-Yx-jT2"/>
@@ -1854,6 +1925,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="eSa-EH-ogh"/>
+        <segue reference="u0y-qs-mpL"/>
     </inferredMetricsTieBreakers>
 </document>
