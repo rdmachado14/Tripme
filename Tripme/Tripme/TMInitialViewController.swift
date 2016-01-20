@@ -35,6 +35,10 @@ class TMInitialViewController: UIViewController
         
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     
     override func viewDidLoad()
     {

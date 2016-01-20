@@ -78,6 +78,10 @@ class TMCustomSignUpViewController: UIViewController, CLLocationManagerDelegate
         })
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     func displayLocationInfo(placemark: CLPlacemark?) {
         if let containsPlacemark = placemark {
             //stop updating location to save battery life

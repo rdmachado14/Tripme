@@ -547,6 +547,9 @@
                                         </imageView>
                                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="357-vV-wy5">
                                             <rect key="frame" x="309" y="16" width="51" height="31"/>
+                                            <connections>
+                                                <action selector="actionSwitch:" destination="Q62-IF-tYD" eventType="valueChanged" id="Kth-jG-a1h"/>
+                                            </connections>
                                         </switch>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e0w-8Q-vvb">
                                             <rect key="frame" x="115" y="23" width="100" height="21"/>

@@ -127,6 +127,10 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
     }
     
+    override func prefersStatusBarHidden() -> Bool {
+        return true
+    }
+    
     @IBAction func fechar(sender: AnyObject) {
         
         if verificador.boolValue {
