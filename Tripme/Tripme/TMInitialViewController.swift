@@ -20,13 +20,14 @@ class TMInitialViewController: UIViewController
     @IBOutlet weak var tfEmail: UITextField!
     @IBOutlet weak var tfSenha: UITextField!
     @IBOutlet weak var btEntrar: UIButton!
+    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vai") as UIViewController
     
     override func viewDidAppear(animated: Bool) {
         //PFUser.logOut()
         let currentUser = PFUser.currentUser()
         if (currentUser != nil) {
             print("esta logado \(currentUser)")
-            self.performSegueWithIdentifier("loginVai", sender: nil)
+            self.presentViewController(self.viewController, animated: false, completion: nil)
         } else {
             print("nao esta logado \(currentUser)")
             
@@ -86,7 +87,7 @@ class TMInitialViewController: UIViewController
                 
                 if user != nil
                 {
-                    self.performSegueWithIdentifier("loginVai", sender: self)
+                    self.presentViewController(self.viewController, animated: false, completion: nil)
                     //UIApplication.sharedApplication().keyWindow?.rootViewController = TMMenuViewController()
                 }
                 else
@@ -120,7 +121,7 @@ class TMInitialViewController: UIViewController
         if error == nil
         {
             print("Login completo")
-            self.performSegueWithIdentifier("vai", sender: self)
+            self.presentViewController(self.viewController, animated: false, completion: nil)
         }
         else
         {
@@ -172,14 +173,19 @@ class TMInitialViewController: UIViewController
                                 user["localidade"] = nameLocation
                             }
                             user["userDescricao"] = " "
-                            user.saveInBackground()
+                            user.saveInBackgroundWithBlock({ (sucess, erro) -> Void in
+                                if sucess {
+                                    self.presentViewController(self.viewController, animated: false, completion: nil)
+                                } else {
+                                    print("Error: \(erro)")
+                                }
+                            })
                         }
                     })
-                    self.performSegueWithIdentifier("mainScreen", sender: nil)
                     print("User signed up and logged in through Facebook!")
                 } else {
-                    self.performSegueWithIdentifier("mainScreen", sender: nil)
                     print("User logged in through Facebook!")
+                    self.presentViewController(self.viewController, animated: false, completion: nil)
                 }
             } else {
                 print("Uh oh. The user cancelled the Facebook login.")

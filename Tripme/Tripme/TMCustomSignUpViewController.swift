@@ -21,7 +21,8 @@ class TMCustomSignUpViewController: UIViewController, CLLocationManagerDelegate
     @IBOutlet weak var tfPassword: UITextField!
     @IBOutlet weak var tfConfirmarSenha: UITextField!
     @IBOutlet weak var logarFace: UIButton!
-    //var actInd: UIActivityIndicatorView = UIActivityIndicatorView(frame: CGRectMake(0, 0, 150, 150)) as UIActivityIndicatorView
+    
+    let viewController:UIViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewControllerWithIdentifier("vai") as UIViewController
     
     let locationManager = CLLocationManager()
     var local = String()
@@ -152,9 +153,9 @@ class TMCustomSignUpViewController: UIViewController, CLLocationManagerDelegate
                 }
                 else
                 {
-                    let alert = UIAlertView(title: "Sucesso", message: "Você agora está cadastrado!", delegate: self, cancelButtonTitle: "OK")
-                    alert.show()
-                    self.dismissViewControllerAnimated(true, completion: nil)
+//                    let alert = UIAlertView(title: "Sucesso", message: "Você agora está cadastrado!", delegate: self, cancelButtonTitle: "OK")
+//                    alert.show()
+                    self.presentViewController(self.viewController, animated: false, completion: nil)
                     
                 }
                 
@@ -210,14 +211,19 @@ class TMCustomSignUpViewController: UIViewController, CLLocationManagerDelegate
                                 user["localidade"] = nameLocation
                             }
                             user["userDescricao"] = " "
-                            user.saveInBackground()
+                            user.saveInBackgroundWithBlock({ (sucess, erro) -> Void in
+                                if sucess {
+                                    self.presentViewController(self.viewController, animated: false, completion: nil)
+                                } else {
+                                    print("Error: \(erro)")
+                                }
+                            })
                         }
                     })
-                    self.performSegueWithIdentifier("mainScreen", sender: nil)
                     print("User signed up and logged in through Facebook!")
                 } else {
-                    self.performSegueWithIdentifier("mainScreen", sender: nil)
                     print("User logged in through Facebook!")
+                    self.presentViewController(self.viewController, animated: false, completion: nil)
                 }
             } else {
                 print("Uh oh. The user cancelled the Facebook login.")

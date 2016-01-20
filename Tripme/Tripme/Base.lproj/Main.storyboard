@@ -1054,7 +1054,6 @@
                         <outlet property="tfEmail" destination="qrH-gQ-gdd" id="lPK-2T-Iyb"/>
                         <outlet property="tfPassword" destination="9f3-mm-IrZ" id="gqr-PK-5sI"/>
                         <outlet property="tfUsername" destination="u8S-9m-9p0" id="Ckb-nu-drf"/>
-                        <segue destination="ENh-HJ-8iU" kind="show" identifier="fbVai" id="cUF-ya-26X"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1293,7 +1292,6 @@
                         <outlet property="btLogarFace" destination="WPf-yc-HcQ" id="772-CW-NJK"/>
                         <outlet property="tfEmail" destination="1GN-eP-pBo" id="eSN-aA-1ns"/>
                         <outlet property="tfSenha" destination="o42-pt-jjN" id="59D-e9-5df"/>
-                        <segue destination="ENh-HJ-8iU" kind="show" identifier="loginVai" animates="NO" id="Ica-Uc-XCA"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="C8M-pc-aTW" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1857,6 +1855,5 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eSa-EH-ogh"/>
-        <segue reference="4ps-d9-my4"/>
     </inferredMetricsTieBreakers>
 </document>
