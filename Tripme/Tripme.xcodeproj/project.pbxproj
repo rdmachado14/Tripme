@@ -36,6 +36,7 @@
 		79BCB87E1C1B60800028F165 /* TMRecoveryPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79BCB87D1C1B60800028F165 /* TMRecoveryPasswordViewController.swift */; };
 		79C774CB1BF2835900D51E3D /* TMSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */; };
 		79C774D91BF3C74E00D51E3D /* TMShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */; };
+		79C7A1141C5016ED00D3100C /* ParseTwitterUtils.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79C7A1131C5016ED00D3100C /* ParseTwitterUtils.framework */; };
 		79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */; };
 		79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */; };
 		79D8403F1BEBA8B200C5B8A0 /* TMProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */; };
@@ -117,6 +118,7 @@
 		79BCB87D1C1B60800028F165 /* TMRecoveryPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMRecoveryPasswordViewController.swift; sourceTree = "<group>"; };
 		79C774CA1BF2835900D51E3D /* TMSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSearchViewController.swift; sourceTree = "<group>"; };
 		79C774D81BF3C74E00D51E3D /* TMShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMShareViewController.swift; sourceTree = "<group>"; };
+		79C7A1131C5016ED00D3100C /* ParseTwitterUtils.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseTwitterUtils.framework; sourceTree = "<group>"; };
 		79D4A0B31BECE4D7000E552D /* TMProfileTrips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileTrips.swift; sourceTree = "<group>"; };
 		79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileViewCell.swift; sourceTree = "<group>"; };
 		79D8403E1BEBA8B200C5B8A0 /* TMProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMProfileViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				A7B62CBA1BE1507600145361 /* CoreLocation.framework in Frameworks */,
+				79C7A1141C5016ED00D3100C /* ParseTwitterUtils.framework in Frameworks */,
 				795AB3961BE2A48000FD6BD8 /* ParseUI.framework in Frameworks */,
 				A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */,
 				A7B62CC81BE150C600145361 /* Accounts.framework in Frameworks */,
@@ -399,6 +402,7 @@
 				A7B62CC71BE150C600145361 /* Accounts.framework */,
 				A7B62CC51BE150BC00145361 /* libsqlite3.tbd */,
 				A7B62CC31BE150B100145361 /* libz.tbd */,
+				79C7A1131C5016ED00D3100C /* ParseTwitterUtils.framework */,
 				795AB3951BE2A48000FD6BD8 /* ParseUI.framework */,
 				795AB38C1BE2A00800FD6BD8 /* FBSDKLoginKit.framework */,
 				795AB38D1BE2A00800FD6BD8 /* FBSDKShareKit.framework */,
