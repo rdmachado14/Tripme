@@ -65,6 +65,7 @@
 		A7B62CCA1BE150D000145361 /* Social.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A7B62CC91BE150D000145361 /* Social.framework */; };
 		A7C9CC4B1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9CC4A1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift */; };
 		A7C9CC4D1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9CC4C1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift */; };
+		A7D220A31C4FC9F50074C876 /* TMSelecaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D220A21C4FC9F50074C876 /* TMSelecaoTableViewController.swift */; };
 		A7E57D971BFD15B700463174 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */; };
 		A7E57D991BFD3B9700463174 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E57D981BFD3B9700463174 /* Color.swift */; };
 /* End PBXBuildFile section */
@@ -156,6 +157,7 @@
 		A7B62CC91BE150D000145361 /* Social.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Social.framework; path = System/Library/Frameworks/Social.framework; sourceTree = SDKROOT; };
 		A7C9CC4A1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemHeader.swift; sourceTree = "<group>"; };
 		A7C9CC4C1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagem2ViewController.swift; sourceTree = "<group>"; };
+		A7D220A21C4FC9F50074C876 /* TMSelecaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSelecaoTableViewController.swift; sourceTree = "<group>"; };
 		A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A7E57D981BFD3B9700463174 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -284,6 +286,7 @@
 		79D4A0B51BECEC1B000E552D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A7D220A11C4FC9A70074C876 /* table */,
 				7921CAEB1BF51A41008C6F6C /* TMLikeViewController.swift */,
 				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
 				79D4A0B61BECEC36000E552D /* TMProfileViewCell.swift */,
@@ -411,6 +414,14 @@
 				A7B62CB01BE14FE600145361 /* Parse.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A7D220A11C4FC9A70074C876 /* table */ = {
+			isa = PBXGroup;
+			children = (
+				A7D220A21C4FC9F50074C876 /* TMSelecaoTableViewController.swift */,
+			);
+			name = table;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -566,6 +577,7 @@
 				A7E57D991BFD3B9700463174 /* Color.swift in Sources */,
 				79C774D91BF3C74E00D51E3D /* TMShareViewController.swift in Sources */,
 				793B79541C3C0B0A001D2A98 /* TMSettingsTableViewController.swift in Sources */,
+				A7D220A31C4FC9F50074C876 /* TMSelecaoTableViewController.swift in Sources */,
 				A7E57D971BFD15B700463174 /* CustomTableViewCell.swift in Sources */,
 				A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */,
 				79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */,
