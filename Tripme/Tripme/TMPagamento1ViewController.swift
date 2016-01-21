@@ -8,9 +8,13 @@
 
 import UIKit
 
-class TMPagamento1ViewController: UIViewController
+class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    
+    let opcoes = ["R$ 1,00", "R$ 5,00", "R$ 10,00", "Outros valores"]
 
+    @IBOutlet weak var minhaTableView: UITableView!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
@@ -22,6 +26,32 @@ class TMPagamento1ViewController: UIViewController
         super.didReceiveMemoryWarning()
     }
     
+    
+    @IBAction func cancelar(sender: AnyObject)
+    {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    
+    // TABLE VIEW
+    func numberOfSectionsInTableView(tableView: UITableView) -> Int
+    {
+        return 1
+    }
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return opcoes.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        
+        cell?.textLabel?.text = opcoes[indexPath.row]
+        
+        return cell!
+    }
 
 
 
