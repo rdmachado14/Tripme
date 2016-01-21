@@ -75,10 +75,10 @@
         </mutableArray>
     </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Pagamento1 View Controller-->
         <scene sceneID="hkg-sL-8F1">
             <objects>
-                <viewController id="3IO-iL-laU" sceneMemberID="viewController">
+                <viewController id="3IO-iL-laU" customClass="TMPagamento1ViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="Pxs-Gc-fvH"/>
                         <viewControllerLayoutGuide type="bottom" id="Av0-MH-Rv3"/>
