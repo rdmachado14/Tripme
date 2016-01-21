@@ -228,6 +228,13 @@
 			name = "Menu Inicial";
 			sourceTree = "<group>";
 		};
+		790821091C515D7D00C84359 /* Pagamento */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Pagamento;
+			sourceTree = "<group>";
+		};
 		793AA9331C11DA0700095CFD /* Viagem */ = {
 			isa = PBXGroup;
 			children = (
@@ -262,6 +269,7 @@
 		795AB3931BE2A29800FD6BD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				790821091C515D7D00C84359 /* Pagamento */,
 				793B79501C3C03B9001D2A98 /* Settings */,
 				793AA9331C11DA0700095CFD /* Viagem */,
 				A7ACB5821C0DD51100B5F24C /* CriarViagem */,
