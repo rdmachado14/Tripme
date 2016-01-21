@@ -887,6 +887,13 @@
                                     <outlet property="delegate" destination="ENh-HJ-8iU" id="lxS-EH-k1U"/>
                                 </connections>
                             </collectionView>
+                            <searchBar contentMode="redraw" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVf-Yb-qEn">
+                                <rect key="frame" x="20" y="31" width="267" height="44"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="ENh-HJ-8iU" id="erF-4A-qlm"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" red="0.066666666666666666" green="0.54509803921568623" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -917,6 +924,7 @@
                         <outlet property="nuvens1" destination="M9P-jc-Mhl" id="gdD-UC-Z9k"/>
                         <outlet property="nuvens2" destination="6Wr-vC-1u9" id="a7F-AI-QgJ"/>
                         <outlet property="perfilImagem" destination="Pcl-g6-23T" id="fhQ-g1-Kml"/>
+                        <outlet property="searchBar" destination="mVf-Yb-qEn" id="DeJ-58-DEZ"/>
                         <segue destination="NWZ-Kr-wqq" kind="show" identifier="descricaoPelaCollection" id="eSa-EH-ogh"/>
                     </connections>
                 </viewController>
@@ -1928,6 +1936,6 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="u0y-qs-mpL"/>
+        <segue reference="eSa-EH-ogh"/>
     </inferredMetricsTieBreakers>
 </document>

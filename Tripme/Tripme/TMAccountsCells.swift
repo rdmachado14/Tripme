@@ -26,7 +26,6 @@ class TMAccountsCells: UITableViewCell
         {
             if  lbAccount.text! == "Twitter"
             {
-            
                 PFTwitterUtils.unlinkUserInBackground(user!, block: { (success, error) -> Void in
                     if success
                     {
