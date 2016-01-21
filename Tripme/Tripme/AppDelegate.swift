@@ -12,7 +12,7 @@ import Parse
 import Bolts
 import FBSDKCoreKit
 import ParseFacebookUtilsV4
-
+import ParseTwitterUtils
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -31,8 +31,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Parse.setApplicationId("DBIjndvYua2TbE1kJc9coUHCrsS1bX9RG8iM6wcJ",
             clientKey: "mPhUDgkrIX20fgOHX3aFurzPrk57PmmC2dCvDRMR")
         
+        // Twitter
+        PFTwitterUtils.initializeWithConsumerKey("SMi8rkAlCmXBdFRQFyxLck6dy", consumerSecret: "9CNnLHHNCesJkMcW87eOCb6f4NRtDxQ3ztqHavztCfuGuDTist")
         
-        
+        // Facebook
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
