@@ -18,9 +18,13 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var labelNomeViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
     
+    var loadNomeViagem: String!
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        labelNomeViagem.text = loadNomeViagem
 
     }
 
@@ -52,6 +56,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
         cell?.textLabel?.text = opcoes[indexPath.row]
+        
         
         return cell!
     }

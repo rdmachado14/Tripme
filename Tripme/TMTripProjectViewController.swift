@@ -432,6 +432,16 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
         
     }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "segureDoacao"
+        {
+            let viewController: TMPagamento1ViewController! = segue.destinationViewController as! TMPagamento1ViewController
+            
+            viewController.loadNomeViagem = arrayTela1[0]
+        }
+    }
 
     func progressViewAction()
     {
