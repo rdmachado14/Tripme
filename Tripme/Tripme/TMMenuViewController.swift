@@ -9,10 +9,11 @@
 import UIKit
 import Parse
 
-class TMMenuViewController: UIViewController {
+class TMMenuViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var imageView : UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
     
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var currentUserProfileImageButton: UIButton!
     @IBOutlet weak var currentUserFullNameButton: UIButton!
     @IBOutlet weak var lbSecondName: UILabel!
@@ -63,7 +64,10 @@ class TMMenuViewController: UIViewController {
         perfilImagem.clipsToBounds = true
         //        perfilImagem.layer.borderWidth = 1
         //        perfilImagem.layer.borderColor = UIColor.whiteColor().CGColor
-       loadParse()
+        loadParse()
+        queryParse()
+        
+        collectionView.window?.makeKeyWindow()
     }
     
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
@@ -97,6 +101,50 @@ class TMMenuViewController: UIViewController {
         }
     
     }
+    
+    func queryParse()
+    {
+        print("AQUIII")
+        let queryViagem = PFQuery(className: "Trip")
+        
+        if searchBar.text != ""
+        {
+            tripResult.removeAll(keepCapacity: true)
+            queryViagem.whereKey("Viagem", containsString: searchBar.text?.lowercaseString)
+        }
+        
+        queryViagem.findObjectsInBackgroundWithBlock { (object, error) -> Void in
+            if error == nil
+            {
+                print("Aqui 22222")
+                self.collectionView.reloadData()
+                
+                if let objects = object
+                {
+                    print("Aqui 33333")
+                    self.tripResult.appendContentsOf(objects)
+                }
+            }
+            else
+            {
+                print(error)
+            }
+        }
+    }
+    
+    func searchBarTextDidEndEditing(searchBar: UISearchBar)
+    {
+        searchBar.resignFirstResponder() // tira o teclado
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar)
+    {
+        print("1")
+        searchBar.resignFirstResponder()
+        queryParse()
+        
+    }
+    
     
     private struct Storyboard {
         static let CellIdentifier = "Trips Cell"
@@ -139,6 +187,11 @@ extension TMMenuViewController : UICollectionViewDataSource
         
         if let nome = tripResult[indexPath.row]["userName"] as? String {
             cell.Nome.text = nome
+        }
+        
+        if let value = tripResult[indexPath.row]["Viagem"] as? String
+        {
+            cell.interestTitleLabel.text = value
         }
         
         let transform:CGAffineTransform = CGAffineTransformMakeScale(1.0, 3.0);
