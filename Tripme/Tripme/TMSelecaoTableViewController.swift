@@ -13,14 +13,21 @@ class TMSelecaoTableViewController: UIViewController {
     var object: PFObject!
     var tripResult = [PFObject]()
     var id = String()
+    var color = UIColor()
+    var cont = Int()
+    var titulo = String()
+    @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var myTable: UITableView!
     
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        print(id)
+        lbTitle.text = titulo
         myTable.tableFooterView = UIView(frame: CGRectZero)
         ParseQuerry()
+        print(cont)
 
         // Do any additional setup after loading the view.
     }
@@ -46,7 +53,6 @@ class TMSelecaoTableViewController: UIViewController {
     }
     func ParseQuerry() {
         let currentUser = PFUser.currentUser()
-        id = (currentUser?.objectId)!
         let queryParse = PFQuery(className: "Trip")
         queryParse.whereKey("ID", equalTo: id)
         queryParse.findObjectsInBackgroundWithBlock { (object: [PFObject]?, NSError) -> Void in
@@ -94,8 +100,33 @@ extension TMSelecaoTableViewController: UITableViewDataSource {
         {
             cell?.textLabel?.text = value
         }
-        cell?.backgroundColor = UIColor.blackColor().azulEscuro
-        let setinha = UIImageView(image: UIImage(named: "Setinha"))
+        
+        if let date = tripResult[indexPath.section].createdAt as NSDate!  {
+            let dateFormat = NSDateFormatter()
+            dateFormat.dateFormat = "dd/MM/yyyy"
+            print("entrou aq: \(date)")
+            cell?.detailTextLabel!.text = dateFormat.stringFromDate(date)
+        }
+        
+        if cont == 0 {
+            color = UIColor.blackColor().roxo
+        } else if cont == 1 {
+            color = UIColor.blackColor().azulEscuro
+        } else if cont == 2 {
+            color = UIColor.blackColor().vemelho
+        } else if cont == 3 {
+            color = UIColor.blackColor().amareloEscuro
+        } else if cont == 4 {
+            color = UIColor.blackColor().azulClaro
+        }
+        
+        if cont < 4 {
+            cont++
+        } else {
+            cont = 0
+        }
+        cell?.backgroundColor = color
+        let setinha = UIImageView(image: UIImage(named: "setabranca"))
         cell?.accessoryView = setinha
         
         cell?.layer.cornerRadius = 5
