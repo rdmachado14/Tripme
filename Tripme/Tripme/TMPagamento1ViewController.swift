@@ -42,7 +42,6 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-    
     // TABLE VIEW
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {

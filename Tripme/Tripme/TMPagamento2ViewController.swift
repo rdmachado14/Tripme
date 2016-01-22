@@ -8,8 +8,10 @@
 
 import UIKit
 
-class TMPagamento2ViewController: UIViewController
+class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
+    
+    let infoCartao = ["Nome", "Número do cartão", "C.E.P", "Validade", "Código de segurança"]
 
     override func viewDidLoad()
     {
@@ -22,6 +24,24 @@ class TMPagamento2ViewController: UIViewController
         super.didReceiveMemoryWarning()
     }
     
+    // TABLE VIEW
+    
+    func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
+    {
+        return infoCartao.count
+    }
+    
+    func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
+    {
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        
+        cell?.textLabel?.text = infoCartao[indexPath.row]
+        
+        return cell!
+    }
+    
+    
+
 
 
 
