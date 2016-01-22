@@ -94,6 +94,9 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="krb-6R-KAY">
                                 <rect key="frame" x="277" y="9" width="78" height="30"/>
                                 <state key="normal" title="Continuar"/>
+                                <connections>
+                                    <segue destination="FWz-Pr-mfz" kind="show" identifier="seguePagamento2" id="FNU-1P-xHg"/>
+                                </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-fB-Oid">
                                 <rect key="frame" x="110" y="13" width="155" height="21"/>
@@ -161,7 +164,7 @@
                                 <rect key="frame" x="154" y="517" width="67" height="30"/>
                                 <state key="normal" title="Continuar"/>
                                 <connections>
-                                    <segue destination="FWz-Pr-mfz" kind="show" id="V5a-bB-6kL"/>
+                                    <segue destination="FWz-Pr-mfz" kind="show" identifier="seguePagamento2" id="V5a-bB-6kL"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -218,6 +221,7 @@
                                 <state key="normal" title="Cancelar"/>
                                 <connections>
                                     <action selector="cancelar:" destination="3IO-iL-laU" eventType="touchUpInside" id="Xr6-oB-Agw"/>
+                                    <action selector="cancelar:" destination="FWz-Pr-mfz" eventType="touchUpInside" id="nHv-Tx-vwc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjz-4W-A5X">
@@ -2061,6 +2065,7 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="FNU-1P-xHg"/>
         <segue reference="wjJ-tr-zqq"/>
     </inferredMetricsTieBreakers>
 </document>

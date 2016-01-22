@@ -24,6 +24,17 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         super.didReceiveMemoryWarning()
     }
     
+    @IBAction func cancelar(sender: AnyObject)
+    {
+        dismissViewControllerAnimated(true, completion: nil)
+    }
+    
+    override func prefersStatusBarHidden() -> Bool
+    {
+        return true
+    }
+    
+    
     // TABLE VIEW
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
