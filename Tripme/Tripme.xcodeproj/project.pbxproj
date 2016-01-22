@@ -48,6 +48,7 @@
 		79F071621BCEE87600646DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F071601BCEE87600646DD5 /* LaunchScreen.storyboard */; };
 		79F0716D1BCEE87600646DD5 /* TripmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0716C1BCEE87600646DD5 /* TripmeTests.swift */; };
 		79F071781BCEE87600646DD5 /* TripmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071771BCEE87600646DD5 /* TripmeUITests.swift */; };
+		79F6F6A81C5287F2008AF85D /* TMPagamento2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */; };
 		A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7280F051C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift */; };
 		A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */; };
 		A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */; };
@@ -137,6 +138,7 @@
 		79F071731BCEE87600646DD5 /* TripmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F071771BCEE87600646DD5 /* TripmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripmeUITests.swift; sourceTree = "<group>"; };
 		79F071791BCEE87600646DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento2ViewController.swift; sourceTree = "<group>"; };
 		A714B1621BFBB47200990971 /* Gidole-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gidole-Regular.ttf"; sourceTree = "<group>"; };
 		A714B1631BFBB53900990971 /* Tondo_Trial_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Bd.ttf; sourceTree = "<group>"; };
 		A714B1641BFBB53900990971 /* Tondo_Trial_Lt.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Lt.ttf; sourceTree = "<group>"; };
@@ -234,6 +236,7 @@
 			isa = PBXGroup;
 			children = (
 				7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */,
+				79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */,
 			);
 			name = Pagamento;
 			sourceTree = "<group>";
@@ -601,6 +604,7 @@
 				793B795A1C3C10FB001D2A98 /* TMNotificationCells.swift in Sources */,
 				793B79561C3C10CC001D2A98 /* TMProfileCells.swift in Sources */,
 				7908210B1C515DEE00C84359 /* TMPagamento1ViewController.swift in Sources */,
+				79F6F6A81C5287F2008AF85D /* TMPagamento2ViewController.swift in Sources */,
 				793B79581C3C10E1001D2A98 /* TMAccountsCells.swift in Sources */,
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
 				A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */,
