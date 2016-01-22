@@ -11,9 +11,12 @@ import UIKit
 class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
+    
     let opcoes = ["R$ 1,00", "R$ 5,00", "R$ 10,00", "Outros valores"]
 
     @IBOutlet weak var minhaTableView: UITableView!
+    @IBOutlet weak var labelNomeViagem: UILabel!
+    @IBOutlet weak var labelDataViagem: UILabel!
     
     override func viewDidLoad()
     {
