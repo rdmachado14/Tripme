@@ -38,6 +38,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         PFFacebookUtils.initializeFacebookWithApplicationLaunchOptions(launchOptions)
         FBSDKApplicationDelegate.sharedInstance().application(application, didFinishLaunchingWithOptions: launchOptions)
         
+        //Stripe
+        Stripe.setDefaultPublishableKey("pk_test_IsYnz2LUl0MxZ3JUFLTzUzlX")
+        
         
         
         return true
