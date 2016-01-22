@@ -141,6 +141,7 @@
 		79F071771BCEE87600646DD5 /* TripmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripmeUITests.swift; sourceTree = "<group>"; };
 		79F071791BCEE87600646DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento2ViewController.swift; sourceTree = "<group>"; };
+		79F6F6AA1C52BE31008AF85D /* Tripme-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tripme-Bridging-Header.h"; sourceTree = "<group>"; };
 		A2FCACD87DA78FC96708FBFB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A714B1621BFBB47200990971 /* Gidole-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gidole-Regular.ttf"; sourceTree = "<group>"; };
 		A714B1631BFBB53900990971 /* Tondo_Trial_Bd.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Tondo_Trial_Bd.ttf; sourceTree = "<group>"; };
@@ -352,6 +353,7 @@
 		79F071531BCEE87600646DD5 /* Tripme */ = {
 			isa = PBXGroup;
 			children = (
+				79F6F6A91C52BE0F008AF85D /* Bridging */,
 				A714B1611BFBB3CB00990971 /* Fontes */,
 				795AB3941BE2A2A900FD6BD8 /* Model */,
 				795AB3931BE2A29800FD6BD8 /* Controller */,
@@ -379,6 +381,14 @@
 				79F071791BCEE87600646DD5 /* Info.plist */,
 			);
 			path = TripmeUITests;
+			sourceTree = "<group>";
+		};
+		79F6F6A91C52BE0F008AF85D /* Bridging */ = {
+			isa = PBXGroup;
+			children = (
+				79F6F6AA1C52BE31008AF85D /* Tripme-Bridging-Header.h */,
+			);
+			name = Bridging;
 			sourceTree = "<group>";
 		};
 		9E4733490011BB967470D7E1 /* Pods */ = {
@@ -531,6 +541,7 @@
 		79F071491BCEE87500646DD5 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0720;
 				LastUpgradeCheck = 0700;
 				ORGANIZATIONNAME = "Rodrigo DAngelo Silva Machado";
 				TargetAttributes = {
@@ -835,6 +846,7 @@
 			baseConfigurationReference = B2D527F42F8DC3C197CB4A3F /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -846,6 +858,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bepid.Tripme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tripme/Tripme-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -854,6 +868,7 @@
 			baseConfigurationReference = A2FCACD87DA78FC96708FBFB /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -865,6 +880,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.bepid.Tripme;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Tripme/Tripme-Bridging-Header.h";
 			};
 			name = Release;
 		};

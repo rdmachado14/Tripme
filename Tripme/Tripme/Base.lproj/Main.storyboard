@@ -179,7 +179,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciY-uw-3IN" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3267.5" y="-531.5"/>
+            <point key="canvasLocation" x="3169.5" y="-531.5"/>
         </scene>
         <!--Pagamento2 View Controller-->
         <scene sceneID="4Gg-pT-m35">
@@ -307,7 +307,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztM-JX-g1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3798.5" y="-531.5"/>
+            <point key="canvasLocation" x="3824.5" y="-531.5"/>
         </scene>
         <!--Trip Project View Controller-->
         <scene sceneID="xhs-Ah-A5Q">
