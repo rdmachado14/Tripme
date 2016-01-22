@@ -109,10 +109,8 @@ class TMSettingsTableViewController: UITableViewController {
             let cell = tableView.dequeueReusableCellWithIdentifier("Account") as! TMAccountsCells
             cell.lbAccount.text = settings[indexPath.section].arrayLabel[indexPath.row]
             cell.imImage.image = settings[indexPath.section].image[indexPath.row]
-//            cell.switchCase.on = settings[indexPath.section].switchCase[indexPath.row]
             
             let currentUser = PFUser.currentUser()
-//            print("authData: \(currentUser!["authData"])")
             
             if currentUser!["ultimoNome"] != nil && indexPath.row == 0
             {
@@ -226,5 +224,7 @@ class TMSettingsTableViewController: UITableViewController {
         })
 
     }
+    
+
 
 }
