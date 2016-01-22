@@ -19,12 +19,15 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var labelDataViagem: UILabel!
     
     var loadNomeViagem: String!
+    var loadDataViagem: String!
+
     
     override func viewDidLoad()
     {
         super.viewDidLoad()
         
         labelNomeViagem.text = loadNomeViagem
+        labelDataViagem.text = loadDataViagem
 
     }
 

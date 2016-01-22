@@ -440,6 +440,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             let viewController: TMPagamento1ViewController! = segue.destinationViewController as! TMPagamento1ViewController
             
             viewController.loadNomeViagem = arrayTela1[0]
+            viewController.loadDataViagem = arrayTela1[4]
         }
     }
 
