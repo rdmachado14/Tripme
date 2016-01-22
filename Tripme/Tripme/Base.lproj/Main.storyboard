@@ -283,7 +283,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-Qo-65V">
-                                                    <rect key="frame" x="178" y="7" width="174" height="30"/>
+                                                    <rect key="frame" x="178" y="8" width="174" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -300,6 +300,10 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="labelDataViagem" destination="8c5-mU-YRJ" id="byN-FV-wty"/>
+                        <outlet property="labelNomeViagem" destination="uTO-Xg-PEN" id="RXy-yQ-3tO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztM-JX-g1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2065,7 +2069,7 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="FNU-1P-xHg"/>
+        <segue reference="V5a-bB-6kL"/>
         <segue reference="wjJ-tr-zqq"/>
     </inferredMetricsTieBreakers>
 </document>

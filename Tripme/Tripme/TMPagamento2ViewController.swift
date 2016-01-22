@@ -13,9 +13,19 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     
     let infoCartao = ["Nome", "Número do cartão", "C.E.P", "Validade", "Código de segurança"]
 
+    @IBOutlet weak var labelNomeViagem: UILabel!
+    @IBOutlet weak var labelDataViagem: UILabel!
+    
+    var loadNomeViagem: String!
+    var loadDataViagem: String!
+    
+    
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        
+        labelNomeViagem.text = loadNomeViagem
+        labelDataViagem.text = loadDataViagem
 
     }
 
@@ -33,7 +43,6 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     {
         return true
     }
-    
     
     // TABLE VIEW
     
