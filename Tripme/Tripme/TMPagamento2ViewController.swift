@@ -11,8 +11,6 @@ import UIKit
 class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
-    let infoCartao = ["Nome", "Número do cartão", "C.E.P", "Validade", "Código de segurança"]
-
     @IBOutlet weak var labelNomeViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
     
@@ -48,19 +46,15 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int
     {
-        return infoCartao.count
+        return 4
     }
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMPagamento2TableViewCell
-        
-        cell.labelInfo.text = infoCartao[indexPath.row]
-        cell.flag = indexPath.row
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
         
-        
-        return cell
+        return cell!
     }
     
     
