@@ -16,6 +16,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     var loadDataViagem: String!
     var loadValorViagem: String!
     var vetor: [String]!
+    var vetorInfo: [String]!
     var error = false
 
     
@@ -83,6 +84,16 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
                 error = true
             }
         }
+        
+        
+        if !error
+        {
+            let card = STPCard()
+            
+            card.number = vetor[1]
+            
+        }
+        
 
     }
 
