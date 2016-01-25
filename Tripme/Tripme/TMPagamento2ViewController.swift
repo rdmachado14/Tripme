@@ -14,6 +14,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     let info = ["Nome", "Número do cartão", "C.E.P.", "Validade", "Código de segurança"]
     var loadNomeViagem: String!
     var loadDataViagem: String!
+    var loadValorViagem: String!
     var vetor: [String]!
     var error = false
 
@@ -21,6 +22,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var labelNomeViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
     @IBOutlet weak var minhaTableView: UITableView!
+    @IBOutlet weak var labelValor: UILabel!
     
     
     override func viewDidLoad()
@@ -29,6 +31,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         
         labelNomeViagem.text = loadNomeViagem
         labelDataViagem.text = loadDataViagem
+        labelValor.text = loadValorViagem
         
     }
 
@@ -62,6 +65,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+
     @IBAction func cancelar(sender: AnyObject)
     {
         dismissViewControllerAnimated(true, completion: nil)

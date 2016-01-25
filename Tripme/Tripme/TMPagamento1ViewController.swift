@@ -20,6 +20,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     
     var loadNomeViagem: String!
     var loadDataViagem: String!
+    var loadValorViagem: String!
 
     
     override func viewDidLoad()
@@ -47,6 +48,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         return true
     }
     
+    // enviando a informação escolida para a outra view
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
     {
         if segue.identifier == "seguePagamento2"
@@ -55,6 +57,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
             
             viewController.loadDataViagem = loadDataViagem
             viewController.loadNomeViagem = loadNomeViagem
+            viewController.loadValorViagem = loadValorViagem
             
         }
     }
@@ -78,6 +81,27 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         cell.flag = indexPath.row
      
         return cell
+    }
+    
+    // carregando o valor selecionado
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        if indexPath.row == 0
+        {
+            loadValorViagem = "1,00"
+        }
+        else if indexPath.row == 1
+        {
+            loadValorViagem = "5,00"
+        }
+        else if indexPath.row == 2
+        {
+            loadValorViagem = "10,00"
+        }
+        else
+        {
+            loadValorViagem = "Outros valores"
+        }
     }
 
 
