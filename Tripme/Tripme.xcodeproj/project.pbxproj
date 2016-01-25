@@ -254,9 +254,9 @@
 			isa = PBXGroup;
 			children = (
 				7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */,
+				7903EA281C566AD70028DED8 /* TMPagamento1TableViewCell.swift */,
 				79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */,
 				7903EA261C5657480028DED8 /* TMPagamento2TableViewCell.swift */,
-				7903EA281C566AD70028DED8 /* TMPagamento1TableViewCell.swift */,
 			);
 			name = Pagamento;
 			sourceTree = "<group>";

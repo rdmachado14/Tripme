@@ -11,6 +11,7 @@ import UIKit
 class TMPagamento1TableViewCell: UITableViewCell
 {
     @IBOutlet weak var labelInfo: UILabel!
+    var flag: Int!
 
     override func awakeFromNib()
     {
@@ -25,6 +26,23 @@ class TMPagamento1TableViewCell: UITableViewCell
 
     @IBAction func acaoValor(sender: AnyObject)
     {
-        print("AQUI")
+        if flag == 0
+        {
+            print("0")
+        }
+        else if flag == 1
+        {
+            print("1")
+        }
+        else if flag == 2
+        {
+            print("2")
+        }
+        else
+        {
+            print("3")
+        }
+        
+        
     }
 }
