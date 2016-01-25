@@ -140,7 +140,7 @@
                                 <rect key="frame" x="0.0" y="218" width="375" height="194"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="evS-q2-dFV">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="evS-q2-dFV" customClass="TMPagamento1TableViewCell" customModule="Tripme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="evS-q2-dFV" id="JRb-4q-ac8">
@@ -159,6 +159,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="labelInfo" destination="ohJ-i4-I7h" id="qFf-qO-xBj"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>

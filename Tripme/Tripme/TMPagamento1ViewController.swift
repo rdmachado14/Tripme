@@ -72,12 +72,12 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMPagamento1TableViewCell
         
-        
+        cell.labelInfo.text = opcoes[indexPath.row]
         
      
-        return cell!
+        return cell
     }
 
 
