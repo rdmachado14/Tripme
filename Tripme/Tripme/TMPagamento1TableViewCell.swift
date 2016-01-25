@@ -23,4 +23,8 @@ class TMPagamento1TableViewCell: UITableViewCell
 
     }
 
+    @IBAction func acaoValor(sender: AnyObject)
+    {
+        print("AQUI")
+    }
 }
