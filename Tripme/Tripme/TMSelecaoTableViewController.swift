@@ -16,6 +16,7 @@ class TMSelecaoTableViewController: UIViewController {
     var color = UIColor()
     var cont = Int()
     var titulo = String()
+    var classeNoParse = String()
     @IBOutlet weak var lbTitle: UILabel!
     @IBOutlet weak var myTable: UITableView!
     
@@ -52,9 +53,8 @@ class TMSelecaoTableViewController: UIViewController {
         dismissViewControllerAnimated(true, completion: nil)
     }
     func ParseQuerry() {
-        let currentUser = PFUser.currentUser()
         let queryParse = PFQuery(className: "Trip")
-        queryParse.whereKey("ID", equalTo: id)
+        queryParse.whereKey(classeNoParse, equalTo: id)
         queryParse.findObjectsInBackgroundWithBlock { (object: [PFObject]?, NSError) -> Void in
             if NSError == nil {
                 

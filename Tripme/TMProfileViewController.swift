@@ -29,10 +29,11 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate, UITextVie
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var nuvem1: UIImageView!
     var titulo = String()
+    var categoria = String()
     @IBOutlet weak var configuracaoOutlet: UIButton!
     @IBOutlet weak var fecharOutlet: UIButton!
     let strings = ["Minhas viagens", "Viagens que eu ajudei", "Viagens que gostei", "Mensagens"]
-    
+    let parseCategorias = ["ID", "ID", "likes","ID"]
     
     
     var verificador = Bool()
@@ -76,6 +77,7 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate, UITextVie
             let currentUser = PFUser.currentUser()
             viewController.titulo = titulo
             viewController.id = (currentUser?.objectId)!
+            viewController.classeNoParse = categoria
             
         }
     }
@@ -291,6 +293,7 @@ extension TMProfileViewController: UITableViewDelegate {
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("clicou: \(indexPath.row)")
         titulo = strings[indexPath.row]
+        categoria = parseCategorias[indexPath.row]
         performSegueWithIdentifier("selecaoTable", sender: self)
         myTable.deselectRowAtIndexPath(indexPath, animated: true)
     }

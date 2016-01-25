@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class TMMenuItensCell: UICollectionViewCell
 {
@@ -16,6 +17,8 @@ class TMMenuItensCell: UICollectionViewCell
             updateUI()
         }
     }
+    
+    var showDetailDelegate:ShowDetailDelegate? = nil
     
     
     // MARK: - Private
@@ -29,7 +32,9 @@ class TMMenuItensCell: UICollectionViewCell
     @IBOutlet weak var FAvorite: UIImageView!
     @IBOutlet weak var DinheiroAtual: UILabel!
     @IBOutlet weak var DinheiroTotal: UILabel!
-    
+    @IBOutlet weak var buttonImage: UIButton!
+    var objeto: PFObject!
+    var id = String()
     private func updateUI()
     {
         //interestTitleLabel?.text! = trips.title
@@ -49,6 +54,13 @@ class TMMenuItensCell: UICollectionViewCell
     }
     
     
+    @IBAction func perfilButton(sender: AnyObject) {
+        let displayText = objeto
+        showDetailDelegate?.showDetail(displayText, imagem: self.UserImg.image!)
+        
+    }
+    
+    
     @IBAction func FavoriteClicked(sender: AnyObject) {
         if(FAvorite.image == UIImage(named: "icon-heart")){
             FAvorite.growDown(0.1){
@@ -56,6 +68,15 @@ class TMMenuItensCell: UICollectionViewCell
                 self.FAvorite.growNormalSize(0.1)
             }
         } else {
+            print(id)
+            objeto.addUniqueObject(id, forKey: "likes")
+            objeto.saveInBackgroundWithBlock({ (certo, erro) -> Void in
+                if certo {
+                    print("salvou")
+                } else {
+                    print("error: \(erro)")
+                }
+            })
             FAvorite.growUp(0.1){
                 self.FAvorite.image = UIImage(named: "icon-heart")
                 self.FAvorite.growNormalSize(0.1)
