@@ -16,7 +16,6 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     var loadDataViagem: String!
     var loadValorViagem: String!
     var vetor: [String]!
-    var vetorInfo: [String]!
     var error = false
 
     

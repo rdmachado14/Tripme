@@ -88,15 +88,15 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     {
         if indexPath.row == 0
         {
-            loadValorViagem = "1,00"
+            loadValorViagem = "1"
         }
         else if indexPath.row == 1
         {
-            loadValorViagem = "5,00"
+            loadValorViagem = "5"
         }
         else if indexPath.row == 2
         {
-            loadValorViagem = "10,00"
+            loadValorViagem = "10"
         }
         else
         {
