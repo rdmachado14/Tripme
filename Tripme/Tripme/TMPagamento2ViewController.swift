@@ -55,7 +55,10 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMPagamento2TableViewCell
         
-        cell.textLabel?.text = infoCartao[indexPath.row]
+        cell.labelInfo.text = infoCartao[indexPath.row]
+        cell.flag = indexPath.row
+        
+        
         
         return cell
     }

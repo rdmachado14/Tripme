@@ -10,7 +10,9 @@ import UIKit
 
 class TMPagamento2TableViewCell: UITableViewCell
 {
-    @IBOutlet weak var textFieldInfo: UITextField!
+    @IBOutlet weak var labelInfo: UILabel!
+    @IBOutlet weak var textInfo: UITextField!
+    var flag: Int!
     
     override func awakeFromNib()
     {
@@ -24,4 +26,25 @@ class TMPagamento2TableViewCell: UITableViewCell
       
     }
 
+//    @IBAction func acaoText(sender: AnyObject)
+//    {
+//        
+//        if flag == 0
+//        {
+//            print("0")
+//        }
+//        else if flag == 1
+//        {
+//            print("1")
+//        }
+//        else if flag == 2
+//        {
+//            print("2")
+//        }
+//        else
+//        {
+//            print("3")
+//        }
+//
+//    }
 }
