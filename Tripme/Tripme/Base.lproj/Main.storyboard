@@ -95,7 +95,7 @@
                                 <rect key="frame" x="277" y="9" width="78" height="30"/>
                                 <state key="normal" title="Continuar"/>
                                 <connections>
-                                    <segue destination="FWz-Pr-mfz" kind="show" identifier="seguePagamento2" id="FNU-1P-xHg"/>
+                                    <segue destination="FWz-Pr-mfz" kind="show" id="7xZ-eT-F9A"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-fB-Oid">
@@ -176,7 +176,7 @@
                                 <rect key="frame" x="154" y="517" width="67" height="30"/>
                                 <state key="normal" title="Continuar"/>
                                 <connections>
-                                    <segue destination="FWz-Pr-mfz" kind="show" identifier="seguePagamento2" id="V5a-bB-6kL"/>
+                                    <segue destination="FWz-Pr-mfz" kind="show" id="ILO-Cg-MXo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="3169.5" y="-531.5"/>
         </scene>
-        <!--Pagamento2 View Controller-->
+        <!--View Controller-->
         <scene sceneID="4Gg-pT-m35">
             <objects>
-                <viewController storyboardIdentifier="Pagamento2" id="FWz-Pr-mfz" customClass="TMPagamento2ViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pagamento2" id="FWz-Pr-mfz" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hYo-7o-qWN"/>
                         <viewControllerLayoutGuide type="bottom" id="86I-Ui-uzk"/>
@@ -233,7 +233,6 @@
                                 <state key="normal" title="Cancelar"/>
                                 <connections>
                                     <action selector="cancelar:" destination="3IO-iL-laU" eventType="touchUpInside" id="Xr6-oB-Agw"/>
-                                    <action selector="cancelar:" destination="FWz-Pr-mfz" eventType="touchUpInside" id="nHv-Tx-vwc"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjz-4W-A5X">
@@ -271,61 +270,49 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usar este cartão para futuras doações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-d2-FAq">
-                                <rect key="frame" x="20" y="458" width="300" height="21"/>
+                                <rect key="frame" x="20" y="512" width="300" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0U-Bt-a5i">
-                                <rect key="frame" x="321" y="453" width="51" height="31"/>
-                            </switch>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ro5-Zx-wJc">
                                 <rect key="frame" x="171" y="564" width="33" height="30"/>
                                 <state key="normal" title="Doar"/>
                             </button>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0U-Bt-a5i">
+                                <rect key="frame" x="321" y="507" width="51" height="31"/>
+                            </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-ve-fVl">
-                                <rect key="frame" x="0.0" y="233" width="375" height="201"/>
+                                <rect key="frame" x="0.0" y="233" width="375" height="258"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="54" id="E1t-GS-fJH" customClass="TMPagamento2TableViewCell" customModule="Tripme" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="E1t-GS-fJH">
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E1t-GS-fJH" id="D0v-IG-n5S">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-Qo-65V">
-                                                    <rect key="frame" x="178" y="8" width="174" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-1K-POB">
                                                     <rect key="frame" x="26" y="16" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-Qo-65V">
+                                                    <rect key="frame" x="178" y="8" width="174" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="labelInfo" destination="FBf-1K-POB" id="rrN-En-JSg"/>
-                                            <outlet property="textInfo" destination="Iq5-Qo-65V" id="0Tt-fk-Tpw"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
-                                <connections>
-                                    <outlet property="dataSource" destination="FWz-Pr-mfz" id="hMd-Lg-Nd5"/>
-                                    <outlet property="delegate" destination="FWz-Pr-mfz" id="5zI-AF-iiP"/>
-                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                    <connections>
-                        <outlet property="labelDataViagem" destination="8c5-mU-YRJ" id="byN-FV-wty"/>
-                        <outlet property="labelNomeViagem" destination="uTO-Xg-PEN" id="RXy-yQ-3tO"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztM-JX-g1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2091,7 +2078,7 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="V5a-bB-6kL"/>
         <segue reference="wjJ-tr-zqq"/>
+        <segue reference="7xZ-eT-F9A"/>
     </inferredMetricsTieBreakers>
 </document>

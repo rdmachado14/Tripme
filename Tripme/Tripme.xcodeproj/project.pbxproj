@@ -14,7 +14,6 @@
 		5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */; };
 		5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */; };
 		5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281C51BE8E9DF002D90EE /* Trips.swift */; };
-		7903EA271C5657480028DED8 /* TMPagamento2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903EA261C5657480028DED8 /* TMPagamento2TableViewCell.swift */; };
 		7903EA291C566AD70028DED8 /* TMPagamento1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903EA281C566AD70028DED8 /* TMPagamento1TableViewCell.swift */; };
 		7908210B1C515DEE00C84359 /* TMPagamento1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */; };
 		790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */; };
@@ -50,7 +49,6 @@
 		79F071621BCEE87600646DD5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79F071601BCEE87600646DD5 /* LaunchScreen.storyboard */; };
 		79F0716D1BCEE87600646DD5 /* TripmeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F0716C1BCEE87600646DD5 /* TripmeTests.swift */; };
 		79F071781BCEE87600646DD5 /* TripmeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F071771BCEE87600646DD5 /* TripmeUITests.swift */; };
-		79F6F6A81C5287F2008AF85D /* TMPagamento2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */; };
 		A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7280F051C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift */; };
 		A7ACB5861C0DD53500B5F24C /* TMCriarViagemViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5831C0DD53500B5F24C /* TMCriarViagemViewController.swift */; };
 		A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7ACB5841C0DD53500B5F24C /* TMCriarViagemCell.swift */; };
@@ -102,7 +100,6 @@
 		5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuItensCell.swift; sourceTree = "<group>"; };
 		5EF281C51BE8E9DF002D90EE /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		6F13E0D01BFEDD0E55B0617E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		7903EA261C5657480028DED8 /* TMPagamento2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento2TableViewCell.swift; sourceTree = "<group>"; };
 		7903EA281C566AD70028DED8 /* TMPagamento1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento1TableViewCell.swift; sourceTree = "<group>"; };
 		7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento1ViewController.swift; sourceTree = "<group>"; };
 		790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTestPageViewController.swift; sourceTree = "<group>"; };
@@ -144,7 +141,6 @@
 		79F071731BCEE87600646DD5 /* TripmeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TripmeUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		79F071771BCEE87600646DD5 /* TripmeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripmeUITests.swift; sourceTree = "<group>"; };
 		79F071791BCEE87600646DD5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento2ViewController.swift; sourceTree = "<group>"; };
 		79F6F6AA1C52BE31008AF85D /* Tripme-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Tripme-Bridging-Header.h"; sourceTree = "<group>"; };
 		A2FCACD87DA78FC96708FBFB /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A714B1621BFBB47200990971 /* Gidole-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gidole-Regular.ttf"; sourceTree = "<group>"; };
@@ -255,8 +251,6 @@
 			children = (
 				7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */,
 				7903EA281C566AD70028DED8 /* TMPagamento1TableViewCell.swift */,
-				79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */,
-				7903EA261C5657480028DED8 /* TMPagamento2TableViewCell.swift */,
 			);
 			name = Pagamento;
 			sourceTree = "<group>";
@@ -697,10 +691,8 @@
 				793B795A1C3C10FB001D2A98 /* TMNotificationCells.swift in Sources */,
 				793B79561C3C10CC001D2A98 /* TMProfileCells.swift in Sources */,
 				7908210B1C515DEE00C84359 /* TMPagamento1ViewController.swift in Sources */,
-				79F6F6A81C5287F2008AF85D /* TMPagamento2ViewController.swift in Sources */,
 				793B79581C3C10E1001D2A98 /* TMAccountsCells.swift in Sources */,
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
-				7903EA271C5657480028DED8 /* TMPagamento2TableViewCell.swift in Sources */,
 				A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
