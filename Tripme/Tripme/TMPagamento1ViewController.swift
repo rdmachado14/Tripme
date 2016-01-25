@@ -74,9 +74,9 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
         
-        cell?.textLabel?.text = opcoes[indexPath.row]
         
         
+     
         return cell!
     }
 

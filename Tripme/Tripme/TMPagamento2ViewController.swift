@@ -53,11 +53,11 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell
     {
-        let cell = tableView.dequeueReusableCellWithIdentifier("Cell")
+        let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMPagamento2TableViewCell
         
-        cell?.textLabel?.text = infoCartao[indexPath.row]
+        cell.textLabel?.text = infoCartao[indexPath.row]
         
-        return cell!
+        return cell
     }
     
     

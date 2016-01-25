@@ -14,6 +14,7 @@
 		5EF281BB1BE8E5B5002D90EE /* TMMenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BA1BE8E5B5002D90EE /* TMMenuViewController.swift */; };
 		5EF281BF1BE8E8D6002D90EE /* TMMenuItensCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */; };
 		5EF281C61BE8E9DF002D90EE /* Trips.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5EF281C51BE8E9DF002D90EE /* Trips.swift */; };
+		7903EA271C5657480028DED8 /* TMPagamento2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903EA261C5657480028DED8 /* TMPagamento2TableViewCell.swift */; };
 		7908210B1C515DEE00C84359 /* TMPagamento1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */; };
 		790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */; };
 		7921CAEA1BF513D4008C6F6C /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */; };
@@ -100,6 +101,7 @@
 		5EF281BE1BE8E8D6002D90EE /* TMMenuItensCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMMenuItensCell.swift; sourceTree = "<group>"; };
 		5EF281C51BE8E9DF002D90EE /* Trips.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Trips.swift; sourceTree = "<group>"; };
 		6F13E0D01BFEDD0E55B0617E /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7903EA261C5657480028DED8 /* TMPagamento2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento2TableViewCell.swift; sourceTree = "<group>"; };
 		7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento1ViewController.swift; sourceTree = "<group>"; };
 		790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTestPageViewController.swift; sourceTree = "<group>"; };
 		7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
@@ -251,6 +253,7 @@
 			children = (
 				7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */,
 				79F6F6A71C5287F2008AF85D /* TMPagamento2ViewController.swift */,
+				7903EA261C5657480028DED8 /* TMPagamento2TableViewCell.swift */,
 			);
 			name = Pagamento;
 			sourceTree = "<group>";
@@ -693,6 +696,7 @@
 				79F6F6A81C5287F2008AF85D /* TMPagamento2ViewController.swift in Sources */,
 				793B79581C3C10E1001D2A98 /* TMAccountsCells.swift in Sources */,
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
+				7903EA271C5657480028DED8 /* TMPagamento2TableViewCell.swift in Sources */,
 				A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
 				79D4A0B71BECEC36000E552D /* TMProfileViewCell.swift in Sources */,
