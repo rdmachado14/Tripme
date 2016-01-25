@@ -99,6 +99,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
                 let expYear: NSNumber = Int(expirationDate[1])!
                 
                 // informações do cartão
+                card.name = vetor[0]
                 card.number = vetor[1]
                 card.cvc = vetor[4]
                 card.expMonth = expMonth.unsignedLongValue
@@ -144,7 +145,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     func postStripeToken(token: STPToken)
     {
         
-        let URL = "http://localhost/donate/payment.php"
+        let URL = "http://localhost/tripme/payment.php"
         let params = ["stripeToken": token.tokenId, "amount": Int(self.labelValor.text!)!, "currency": "usd", "description": self.labelNomeViagem.text!]
         
         let manager = AFHTTPRequestOperationManager()
