@@ -76,6 +76,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     {
         vetor = []
         
+        // varrendo cada posição do vetor
         for i in 0..<5 {
             let cell: TMPagamento2TableViewCell = minhaTableView.cellForRowAtIndexPath(NSIndexPath(forRow: i, inSection: 0)) as! TMPagamento2TableViewCell
             if(cell.textInfo.text != ""){
@@ -90,11 +91,81 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         {
             let card = STPCard()
             
-            card.number = vetor[1]
+            // verificando se data de validade do cartão está vazia
+            if vetor[3].isEmpty == false
+            {
+                let expirationDate = vetor[3].componentsSeparatedByString("/")
+                let expMonth: NSNumber = Int(expirationDate[0])!
+                let expYear: NSNumber = Int(expirationDate[1])!
+                
+                // informações do cartão
+                card.number = vetor[1]
+                card.cvc = vetor[4]
+                card.expMonth = expMonth.unsignedLongValue
+                card.expYear = expYear.unsignedLongValue
+            }
             
+            var underlyingError: NSError?
+            do {
+                try card.validateCardReturningError()
+            } catch let error as NSError {
+                underlyingError = error
+            }
+            if underlyingError != nil {
+                self.handleError(underlyingError!)
+                return
+            }
+            
+            STPAPIClient.sharedClient().createTokenWithCard(card, completion: { (token, error) -> Void in
+                
+                if error != nil {
+                    self.handleError(error!)
+                    return
+                }
+                
+                self.postStripeToken(token!)
+            })
+
         }
         
 
     }
+    
+    func handleError(error: NSError)
+    {
+        print(error)
+        UIAlertView(title: "Por favor, tente novamente",
+            message: error.localizedDescription,
+            delegate: nil,
+            cancelButtonTitle: "OK").show()
+        
+    }
+    
+    func postStripeToken(token: STPToken)
+    {
+        
+        let URL = "http://localhost/donate/payment.php"
+        let params = ["stripeToken": token.tokenId, "amount": Int(self.labelValor.text!)!, "currency": "usd", "description": self.labelNomeViagem.text!]
+        
+        let manager = AFHTTPRequestOperationManager()
+        manager.POST(URL, parameters: params, success: { (operation, responseObject) -> Void in
+            
+            if let response = responseObject as? [String: String] {
+                UIAlertView(title: response["status"],
+                    message: response["message"],
+                    delegate: nil,
+                    cancelButtonTitle: "OK").show()
+            }
+            
+            }) { (operation, error) -> Void in
+                self.handleError(error!)
+                print("ERRO!!!")
+        }
+        
+        
+        
+    }
+
+
 
 }
