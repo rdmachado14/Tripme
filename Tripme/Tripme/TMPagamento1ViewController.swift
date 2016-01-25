@@ -47,17 +47,17 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         return true
     }
     
-//    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-//    {
-//        if segue.identifier == "seguePagamento2"
-//        {
-//            let viewController: TMPagamento2ViewController! = segue.destinationViewController as! TMPagamento2ViewController
-//            
-//            viewController.loadDataViagem = loadDataViagem
-//            viewController.loadNomeViagem = loadNomeViagem
-//            
-//        }
-//    }
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
+    {
+        if segue.identifier == "seguePagamento2"
+        {
+            let viewController: TMPagamento2ViewController! = segue.destinationViewController as! TMPagamento2ViewController
+            
+            viewController.loadDataViagem = loadDataViagem
+            viewController.loadNomeViagem = loadNomeViagem
+            
+        }
+    }
     
     // TABLE VIEW
     func numberOfSectionsInTableView(tableView: UITableView) -> Int

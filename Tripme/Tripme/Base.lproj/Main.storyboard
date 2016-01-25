@@ -95,7 +95,7 @@
                                 <rect key="frame" x="277" y="9" width="78" height="30"/>
                                 <state key="normal" title="Continuar"/>
                                 <connections>
-                                    <segue destination="FWz-Pr-mfz" kind="show" id="7xZ-eT-F9A"/>
+                                    <segue destination="FWz-Pr-mfz" kind="show" identifier="seguePagamento2" id="7xZ-eT-F9A"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YXQ-fB-Oid">
@@ -176,7 +176,7 @@
                                 <rect key="frame" x="154" y="517" width="67" height="30"/>
                                 <state key="normal" title="Continuar"/>
                                 <connections>
-                                    <segue destination="FWz-Pr-mfz" kind="show" id="ILO-Cg-MXo"/>
+                                    <segue destination="FWz-Pr-mfz" kind="show" identifier="seguePagamento2" id="ILO-Cg-MXo"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -193,10 +193,10 @@
             </objects>
             <point key="canvasLocation" x="3169.5" y="-531.5"/>
         </scene>
-        <!--View Controller-->
+        <!--Pagamento2 View Controller-->
         <scene sceneID="4Gg-pT-m35">
             <objects>
-                <viewController storyboardIdentifier="Pagamento2" id="FWz-Pr-mfz" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="Pagamento2" id="FWz-Pr-mfz" customClass="TMPagamento2ViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hYo-7o-qWN"/>
                         <viewControllerLayoutGuide type="bottom" id="86I-Ui-uzk"/>
@@ -208,14 +208,14 @@
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="y8m-Og-GAK">
                                 <rect key="frame" x="0.0" y="44" width="375" height="71"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-mU-YRJ">
-                                        <rect key="frame" x="23" y="37" width="36" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome da viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTO-Xg-PEN">
+                                        <rect key="frame" x="23" y="8" width="129" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome da viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTO-Xg-PEN">
-                                        <rect key="frame" x="23" y="8" width="129" height="21"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-mU-YRJ">
+                                        <rect key="frame" x="23" y="37" width="36" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
@@ -232,7 +232,7 @@
                                 <rect key="frame" x="23" y="9" width="68" height="30"/>
                                 <state key="normal" title="Cancelar"/>
                                 <connections>
-                                    <action selector="cancelar:" destination="3IO-iL-laU" eventType="touchUpInside" id="Xr6-oB-Agw"/>
+                                    <action selector="cancelar:" destination="FWz-Pr-mfz" eventType="touchUpInside" id="tB3-qh-ars"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjz-4W-A5X">
@@ -286,7 +286,7 @@
                                 <rect key="frame" x="0.0" y="233" width="375" height="258"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" rowHeight="54" id="E1t-GS-fJH">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="54" id="E1t-GS-fJH" customClass="TMPagamento2TableViewCell" customModule="Tripme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E1t-GS-fJH" id="D0v-IG-n5S">
@@ -308,11 +308,19 @@
                                         </tableViewCellContentView>
                                     </tableViewCell>
                                 </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="FWz-Pr-mfz" id="ANZ-rw-WXD"/>
+                                    <outlet property="delegate" destination="FWz-Pr-mfz" id="SM7-9u-JEb"/>
+                                </connections>
                             </tableView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="labelDataViagem" destination="8c5-mU-YRJ" id="khR-tl-5h9"/>
+                        <outlet property="labelNomeViagem" destination="uTO-Xg-PEN" id="x0J-Ug-VJ7"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztM-JX-g1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -2079,6 +2087,6 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="wjJ-tr-zqq"/>
-        <segue reference="7xZ-eT-F9A"/>
+        <segue reference="ILO-Cg-MXo"/>
     </inferredMetricsTieBreakers>
 </document>
