@@ -14,8 +14,13 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     let info = ["Nome", "Número do cartão", "C.E.P.", "Validade", "Código de segurança"]
     var loadNomeViagem: String!
     var loadDataViagem: String!
+    var vetor: [String]!
+    var error = false
+
+    
     @IBOutlet weak var labelNomeViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
+    @IBOutlet weak var minhaTableView: UITableView!
     
     
     override func viewDidLoad()
@@ -51,7 +56,8 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     {
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMPagamento2TableViewCell
         
-        cell.textLabel?.text = info[indexPath.row]
+        cell.labelTitulo.text = info[indexPath.row]
+        
         
         return cell
     }
@@ -61,5 +67,19 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         dismissViewControllerAnimated(true, completion: nil)
     }
 
+    @IBAction func acaoDoar(sender: AnyObject)
+    {
+        vetor = []
+        
+        for i in 0..<5 {
+            let cell: TMPagamento2TableViewCell = minhaTableView.cellForRowAtIndexPath(NSIndexPath(forRow: i, inSection: 0)) as! TMPagamento2TableViewCell
+            if(cell.textInfo.text != ""){
+                vetor.append(cell.textInfo.text!)
+            } else {
+                error = true
+            }
+        }
+
+    }
 
 }

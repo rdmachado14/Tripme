@@ -10,7 +10,11 @@ import UIKit
 
 class TMPagamento2TableViewCell: UITableViewCell
 {
+    @IBOutlet weak var labelTitulo: UILabel!
 
+    @IBOutlet weak var textInfo: UITextField!
+    
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()
