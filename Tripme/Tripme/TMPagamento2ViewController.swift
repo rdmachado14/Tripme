@@ -101,6 +101,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
                 card.name = vetor[0]
                 card.number = vetor[1]
                 card.cvc = vetor[4]
+                card.addressLine1 = vetor[2]
                 card.expMonth = expMonth.unsignedLongValue
                 card.expYear = expYear.unsignedLongValue
             }
