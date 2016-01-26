@@ -312,21 +312,33 @@
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E1t-GS-fJH" id="D0v-IG-n5S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-Qo-65V">
-                                                    <rect key="frame" x="178" y="8" width="174" height="30"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </textField>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-1K-POB">
-                                                    <rect key="frame" x="13" y="16" width="157" height="22"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-1K-POB">
+                                                    <rect key="frame" x="13" y="15" width="157" height="22"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="width" constant="157" id="p1l-oi-0hc"/>
+                                                    </constraints>
                                                     <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
                                                     <color key="textColor" red="0.54509803921568623" green="0.54117647058823526" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-Qo-65V">
+                                                    <rect key="frame" x="178" y="12" width="174" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottomMargin" secondItem="Iq5-Qo-65V" secondAttribute="bottom" constant="4" id="8Ht-Te-Usc"/>
+                                                <constraint firstItem="Iq5-Qo-65V" firstAttribute="top" secondItem="D0v-IG-n5S" secondAttribute="topMargin" constant="4" id="DsZ-Uy-aAZ"/>
+                                                <constraint firstItem="FBf-1K-POB" firstAttribute="centerY" secondItem="D0v-IG-n5S" secondAttribute="centerY" id="Kbi-8M-iIi"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="Iq5-Qo-65V" secondAttribute="trailing" constant="15" id="YAS-e1-bLI"/>
+                                                <constraint firstItem="FBf-1K-POB" firstAttribute="leading" secondItem="D0v-IG-n5S" secondAttribute="leadingMargin" constant="5" id="bL0-KH-0V4"/>
+                                                <constraint firstItem="Iq5-Qo-65V" firstAttribute="leading" secondItem="FBf-1K-POB" secondAttribute="trailing" constant="8" symbolic="YES" id="opu-WZ-2HM"/>
+                                                <constraint firstItem="FBf-1K-POB" firstAttribute="top" secondItem="D0v-IG-n5S" secondAttribute="topMargin" constant="7" id="uXZ-fd-9Fy"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="labelTitulo" destination="FBf-1K-POB" id="reY-xU-ktG"/>

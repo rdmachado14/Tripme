@@ -66,7 +66,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.labelTitulo.text = info[indexPath.row]
         cell.textInfo.placeholder = infoPlaceholder[indexPath.row]
-        cell.textInfo.placeholderRectForBounds(CGRect(x: 1, y: 1, width: 1, height: 1))
+        cell.textInfo.placeholderRectForBounds(CGRect(x: 100, y: 100, width: 1, height: 1))
         
         return cell
     }
