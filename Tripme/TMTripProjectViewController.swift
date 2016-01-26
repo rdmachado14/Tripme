@@ -41,7 +41,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet weak var textView2: UITextView!
     
     
-    
+    let recognizer = UITapGestureRecognizer()
     var verificador = false
     var arrayImagensTela:[UIImage] = []
     var arrayTela1:[String] = []
@@ -72,6 +72,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        recognizer.addTarget(self, action: "profileImageHasBeenTapped")
         print("testando a view: \(view.frame.size)")
         print(verificador.boolValue)
         if verificador.boolValue {
@@ -79,7 +80,10 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         } else {
             loadFromViewCriarConta()
         }
-        
+        lbTripHost.userInteractionEnabled = true
+        ivProfilePicture.userInteractionEnabled = true
+        //lbTripHost.addGestureRecognizer(recognizer)
+        ivProfilePicture.addGestureRecognizer(recognizer)
         
         myTableView.tableFooterView = UIView(frame: CGRectZero)
         
@@ -127,6 +131,25 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
     }
     
+    func profileImageHasBeenTapped() {
+        
+        print("clicou na foto")
+        performSegueWithIdentifier("otherProfile", sender: self)
+    }
+    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "otherProfile" {
+            let viewController:otherProfileViewController = segue.destinationViewController as! otherProfileViewController
+            
+            
+            viewController.imagem = ivProfilePicture.image!
+            viewController.recebeObjeto = object2
+            
+            
+            
+        }
+    }
+    
     override func prefersStatusBarHidden() -> Bool {
         return true
     }
@@ -149,6 +172,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             for i in 0..<arrayImagensTela.count {
                 let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
                 imgOne.image = arrayImagensTela[i]
+                
                 self.scrollViewImage.addSubview(imgOne)
             }
             

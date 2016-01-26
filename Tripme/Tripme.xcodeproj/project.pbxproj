@@ -71,6 +71,7 @@
 		A7C9CC4B1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9CC4A1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift */; };
 		A7C9CC4D1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7C9CC4C1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift */; };
 		A7D220A31C4FC9F50074C876 /* TMSelecaoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D220A21C4FC9F50074C876 /* TMSelecaoTableViewController.swift */; };
+		A7D220A61C512BE10074C876 /* otherProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7D220A51C512BE10074C876 /* otherProfileViewController.swift */; };
 		A7E57D971BFD15B700463174 /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */; };
 		A7E57D991BFD3B9700463174 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = A7E57D981BFD3B9700463174 /* Color.swift */; };
 		F3B6260E41B96B20AB7F03FF /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 6F13E0D01BFEDD0E55B0617E /* libPods.a */; };
@@ -172,6 +173,7 @@
 		A7C9CC4A1C0F7B3200FF6D74 /* TMCriarViagemHeader.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagemHeader.swift; sourceTree = "<group>"; };
 		A7C9CC4C1C0F851F00FF6D74 /* TMCriarViagem2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMCriarViagem2ViewController.swift; sourceTree = "<group>"; };
 		A7D220A21C4FC9F50074C876 /* TMSelecaoTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMSelecaoTableViewController.swift; sourceTree = "<group>"; };
+		A7D220A51C512BE10074C876 /* otherProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = otherProfileViewController.swift; sourceTree = "<group>"; };
 		A7E57D961BFD15B700463174 /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		A7E57D981BFD3B9700463174 /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		B2D527F42F8DC3C197CB4A3F /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -323,6 +325,7 @@
 		79D4A0B51BECEC1B000E552D /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				A7D220A41C512BC70074C876 /* otherProfile */,
 				A7D220A11C4FC9A70074C876 /* table */,
 				7921CAEB1BF51A41008C6F6C /* TMLikeViewController.swift */,
 				795AB3971BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift */,
@@ -480,6 +483,14 @@
 				A7D220A21C4FC9F50074C876 /* TMSelecaoTableViewController.swift */,
 			);
 			name = table;
+			sourceTree = "<group>";
+		};
+		A7D220A41C512BC70074C876 /* otherProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A7D220A51C512BE10074C876 /* otherProfileViewController.swift */,
+			);
+			name = otherProfile;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -693,6 +704,7 @@
 				A7E57D971BFD15B700463174 /* CustomTableViewCell.swift in Sources */,
 				A7ACB5871C0DD53500B5F24C /* TMCriarViagemCell.swift in Sources */,
 				79F071551BCEE87600646DD5 /* AppDelegate.swift in Sources */,
+				A7D220A61C512BE10074C876 /* otherProfileViewController.swift in Sources */,
 				790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */,
 				79D4A0B41BECE4D7000E552D /* TMProfileTrips.swift in Sources */,
 				793B795A1C3C10FB001D2A98 /* TMNotificationCells.swift in Sources */,
