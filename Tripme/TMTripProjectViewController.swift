@@ -148,6 +148,14 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             
             
         }
+        
+        else if segue.identifier == "segureDoacao"
+        {
+            let viewController: TMPagamento1ViewController! = segue.destinationViewController as! TMPagamento1ViewController
+            
+            viewController.loadNomeViagem = arrayTela1[0]
+            viewController.loadDataViagem = arrayTela1[4]
+        }
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -457,16 +465,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
     }
     
-    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?)
-    {
-        if segue.identifier == "segureDoacao"
-        {
-            let viewController: TMPagamento1ViewController! = segue.destinationViewController as! TMPagamento1ViewController
-            
-            viewController.loadNomeViagem = arrayTela1[0]
-            viewController.loadDataViagem = arrayTela1[4]
-        }
-    }
+
 
     func progressViewAction()
     {
