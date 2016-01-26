@@ -13,6 +13,8 @@ class TMPagamento1TableViewCell: UITableViewCell
     @IBOutlet weak var labelInfo: UILabel!
     var flag: Int!
 
+    @IBOutlet weak var botaoSelecionado: UIButton!
+    
     override func awakeFromNib()
     {
         super.awakeFromNib()

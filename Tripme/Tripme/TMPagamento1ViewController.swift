@@ -86,9 +86,14 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     // carregando o valor selecionado
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! TMPagamento1TableViewCell
+        
+        cell.botaoSelecionado.setImage(UIImage(named: "Selecionado"), forState: .Normal)
+        
         if indexPath.row == 0
         {
             loadValorViagem = "1"
+
         }
         else if indexPath.row == 1
         {
@@ -102,6 +107,13 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         {
             loadValorViagem = "Outros valores"
         }
+    }
+    
+    func tableView(tableView: UITableView, didDeselectRowAtIndexPath indexPath: NSIndexPath)
+    {
+        let cell = tableView.cellForRowAtIndexPath(indexPath) as! TMPagamento1TableViewCell
+        
+        cell.botaoSelecionado.setImage(UIImage(named: "Não selecionado"), forState: .Normal)
     }
 
 
