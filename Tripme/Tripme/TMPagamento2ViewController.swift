@@ -19,7 +19,6 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     var loadDataViagem: String!
     var loadValorViagem: String!
     var vetor: [String]!
-    var pagamentoText = TMPagamento2TableViewCell()
     var error = false
 
     
@@ -42,13 +41,19 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         
         
         scroll.contentSize.height = 50
-
         
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
     }
 
     override func didReceiveMemoryWarning()
     {
         super.didReceiveMemoryWarning()
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
     
     override func prefersStatusBarHidden() -> Bool
@@ -76,13 +81,17 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         return cell
     }
     
+    
+    
 
     @IBAction func cancelar(sender: AnyObject)
     {
         dismissViewControllerAnimated(true, completion: nil)
     }
     
-       
+
+    
+    
     @IBAction func acaoDoar(sender: AnyObject)
     {
         vetor = []
