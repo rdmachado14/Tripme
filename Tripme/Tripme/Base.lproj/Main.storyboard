@@ -307,12 +307,16 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-ve-fVl">
                                 <rect key="frame" x="0.0" y="233" width="375" height="258"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <scrollView key="tableFooterView" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="L4V-67-v2k">
+                                    <rect key="frame" x="0.0" y="82" width="375" height="667"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                </scrollView>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="54" id="E1t-GS-fJH" customClass="TMPagamento2TableViewCell" customModule="Tripme" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="54"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="E1t-GS-fJH" id="D0v-IG-n5S">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="54"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-1K-POB">
@@ -391,6 +395,7 @@
                         <outlet property="labelNomeViagem" destination="uTO-Xg-PEN" id="x0J-Ug-VJ7"/>
                         <outlet property="labelValor" destination="xvd-Ky-Qff" id="hcz-iK-SlC"/>
                         <outlet property="minhaTableView" destination="AFB-ve-fVl" id="06x-IP-hca"/>
+                        <outlet property="scroll" destination="L4V-67-v2k" id="Gvr-U9-PLa"/>
                         <outlet property="viewTitulo" destination="y8m-Og-GAK" id="bPo-FT-0gu"/>
                     </connections>
                 </viewController>

@@ -11,12 +11,15 @@ import UIKit
 class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
+    @IBOutlet weak var scroll: UIScrollView!
+    
     let info = ["Nome", "Número do cartão", "C.E.P.", "Validade", "Código de segurança"]
     let infoPlaceholder = ["Nome", "Número do cartão", "C.E.P.", "02/2018", "123"]
     var loadNomeViagem: String!
     var loadDataViagem: String!
     var loadValorViagem: String!
     var vetor: [String]!
+    var pagamentoText = TMPagamento2TableViewCell()
     var error = false
 
     
@@ -36,6 +39,9 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         labelValor.text = loadValorViagem
         
         viewTitulo.backgroundColor = UIColor().colorWithHexString("118CEF")
+        
+        
+        scroll.contentSize.height = 50
 
         
     }
@@ -66,7 +72,6 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.labelTitulo.text = info[indexPath.row]
         cell.textInfo.placeholder = infoPlaceholder[indexPath.row]
-        cell.textInfo.placeholderRectForBounds(CGRect(x: 100, y: 100, width: 1, height: 1))
         
         return cell
     }
@@ -76,7 +81,8 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     {
         dismissViewControllerAnimated(true, completion: nil)
     }
-
+    
+       
     @IBAction func acaoDoar(sender: AnyObject)
     {
         vetor = []
