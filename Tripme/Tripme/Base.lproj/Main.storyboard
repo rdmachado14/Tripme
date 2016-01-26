@@ -80,6 +80,16 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
+            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -198,7 +208,7 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Continuar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jvj-2u-Idm">
-                                <rect key="frame" x="147" y="538" width="85" height="21"/>
+                                <rect key="frame" x="147" y="536" width="85" height="21"/>
                                 <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="18"/>
                                 <color key="textColor" red="0.035294117647058823" green="0.76078431372549016" blue="0.22352941176470589" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -235,13 +245,13 @@
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome da viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="uTO-Xg-PEN">
                                         <rect key="frame" x="23" y="8" width="344" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8c5-mU-YRJ">
-                                        <rect key="frame" x="23" y="37" width="128" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <rect key="frame" x="23" y="37" width="150" height="21"/>
+                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="18"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
@@ -253,56 +263,46 @@
                                 <rect key="frame" x="0.0" y="42" width="375" height="2"/>
                                 <color key="backgroundColor" red="0.73333333329999995" green="0.74117647060000003" blue="0.75686274509999996" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJr-Uk-drz">
-                                <rect key="frame" x="23" y="9" width="68" height="30"/>
-                                <state key="normal" title="Cancelar"/>
-                                <connections>
-                                    <action selector="cancelar:" destination="FWz-Pr-mfz" eventType="touchUpInside" id="tB3-qh-ars"/>
-                                </connections>
-                            </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wjz-4W-A5X">
-                                <rect key="frame" x="110" y="13" width="155" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MT4-Vv-W7q">
-                                <rect key="frame" x="284" y="9" width="78" height="30"/>
-                                <state key="normal" title="Doar"/>
+                                <rect key="frame" x="308" y="10" width="40" height="30"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="16"/>
+                                <state key="normal" title="Doar">
+                                    <color key="titleColor" red="0.070588235294117646" green="0.77647058823529413" blue="0.2627450980392157" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valor a ser doado" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Tdr-lA-mEd">
-                                <rect key="frame" x="20" y="138" width="134" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="13" y="138" width="128" height="21"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                <color key="textColor" red="0.49803921568627452" green="0.49803921568627452" blue="0.49803921568627452" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="R$" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="X17-RA-D15">
-                                <rect key="frame" x="176" y="138" width="22" height="21"/>
+                                <rect key="frame" x="142" y="138" width="22" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="textColor" red="0.57647058823529407" green="0.57647058823529407" blue="0.57647058823529407" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Informações do cartão" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hS8-sL-fVa">
-                                <rect key="frame" x="20" y="187" width="173" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="13" y="187" width="193" height="21"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                <color key="textColor" red="0.64313725490196083" green="0.64313725490196083" blue="0.64313725490196083" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Usar este cartão para futuras doações" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cXi-d2-FAq">
-                                <rect key="frame" x="20" y="512" width="300" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <rect key="frame" x="13" y="512" width="275" height="21"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ro5-Zx-wJc">
-                                <rect key="frame" x="171" y="564" width="33" height="30"/>
-                                <state key="normal" title="Doar"/>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ro5-Zx-wJc">
+                                <rect key="frame" x="72" y="586" width="231" height="45"/>
+                                <state key="normal" title="Doar" image="Botão continuar"/>
                                 <connections>
                                     <action selector="acaoDoar:" destination="FWz-Pr-mfz" eventType="touchUpInside" id="hD8-qN-3qP"/>
                                 </connections>
                             </button>
                             <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="u0U-Bt-a5i">
-                                <rect key="frame" x="321" y="507" width="51" height="31"/>
+                                <rect key="frame" x="306" y="507" width="51" height="31"/>
                             </switch>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="54" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AFB-ve-fVl">
                                 <rect key="frame" x="0.0" y="233" width="375" height="258"/>
@@ -315,15 +315,15 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="53.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-Qo-65V">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Iq5-Qo-65V">
                                                     <rect key="frame" x="178" y="8" width="174" height="30"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FBf-1K-POB">
                                                     <rect key="frame" x="13" y="16" width="157" height="22"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                                    <color key="textColor" red="0.54509803921568623" green="0.54117647058823526" blue="0.54509803921568623" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
@@ -340,11 +340,36 @@
                                 </connections>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xvd-Ky-Qff">
-                                <rect key="frame" x="211" y="138" width="83" height="21"/>
+                                <rect key="frame" x="177" y="138" width="83" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" red="0.5725490196078431" green="0.5725490196078431" blue="0.5725490196078431" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cJr-Uk-drz">
+                                <rect key="frame" x="13" y="9" width="49" height="32"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="16"/>
+                                <state key="normal" title="Voltar">
+                                    <color key="titleColor" red="0.61176470588235299" green="0.61176470588235299" blue="0.61176470588235299" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="cancelar:" destination="FWz-Pr-mfz" eventType="touchUpInside" id="tB3-qh-ars"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Ajudar essa viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DGa-bv-MDf">
+                                <rect key="frame" x="110" y="13" width="155" height="21"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Doar" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="v9S-fl-fzO">
+                                <rect key="frame" x="169" y="596" width="46" height="21"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="18"/>
+                                <color key="textColor" red="0.098039215686274508" green="0.75686274509803919" blue="0.25882352941176473" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Box de quantia" translatesAutoresizingMaskIntoConstraints="NO" id="naY-eq-cPA">
+                                <rect key="frame" x="135" y="136" width="71" height="25"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -354,11 +379,12 @@
                         <outlet property="labelNomeViagem" destination="uTO-Xg-PEN" id="x0J-Ug-VJ7"/>
                         <outlet property="labelValor" destination="xvd-Ky-Qff" id="hcz-iK-SlC"/>
                         <outlet property="minhaTableView" destination="AFB-ve-fVl" id="06x-IP-hca"/>
+                        <outlet property="viewTitulo" destination="y8m-Og-GAK" id="bPo-FT-0gu"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ztM-JX-g1t" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3743.5" y="-531.5"/>
+            <point key="canvasLocation" x="3748.5" y="-531.5"/>
         </scene>
         <!--Chat View Controller-->
         <scene sceneID="epD-pn-bYi">
@@ -2123,6 +2149,7 @@
         <image name="Barra cinza" width="751" height="4"/>
         <image name="Botão continuar" width="472" height="90"/>
         <image name="Botão doar" width="104" height="104"/>
+        <image name="Box de quantia" width="146" height="52"/>
         <image name="Criar conta-7" width="326" height="48"/>
         <image name="Linha Divisória-11" width="751" height="4"/>
         <image name="Linha com avião-11" width="751" height="56"/>

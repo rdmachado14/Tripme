@@ -24,6 +24,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var minhaTableView: UITableView!
     @IBOutlet weak var labelValor: UILabel!
     
+    @IBOutlet weak var viewTitulo: UIView!
     
     override func viewDidLoad()
     {
@@ -32,6 +33,9 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         labelNomeViagem.text = loadNomeViagem
         labelDataViagem.text = loadDataViagem
         labelValor.text = loadValorViagem
+        
+        viewTitulo.backgroundColor = UIColor().colorWithHexString("118CEF")
+
         
     }
 
