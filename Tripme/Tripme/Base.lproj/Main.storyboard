@@ -335,6 +335,25 @@
             </objects>
             <point key="canvasLocation" x="3743.5" y="-531.5"/>
         </scene>
+        <!--Chat View Controller-->
+        <scene sceneID="epD-pn-bYi">
+            <objects>
+                <viewController id="XOY-8Z-Epk" customClass="TMChatViewController" customModule="Tripme" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="AIx-4K-z65"/>
+                        <viewControllerLayoutGuide type="bottom" id="2Bj-6J-iaa"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2q9-u9-7nJ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="MkP-rp-tna" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4517.5" y="-584.5"/>
+        </scene>
         <!--Trip Project View Controller-->
         <scene sceneID="xhs-Ah-A5Q">
             <objects>

@@ -17,6 +17,7 @@
 		7903EA291C566AD70028DED8 /* TMPagamento1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903EA281C566AD70028DED8 /* TMPagamento1TableViewCell.swift */; };
 		7903EA2D1C56A3FD0028DED8 /* TMPagamento2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903EA2C1C56A3FD0028DED8 /* TMPagamento2TableViewCell.swift */; };
 		7903EA2F1C56A4120028DED8 /* TMPagamento2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903EA2E1C56A4120028DED8 /* TMPagamento2ViewController.swift */; };
+		7903EA711C57C6B20028DED8 /* TMChatViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7903EA701C57C6B20028DED8 /* TMChatViewController.swift */; };
 		7908210B1C515DEE00C84359 /* TMPagamento1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */; };
 		790B76491C07A6BC001CED07 /* TMTestPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */; };
 		7921CAEA1BF513D4008C6F6C /* ParseFacebookUtilsV4.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */; };
@@ -105,6 +106,7 @@
 		7903EA281C566AD70028DED8 /* TMPagamento1TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento1TableViewCell.swift; sourceTree = "<group>"; };
 		7903EA2C1C56A3FD0028DED8 /* TMPagamento2TableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento2TableViewCell.swift; sourceTree = "<group>"; };
 		7903EA2E1C56A4120028DED8 /* TMPagamento2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento2ViewController.swift; sourceTree = "<group>"; };
+		7903EA701C57C6B20028DED8 /* TMChatViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMChatViewController.swift; sourceTree = "<group>"; };
 		7908210A1C515DEE00C84359 /* TMPagamento1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMPagamento1ViewController.swift; sourceTree = "<group>"; };
 		790B76481C07A6BC001CED07 /* TMTestPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TMTestPageViewController.swift; sourceTree = "<group>"; };
 		7921CAE91BF513D4008C6F6C /* ParseFacebookUtilsV4.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = ParseFacebookUtilsV4.framework; sourceTree = "<group>"; };
@@ -250,6 +252,14 @@
 			name = "Menu Inicial";
 			sourceTree = "<group>";
 		};
+		7903EA6F1C57C6A10028DED8 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				7903EA701C57C6B20028DED8 /* TMChatViewController.swift */,
+			);
+			name = Chat;
+			sourceTree = "<group>";
+		};
 		790821091C515D7D00C84359 /* Pagamento */ = {
 			isa = PBXGroup;
 			children = (
@@ -295,6 +305,7 @@
 		795AB3931BE2A29800FD6BD8 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				7903EA6F1C57C6A10028DED8 /* Chat */,
 				790821091C515D7D00C84359 /* Pagamento */,
 				793B79501C3C03B9001D2A98 /* Settings */,
 				793AA9331C11DA0700095CFD /* Viagem */,
@@ -700,6 +711,7 @@
 				7908210B1C515DEE00C84359 /* TMPagamento1ViewController.swift in Sources */,
 				793B79581C3C10E1001D2A98 /* TMAccountsCells.swift in Sources */,
 				795AB3981BE2BA0600FD6BD8 /* TMCustomLoginViewController.swift in Sources */,
+				7903EA711C57C6B20028DED8 /* TMChatViewController.swift in Sources */,
 				7903EA2D1C56A3FD0028DED8 /* TMPagamento2TableViewCell.swift in Sources */,
 				A7280F061C0F96CE00B89E08 /* TMCriarViagemCollectionViewCell.swift in Sources */,
 				795AB39C1BE3FB3000FD6BD8 /* TMInitialViewController.swift in Sources */,
