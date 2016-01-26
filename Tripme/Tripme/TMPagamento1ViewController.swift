@@ -17,6 +17,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     @IBOutlet weak var minhaTableView: UITableView!
     @IBOutlet weak var labelNomeViagem: UILabel!
     @IBOutlet weak var labelDataViagem: UILabel!
+    @IBOutlet weak var viewTitulo: UIView!
     
     var loadNomeViagem: String!
     var loadDataViagem: String!
@@ -29,6 +30,8 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         
         labelNomeViagem.text = loadNomeViagem
         labelDataViagem.text = loadDataViagem
+        
+        viewTitulo.backgroundColor = UIColor().colorWithHexString("118CEF")
 
     }
 
