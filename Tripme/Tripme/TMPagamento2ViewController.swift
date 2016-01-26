@@ -12,6 +12,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
 {
     
     let info = ["Nome", "Número do cartão", "C.E.P.", "Validade", "Código de segurança"]
+    let infoPlaceholder = ["Nome", "Número do cartão", "C.E.P.", "02/2018", "123"]
     var loadNomeViagem: String!
     var loadDataViagem: String!
     var loadValorViagem: String!
@@ -64,7 +65,8 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.dequeueReusableCellWithIdentifier("Cell") as! TMPagamento2TableViewCell
         
         cell.labelTitulo.text = info[indexPath.row]
-        
+        cell.textInfo.placeholder = infoPlaceholder[indexPath.row]
+        cell.textInfo.placeholderRectForBounds(CGRect(x: 1, y: 1, width: 1, height: 1))
         
         return cell
     }
@@ -93,6 +95,8 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         if !error
         {
             let card = STPCard()
+            
+            //vetor[0].placeholder = "teste"
             
             // verificando se data de validade do cartão está vazia
             if vetor[3].isEmpty == false
