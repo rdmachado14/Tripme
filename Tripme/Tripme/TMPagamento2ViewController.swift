@@ -94,16 +94,39 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     
     @IBAction func acaoDoar(sender: AnyObject)
     {
-        vetor = []
+        vetor = [String]()
+        
+        
+        print(info.count)
         
         // varrendo cada posição do vetor
-        for i in 0..<5 {
-            let cell: TMPagamento2TableViewCell = minhaTableView.cellForRowAtIndexPath(NSIndexPath(forRow: i, inSection: 0)) as! TMPagamento2TableViewCell
-            if(cell.textInfo.text != ""){
-                vetor.append(cell.textInfo.text!)
+        for i in 0...4 {
+            
+            
+            if let m = self.minhaTableView.cellForRowAtIndexPath(NSIndexPath(forRow: i, inSection: 0)) {
+                
+                print(m)
+                
+                let cell = m as! TMPagamento2TableViewCell
+                
+                print(cell)
+                
+                //let cell: TMPagamento2TableViewCell = self.minhaTableView.cellForRowAtIndexPath(NSIndexPath(forRow: i, inSection: 0)) as! TMPagamento2TableViewCell
+                //            let cell = minhaTableView.cellForRowAtIndexPath(index)
+                print(cell.textInfo.text)
+                
+                print("passou do william")
+                if(cell.textInfo.text != ""){
+                    vetor.append(cell.textInfo.text!)
+                } else {
+                    error = true
+                }
+                
+                
             } else {
-                error = true
+                print("Ta vazio !!!")
             }
+            
         }
         
         
@@ -168,7 +191,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     func postStripeToken(token: STPToken)
     {
         
-        let URL = "http://localhost/tripme/payment.php"
+        let URL = "http://172.16.1.208/tripme/payment.php"
         let params = ["stripeToken": token.tokenId, "amount": Int(self.labelValor.text!)!, "currency": "usd", "description": self.labelNomeViagem.text!]
         
         let manager = AFHTTPRequestOperationManager()
@@ -185,9 +208,6 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
                 self.handleError(error!)
                 print("ERRO!!!")
         }
-        
-        
-        
     }
 
 

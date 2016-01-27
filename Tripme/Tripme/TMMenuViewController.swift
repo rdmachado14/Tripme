@@ -208,8 +208,8 @@ extension TMMenuViewController : UICollectionViewDataSource
             cell.interestTitleLabel.text = localDestino
         }
         
-        cell.DinheiroAtual.text = "100"
-        cell.DinheiroTotal.text = "900"
+        cell.DinheiroAtual.text = "900"
+        cell.DinheiroTotal.text = "5000"
         
         self.collectedNumber = NSString(string: cell.DinheiroAtual.text!).floatValue
         
