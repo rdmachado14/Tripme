@@ -32,6 +32,9 @@ class TMMenuItensCell: UICollectionViewCell
     @IBOutlet weak var FAvorite: UIImageView!
     @IBOutlet weak var DinheiroAtual: UILabel!
     @IBOutlet weak var DinheiroTotal: UILabel!
+    @IBOutlet weak var buttonImage: UIButton!
+    var objeto: PFObject!
+    var id = String()
     
     var Total: Float!
     var ATUAL: Float!
