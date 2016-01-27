@@ -1058,13 +1058,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wud-kg-cz5">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="0.18322268489999999" green="0.50639935319999996" blue="0.98369586470000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="6Wr-vC-1u9">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="nuvens-9" translatesAutoresizingMaskIntoConstraints="NO" id="M9P-jc-Mhl">
                                 <rect key="frame" x="375" y="0.0" width="375" height="667"/>
-                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yke-nr-2Rf">
                                 <rect key="frame" x="295" y="37" width="60" height="32"/>
@@ -1278,7 +1280,7 @@
                                 </connections>
                             </searchBar>
                         </subviews>
-                        <color key="backgroundColor" red="0.066666666666666666" green="0.54509803921568623" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="L7K-MD-8jh" secondAttribute="trailing" id="3Oo-4Q-dtW"/>
                             <constraint firstItem="M9P-jc-Mhl" firstAttribute="leading" secondItem="Pcl-g6-23T" secondAttribute="trailing" constant="48" id="5iR-PT-Npq"/>
@@ -1588,7 +1590,7 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dGV-43-us9">
                                 <rect key="frame" x="0.0" y="43" width="375" height="240"/>
-                                <color key="backgroundColor" red="0.08235294118" green="0.46274509800000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.18322268490121613" green="0.50639935316469531" blue="0.9836958646774292" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Nuvens Perfil-2" translatesAutoresizingMaskIntoConstraints="NO" id="T4k-9o-jXX">
                                 <rect key="frame" x="375" y="43" width="375" height="240"/>
@@ -2355,6 +2357,7 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="o4u-Iy-2Vc"/>
         <segue reference="eSa-EH-ogh"/>
         <segue reference="kuQ-5M-qfy"/>
         <segue reference="o4u-Iy-2Vc"/>

@@ -93,8 +93,6 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
         myTableView.tableFooterView = UIView(frame: CGRectZero)
         
-        progressViewAction()
-        
         // scroll
 //        print(self.scrollView.frame.height)
 //        print(view.frame.size)
@@ -108,7 +106,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             scrollView.contentSize.height = 2600
         }
         
-        
+        progressViewAction()
         
         // requisição de curtir
         let query = PFQuery(className: "Trip")
@@ -492,14 +490,18 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     func progressViewAction()
     {
         
-        self.collectedNumber = NSString(string: lbCollected.text!).floatValue
-        
-        self.tripTotalNumber = NSString(string: arrayTela1[3]).floatValue
-        
-        dispatch_async(dispatch_get_main_queue())
-            {
-                self.pvTripProgress.setProgress(self.collectedNumber/self.tripTotalNumber, animated: true)
+        if verificador.boolValue {
+            self.collectedNumber = Float(object2.valueForKey("Coletado") as! NSNumber)
+        } else {
+            self.collectedNumber = 0
         }
+        
+        
+        self.tripTotalNumber = Float(arrayTela1[3])!
+        
+        
+        self.pvTripProgress.setProgress(self.collectedNumber/self.tripTotalNumber, animated: true)
+        
         
     }
     
