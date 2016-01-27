@@ -441,6 +441,12 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             
             viewController.loadNomeViagem = arrayTela1[0]
             viewController.loadDataViagem = arrayTela1[4]
+            if verificador.boolValue {
+                viewController.objectID = object2.objectId!
+            } else {
+                viewController.objectID = object.objectId!
+            }
+
         }
     }
 

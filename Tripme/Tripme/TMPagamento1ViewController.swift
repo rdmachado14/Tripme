@@ -23,6 +23,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     var loadNomeViagem: String!
     var loadDataViagem: String!
     var loadValorViagem: String!
+    var objectID: String!
 
     
     override func viewDidLoad()
@@ -62,6 +63,8 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
             viewController.loadDataViagem = loadDataViagem
             viewController.loadNomeViagem = loadNomeViagem
             viewController.loadValorViagem = loadValorViagem
+            viewController.objectID = objectID
+            
             
         }
     }
@@ -90,8 +93,6 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     // carregando o valor selecionado
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath)
     {
-//        let object = PFObject(className: "Trip")
-        
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! TMPagamento1TableViewCell
         
         cell.botaoSelecionado.setImage(UIImage(named: "Selecionado"), forState: .Normal)
@@ -99,18 +100,6 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         if indexPath.row == 0
         {
             loadValorViagem = "1"
-//            object["Coletado"] = loadValorViagem
-//            
-//            object.saveInBackgroundWithBlock({ (success, error) -> Void in
-//                if success
-//                {
-//                    print("Salvou!!!!")
-//                }
-//                else
-//                {
-//                    print(error)
-//                }
-//            })
 
         }
         else if indexPath.row == 1

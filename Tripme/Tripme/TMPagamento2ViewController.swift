@@ -19,6 +19,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     var loadDataViagem: String!
     var loadValorViagem: String!
     var vetor: [String]!
+    var objectID: String!
     var error = false
 
     
@@ -44,6 +45,8 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         
         let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
         view.addGestureRecognizer(tap)
+        
+        print(objectID)
 
         
 
@@ -204,21 +207,34 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         }
     
         // SALVANDO NO PARSE
-        let object = PFObject(className: "Trip")
-    
-        object["Coletado"] = labelValor.text
-        object["Viagem"] = labelNomeViagem.text
-    
-        object.saveInBackgroundWithBlock { (success, error) -> Void in
-            if success
-            {
-                print("SALVO!!!!")
-            }
-            else
-            {
-                print(error)
-            }
+        let query = PFQuery(className: "Trip")
+        query.whereKey("objectId", containsString: objectID)
+        query.getFirstObjectInBackgroundWithBlock { (object, error) -> Void in
+        if error == nil
+        {
+//            var coletado = object?.valueForKey("Coletado") as! Int
+            let inc = Int(self.labelValor.text!)!
+            object?.incrementKey("Coletado", byAmount: Int(inc))
+//            object!["Coletado"] = coletado
+//            
+            object?.saveInBackgroundWithBlock({ (success, error) -> Void in
+                if success
+                {
+                    print("SALVO!!!")
+                }
+                else
+                {
+                    print(error)
+                }
+            })
         }
+        else
+        {
+                print(error)
+        }
+    }
+    
+    
     }
     
     func handleError(error: NSError)
