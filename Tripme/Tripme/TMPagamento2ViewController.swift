@@ -11,7 +11,6 @@ import UIKit
 class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
     
-    @IBOutlet weak var scroll: UIScrollView!
     
     let info = ["Nome", "Número do cartão", "C.E.P.", "Validade", "Código de segurança"]
     let infoPlaceholder = ["Nome", "Número do cartão", "C.E.P.", "02/2018", "123"]
