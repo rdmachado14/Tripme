@@ -40,10 +40,38 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         viewTitulo.backgroundColor = UIColor().colorWithHexString("118CEF")
         
         
-        scroll.contentSize.height = 50
+        registerNotifications()
         
-        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
-        view.addGestureRecognizer(tap)
+
+        
+        
+    }
+    
+    private func registerNotifications() -> Void {
+        
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidShow:"), name:UIKeyboardDidShowNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    
+    
+    
+    //MARK: Keyboard treatments
+    func keyboardDidShow(sender: NSNotification) {
+        let targetPointOffset: CGFloat = 44
+        let adjustedViewFrameCenter: CGPoint = CGPointMake(self.view.center.x, self.view.center.y - targetPointOffset)
+        UIView.animateWithDuration(0.2, animations:  {
+            self.view.center = adjustedViewFrameCenter
+        })
+    }
+    
+    func keyboardWillHide(sender: NSNotification) {
+        let targetPointOffset: CGFloat = 44
+        let adjustedViewFrameCenter: CGPoint = CGPointMake(self.view.center.x, self.view.center.y + targetPointOffset)
+        UIView.animateWithDuration(0.2, animations: {
+            self.view.center = adjustedViewFrameCenter
+        })
     }
 
     override func didReceiveMemoryWarning()
