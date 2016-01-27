@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tzl-YC-y1W">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="Tzl-YC-y1W">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Alignment constraints to the first baseline" minToolsVersion="6.0"/>
@@ -7,17 +7,20 @@
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <customFonts key="customFonts">
+        <mutableArray key="Gidole-Regular.ttf">
+            <string>Gidole-Regular</string>
+            <string>Gidole-Regular</string>
+            <string>Gidole-Regular</string>
+            <string>Gidole-Regular</string>
+            <string>Gidole-Regular</string>
+            <string>Gidole-Regular</string>
+            <string>Gidole-Regular</string>
+            <string>Gidole-Regular</string>
+        </mutableArray>
         <mutableArray key="Tondo_Trial_Lt.ttf">
             <string>TondoTrial-Light</string>
         </mutableArray>
         <mutableArray key="Tondo_Trial_Rg.ttf">
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
@@ -181,30 +184,8 @@
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5r8-rU-9kp">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="1700"/>
                                 <subviews>
-                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Linha Divisória-11" translatesAutoresizingMaskIntoConstraints="NO" id="egS-uF-NYU">
-                                        <rect key="frame" x="0.0" y="64" width="375" height="2"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="2" id="6ir-K7-PrH"/>
-                                        </constraints>
-                                    </imageView>
-                                    <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAl-AY-pid">
-                                        <rect key="frame" x="282" y="26" width="85" height="30"/>
-                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
-                                        <state key="normal" title="Compartilhar">
-                                            <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="btShare:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="AVW-tM-dbE"/>
-                                        </connections>
-                                    </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-ol-Ez5">
-                                        <rect key="frame" x="158" y="30" width="58" height="21"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <view contentMode="scaleToFill" ambiguous="YES" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-cc-dPa">
-                                        <rect key="frame" x="17" y="92" width="340" height="582"/>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Y2A-cc-dPa">
+                                        <rect key="frame" x="17" y="60" width="340" height="582"/>
                                         <subviews>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpf-gn-9TA">
                                                 <rect key="frame" x="0.0" y="304" width="340" height="101"/>
@@ -219,7 +200,9 @@
                                                         <rect key="frame" x="8" y="57" width="28" height="28"/>
                                                     </imageView>
                                                     <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" progressImage="Criar conta-7" translatesAutoresizingMaskIntoConstraints="NO" id="NSL-ph-IWV">
-                                                        <rect key="frame" x="8" y="40" width="309" height="2"/>
+                                                        <rect key="frame" x="8" y="40" width="324" height="2"/>
+                                                        <color key="progressTintColor" red="0.0" green="0.90196078431372551" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <color key="trackTintColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                     </progressView>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZCK-Pr-MWe">
                                                         <rect key="frame" x="44" y="60" width="128" height="21"/>
@@ -228,13 +211,13 @@
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Total" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lqO-p5-Zdl">
-                                                        <rect key="frame" x="227" y="72" width="90" height="21"/>
+                                                        <rect key="frame" x="235" y="72" width="90" height="21"/>
                                                         <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="9"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Arrecadado" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ehi-wO-dqi">
-                                                        <rect key="frame" x="204" y="50" width="113" height="21"/>
+                                                        <rect key="frame" x="215" y="50" width="113" height="21"/>
                                                         <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -244,11 +227,11 @@
                                                 <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </view>
                                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WEs-3G-hft">
-                                                <rect key="frame" x="21" y="425" width="294" height="89"/>
+                                                <rect key="frame" x="17" y="425" width="306" height="89"/>
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhA-Lj-0hr">
@@ -266,14 +249,14 @@
                                             </scrollView>
                                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vi1-qo-ElF">
                                                 <rect key="frame" x="150" y="273" width="39" height="37"/>
-                                                <color key="pageIndicatorTintColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                <color key="currentPageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="pageIndicatorTintColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                <color key="currentPageIndicatorTintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                             </pageControl>
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
                                     <tableView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Informacoes" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="v25-DK-Mex">
-                                        <rect key="frame" x="17" y="698" width="340" height="278"/>
+                                        <rect key="frame" x="17" y="666" width="340" height="278"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <prototypes>
@@ -286,13 +269,13 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jlX-Um-Kt0">
                                                             <rect key="frame" x="217" y="11" width="108" height="21"/>
-                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="14"/>
                                                             <color key="textColor" red="0.42745098039215684" green="0.41960784313725491" blue="0.42745098039215684" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NCG-BO-pRS">
                                                             <rect key="frame" x="17" y="8" width="192" height="21"/>
-                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="15"/>
                                                             <color key="textColor" red="0.50196078431372548" green="0.49411764705882355" blue="0.50196078431372548" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -338,7 +321,7 @@
                                         </connections>
                                     </tableView>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Despesas" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HdV-Sy-xXt">
-                                        <rect key="frame" x="17" y="1004" width="340" height="281"/>
+                                        <rect key="frame" x="17" y="972" width="340" height="163"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Go6-ya-NG3" customClass="TMTripProjectViewCell" customModule="Tripme" customModuleProvider="target">
@@ -350,13 +333,13 @@
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gyW-3B-RdM">
                                                             <rect key="frame" x="218" y="11" width="107" height="21"/>
-                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                                            <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="14"/>
                                                             <color key="textColor" red="0.42745098040000001" green="0.41960784309999999" blue="0.42745098040000001" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JpR-tE-6jo">
                                                             <rect key="frame" x="17" y="8" width="193" height="21"/>
-                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                                            <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="15"/>
                                                             <color key="textColor" red="0.50196078430000002" green="0.4941176471" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -402,14 +385,14 @@
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuM-V1-H1e">
-                                        <rect key="frame" x="17" y="1316" width="340" height="315"/>
+                                        <rect key="frame" x="17" y="1165" width="340" height="315"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-ci-qss">
                                                 <rect key="frame" x="8" y="74" width="28" height="28"/>
                                             </imageView>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vRI-vw-IAm">
                                                 <rect key="frame" x="44" y="77" width="288" height="21"/>
-                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="13"/>
                                                 <color key="textColor" red="0.47450980392156861" green="0.47450980392156861" blue="0.47450980392156861" alpha="1" colorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
@@ -425,7 +408,7 @@
                                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
                                                 <color key="textColor" red="0.60784313729999995" green="0.60784313729999995" blue="0.60784313729999995" alpha="1" colorSpace="calibratedRGB"/>
-                                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
+                                                <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="15"/>
                                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                             </textView>
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ASE-cK-Qte">
@@ -443,29 +426,51 @@
                                         </subviews>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </view>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-dd-OeZ">
-                                        <rect key="frame" x="8" y="26" width="61" height="30"/>
-                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="14"/>
-                                        <state key="normal" title="Fechar">
-                                            <color key="titleColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="calibratedRGB"/>
-                                        </state>
-                                        <connections>
-                                            <action selector="fechar:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="hgq-vh-D8p"/>
-                                        </connections>
-                                    </button>
                                 </subviews>
-                                <constraints>
-                                    <constraint firstItem="egS-uF-NYU" firstAttribute="top" secondItem="Jsy-dd-OeZ" secondAttribute="bottom" constant="8" id="2ug-Ea-FBB"/>
-                                    <constraint firstItem="Y2A-cc-dPa" firstAttribute="top" secondItem="egS-uF-NYU" secondAttribute="bottom" constant="26" id="fn8-Cl-5cl"/>
-                                </constraints>
                             </scrollView>
+                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yah-dR-39p">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9qB-Kk-smy">
-                                <rect key="frame" x="313" y="576" width="52" height="52"/>
+                                <rect key="frame" x="313" y="598" width="52" height="52"/>
                                 <state key="normal" image="Botão doar"/>
                                 <connections>
                                     <action selector="doacao:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="vqx-VJ-Q70"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Jsy-dd-OeZ">
+                                <rect key="frame" x="8" y="10" width="61" height="30"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                <state key="normal" title="Fechar">
+                                    <color key="titleColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="fechar:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="hgq-vh-D8p"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" image="Linha Divisória-11" translatesAutoresizingMaskIntoConstraints="NO" id="egS-uF-NYU">
+                                <rect key="frame" x="0.0" y="41" width="375" height="2"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="2" id="6ir-K7-PrH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oAl-AY-pid">
+                                <rect key="frame" x="280" y="10" width="85" height="30"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                <state key="normal" title="Compartilhar">
+                                    <color key="titleColor" red="0.69803921568627447" green="0.69803921568627447" blue="0.69803921568627447" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btShare:" destination="NWZ-Kr-wqq" eventType="touchUpInside" id="AVW-tM-dbE"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Viagem" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbc-ol-Ez5">
+                                <rect key="frame" x="95" y="14" width="186" height="21"/>
+                                <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
+                                <color key="textColor" red="0.30196078431372547" green="0.30196078431372547" blue="0.30196078431372547" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -496,7 +501,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mTh-ou-0F4" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4750.5" y="1424"/>
+            <point key="canvasLocation" x="4336.5" y="2621"/>
         </scene>
         <!--Configurações-->
         <scene sceneID="NrB-UX-e3n">
@@ -696,11 +701,11 @@
                         <viewControllerLayoutGuide type="bottom" id="mMj-Yc-gBd"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="zlp-8v-AZf">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="720-gX-nES">
-                                <rect key="frame" x="20" y="20" width="48" height="30"/>
+                                <rect key="frame" x="4" y="20" width="48" height="30"/>
                                 <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
                                 <state key="normal" title="Fechar">
                                     <color key="titleColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
@@ -710,35 +715,35 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Pt5-HL-fo2">
-                                <rect key="frame" x="247" y="20" width="53" height="30"/>
+                                <rect key="frame" x="318" y="20" width="53" height="30"/>
                                 <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
                                 <state key="normal" title="Opcoes">
                                     <color key="titleColor" red="0.70196078431372544" green="0.70196078431372544" blue="0.70196078431372544" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q9a-AX-xuQ">
-                                <rect key="frame" x="75" y="24" width="164" height="21"/>
+                                <rect key="frame" x="105" y="24" width="164" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="WXZ-vS-fsF">
-                                <rect key="frame" x="0.0" y="58" width="320" height="240"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="240"/>
                                 <color key="backgroundColor" red="0.08235294118" green="0.46274509800000002" blue="0.92156862750000001" alpha="1" colorSpace="calibratedRGB"/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="57" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="3cI-5p-VfO">
-                                <rect key="frame" x="0.0" y="296" width="320" height="184"/>
+                                <rect key="frame" x="0.0" y="296" width="375" height="371"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cell" textLabel="3cE-dv-yhF" style="IBUITableViewCellStyleDefault" id="XKd-TB-ZcM">
-                                        <rect key="frame" x="0.0" y="28" width="320" height="57"/>
+                                        <rect key="frame" x="0.0" y="28" width="375" height="57"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="XKd-TB-ZcM" id="cBP-60-dfe">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="56.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="56.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="3cE-dv-yhF">
-                                                    <rect key="frame" x="15" y="0.0" width="290" height="56.5"/>
+                                                    <rect key="frame" x="15" y="0.0" width="345" height="56.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -754,36 +759,36 @@
                                 </connections>
                             </tableView>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" pagingEnabled="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lyX-gh-gXA">
-                                <rect key="frame" x="0.0" y="58" width="320" height="240"/>
+                                <rect key="frame" x="0.0" y="58" width="375" height="240"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u1-CT-rPM">
-                                        <rect key="frame" x="29" y="128" width="262" height="33"/>
-                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
-                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yFS-HL-auy">
-                                        <rect key="frame" x="42" y="166" width="235" height="21"/>
+                                        <rect key="frame" x="8" y="167" width="359" height="21"/>
                                         <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="12"/>
                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2Vt-aE-YPo">
-                                        <rect key="frame" x="109" y="15" width="102" height="102"/>
+                                        <rect key="frame" x="137" y="15" width="102" height="102"/>
                                     </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5u1-CT-rPM">
+                                        <rect key="frame" x="8" y="126" width="359" height="33"/>
+                                        <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                             </scrollView>
                             <pageControl opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="2" translatesAutoresizingMaskIntoConstraints="NO" id="joH-4d-uUu">
-                                <rect key="frame" x="141" y="251" width="39" height="37"/>
+                                <rect key="frame" x="168" y="251" width="39" height="37"/>
                             </pageControl>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="Barra cinza" translatesAutoresizingMaskIntoConstraints="NO" id="934-5b-GwV">
-                                <rect key="frame" x="0.0" y="55" width="320" height="2"/>
+                                <rect key="frame" x="0.0" y="55" width="375" height="2"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <nil key="simulatedStatusBarMetrics"/>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="ivImagem" destination="2Vt-aE-YPo" id="m7S-4f-Rei"/>
                         <outlet property="lbNome" destination="q9a-AX-xuQ" id="F0a-nc-fuo"/>
@@ -797,7 +802,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="kaS-ax-YyI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4971" y="2834"/>
+            <point key="canvasLocation" x="4970.5" y="2833.5"/>
         </scene>
         <!--Menu View Controller-->
         <scene sceneID="s8k-zl-wKr">
@@ -864,10 +869,10 @@
                                             <rect key="frame" x="0.0" y="0.0" width="290" height="450"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mochilão na América do Sul" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-Tm-ebL">
-                                                    <rect key="frame" x="18" y="293" width="282" height="33"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mochilão na América do Sul" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9eY-Tm-ebL">
+                                                    <rect key="frame" x="18" y="293" width="282" height="42"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="33" id="FMF-a9-IrV"/>
+                                                        <constraint firstAttribute="height" constant="42" id="FMF-a9-IrV"/>
                                                     </constraints>
                                                     <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
                                                     <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
@@ -877,12 +882,12 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="290" height="289"/>
                                                 </imageView>
                                                 <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progressViewStyle="bar" progress="0.5" progressImage="Criar conta-7" trackImage="facebook-11" translatesAutoresizingMaskIntoConstraints="NO" id="1o3-1Z-aSd">
-                                                    <rect key="frame" x="19" y="333" width="253" height="3"/>
+                                                    <rect key="frame" x="15" y="333" width="261" height="3"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="2" id="fLc-xa-jvi"/>
                                                     </constraints>
-                                                    <color key="progressTintColor" red="0.1176470588" green="0.90196078430000004" blue="0.47843137250000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                    <color key="trackTintColor" red="0.80392156859999997" green="0.80392156859999997" blue="0.80392156859999997" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="progressTintColor" red="0.0" green="0.90196078431372551" blue="0.46274509803921571" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="trackTintColor" red="0.89803921568627454" green="0.89803921568627454" blue="0.89803921568627454" alpha="1" colorSpace="calibratedRGB"/>
                                                 </progressView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="R$" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxn-m7-Buq">
                                                     <rect key="frame" x="233" y="349" width="43" height="21"/>
@@ -906,17 +911,17 @@
                                                     </constraints>
                                                 </imageView>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon-heart" translatesAutoresizingMaskIntoConstraints="NO" id="j22-rg-bEO">
-                                                    <rect key="frame" x="244" y="415" width="23" height="25"/>
+                                                    <rect key="frame" x="247" y="409" width="25" height="23"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="23" id="7I3-RT-DgC"/>
+                                                        <constraint firstAttribute="width" constant="25" id="7I3-RT-DgC"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Nome" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bfs-9k-Do3">
-                                                    <rect key="frame" x="63" y="409" width="162" height="21"/>
+                                                    <rect key="frame" x="66" y="409" width="162" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="21" id="jsh-II-cb9"/>
                                                     </constraints>
-                                                    <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
+                                                    <fontDescription key="fontDescription" name="Gidole-Regular" family="Gidole" pointSize="13"/>
                                                     <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -927,17 +932,11 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="total de R$ " textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lh2-e6-H4P">
-                                                    <rect key="frame" x="183" y="363" width="93" height="21"/>
+                                                    <rect key="frame" x="151" y="363" width="121" height="21"/>
                                                     <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="9"/>
-                                                    <color key="textColor" red="0.43137254901960786" green="0.43137254901960786" blue="0.43137254901960786" alpha="1" colorSpace="calibratedRGB"/>
+                                                    <color key="textColor" red="0.74117647058823533" green="0.74117647058823533" blue="0.74117647058823533" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MI7-7r-c8h">
-                                                    <rect key="frame" x="233" y="411" width="34" height="31"/>
-                                                    <connections>
-                                                        <action selector="FavoriteClicked:" destination="7h4-q1-55o" eventType="touchUpInside" id="Kx8-Ai-flJ"/>
-                                                    </connections>
-                                                </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Localizacao-icon" translatesAutoresizingMaskIntoConstraints="NO" id="ycU-Ys-aqU">
                                                     <rect key="frame" x="18" y="356" width="8" height="13"/>
                                                     <constraints>
@@ -945,7 +944,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DYQ-Od-xxf">
-                                                    <rect key="frame" x="15" y="398" width="44" height="44"/>
+                                                    <rect key="frame" x="18" y="398" width="44" height="44"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="44" id="LKw-05-lke"/>
                                                     </constraints>
@@ -953,25 +952,31 @@
                                                         <action selector="perfilButton:" destination="7h4-q1-55o" eventType="touchUpInside" id="s3U-Qw-GhF"/>
                                                     </connections>
                                                 </button>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MI7-7r-c8h">
+                                                    <rect key="frame" x="239" y="405" width="34" height="31"/>
+                                                    <connections>
+                                                        <action selector="FavoriteClicked:" destination="7h4-q1-55o" eventType="touchUpInside" id="Kx8-Ai-flJ"/>
+                                                    </connections>
+                                                </button>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="top" secondItem="lh2-e6-H4P" secondAttribute="bottom" constant="27" id="0kW-ox-YTZ"/>
-                                            <constraint firstItem="bfs-9k-Do3" firstAttribute="leading" secondItem="lev-nG-zh4" secondAttribute="trailing" constant="4" id="3FB-cK-mrs"/>
+                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="top" secondItem="lh2-e6-H4P" secondAttribute="bottom" constant="21" id="0kW-ox-YTZ"/>
+                                            <constraint firstItem="bfs-9k-Do3" firstAttribute="leading" secondItem="lev-nG-zh4" secondAttribute="trailing" constant="7" id="3FB-cK-mrs"/>
                                             <constraint firstItem="sKo-3L-udM" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leading" id="6Pk-iU-S7E"/>
-                                            <constraint firstItem="1o3-1Z-aSd" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leadingMargin" constant="11" id="7lZ-Jo-z0n"/>
+                                            <constraint firstItem="1o3-1Z-aSd" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leadingMargin" constant="7" id="7lZ-Jo-z0n"/>
                                             <constraint firstItem="ycU-Ys-aqU" firstAttribute="top" secondItem="1o3-1Z-aSd" secondAttribute="bottom" constant="21" id="9gh-hC-Yfv"/>
                                             <constraint firstItem="bfs-9k-Do3" firstAttribute="leading" secondItem="DYQ-Od-xxf" secondAttribute="trailing" constant="4" id="A7M-QF-clN"/>
                                             <constraint firstItem="gOx-0W-yS0" firstAttribute="baseline" secondItem="bxn-m7-Buq" secondAttribute="baseline" id="AoM-kF-hy1"/>
-                                            <constraint firstItem="j22-rg-bEO" firstAttribute="top" secondItem="lh2-e6-H4P" secondAttribute="bottom" constant="31" id="BOE-VI-Uij"/>
-                                            <constraint firstItem="lev-nG-zh4" firstAttribute="bottom" secondItem="j22-rg-bEO" secondAttribute="bottom" constant="2" id="Bbt-lk-7bT"/>
+                                            <constraint firstItem="j22-rg-bEO" firstAttribute="top" secondItem="lh2-e6-H4P" secondAttribute="bottom" constant="25" id="BOE-VI-Uij"/>
+                                            <constraint firstItem="lev-nG-zh4" firstAttribute="bottom" secondItem="j22-rg-bEO" secondAttribute="bottom" constant="10" id="Bbt-lk-7bT"/>
                                             <constraint firstItem="bxn-m7-Buq" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="94" id="CU2-SV-iuG"/>
                                             <constraint firstItem="DYQ-Od-xxf" firstAttribute="top" secondItem="Bzu-8p-JT4" secondAttribute="bottom" constant="26" id="Dc3-Wm-pJ7"/>
-                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="centerX" secondItem="j22-rg-bEO" secondAttribute="centerX" constant="-5.5" id="FIY-e4-ZNV"/>
+                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="centerX" secondItem="j22-rg-bEO" secondAttribute="centerX" constant="-3.5" id="FIY-e4-ZNV"/>
                                             <constraint firstItem="j22-rg-bEO" firstAttribute="leading" secondItem="bfs-9k-Do3" secondAttribute="trailing" constant="19" id="Gcg-fv-IJa"/>
-                                            <constraint firstItem="1o3-1Z-aSd" firstAttribute="top" secondItem="9eY-Tm-ebL" secondAttribute="bottom" constant="7" id="HSn-QA-sA8"/>
+                                            <constraint firstItem="1o3-1Z-aSd" firstAttribute="top" secondItem="9eY-Tm-ebL" secondAttribute="bottom" constant="-2" id="HSn-QA-sA8"/>
                                             <constraint firstItem="lev-nG-zh4" firstAttribute="centerY" secondItem="bfs-9k-Do3" secondAttribute="centerY" id="IkC-Ze-wm2"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="bxn-m7-Buq" secondAttribute="trailing" constant="6" id="KLS-GZ-gI5"/>
                                             <constraint firstItem="sKo-3L-udM" firstAttribute="centerX" secondItem="1o3-1Z-aSd" secondAttribute="centerX" id="Kbc-6A-2Ec"/>
@@ -979,7 +984,7 @@
                                             <constraint firstItem="DYQ-Od-xxf" firstAttribute="top" secondItem="ycU-Ys-aqU" secondAttribute="bottom" constant="29" id="Nwy-Nd-EJU"/>
                                             <constraint firstItem="lev-nG-zh4" firstAttribute="top" secondItem="ycU-Ys-aqU" secondAttribute="bottom" constant="29" id="Q4g-md-rdZ"/>
                                             <constraint firstItem="9eY-Tm-ebL" firstAttribute="top" secondItem="sKo-3L-udM" secondAttribute="bottom" constant="4" id="QOb-03-bMa"/>
-                                            <constraint firstItem="j22-rg-bEO" firstAttribute="bottom" secondItem="7h4-q1-55o" secondAttribute="bottomMargin" constant="-2" id="SM2-gV-KpY"/>
+                                            <constraint firstItem="j22-rg-bEO" firstAttribute="bottom" secondItem="7h4-q1-55o" secondAttribute="bottomMargin" constant="-10" id="SM2-gV-KpY"/>
                                             <constraint firstItem="gOx-0W-yS0" firstAttribute="leading" secondItem="Bzu-8p-JT4" secondAttribute="trailing" constant="85" id="SzW-4A-0pT"/>
                                             <constraint firstItem="lh2-e6-H4P" firstAttribute="top" secondItem="bxn-m7-Buq" secondAttribute="bottom" constant="-7" id="TEs-wq-irG"/>
                                             <constraint firstItem="Bzu-8p-JT4" firstAttribute="leading" secondItem="ycU-Ys-aqU" secondAttribute="trailing" constant="6" id="TWM-8A-ffB"/>
@@ -989,15 +994,15 @@
                                             <constraint firstAttribute="trailing" secondItem="sKo-3L-udM" secondAttribute="trailing" id="Xqr-p4-eMi"/>
                                             <constraint firstAttribute="bottomMargin" secondItem="DYQ-Od-xxf" secondAttribute="bottom" id="aCU-bk-JoV"/>
                                             <constraint firstItem="sKo-3L-udM" firstAttribute="top" secondItem="7h4-q1-55o" secondAttribute="top" id="dGv-6Y-aCY"/>
-                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="trailing" secondItem="j22-rg-bEO" secondAttribute="trailing" id="dqe-CD-TYt"/>
+                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="trailing" secondItem="j22-rg-bEO" secondAttribute="trailing" constant="1" id="dqe-CD-TYt"/>
                                             <constraint firstItem="bfs-9k-Do3" firstAttribute="top" secondItem="lh2-e6-H4P" secondAttribute="bottom" constant="25" id="kM5-Lq-LxY"/>
-                                            <constraint firstItem="lh2-e6-H4P" firstAttribute="leading" secondItem="bxn-m7-Buq" secondAttribute="leading" constant="-50" id="lru-DZ-sJV"/>
+                                            <constraint firstItem="lh2-e6-H4P" firstAttribute="leading" secondItem="bxn-m7-Buq" secondAttribute="leading" constant="-82" id="lru-DZ-sJV"/>
                                             <constraint firstItem="9eY-Tm-ebL" firstAttribute="trailing" secondItem="sKo-3L-udM" secondAttribute="trailing" constant="10" id="ni7-pA-Hp1"/>
-                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="top" secondItem="bxn-m7-Buq" secondAttribute="bottom" constant="41" id="o0a-w8-1O6"/>
-                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="bottom" secondItem="lev-nG-zh4" secondAttribute="bottom" id="q6r-mX-WnC"/>
+                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="top" secondItem="bxn-m7-Buq" secondAttribute="bottom" constant="35" id="o0a-w8-1O6"/>
+                                            <constraint firstItem="MI7-7r-c8h" firstAttribute="bottom" secondItem="lev-nG-zh4" secondAttribute="bottom" constant="-6" id="q6r-mX-WnC"/>
                                             <constraint firstItem="ycU-Ys-aqU" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leadingMargin" constant="10" id="qNF-ui-Jcg"/>
-                                            <constraint firstItem="lh2-e6-H4P" firstAttribute="trailing" secondItem="bxn-m7-Buq" secondAttribute="trailing" id="sOQ-pC-jec"/>
-                                            <constraint firstAttribute="trailingMargin" secondItem="j22-rg-bEO" secondAttribute="trailing" constant="15" id="t9Z-L7-uNJ"/>
+                                            <constraint firstItem="lh2-e6-H4P" firstAttribute="trailing" secondItem="bxn-m7-Buq" secondAttribute="trailing" constant="-4" id="sOQ-pC-jec"/>
+                                            <constraint firstAttribute="trailingMargin" secondItem="j22-rg-bEO" secondAttribute="trailing" constant="10" id="t9Z-L7-uNJ"/>
                                             <constraint firstItem="bxn-m7-Buq" firstAttribute="top" secondItem="1o3-1Z-aSd" secondAttribute="bottom" constant="14" id="u2t-d4-10l"/>
                                             <constraint firstAttribute="trailingMargin" secondItem="gOx-0W-yS0" secondAttribute="trailing" constant="36" id="uIN-lt-OPi"/>
                                             <constraint firstItem="lev-nG-zh4" firstAttribute="leading" secondItem="7h4-q1-55o" secondAttribute="leadingMargin" constant="7" id="uiy-An-9bN"/>
@@ -1207,7 +1212,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3f5-Qp-oeI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3793.5" y="1775.5"/>
+            <point key="canvasLocation" x="3445.5" y="1940.5"/>
         </scene>
         <!--Selecao Table View Controller-->
         <scene sceneID="FYy-FF-cQ2">

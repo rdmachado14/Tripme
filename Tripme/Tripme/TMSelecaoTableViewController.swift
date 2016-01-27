@@ -28,7 +28,6 @@ class TMSelecaoTableViewController: UIViewController {
         lbTitle.text = titulo
         myTable.tableFooterView = UIView(frame: CGRectZero)
         ParseQuerry()
-        print(cont)
 
         // Do any additional setup after loading the view.
     }

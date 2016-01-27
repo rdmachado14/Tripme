@@ -37,6 +37,7 @@ class TMMenuItensCell: UICollectionViewCell
     var id = String()
     private func updateUI()
     {
+        
         //interestTitleLabel?.text! = trips.title
         //featuredImageView?.image! = trips.featuredImage
         progressView.progress = Float(trips.dinheiroAtual)!/Float(trips.dinheiroTotal)!
@@ -48,7 +49,7 @@ class TMMenuItensCell: UICollectionViewCell
         if(trips.Favorite.boolValue){
             FAvorite.image = UIImage(named: "icon-heart")
         }else{
-            FAvorite.image = UIImage(named: "icon-heart-stroke")
+            FAvorite.image = UIImage(named: "Not_like")
         }
         
     }
@@ -64,7 +65,7 @@ class TMMenuItensCell: UICollectionViewCell
     @IBAction func FavoriteClicked(sender: AnyObject) {
         if(FAvorite.image == UIImage(named: "icon-heart")){
             FAvorite.growDown(0.1){
-                self.FAvorite.image = UIImage(named: "icon-heart-stroke")
+                self.FAvorite.image = UIImage(named: "Not_like")
                 self.FAvorite.growNormalSize(0.1)
             }
         } else {
@@ -91,5 +92,6 @@ class TMMenuItensCell: UICollectionViewCell
         self.layer.borderColor = UIColor.whiteColor().CGColor
         self.layer.cornerRadius = 10.0
         self.clipsToBounds = true
+        
     }
 }
