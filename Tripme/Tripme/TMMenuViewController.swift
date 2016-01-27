@@ -188,7 +188,8 @@ extension TMMenuViewController : UICollectionViewDataSource
         }
         
         if let valorTotal = tripResult[indexPath.row]["Valor"] as? String {
-            cell.DinheiroTotal.text = "Total de R$ \(valorTotal)"
+            
+            cell.DinheiroTotal.text = "total de R$ \(valorTotal)"
         }
         
         if let local = tripResult[indexPath.row]["localidade"] as? String {
@@ -202,6 +203,7 @@ extension TMMenuViewController : UICollectionViewDataSource
         if let value = tripResult[indexPath.row]["Viagem"] as? String
         {
             cell.interestTitleLabel.text = value
+            
         }
         cell.id = (PFUser.currentUser()?.objectId)!
         cell.objeto = tripResult[indexPath.row]

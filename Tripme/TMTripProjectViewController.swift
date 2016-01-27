@@ -72,6 +72,10 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     override func viewDidLoad()
     {
         super.viewDidLoad()
+        let transform:CGAffineTransform = CGAffineTransformMakeScale(1.0, 3.0);
+        pvTripProgress.transform = transform;
+        pvTripProgress.layer.cornerRadius = 4.5
+        pvTripProgress.clipsToBounds = true
         recognizer.addTarget(self, action: "profileImageHasBeenTapped")
         print("testando a view: \(view.frame.size)")
         print(verificador.boolValue)
@@ -80,6 +84,8 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         } else {
             loadFromViewCriarConta()
         }
+        
+        
         lbTripHost.userInteractionEnabled = true
         ivProfilePicture.userInteractionEnabled = true
         //lbTripHost.addGestureRecognizer(recognizer)
@@ -172,7 +178,6 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             for i in 0..<arrayImagensTela.count {
                 let imgOne = UIImageView(frame: CGRectMake(scrollViewWidth*CGFloat(i), 0,scrollViewWidth, scrollViewHeight))
                 imgOne.image = arrayImagensTela[i]
-                
                 self.scrollViewImage.addSubview(imgOne)
             }
             
@@ -310,56 +315,56 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     func customView()
     {
         // view 1
-        view1.layer.cornerRadius = 10
+        //view1.layer.cornerRadius = 10
         view1.layer.masksToBounds = true
-        view1.layer.borderColor = UIColor.grayColor().CGColor
-        view1.layer.borderWidth = 0.5
+        //view1.layer.borderColor = UIColor.grayColor().CGColor
+        //view1.layer.borderWidth = 0.5
         
         view1.layer.contentsScale = UIScreen.mainScreen().scale;
         view1.layer.shadowColor = UIColor.blackColor().CGColor;
         view1.layer.shadowOffset = CGSizeZero;
         view1.layer.shadowRadius = 5.0;
-        view1.layer.shadowOpacity = 0.5;
+        view1.layer.shadowOpacity = 0.3;
         view1.layer.masksToBounds = false;
         view1.clipsToBounds = false;
         
         // view 4
-        view4.layer.cornerRadius = 10
+        //view4.layer.cornerRadius = 10
         view4.layer.masksToBounds = true
-        view4.layer.borderColor = UIColor.grayColor().CGColor
-        view4.layer.borderWidth = 0.5
+        //view4.layer.borderColor = UIColor.grayColor().CGColor
+        //view4.layer.borderWidth = 0.5
         
         view4.layer.contentsScale = UIScreen.mainScreen().scale;
         view4.layer.shadowColor = UIColor.blackColor().CGColor;
         view4.layer.shadowOffset = CGSizeZero;
         view4.layer.shadowRadius = 5.0;
-        view4.layer.shadowOpacity = 0.5;
+        view4.layer.shadowOpacity = 0.3;
         view4.layer.masksToBounds = false;
         view4.clipsToBounds = false;
         
-        myTableView.layer.cornerRadius = 10
+        //myTableView.layer.cornerRadius = 10
         myTableView.layer.masksToBounds = true
-        myTableView.layer.borderColor = UIColor.grayColor().CGColor
-        myTableView.layer.borderWidth = 0.5
+//        myTableView.layer.borderColor = UIColor.grayColor().CGColor
+//        myTableView.layer.borderWidth = 0.5
         
         myTableView.layer.contentsScale = UIScreen.mainScreen().scale;
         myTableView.layer.shadowColor = UIColor.blackColor().CGColor;
         myTableView.layer.shadowOffset = CGSizeZero;
         myTableView.layer.shadowRadius = 5.0;
-        myTableView.layer.shadowOpacity = 0.5;
+        myTableView.layer.shadowOpacity = 0.3;
         myTableView.layer.masksToBounds = false;
         myTableView.clipsToBounds = false;
         
-        mtTableView2.layer.cornerRadius = 10
+        //mtTableView2.layer.cornerRadius = 10
         mtTableView2.layer.masksToBounds = true
-        mtTableView2.layer.borderColor = UIColor.grayColor().CGColor
-        mtTableView2.layer.borderWidth = 0.5
+//        mtTableView2.layer.borderColor = UIColor.grayColor().CGColor
+//        mtTableView2.layer.borderWidth = 0.5
         
         mtTableView2.layer.contentsScale = UIScreen.mainScreen().scale;
         mtTableView2.layer.shadowColor = UIColor.blackColor().CGColor;
         mtTableView2.layer.shadowOffset = CGSizeZero;
         mtTableView2.layer.shadowRadius = 5.0;
-        mtTableView2.layer.shadowOpacity = 0.5;
+        mtTableView2.layer.shadowOpacity = 0.3;
         mtTableView2.layer.masksToBounds = false;
         mtTableView2.clipsToBounds = false;
 

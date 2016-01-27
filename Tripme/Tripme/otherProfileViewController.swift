@@ -21,6 +21,7 @@ class otherProfileViewController: UIViewController, UIScrollViewDelegate {
     var textView = UITextView()
     var recebeObjeto: PFObject!
     let strings = ["Viagens de ", "Mensagens"]
+    let claseParse = ["ID"]
     var titulo = String()
     var imagem = UIImage()
     override func viewDidLoad() {
@@ -70,6 +71,7 @@ class otherProfileViewController: UIViewController, UIScrollViewDelegate {
         let viewController:TMSelecaoTableViewController = segue.destinationViewController as! TMSelecaoTableViewController
         print((recebeObjeto.objectForKey("ID") as? String)!)
         viewController.id = (recebeObjeto.objectForKey("ID") as? String)!
+        viewController.classeNoParse = "ID"
         viewController.titulo = titulo
     }
 
