@@ -53,10 +53,12 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+//        
+//        menuItemCell.DinheiroAtual.text = "100"
+//        menuItemCell.DinheiroTotal.text = "900"
         
         ///// CHAMADA DA FUNCAO
-        progressViewAction()
+       // progressViewAction()
         
         
         let currentUser = PFUser.currentUser()
@@ -206,8 +208,22 @@ extension TMMenuViewController : UICollectionViewDataSource
             cell.interestTitleLabel.text = localDestino
         }
         
+        cell.DinheiroAtual.text = "100"
+        cell.DinheiroTotal.text = "900"
+        
+        self.collectedNumber = NSString(string: cell.DinheiroAtual.text!).floatValue
+        
+        self.tripTotalNumber = NSString(string: cell.DinheiroTotal.text!).floatValue
+        
+        dispatch_async(dispatch_get_main_queue())
+            {
+                cell.progressView.setProgress(self.collectedNumber/self.tripTotalNumber, animated: true)
+        }
+
+        
         if let valorTotal = tripResult[indexPath.row]["Valor"] as? String {
             cell.DinheiroTotal.text = "Total de R$ \(valorTotal)"
+//            cell.DinheiroAtual.text = "100"
         }
         
         if let local = tripResult[indexPath.row]["localidade"] as? String {
@@ -222,6 +238,8 @@ extension TMMenuViewController : UICollectionViewDataSource
         {
             cell.interestTitleLabel.text = value
         }
+        
+//        cell.DinheiroTotal.text = "100,0"
         
         let transform:CGAffineTransform = CGAffineTransformMakeScale(1.0, 3.0);
         cell.progressView.transform = transform;
