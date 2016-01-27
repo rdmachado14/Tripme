@@ -180,9 +180,15 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
         lbTripName.text = arrayTela1[0]
         
-//        lbCollected.text = "900"
         lbTripTotal.text = "Total de R$ \(arrayTela1[3])"
         
+        if verificador.boolValue {
+            lbCollected.text = "R$" + String(object2.valueForKey("Coletado") as! NSNumber)
+        } else {
+            lbCollected.text = "R$ 0"
+        }
+
+    
     }
     
     func loadParse() {
@@ -230,7 +236,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
                     }
                 })
         }
-        }
+    }
         
         
         
