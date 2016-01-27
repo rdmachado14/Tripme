@@ -9,6 +9,11 @@
 import UIKit
 import Parse
 
+
+protocol ShowDetailDelegate {
+    func showDetail(displayText:PFObject, imagem: UIImage)
+}
+
 class TMMenuViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var imageView : UIImageView!
     @IBOutlet weak var collectionView: UICollectionView!
@@ -30,7 +35,7 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
     var object: PFObject!
     
     var imagens: [UIImage]!
-    
+    var imagem = UIImage()
     // MARK: - UICollectionViewDataSource
     private var trips = Trips.createInterests()
     
@@ -93,6 +98,10 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
         let viewController:TMTripProjectViewController = segue.destinationViewController as! TMTripProjectViewController
             viewController.object2 = self.object
             viewController.verificador = true
+        } else if segue.identifier == "otherProfile"{
+            let viewController:otherProfileViewController = segue.destinationViewController as! otherProfileViewController
+            viewController.recebeObjeto = self.object
+            viewController.imagem = self.imagem
         }
     }
     
@@ -206,6 +215,7 @@ extension TMMenuViewController : UICollectionViewDataSource
     
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell
     {
+        
         let cell:TMMenuItensCell = collectionView.dequeueReusableCellWithReuseIdentifier(Storyboard.CellIdentifier, forIndexPath: indexPath) as! TMMenuItensCell
         if let localDestino = tripResult[indexPath.row]["Viagem"] as? String {
             cell.interestTitleLabel.text = localDestino
@@ -252,6 +262,8 @@ extension TMMenuViewController : UICollectionViewDataSource
         {
             cell.interestTitleLabel.text = value
         }
+        cell.id = (PFUser.currentUser()?.objectId)!
+        cell.objeto = tripResult[indexPath.row]
         
 //        cell.DinheiroTotal.text = "100,0"
         
@@ -259,6 +271,8 @@ extension TMMenuViewController : UICollectionViewDataSource
         cell.progressView.transform = transform;
         cell.progressView.layer.cornerRadius = 4.5
         cell.progressView.clipsToBounds = true
+        cell.showDetailDelegate = self
+        
         
         if let finalImage = tripResult[indexPath.row]["Foto0"] as? PFFile {
         
@@ -350,5 +364,15 @@ extension TMMenuViewController: UICollectionViewDelegate
 //        }
         performSegueWithIdentifier("descricaoPelaCollection", sender: self)
         //print(indexPath.row)
+    }
+}
+
+
+extension TMMenuViewController : ShowDetailDelegate {
+    func showDetail(displayText:PFObject, imagem: UIImage){
+        //print("oshi diaxo: \(displayText)")
+        self.object = displayText
+        self.imagem = imagem
+        performSegueWithIdentifier("otherProfile", sender: self)
     }
 }

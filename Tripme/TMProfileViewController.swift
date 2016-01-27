@@ -28,11 +28,12 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate, UITextVie
     var lastContentOfSet = CGFloat()
     @IBOutlet weak var pageControll: UIPageControl!
     @IBOutlet weak var nuvem1: UIImageView!
-    
+    var titulo = String()
+    var categoria = String()
     @IBOutlet weak var configuracaoOutlet: UIButton!
     @IBOutlet weak var fecharOutlet: UIButton!
-    
-    
+    let strings = ["Minhas viagens", "Viagens que eu ajudei", "Viagens que gostei", "Mensagens"]
+    let parseCategorias = ["ID", "ID", "likes","ID"]
     
     
     var verificador = Bool()
@@ -41,7 +42,6 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate, UITextVie
     
     override func viewWillAppear(animated: Bool)
     {
-        pageControll.hidden = true
         nuvem1.goLeftAndAgain2(true)
         nuvem2.goLeftAndAgainNuvem(true)
         nuvem3.goLeftAndAgainNuvem2(false)
@@ -71,7 +71,16 @@ class TMProfileViewController: UIViewController, UIScrollViewDelegate, UITextVie
         
     }
     
-    
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == "selecaoTable" {
+            let viewController:TMSelecaoTableViewController = segue.destinationViewController as! TMSelecaoTableViewController
+            let currentUser = PFUser.currentUser()
+            viewController.titulo = titulo
+            viewController.id = (currentUser?.objectId)!
+            viewController.classeNoParse = categoria
+            
+        }
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -243,15 +252,7 @@ extension TMProfileViewController: UITableViewDataSource {
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("cell")
-        if indexPath.row == 0 {
-            cell?.textLabel?.text = "Minhas viagens"
-        } else if indexPath.row == 1 {
-            cell?.textLabel?.text = "Viagens que eu ajudei"
-        } else if indexPath.row == 2 {
-            cell?.textLabel?.text = "Viagens que gostei"
-        } else if indexPath.row == 3 {
-            cell?.textLabel?.text = "Mensagens"
-        }
+        cell?.textLabel?.text = strings[indexPath.row]
         
         let setinha = UIImageView(image: UIImage(named: "Setinha"))
         cell?.accessoryView = setinha
@@ -291,6 +292,8 @@ extension TMProfileViewController: UITableViewDelegate {
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         print("clicou: \(indexPath.row)")
+        titulo = strings[indexPath.row]
+        categoria = parseCategorias[indexPath.row]
         performSegueWithIdentifier("selecaoTable", sender: self)
         myTable.deselectRowAtIndexPath(indexPath, animated: true)
     }
