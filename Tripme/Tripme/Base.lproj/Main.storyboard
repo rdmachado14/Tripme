@@ -82,8 +82,6 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -190,8 +188,8 @@
                                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fpf-gn-9TA">
                                                 <rect key="frame" x="0.0" y="304" width="340" height="101"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome viagem" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-Bd-CWe">
-                                                        <rect key="frame" x="8" y="8" width="309" height="21"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nome viagem" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="c3F-Bd-CWe">
+                                                        <rect key="frame" x="8" y="0.0" width="309" height="37"/>
                                                         <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="15"/>
                                                         <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                         <nil key="highlightedColor"/>
@@ -300,17 +298,9 @@
                                                             <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ueE-yJ-ajh">
-                                                            <rect key="frame" x="284" y="10" width="36" height="30"/>
-                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
-                                                            <state key="normal" title="Editar">
-                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                        </button>
                                                     </subviews>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="btEdit" destination="ueE-yJ-ajh" id="lNm-WY-z6F"/>
                                                     <outlet property="lbName" destination="bch-YP-s2A" id="Sw2-Mn-ba5"/>
                                                 </connections>
                                             </tableViewCell>
@@ -320,8 +310,8 @@
                                             <outlet property="delegate" destination="NWZ-Kr-wqq" id="GhK-0u-8Ae"/>
                                         </connections>
                                     </tableView>
-                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Despesas" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HdV-Sy-xXt">
-                                        <rect key="frame" x="17" y="972" width="340" height="163"/>
+                                    <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="Despesas" alwaysBounceVertical="YES" scrollEnabled="NO" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="HdV-Sy-xXt">
+                                        <rect key="frame" x="17" y="972" width="340" height="270"/>
                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         <prototypes>
                                             <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" id="Go6-ya-NG3" customClass="TMTripProjectViewCell" customModule="Tripme" customModuleProvider="target">
@@ -358,13 +348,6 @@
                                                     <rect key="frame" x="0.0" y="0.0" width="340" height="49.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
-                                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="T3U-0c-BW1">
-                                                            <rect key="frame" x="284" y="10" width="36" height="30"/>
-                                                            <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="13"/>
-                                                            <state key="normal" title="Editar">
-                                                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                                            </state>
-                                                        </button>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5IX-8N-TaC">
                                                             <rect key="frame" x="19" y="14" width="252" height="21"/>
                                                             <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
@@ -374,7 +357,6 @@
                                                     </subviews>
                                                 </tableViewCellContentView>
                                                 <connections>
-                                                    <outlet property="btEdit" destination="T3U-0c-BW1" id="3GK-Bu-Uha"/>
                                                     <outlet property="lbName" destination="5IX-8N-TaC" id="Em1-Y2-Adk"/>
                                                 </connections>
                                             </tableViewCell>
@@ -385,7 +367,7 @@
                                         </connections>
                                     </tableView>
                                     <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OuM-V1-H1e">
-                                        <rect key="frame" x="17" y="1165" width="340" height="315"/>
+                                        <rect key="frame" x="17" y="1268" width="340" height="315"/>
                                         <subviews>
                                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0cR-ci-qss">
                                                 <rect key="frame" x="8" y="74" width="28" height="28"/>
@@ -2129,8 +2111,8 @@
         <image name="r1" width="750" height="513"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="kuQ-5M-qfy"/>
         <segue reference="eSa-EH-ogh"/>
-        <segue reference="XOq-Dc-G7e"/>
+        <segue reference="o4u-Iy-2Vc"/>
+        <segue reference="kuQ-5M-qfy"/>
     </inferredMetricsTieBreakers>
 </document>

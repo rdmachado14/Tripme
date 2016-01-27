@@ -48,7 +48,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     var arrayTela3:[String] = []
     var object: PFObject!
     var object2: PFObject!
-    
+    var likeButton: PFObject!
     struct Objects {
         var sectionName: String!
         var sectionObjects: [String]!
@@ -197,8 +197,8 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             
             Objects(
                 sectionName: "Despesas da viagem",
-                sectionObjects: [arrayTela3[0],arrayTela3[2]],
-                sectionNameObjects: ["Passagens aérias","Alimentação"],
+                sectionObjects: [arrayTela3[0],arrayTela3[1],arrayTela3[2],arrayTela3[3],arrayTela3[4]],
+                sectionNameObjects: ["Passagens aérias","Alimentação", "Hospedagem", "Lazer", "Saude"],
                 BackGroungColor: UIColor().colorWithHexString("431A8D")
             )
         ]
@@ -216,7 +216,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     
     func loadParse() {
         arrayTela1 = ["","","","","","",""]
-        arrayTela3 = ["","",""]
+        arrayTela3 = ["","","","",""]
         arrayTela1[2] = (object2.objectForKey("Descricao") as? String)!
         arrayTela1[0] = (object2.objectForKey("Viagem") as? String)!
         arrayTela1[6] = (object2.objectForKey("DoacaoMinima") as? String)!
@@ -224,7 +224,10 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         arrayTela1[4] = (object2.objectForKey("DataLimite") as? String)!
         arrayTela1[5] = (object2.objectForKey("DiasDeViagem") as? String)!
         arrayTela3[0] = (object2.objectForKey("CustoPassagem") as? String)!
-        arrayTela3[2] = (object2.objectForKey("CustoAlimentacao") as? String)!
+        arrayTela3[1] = (object2.objectForKey("CustoAlimentacao") as? String)!
+        arrayTela3[2] = (object2.objectForKey("CustoHospedagem") as? String)!
+        arrayTela3[3] = (object2.objectForKey("CustoLazer") as? String)!
+        arrayTela3[4] = (object2.objectForKey("CustoSaude") as? String)!
         
         for i in 0..<4 {
             if (object2.objectForKey("Foto\(i)") != nil) {
@@ -479,8 +482,14 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     
     @IBAction func btLikeTrip(sender: AnyObject)
     {
-        object.addUniqueObject((PFUser.currentUser()?.objectId)!, forKey: "Favoritos")
-        object.saveInBackgroundWithBlock { (success: Bool, NSError) -> Void in
+        
+        if verificador {
+            likeButton = object2
+        } else {
+            likeButton = object
+        }
+        likeButton.addUniqueObject((PFUser.currentUser()?.objectId)!, forKey: "likes")
+        likeButton.saveInBackgroundWithBlock { (success: Bool, NSError) -> Void in
             if NSError == nil
             {
                 print("sem erro!")
