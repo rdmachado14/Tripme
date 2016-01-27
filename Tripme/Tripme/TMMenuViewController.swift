@@ -61,16 +61,14 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        
-//        menuItemCell.DinheiroAtual.text = "100"
-//        menuItemCell.DinheiroTotal.text = "900"
-        
-        ///// CHAMADA DA FUNCAO
-       // progressViewAction()
-        
+
+        self.searchBar.hidden = true
         
         let currentUser = PFUser.currentUser()
+        print(currentUser)
         self.view.backgroundColor = UIColor().colorWithHexString("118DF0")
+        
+        
         
         
         
