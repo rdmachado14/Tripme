@@ -30,6 +30,8 @@ class TMMenuItensCell: UICollectionViewCell
     @IBOutlet weak var DinheiroAtual: UILabel!
     @IBOutlet weak var DinheiroTotal: UILabel!
     
+    
+    
     private func updateUI()
     {
         //interestTitleLabel?.text! = trips.title
@@ -47,7 +49,6 @@ class TMMenuItensCell: UICollectionViewCell
         }
         
     }
-    
     
     @IBAction func FavoriteClicked(sender: AnyObject) {
         if(FAvorite.image == UIImage(named: "icon-heart")){

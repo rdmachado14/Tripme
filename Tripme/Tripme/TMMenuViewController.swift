@@ -18,6 +18,11 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
     @IBOutlet weak var currentUserFullNameButton: UIButton!
     @IBOutlet weak var lbSecondName: UILabel!
     
+    
+    ////// AQUIIIII
+    var menuItemCell = TMMenuItensCell()
+
+    
     var tripResult = [PFObject]()
     var object: PFObject!
     
@@ -25,6 +30,10 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: - UICollectionViewDataSource
     private var trips = Trips.createInterests()
+    
+    // Referência para os outlets de arrecadação e o total
+    var collectedNumber = Float()
+    var tripTotalNumber = Float()
     
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
@@ -45,6 +54,9 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        ///// CHAMADA DA FUNCAO
+        progressViewAction()
         
         
         let currentUser = PFUser.currentUser()
@@ -131,6 +143,23 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
             }
         }
     }
+    
+    
+    // FUNCAO AQUI
+    func progressViewAction()
+    {
+        
+        self.collectedNumber = NSString(string: menuItemCell.DinheiroAtual.text!).floatValue
+        
+        self.tripTotalNumber = NSString(string: menuItemCell.DinheiroTotal.text!).floatValue
+        
+        dispatch_async(dispatch_get_main_queue())
+            {
+                self.menuItemCell.progressView.setProgress(self.collectedNumber/self.tripTotalNumber, animated: true)
+        }
+        
+    }
+
     
     func searchBarTextDidEndEditing(searchBar: UISearchBar)
     {
