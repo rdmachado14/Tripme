@@ -30,13 +30,17 @@ class TMMenuItensCell: UICollectionViewCell
     @IBOutlet weak var DinheiroAtual: UILabel!
     @IBOutlet weak var DinheiroTotal: UILabel!
     
-    
+    var Total: Float!
+    var ATUAL: Float!
     
     private func updateUI()
     {
         //interestTitleLabel?.text! = trips.title
         //featuredImageView?.image! = trips.featuredImage
-        progressView.progress = Float(trips.dinheiroAtual)!/Float(trips.dinheiroTotal)!
+        //print("")
+        //print(Float(trips.dinheiroAtual)!/Float(trips.dinheiroTotal)!)
+        //print("")
+        //progressView.progress = Float(trips.dinheiroAtual)!/Float(trips.dinheiroTotal)!
         lbLocal.text = trips.local
         DinheiroAtual.text = trips.dinheiroAtual
         //DinheiroTotal.text = trips.dinheiroTotal
@@ -48,6 +52,10 @@ class TMMenuItensCell: UICollectionViewCell
             FAvorite.image = UIImage(named: "icon-heart-stroke")
         }
         
+    }
+    
+    func progressViewAction(){
+        progressView.setProgress(ATUAL/Total, animated: true)
     }
     
     @IBAction func FavoriteClicked(sender: AnyObject) {

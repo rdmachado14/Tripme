@@ -21,6 +21,9 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
     
     ////// AQUIIIII
     var menuItemCell = TMMenuItensCell()
+    
+    var verificador = false
+
 
     
     var tripResult = [PFObject]()
@@ -79,7 +82,7 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
         //        perfilImagem.layer.borderWidth = 1
         //        perfilImagem.layer.borderColor = UIColor.whiteColor().CGColor
         loadParse()
-        queryParse()
+        //queryParse()
         
         collectionView.window?.makeKeyWindow()
     }
@@ -208,23 +211,34 @@ extension TMMenuViewController : UICollectionViewDataSource
             cell.interestTitleLabel.text = localDestino
         }
         
-        cell.DinheiroAtual.text = "900"
-        cell.DinheiroTotal.text = "5000"
         
-        self.collectedNumber = NSString(string: cell.DinheiroAtual.text!).floatValue
         
-        self.tripTotalNumber = NSString(string: cell.DinheiroTotal.text!).floatValue
-        
-        dispatch_async(dispatch_get_main_queue())
-            {
-                cell.progressView.setProgress(self.collectedNumber/self.tripTotalNumber, animated: true)
-        }
+//        self.collectedNumber = NSString(string: cell.DinheiroAtual.text!).floatValue
+//        
+//        self.tripTotalNumber = NSString(string: cell.DinheiroTotal.text!).floatValue
+//        
+//        dispatch_async(dispatch_get_main_queue())
+//            {
+//                cell.progressView.setProgress(self.collectedNumber/self.tripTotalNumber, animated: true)
+//        }
 
         
         if let valorTotal = tripResult[indexPath.row]["Valor"] as? String {
             cell.DinheiroTotal.text = "Total de R$ \(valorTotal)"
+            cell.Total = Float(valorTotal)
+            //self.tripTotalNumber = Float(valorTotal)!
 //            cell.DinheiroAtual.text = "100"
         }
+        
+        if let valorAtual = tripResult[indexPath.row]["Coletado"] as? NSNumber
+        {
+            cell.DinheiroAtual.text = String(valorAtual)
+            //self.collectedNumber = Float(valorAtual)
+            cell.ATUAL = Float(valorAtual)
+        }
+        
+        cell.progressViewAction()
+        ///cell.progressView.progress = 0.5
         
         if let local = tripResult[indexPath.row]["localidade"] as? String {
             cell.lbLocal.text = local
@@ -277,6 +291,7 @@ extension TMMenuViewController : UICollectionViewDataSource
                 }
             })
         }
+        
         
         return cell
     }
