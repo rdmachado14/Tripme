@@ -14,7 +14,6 @@ class TMTripProjectHeader: UITableViewCell
     
 
     @IBOutlet weak var lbName: UILabel!
-    @IBOutlet weak var btEdit: UIButton!
 
 
 }

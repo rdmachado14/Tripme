@@ -101,6 +101,7 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
                 }
                 
                 // recarregando os dados
+                print(self.tripResult.count)
                 self.collectionView.reloadData()
                 
             } else {
