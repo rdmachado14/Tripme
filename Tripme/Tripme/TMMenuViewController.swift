@@ -118,6 +118,7 @@ class TMMenuViewController: UIViewController, UISearchBarDelegate {
                 }
                 
                 // recarregando os dados
+                print(self.tripResult.count)
                 self.collectionView.reloadData()
                 
             } else {
@@ -245,6 +246,7 @@ extension TMMenuViewController : UICollectionViewDataSource
             cell.DinheiroAtual.text = String(valorAtual)
             //self.collectedNumber = Float(valorAtual)
             cell.ATUAL = Float(valorAtual)
+
         }
         
         cell.progressViewAction()
@@ -261,6 +263,7 @@ extension TMMenuViewController : UICollectionViewDataSource
         if let value = tripResult[indexPath.row]["Viagem"] as? String
         {
             cell.interestTitleLabel.text = value
+            
         }
         cell.id = (PFUser.currentUser()?.objectId)!
         cell.objeto = tripResult[indexPath.row]

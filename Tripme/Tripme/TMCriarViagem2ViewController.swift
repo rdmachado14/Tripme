@@ -119,7 +119,14 @@ class TMCriarViagem2ViewController: UIViewController {
     
     
     @IBAction func proximo(sender: AnyObject) {
-        performSegueWithIdentifier("tela2", sender: self)
+        if imagens.count == 0 {
+            let alert=UIAlertController(title: "Opa", message: "Voce precisa adicionar alguma foto", preferredStyle: UIAlertControllerStyle.Alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil))
+            showViewController(alert, sender: self)
+        } else {
+            performSegueWithIdentifier("tela2", sender: self)
+        }
+        
     }
     
 
