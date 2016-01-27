@@ -180,7 +180,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
         
         lbTripName.text = arrayTela1[0]
         
-        lbCollected.text = "900"
+//        lbCollected.text = "900"
         lbTripTotal.text = "Total de R$ \(arrayTela1[3])"
         
     }

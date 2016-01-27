@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Parse
 
 class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
 {
@@ -41,6 +42,10 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         
         registerNotifications()
         
+        let tap = UITapGestureRecognizer(target: self, action: "dismissKeyboard")
+        view.addGestureRecognizer(tap)
+
+        
 
         
         
@@ -51,6 +56,11 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardDidShow:"), name:UIKeyboardDidShowNotification, object: nil)
         NSNotificationCenter.defaultCenter().addObserver(self, selector: Selector("keyboardWillHide:"), name:UIKeyboardWillHideNotification, object: nil)
+    }
+    
+    func dismissKeyboard()
+    {
+        view.endEditing(true)
     }
     
     
@@ -78,10 +88,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         super.didReceiveMemoryWarning()
     }
     
-    func dismissKeyboard()
-    {
-        view.endEditing(true)
-    }
+
     
     override func prefersStatusBarHidden() -> Bool
     {
@@ -124,8 +131,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         vetor = [String]()
         
         
-        print(info.count)
-        
+    
         // varrendo cada posição do vetor
         for i in 0...4 {
             
@@ -137,12 +143,9 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
                 let cell = m as! TMPagamento2TableViewCell
                 
                 print(cell)
-                
-                //let cell: TMPagamento2TableViewCell = self.minhaTableView.cellForRowAtIndexPath(NSIndexPath(forRow: i, inSection: 0)) as! TMPagamento2TableViewCell
-                //            let cell = minhaTableView.cellForRowAtIndexPath(index)
+            
                 print(cell.textInfo.text)
                 
-                print("passou do william")
                 if(cell.textInfo.text != ""){
                     vetor.append(cell.textInfo.text!)
                 } else {
@@ -160,8 +163,6 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
         if !error
         {
             let card = STPCard()
-            
-            //vetor[0].placeholder = "teste"
             
             // verificando se data de validade do cartão está vazia
             if vetor[3].isEmpty == false
@@ -201,8 +202,23 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
             })
 
         }
-        
-
+    
+        // SALVANDO NO PARSE
+        let object = PFObject(className: "Trip")
+    
+        object["Coletado"] = labelValor.text
+        object["Viagem"] = labelNomeViagem.text
+    
+        object.saveInBackgroundWithBlock { (success, error) -> Void in
+            if success
+            {
+                print("SALVO!!!!")
+            }
+            else
+            {
+                print(error)
+            }
+        }
     }
     
     func handleError(error: NSError)
