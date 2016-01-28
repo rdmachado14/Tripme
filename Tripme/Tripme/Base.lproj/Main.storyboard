@@ -100,7 +100,6 @@
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
             <string>TondoTrial-Regular</string>
-            <string>TondoTrial-Regular</string>
         </mutableArray>
     </customFonts>
     <scenes>
@@ -2357,7 +2356,8 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="eSa-EH-ogh"/>
-        <segue reference="ILO-Cg-MXo"/>
         <segue reference="o4u-Iy-2Vc"/>
+        <segue reference="ILO-Cg-MXo"/>
+        <segue reference="kuQ-5M-qfy"/>
     </inferredMetricsTieBreakers>
 </document>

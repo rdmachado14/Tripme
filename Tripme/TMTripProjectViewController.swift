@@ -637,10 +637,11 @@ extension TMTripProjectViewController: UITableViewDelegate
     @IBAction func btShare(sender: AnyObject)
     {
         let shareFacebook: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        //        shareFacebook.setInitialText("") // texto inicial
-        //        shareFacebook.addImage() // imagem inicial
+        
+        shareFacebook.setInitialText(lbTripName.text)
+        shareFacebook.addImage(ivProfilePicture.image)
         
         self.presentViewController(shareFacebook, animated: true, completion: nil)
-    }
-    
+        
+        }
 }
