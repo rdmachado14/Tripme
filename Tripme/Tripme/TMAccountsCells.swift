@@ -22,6 +22,8 @@ class TMAccountsCells: UITableViewCell
 
     @IBAction func actionSwitch(sender: AnyObject)
     {
+        
+        let user = PFUser.currentUser()
         if switchCase.on == false
         {
             if  lbAccount.text! == "Twitter"
@@ -61,6 +63,22 @@ class TMAccountsCells: UITableViewCell
                     PFFacebookUtils.linkUserInBackground(user!, withReadPermissions: nil, block: { (success, error) -> Void in
                         if success
                         {
+                            //if user!.isNew {
+                                FBSDKGraphRequest.init(graphPath: "me", parameters: ["fields": "id, name, first_name, last_name, picture.type(large), email, location"]).startWithCompletionHandler({ (conection, result, error) -> Void in
+                                    if (result["picture"] != nil) {
+                                        let pic = result["picture"] as! NSDictionary
+                                        let data = pic["data"] as! NSDictionary
+                                        let url = data["url"] as! String
+                                        if let url = NSURL(string: url), let data = NSData(contentsOfURL: url), let downloadedImage = UIImage(data: data) {
+                                            print("testando essa porra aqui\(downloadedImage)")
+                                            let imageData = UIImagePNGRepresentation(downloadedImage)
+                                            
+                                            let ias:PFFile = PFFile(name: "perfilFace", data: imageData!)!
+                                            user!["foto"] = ias
+                                        }
+                                    }
+                                })
+                            //}
                             print("Usuário linkado com o Facebook.")
                         }
                         else
