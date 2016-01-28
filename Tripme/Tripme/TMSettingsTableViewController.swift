@@ -112,7 +112,10 @@ class TMSettingsTableViewController: UITableViewController {
             
             let currentUser = PFUser.currentUser()
             
-            if currentUser!["ultimoNome"] != nil && indexPath.row == 0
+            let object = PFObject(className: "User")
+            
+            
+            if currentUser!["statusRede"] != nil && indexPath.row == 0
             {
                 cell.switchCase.on = true
             }
@@ -215,13 +218,47 @@ class TMSettingsTableViewController: UITableViewController {
         user!.saveInBackgroundWithBlock({ (success, error) -> Void in
             if success
             {
-                print("salvo")
+                print("salvo 1")
             }
             else
             {
                 print(error)
             }
         })
+        
+        ///////////////////////////////////////////////////////////////
+        
+        for i in 0...1
+        {
+            let celula: TMAccountsCells = mytable.cellForRowAtIndexPath(NSIndexPath(forItem: i, inSection: 1)) as! TMAccountsCells
+            
+            if i == 0
+            {
+                user!["statusRede"] = celula.switchCase.on
+            }
+            else
+            {
+                print("Nada")
+            }
+
+        }
+        
+        user?.saveInBackgroundWithBlock({ (success, error) -> Void in
+            if success
+            {
+                print("salvo 2")
+            }
+            else
+            {
+                print("ERRO: \(error)")
+            }
+        })
+        
+            
+        
+        
+        
+        
 
     }
     
