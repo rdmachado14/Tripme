@@ -129,10 +129,9 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         }
         else
         {
-//            loadValorViagem = "Outros valores"
             cell.textFieldOutrosValores.hidden = false
-            
             loadValorViagem = cell.textFieldOutrosValores.text
+            print(cell.textFieldOutrosValores.text)
         }
     }
     
