@@ -197,11 +197,17 @@
                                                         <action selector="acaoValor:" destination="evS-q2-dFV" eventType="touchUpInside" id="Ayl-xV-DDS"/>
                                                     </connections>
                                                 </button>
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="0zX-dG-P05">
+                                                    <rect key="frame" x="120" y="5" width="183" height="30"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="botaoSelecionado" destination="4Tl-VA-DWV" id="mPs-D8-Ra9"/>
                                             <outlet property="labelInfo" destination="ohJ-i4-I7h" id="qFf-qO-xBj"/>
+                                            <outlet property="textFieldOutrosValores" destination="0zX-dG-P05" id="xVW-Qp-8Ur"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -1836,12 +1842,12 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="bezel" placeholder="E-mail" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="FZl-wx-Se2">
-                                <rect key="frame" x="20" y="91" width="324" height="39"/>
+                                <rect key="frame" x="20" y="86" width="324" height="39"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OSr-K4-7Ph">
-                                <rect key="frame" x="20" y="183" width="324" height="50"/>
+                                <rect key="frame" x="20" y="155" width="324" height="50"/>
                                 <color key="backgroundColor" red="0.098039215690000001" green="0.75686274509999996" blue="0.25882352939999997" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" name="TondoTrial-Regular" family="Tondo Trial" pointSize="17"/>
                                 <state key="normal" title="Recuperar Senha">

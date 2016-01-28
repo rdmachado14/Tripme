@@ -86,6 +86,23 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         
         cell.labelInfo.text = opcoes[indexPath.row]
         cell.flag = indexPath.row
+        
+        if indexPath.row == 0
+        {
+            cell.textFieldOutrosValores.hidden = true
+        }
+        else if indexPath.row == 1
+        {
+            cell.textFieldOutrosValores.hidden = true
+        }
+        else if indexPath.row == 2
+        {
+            cell.textFieldOutrosValores.hidden = true
+        }
+        else if indexPath.row == 3
+        {
+            cell.textFieldOutrosValores.hidden = true
+        }
      
         return cell
     }
@@ -112,7 +129,10 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         }
         else
         {
-            loadValorViagem = "Outros valores"
+//            loadValorViagem = "Outros valores"
+            cell.textFieldOutrosValores.hidden = false
+            
+            loadValorViagem = cell.textFieldOutrosValores.text
         }
     }
     
@@ -121,6 +141,11 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! TMPagamento1TableViewCell
         
         cell.botaoSelecionado.setImage(UIImage(named: "Não selecionado"), forState: .Normal)
+        
+        if indexPath.row == 3
+        {
+            cell.textFieldOutrosValores.hidden = true
+        }
     }
 
 
