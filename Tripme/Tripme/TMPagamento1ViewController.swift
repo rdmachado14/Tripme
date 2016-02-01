@@ -9,11 +9,14 @@
 import UIKit
 import Parse
 
-class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate
+class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UIPickerViewDelegate, UIPickerViewDataSource
 {
     
     
     let opcoes = ["R$ 1,00", "R$ 5,00", "R$ 10,00", "Outros valores"]
+    let valores = ["100", "200", "300", "400"]
+    
+    var pickerViewValores =  UIPickerView()
 
     @IBOutlet weak var minhaTableView: UITableView!
     @IBOutlet weak var labelNomeViagem: UILabel!
@@ -24,7 +27,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
     var loadDataViagem: String!
     var loadValorViagem: String!
     var objectID: String!
-
+    var indexPicker = 0
     
     override func viewDidLoad()
     {
@@ -34,7 +37,11 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         labelDataViagem.text = loadDataViagem
         
         viewTitulo.backgroundColor = UIColor().colorWithHexString("118CEF")
-
+        
+        
+        pickerViewValores.delegate = self
+        pickerViewValores.dataSource = self
+        
     }
 
     override func didReceiveMemoryWarning()
@@ -69,7 +76,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         }
     }
     
-    // TABLE VIEW
+    // MARK: - TABLE VIEW
     func numberOfSectionsInTableView(tableView: UITableView) -> Int
     {
         return 1
@@ -87,23 +94,10 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         cell.labelInfo.text = opcoes[indexPath.row]
         cell.flag = indexPath.row
         
-        if indexPath.row == 0
-        {
-            cell.textFieldOutrosValores.hidden = true
-        }
-        else if indexPath.row == 1
-        {
-            cell.textFieldOutrosValores.hidden = true
-        }
-        else if indexPath.row == 2
-        {
-            cell.textFieldOutrosValores.hidden = true
-        }
-        else if indexPath.row == 3
-        {
-            cell.textFieldOutrosValores.hidden = true
-        }
-     
+        cell.textFieldValores.hidden = true
+        
+
+        
         return cell
     }
     
@@ -113,7 +107,7 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! TMPagamento1TableViewCell
         
         cell.botaoSelecionado.setImage(UIImage(named: "Selecionado"), forState: .Normal)
-        
+
         if indexPath.row == 0
         {
             loadValorViagem = "1"
@@ -129,9 +123,14 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         }
         else
         {
-            cell.textFieldOutrosValores.hidden = false
-            loadValorViagem = cell.textFieldOutrosValores.text
-            print(cell.textFieldOutrosValores.text)
+            // pegando os valores do picker
+            cell.textFieldValores.hidden = false
+            cell.textFieldValores.inputView = pickerViewValores
+            cell.textFieldValores.becomeFirstResponder()
+            loadValorViagem = valores[indexPicker]
+            cell.labelInfo.text = ("R$  \(valores[indexPicker]),00")
+
+
         }
     }
     
@@ -140,13 +139,41 @@ class TMPagamento1ViewController: UIViewController, UITableViewDataSource, UITab
         let cell = tableView.cellForRowAtIndexPath(indexPath) as! TMPagamento1TableViewCell
         
         cell.botaoSelecionado.setImage(UIImage(named: "Não selecionado"), forState: .Normal)
-        
+
         if indexPath.row == 3
         {
-            cell.textFieldOutrosValores.hidden = true
+            cell.textFieldValores.hidden = true
         }
     }
+    
+    // MARK: - PICKER VIEW
+    
+    func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int
+    {
+        
+        return 1
+    }
+    
+    
+    func pickerView(pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int
+    {
+        return valores.count
+    }
+        
+    func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int)
+    {
+        let cell = self.minhaTableView.cellForRowAtIndexPath(NSIndexPath(forRow: 3, inSection: 0)) as! TMPagamento1TableViewCell
+        cell.labelInfo.text = ("R$  \(valores[row]),00")
+        loadValorViagem = valores[row]
+        indexPicker = row
+        cell.textFieldValores.hidden = true
 
+    }
+    
+    func pickerView(pickerView: UIPickerView, titleForRow row: Int, forComponent component: Int) -> String?
+    {
+        return valores[row]
+    }
 
 
 }
