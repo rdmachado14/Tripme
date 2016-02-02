@@ -14,6 +14,7 @@ class TMPagamento1TableViewCell: UITableViewCell
     var flag: Int!
 
     @IBOutlet weak var botaoSelecionado: UIButton!
+    @IBOutlet weak var textFieldValores: UITextField!
     
     override func awakeFromNib()
     {

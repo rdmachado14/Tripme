@@ -214,7 +214,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             Objects(
                 sectionName: "Despesas da viagem",
                 sectionObjects: [arrayTela3[0],arrayTela3[1],arrayTela3[2],arrayTela3[3],arrayTela3[4]],
-                sectionNameObjects: ["Passagens aérias","Alimentação", "Hospedagem", "Lazer", "Saude"],
+                sectionNameObjects: ["Passagens aéreas","Alimentação", "Hospedagem", "Lazer", "Saude"],
                 BackGroungColor: UIColor().colorWithHexString("431A8D")
             )
         ]
@@ -641,9 +641,23 @@ extension TMTripProjectViewController: UITableViewDelegate
         let shareFacebook: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
         
         shareFacebook.setInitialText(lbTripName.text)
-        shareFacebook.addImage(ivProfilePicture.image)
+        shareFacebook.addImage(arrayImagensTela[0])
         
         self.presentViewController(shareFacebook, animated: true, completion: nil)
+//
+//        let content = FBSDKShareLinkContent()
+//        content.contentURL = NSURL(string: "http://www.globo.com/")
+//        content.contentTitle = lbTripName.text
+//        content.contentDescription = textView.text
+//        
+//        let button : FBSDKShareButton = FBSDKShareButton()
+//        button.shareContent = content
+//        button.frame = CGRectMake((UIScreen.mainScreen().bounds.width - 100) * 0.5, 50, 100, 25)
+//        self.view.addSubview(button)
         
-        }
+//        let vc = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
+//        vc.setInitialText("Look at this great picture!")
+//        vc.addImage(ivProfilePicture.image!)
+//        presentViewController(vc, animated: true, completion: nil)
+    }
 }
