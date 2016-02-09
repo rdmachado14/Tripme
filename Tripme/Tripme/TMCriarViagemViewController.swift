@@ -116,8 +116,14 @@ extension TMCriarViagemViewController: UITableViewDataSource {
             
         } else {
             let customCell: TMCriarViagem2TableViewCell = tableView.dequeueReusableCellWithIdentifier("cell2") as! TMCriarViagem2TableViewCell
-            customCell.tfTextField.placeholder = self.strings[indexPath.row]
-            customCell.tfTextField.delegate = self
+            if indexPath.row == 4 {
+                customCell.textLabel?.text = self.strings[indexPath.row]
+                customCell.tfTextField.hidden = true
+            } else {
+                customCell.tfTextField.placeholder = self.strings[indexPath.row]
+                customCell.tfTextField.delegate = self
+            }
+            
             customCel = customCell
         }
         
@@ -202,6 +208,10 @@ extension TMCriarViagemViewController: UITableViewDelegate {
             selectedIndexPath = nil
         } else {
             selectedIndexPath = indexPath
+        }
+        
+        if indexPath.row == 4 {
+            print("clicou na 4")
         }
         
         var indexPaths : Array<NSIndexPath> = []
