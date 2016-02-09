@@ -133,7 +133,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     {
         vetor = [String]()
         
-        
+        print("DOARRRR")
     
         // varrendo cada posição do vetor
         for i in 0...4 {
@@ -250,7 +250,7 @@ class TMPagamento2ViewController: UIViewController, UITableViewDataSource, UITab
     func postStripeToken(token: STPToken)
     {
         
-        let URL = "http://172.16.1.208/tripme/payment.php"
+        let URL = "http://192.168.0.15/tripme/payment.php"
         let params = ["stripeToken": token.tokenId, "amount": Int(self.labelValor.text!)!, "currency": "usd", "description": self.labelNomeViagem.text!]
         
         let manager = AFHTTPRequestOperationManager()

@@ -14,7 +14,7 @@ import Social
 import FBSDKShareKit
 
 
-class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
+class TMTripProjectViewController: UIViewController, UIScrollViewDelegate, UIDocumentInteractionControllerDelegate
 {
 
     
@@ -39,6 +39,8 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
     @IBOutlet weak var mtTableView2: UITableView!
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var textView2: UITextView!
+    
+    var documentController : UIDocumentInteractionController!
     
     
     let recognizer = UITapGestureRecognizer()
@@ -214,7 +216,7 @@ class TMTripProjectViewController: UIViewController, UIScrollViewDelegate
             Objects(
                 sectionName: "Despesas da viagem",
                 sectionObjects: [arrayTela3[0],arrayTela3[1],arrayTela3[2],arrayTela3[3],arrayTela3[4]],
-                sectionNameObjects: ["Passagens aérias","Alimentação", "Hospedagem", "Lazer", "Saude"],
+                sectionNameObjects: ["Passagens aéreas","Alimentação", "Hospedagem", "Lazer", "Saude"],
                 BackGroungColor: UIColor().colorWithHexString("431A8D")
             )
         ]
@@ -638,11 +640,18 @@ extension TMTripProjectViewController: UITableViewDelegate
     
     @IBAction func btShare(sender: AnyObject)
     {
-        let shareFacebook: SLComposeViewController = SLComposeViewController(forServiceType: SLServiceTypeFacebook)
-        //        shareFacebook.setInitialText("") // texto inicial
-        //        shareFacebook.addImage() // imagem inicial
+        let writePath = (NSTemporaryDirectory() as NSString).stringByAppendingPathComponent("img.ig")
+        let imageData = UIImagePNGRepresentation(arrayImagensTela[0])
         
-        self.presentViewController(shareFacebook, animated: true, completion: nil)
+        if imageData?.writeToFile(writePath, atomically: true) == false {
+            return
+        } else {
+            let fileURL = NSURL(fileURLWithPath: writePath)
+            
+            self.documentController = UIDocumentInteractionController(URL: fileURL)
+            self.documentController.delegate = self
+            self.documentController.presentOpenInMenuFromRect(self.view.frame, inView: self.view, animated: true)
+        }
+
     }
-    
 }
